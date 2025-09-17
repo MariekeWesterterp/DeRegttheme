@@ -1,0 +1,44 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Lead - 500 error
+  screenshotPath: ../../images/template-previews/500.png
+-->
+{% set template_css = "../../css/templates/system.css" %}
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+<style>
+@media (max-width: 768px){
+  .error-picture h1:first-of-type{
+    font-size: 100px !important;
+    margin-right: -30px !important;
+  }
+       .error-picture h1:last-of-type{
+    font-size: 100px !important;
+    margin-left: -30px !important;
+  }
+    .error-picture img{
+    height: 100px !important;
+  }
+  }
+</style>
+
+<section class="content-wrapper" style="background-color: #C3B496; ">
+  <div class="error-page" data-error="500">
+
+    {# Content #}
+   
+   
+  
+   <h4>Something isn\'t quite right</h4><p>Sorry, an internal server error occurred. But have no fear, we\'re on the case!</p>
+
+
+
+  </div>
+</section>
+
+
+   {% module "footer" path="../../templates/partials/footer"  %}
+
+{% endblock body %}

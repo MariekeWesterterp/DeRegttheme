@@ -1,0 +1,40 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+{% import "/DeRegt/macro/button-group.html" as buttons %}
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+
+<section class="default">
+       <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} default__wrapper" style="background-color: {{ module.style.backgroundcolor.color }}"> 
+ <div class="container">
+           
+
+         {% if module.title %}
+   <h2 class="{{ module.style.type_of_heading }}" style="color: {{ module.style.color_heading.color }}">{{ module.title }}</h2>
+         {% endif %}
+                  {{ module.richtext_field }}
+         {% if module.image_field.src %}
+	{% set sizeAttrs = 'width="{{ module.image_field.width|escape_attr }}" height="{{ module.image_field.height|escape_attr }}"' %}
+	{% if module.image_field.size_type == 'auto' %}
+		{% set sizeAttrs = 'width="{{ module.image_field.width|escape_attr }}" height="{{ module.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+	{% elif module.image_field.size_type == 'auto_custom_max' %}
+		{% set sizeAttrs = 'width="{{ module.image_field.max_width|escape_attr }}" height="{{ module.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+	{% endif %}
+	 {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading|escape_attr }}"' : '' %}
+	<img src="{{ module.image_field.src|escape_url }}" alt="{{ module.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+{% endif %}
+             {{ buttons.buttons(
+    module.button_group.text_btn_1, 
+    module.button_group.url_btn_1.href|escape_url, 
+      module.button_group.target_btn_1,
+    module.button_group.text_btn_2, 
+   module.button_group.url_btn_2.href|escape_url, 
+    module.button_group.target_btn_2,
+    module.button_group.text_link_3, 
+    module.button_group.url_link_3.href|escape_url,
+     module.button_group.target_btn_3,
+    module.button_group.align_button_group,
+    module.button_group.color_text_link  
+) }}
+ </div>
+   </div>
+</section>

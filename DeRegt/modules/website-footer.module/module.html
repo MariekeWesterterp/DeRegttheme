@@ -1,0 +1,77 @@
+ <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__col">
+                    <figure class="footer__logo">
+                      {% set loadingAttr = module.logo_field.loading != 'disabled' ? '{{ module.logo_field.loading }}' : '' %}
+
+{% logo
+	override_inherited_src="{{ module.logo_field.override_inherited_src }}"
+	src="{{ module.logo_field.src }}"
+	alt="{{ module.logo_field.alt }}"
+	width="{{ module.logo_field.width }}"
+	height="{{ module.logo_field.height }}"
+	loading="{{ loadingAttr }}"
+	suppress_company_name="{{ module.logo_field.suppress_company_name }}"
+%}
+               
+                    </figure>
+                    <div class="footer__block">
+                        <div class="footer__links">
+                          {% if module.footer_text %}
+                            <p>{{ module.footer_text }}
+                             </p>
+                         {% endif %}
+                 
+                            
+                      
+                        </div>
+
+                        <div class="footer__box">
+                          <div class="text">{% cta guid="{{ module.cta_field }}" %}</div>
+                             {% if module.link_linkedin %}
+                            <a class="icon-box icon-box--linkedin" href="{{ module.link_linkedin }}" target="_blank"
+                                rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                           {% endif %}
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__col">
+                    <h3>{{ module.heading_2 }}</h3>
+
+                    <div class="footer__links">
+                      {% simple_menu menu_tree="{{ module.simplemenu_field }}" %}
+                        
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3>{{ module.heading_3 }}</h3>
+
+                    <div class="footer__links">
+                     {% simple_menu menu_tree="{{ module.simple_menu_2 }}" %}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer__bottom">
+                <div class="footer__bottom-left">  
+         <figure class="footer__image">
+                       {% if module.sublogo.src %}
+	 {% set loadingAttr = module.sublogo.loading != 'disabled' ? 'loading="{{ module.sublogo.loading }}"' : '' %}
+	<img src="{{ module.sublogo.src }}" alt="{{ module.sublogo.alt }}" {{ loadingAttr }} width="57" height="48">
+{% endif %}
+                    </figure>
+              <p>
+                {{ module.text_bottom }}
+              </p>
+              </div>
+                  <div class="footer__bottom-right">
+                <p>Copyright {{ year }} - {{ site_settings.company_name }}</p>
+              {{ module.legal_texts }}
+              </div>
+            </div>
+
+        </div>
+    </footer>

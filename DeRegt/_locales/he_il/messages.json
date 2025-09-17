@@ -1,0 +1,1632 @@
+{
+  "name": {
+    "message": "גדילה",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.accent_one.label": {
+    "message": "דגש 1",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.accent_two.label": {
+    "message": "דגש 2",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.body_background_color.label": {
+    "message": "צבע הרקע של הגוף",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.label": {
+    "message": "צבעים",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.primary.label": {
+    "message": "ראשי",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.secondary.label": {
+    "message": "משני",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.label": {
+    "message": "גופנים",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.primary.label": {
+    "message": "ראשי",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.secondary.label": {
+    "message": "משני",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.label": {
+    "message": "לחצנים",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.corner.label": {
+    "message": "פינה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.corner.radius.label": {
+    "message": "רדיוס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.label": {
+    "message": "ריחוף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.label": {
+    "message": "ראשי",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.corner.label": {
+    "message": "פינה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.corner.radius.label": {
+    "message": "רדיוס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.label": {
+    "message": "ריחוף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.label": {
+    "message": "משני",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.label": {
+    "message": "גודל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.font_size.label": {
+    "message": "גודל גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.label": {
+    "message": "גדול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.font_size.label": {
+    "message": "גודל גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.label": {
+    "message": "רגיל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.font_size.label": {
+    "message": "גודל גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.label": {
+    "message": "קטן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.corner.label": {
+    "message": "פינה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.corner.radius.label": {
+    "message": "רדיוס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.label": {
+    "message": "כהה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.label": {
+    "message": "כרטיסים",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.corner.label": {
+    "message": "פינה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.corner.radius.label": {
+    "message": "רדיוס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.label": {
+    "message": "בהיר",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.label": {
+    "message": "כותרת תחתונה של אתר",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.active.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.active.label": {
+    "message": "פעיל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.hover.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.hover.label": {
+    "message": "ריחוף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.label": {
+    "message": "תפריט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.label": {
+    "message": "לחצן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.large": {
+    "message": "גדול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.regular": {
+    "message": "רגיל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.small": {
+    "message": "קטן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.label": {
+    "message": "גודל לחצן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.primary": {
+    "message": "ראשי",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.secondary": {
+    "message": "משני",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.simple": {
+    "message": "פשוט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.label": {
+    "message": "סגנון לחצן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.help_text": {
+    "message": "השתמש בהגדרות קבועות מראש כדי להתאים במהירות את המראה של פריט ספציפי לערכים מוגדרים מראש.",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.label": {
+    "message": "הגדרות קבועות מראש",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.help_text": {
+    "message": "שולט בתוכן הפיסקאות של שדות GDPR",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.label": {
+    "message": "טקסט GDPR",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.corner.label": {
+    "message": "פינה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.corner.radius.label": {
+    "message": "רדיוס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.label": {
+    "message": "רכיבי קלט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.placeholder.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.placeholder.label": {
+    "message": "מציין מיקום",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.spacing.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.label": {
+    "message": "שדות",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.font.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.help_text": {
+    "message": "שולט בשדות טקסט עשיר של טופס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.label": {
+    "message": "טקסט עשיר",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.links.label": {
+    "message": "קישורים",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.corner.label": {
+    "message": "פינה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.corner.radius.label": {
+    "message": "רדיוס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.label": {
+    "message": "טופס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.spacing.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.label": {
+    "message": "טקסט עזרה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.label": {
+    "message": "טפסים",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.label": {
+    "message": "תוויות",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.spacing.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.corner.label": {
+    "message": "פינה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.corner.radius.label": {
+    "message": "רדיוס",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.label": {
+    "message": "כותרת",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.spacing.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.label": {
+    "message": "כותרת אתר אינטרנט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.label": {
+    "message": "ריחוף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.label": {
+    "message": "רשימות נפתחות",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.hover.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.hover.label": {
+    "message": "ריחוף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.label": {
+    "message": "בורר שפות",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.active.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.active.label": {
+    "message": "פעיל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.label": {
+    "message": "פעיל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.text.font_color.label": {
+    "message": "צבע גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.label": {
+    "message": "ריחוף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.label": {
+    "message": "רשימות נפתחות",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.hover.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.hover.label": {
+    "message": "ריחוף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.label": {
+    "message": "תפריט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.label": {
+    "message": "סרגל עליון",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.fill.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.fill.label": {
+    "message": "מילוי",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.label": {
+    "message": "כהה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.label": {
+    "message": "סמלים",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.fill.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.fill.label": {
+    "message": "מילוי",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.label": {
+    "message": "בהיר",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.label": {
+    "message": "גודל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.label": {
+    "message": "גדול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.size.label": {
+    "message": "גודל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.label": {
+    "message": "רגיל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.size.label": {
+    "message": "גודל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.label": {
+    "message": "קטן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.size.label": {
+    "message": "גודל",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.label": {
+    "message": "הגדרות נוספות",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.label": {
+    "message": "טבלאות",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.label": {
+    "message": "גוף הטבלה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.border.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.border.label": {
+    "message": "גבול",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.label": {
+    "message": "תאים בטבלה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.spacing.spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.label": {
+    "message": "כותרת תחתונה של טבלה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.background.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.background.label": {
+    "message": "רקע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.label": {
+    "message": "כותרת טבלה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.text.color.label": {
+    "message": "צבע",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.blockquotes.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.blockquotes.label": {
+    "message": "בלוקי ציטוט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.body_font.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.body_font.label": {
+    "message": "גוף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.label": {
+    "message": "כותרת ברמה 1  (H1)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.label": {
+    "message": "כותרת ברמה 2 (H2)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.label": {
+    "message": "כותרת ברמה 3  (H3)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.label": {
+    "message": "כותרת ברמה 4 (H4)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.label": {
+    "message": "כותרת ברמה 5 (H5)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.label": {
+    "message": "כותרת ברמה 6 (H6)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.capitalize": {
+    "message": "הפוך לרישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.lowercase": {
+    "message": "אות קטנה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.none": {
+    "message": "ללא",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.uppercase": {
+    "message": "אות רישית",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.label": {
+    "message": "שינוי צורה",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.label": {
+    "message": "טקסט",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.font.label": {
+    "message": "גופן",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.hover_font.label": {
+    "message": "גופן מרחף",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.label": {
+    "message": "קישורים",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.custom_maximum_content_width.label": {
+    "message": "רוחב תוכן מרבי מותאם אישית",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.custom_vertical_spacing.label": {
+    "message": "ריווח אנכי מותאם אישית",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.label": {
+    "message": "מרווח",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.comfortable": {
+    "message": "נוח (1200 פיקסל)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.compact": {
+    "message": "קומפקטי (900 פיקסל)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.custom": {
+    "message": "מותאם אישית",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.default": {
+    "message": "ברירת מחדל (1000 פיקסל)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.label": {
+    "message": "רוחב תוכן מקסימלי",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.comfortable": {
+    "message": "נוח (80 פיקסל)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.compact": {
+    "message": "בומפקטי (48 פיקסל)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.custom": {
+    "message": "מותאם אישית",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.default": {
+    "message": "ברירת מחדל (60 פיקסל)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.label": {
+    "message": "מרווח אנכי",
+    "description": "",
+    "placeholders": null
+  }
+}

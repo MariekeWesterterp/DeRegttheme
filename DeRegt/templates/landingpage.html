@@ -1,0 +1,60 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: landingpage
+  screenshotPath: ../images/template-previews/webinar.png
+-->
+{% extends "./layouts/base-landingspagina.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section"
+%}
+ {% dnd_section, full_width="true" %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+      {% dnd_module path='/FES-Website/modules/Hero', label="hero"  %}
+     {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+ {% end_dnd_section %}
+ {% dnd_section, full_width="true" %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+      {% dnd_module path='/FES-Website/modules/form-2-columns', label="Form 2 columns", %}
+     {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+ {% dnd_section %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+      {% dnd_module path='/FES-Website/modules/testimonials-3-columns', label="testimonials-3-columns" %}
+     {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+ {% dnd_section, full_width="true" %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+      {% dnd_module path='/FES-Website/modules/programs', label="programs" %}
+     {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+
+ {% dnd_section, full_width="true" %}
+    {% dnd_column %}
+   
+   {% dnd_row %}
+    {% dnd_module path='/FES-Website/templates/partials/footer', label="footer" %}
+   {% end_dnd_module %}
+
+    {% end_dnd_row %}
+
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}

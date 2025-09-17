@@ -1,0 +1,116 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+  label: Theme Modules Acceptance Test
+  screenshotPath: ../../images/template-previews/blank.png
+-->
+{# The contents below are automatically generated, do not modify this file #}
+
+{% extends './../layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area'
+    class='body-container body-container--blank'
+    label='Main section'
+  %}
+
+  {# START MODULES #}
+
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/accordion' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/button' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/icon' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/image-gallery' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/list' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/offer-card' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/pricing-card' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/recent-posts' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/social-follow' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/social-sharing' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/tabs' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/testimonial' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% dnd_section vertical_alignment='MIDDLE' %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module path='../../modules/website-header' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {# END MODULES #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock %}

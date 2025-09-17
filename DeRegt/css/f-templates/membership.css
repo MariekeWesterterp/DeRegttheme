@@ -1,0 +1,56 @@
+/* System pages */
+
+.systems-page {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 2.8rem 1.4rem;
+}
+
+.systems-page--search-results {
+  max-width: 100%;
+}
+
+/* Input error messages */
+
+.form-input-validation-message ul.hs-error-msgs {
+  margin: 0;
+  padding-left: 0;
+}
+
+.form-input-validation-message ul.hs-error-msgs li {
+  margin: 0;
+}
+
+/* Membership pages */
+
+.systems-page .form-container {
+  margin-bottom: 1.4rem;
+}
+
+#hs-membership-password-requirements ul {
+  margin-bottom: 1.4rem;
+  padding-left: 0;
+}
+
+#hs-membership-password-requirements ul li {
+  line-height: 1.4;
+  margin: 0;
+}
+
+.systems-page .hs-login-widget-show-password,
+.systems-page .hs-register-widget-show-password,
+.systems-page .hs-reset-widget-show-password {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.systems-page #hs-login-widget-remember,
+.systems-page #hs-login-widget-remember ~ label {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.systems-page #hs_login_reset {
+  display: block;
+  margin-bottom: 0.7rem;
+}

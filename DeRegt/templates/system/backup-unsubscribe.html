@@ -1,0 +1,27 @@
+<!--
+  templateType: email_backup_unsubscribe_page
+  isAvailableForNewContent: true
+  label: Lead - email backup unsubscribe
+  screenshotPath: ../../images/template-previews/backup-unsubscribe.png
+-->
+
+{% extends "../layouts/base-landingspagina.html" %}
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="systems-page">
+
+    {# Backup unsubscribe form #}
+
+    {% module "backup_unsubscribe"
+      path="@hubspot/email_simple_subscription",
+      extra_classes="backup-unsubscribe"
+    %}
+
+  </div>
+</section>
+{% endblock body %}
+
+    {% block footer %}
+             {% module "footer" path="../../templates/partials/footer"  %}
+      {% endblock footer %}

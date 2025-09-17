@@ -1,0 +1,47 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Lead - membership logout
+  screenshotPath: ../../images/template-previews/membership-logout.png
+-->
+
+{% extends '../layouts/base-landingspagina.html' %}
+
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="membership-page membership-page--centered membership-page--narrow membership-page--spaced" style="margin: 100px;">
+
+    {% module "logout_heading"
+      path="@hubspot/rich_text",
+      html="<h1>You are signed out</h1>"
+    %}
+  <div style="margin: 100px 0">
+    
+  
+    {% module "sign_in_button"
+      path="../../modules/button",
+      extra_classes="cta_button",
+      button_text="Sign back in",
+      button_link={
+        "url": {
+          "type": "EXTERNAL",
+          "href": "/_hcms/mem/login"
+        }
+      }
+    %}
+      </div>
+
+    {% module "logout_description"
+      path="@hubspot/rich_text",
+      extra_classes="logout-description",
+      html="<p>Or return to the <a href=\"{{ '//' ~ request.domain }}\">home page</a></p>"
+    %}
+
+  </div>
+</section>
+{% endblock body %}
+
+    {% block footer %}
+             {% module "footer" path="../../templates/partials/footer"  %}
+      {% endblock footer %}

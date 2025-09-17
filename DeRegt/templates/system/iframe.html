@@ -1,0 +1,42 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% if content.html_title %}<title>{{ content.html_title }}</title>{% endif %}
+    <meta name="description" content="{{ content.meta_description }}">
+    <meta name=”robots” content=”noindex, nofollow”>
+    {{ standard_header_includes }}
+       {{ require_css(get_asset_url("../../css/main.css")) }}
+    {# This is intended to be used if a template requires template specific style sheets #}
+    {% if template_css %}
+      {{ require_css(get_asset_url(template_css)) }}
+    {% endif %}
+  </head>
+  <body>
+    {% dnd_area "dnd_area"
+      label="Main section"
+    %}
+      {% dnd_section %}
+        {% dnd_column %}
+          {% dnd_row %}
+
+            {% dnd_module path="@hubspot/logo" %}
+            {% end_dnd_module %}
+
+          {% end_dnd_row %}
+          {% dnd_row %}
+
+            {% dnd_module path="@hubspot/rich_text" %}
+            {% end_dnd_module %}
+
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+    {{ standard_footer_includes }}
+  </body>
+</html>

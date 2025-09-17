@@ -1,0 +1,104 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Lead - blog post
+  screenshotPath: ../images/template-previews/blog-post-lead.png
+-->
+{% set template_css = "../../css/f-templates/blog-post.css" %}
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# Blog post wrapper #}
+
+<div class="content-wrapper">
+  {% module "module_16691228619751" path='/FES-Website/modules/breadcrumbs', label="breadcrumbs" %}
+
+  {# Blog post #}
+
+  <div class="blog-post-section">
+    <article class="blog-post">
+    
+      {% module "module_16691238220056" path='/FES-Website/modules/image', label="image", extra_classes="blog-post__wide-image" %}
+        <div class="blog-post__body">
+      <h1> 
+        {{ content.name }}
+      </h1> 
+  
+
+    {{ content.post_body }}
+      </div>
+      
+      
+         <div class="blog-post__meta">
+               <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
+        {{ content.publish_date_localized }}
+      </time>
+   
+        <div class="blog-post__author">
+          {% if content.blog_author.avatar %}
+            <img class="blog-post__author-image" src="{{ content.blog_author.avatar }}" width="50" loading="eager" alt="Picture of {{ content.blog_author.display_name }}">
+          {% endif %}
+          <a class="blog-post__author-name" href="{{ content.blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
+            {{ content.blog_post_author.display_name }}
+          </a>
+        </div>
+        {% module "social_sharing"
+          path="../modules/social-sharing",
+          styles={
+            "spacing": {
+              "spacing": {
+                "margin": {
+                  "bottom": {
+                    "value": 22,
+                    "units": "px"
+                  }
+                }
+              }
+            }
+          }
+        %}
+      </div>
+      {% if content.tag_list %}
+        <div class="blog-post__tags">
+          <span class="icon--light">
+            {% icon
+              extra_classes="icon blog-post__tags-icon"
+              name="tag",
+              purpose="decorative",
+              style="SOLID"
+            %}
+          </span>
+          {% for tag in content.tag_list %}
+            <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </article>
+  </div>
+
+  {# Blog comments #}
+
+  {% if group.allow_comments %}
+    <div class="blog-post-section">
+      <div class="blog-comments">
+        {% module "blog_comments_heading"
+          path="@hubspot/rich_text",
+          html="<h2>Blog comments</h2>"
+        %}
+        {% module "blog_comments"
+          path="@hubspot/blog_comments"
+        %}
+      </div>
+    </div>
+  {% endif %}
+
+  {# Related posts #}
+
+</div>
+  <div class="blog-post-section">
+    {% module "related_posts"
+      path="../modules/related-posts"
+    %}
+  </div>
+{% endblock body %}

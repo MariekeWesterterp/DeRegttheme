@@ -1,0 +1,60 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros%}
+
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+
+<section class="client">
+  <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} default__wrapper %}"> 
+    <div class="container" style="color: {{ module.style.color_text }}">
+
+      <div class="client__left">
+        {% if module.title %}
+        <h2 {{ module.style.type_of_heading }} style="color: {{ module.style.color_heading }}">{{ module.title }}</h2 {{ module.style.type_of_heading }}>
+                <svg class="yellow-block" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+            <path d="M48 0H0V6H48V0Z" fill="#F1C61A"/>
+            </svg>
+        {% endif %}
+        {% if module.image_field.src %}
+        {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading|escape_attr }}"' : '' %}
+        <img src="{{ module.image_field.src|escape_url }}" width="812" height="520" alt="{{ module.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+        {% endif %}
+      </div>
+
+      <div class="client__right">
+        <div class="client__text">{{ module.richtext_field }}
+          <div class="client__link"><a href="#">
+            <svg width="16" height="16" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_3_49)">
+                <path d="M5 16C13.3484 16.011 18.1661 16.0778 27 16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 7C20.903 11.0072 22.9157 12.9429 27 16C22.6769 18.9464 20.7594 20.9543 18 25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_49">
+                  <rect width="32" height="32" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>Lees verder</a></div>
+
+          <div class="client__details">
+            {% if module.client_image.src %}
+
+            {% set loadingAttr = module.client_image.loading != 'disabled' ? 'loading="{{ module.client_image.loading|escape_attr }}"' : '' %}
+            <img src="{{ module.client_image.src|escape_url }}" height="80" width="80" alt="{{ module.client_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            <div class="client__details-name"> <p><b>{{ module.client_name }}</b></p>
+              <p>{{ module.client_function }}</p>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+        
+        
+        
+       

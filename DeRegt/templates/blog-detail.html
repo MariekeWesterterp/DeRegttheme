@@ -1,0 +1,153 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Lead - blog post detail
+  screenshotPath: ../images/template-previews/blog-post-lead.png
+-->
+{% set template_css = "../../css/f-templates/blog-post-cialdini.css" %}
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<div id="blogProgressBar"></div>
+
+
+<div class="blog-post__content">
+  {# Blog post wrapper #}
+  <div class="content-wrapper blog-post__content-wrapper">
+ {% module "module_17043573152643" path='/FES-Website/modules/breadcrumbs-blog-post', label="breadcrumbs-blog-post" %}
+
+  {# Blog post #}
+
+  <div class="blog-post-section">
+    <article class="blog-post">
+    
+     
+        <div class="blog-post__body">
+      <h1> 
+        {{ content.name }}
+      </h1> 
+
+       <div class="blog-post__introduction blog-clrd-bg bg-gold">
+        </div>
+         <div class="blog-post__meta">
+              <div class="blog-post__meta-left">
+             {% if content.blog_author.avatar %}
+           <picture class="blog-post__author__image">
+            <img class="blog-post__author" src="{{ content.blog_author.avatar }}" loading="eager" alt="Picture of {{ content.blog_author.display_name }}">
+           </picture>
+          {% endif %}
+           </div>
+    <div class="blog-post__meta-right">
+                
+          <a class="blog-post__author-name" href="{{ content.blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
+            {{ content.blog_post_author.display_name }}
+          </a>
+      <div class="blog-post__meta-details">
+        <div class="blog-post__meta-details__date">
+           <i class="fa-light fa-calendar-days"></i><time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
+        {{ content.publish_date | format_date('MMMM dd, yyyy') }}
+      </time>
+        </div>
+        <div class="blog-post__meta-details__reading-time">
+                   {% set initialPostWords = content.post_body|striptags |wordcount %}
+                    {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+                    {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+                    {% set number = finishedPostWords|round %}
+                    {% if number < 1 %}
+                    {% else %}
+          <i class="fa-light fa-clock"></i>
+           <p>
+             {{ finishedPostWords|round }} min read
+           </p>
+                    
+                    {% endif %}
+        </div>
+      </div>
+           </div>
+        
+        
+        
+      </div>
+{% if content.featured_image %}
+          <div class="blog-post__image">
+             <img src="{{ content.featured_image }}" alt="">
+          </div>
+        {% elif %}
+          <hr class="blog-post__line">
+          {% endif %}
+ {{ content.post_body }} 
+{% if content.tag_list %}
+        <div class="blog-post__tags">
+          {% for tag in content.tag_list %}
+          
+            <div class="blog-post__tag-link" {# href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag" #}>{{ tag.name }}</div>
+        
+          {% endfor %}
+        </div>
+      {% endif %}
+      </div>
+    </article>
+  </div>
+
+
+  {# Related posts #}
+
+     {# module "related_posts"
+      path='/lead/modules/related-posts'
+ #}
+
+
+
+</div>
+</div>
+<script>
+var firstParagraph = document.querySelector('#hs_cos_wrapper_post_body p:first-of-type');
+var intro = document.querySelector('.blog-post__introduction');
+var hsCosWrapper = document.getElementById('hs_cos_wrapper_post_body');
+
+// Move the first <p> element into the new <div>
+if (firstParagraph) {
+    // Append the first paragraph to the new div
+    intro.appendChild(firstParagraph.cloneNode(true));
+  console.log(firstParagraph);
+    // Remove the first paragraph from its original location
+    hsCosWrapper.removeChild(firstParagraph);
+} else {
+    console.error("No <p> element found inside the '.hs_cos_wrapper_post_body' div.");
+}
+  
+
+if (document.querySelectorAll('.blog-post').length > 0) {
+    function updateblogProgressBarPosition() {
+        var header = document.querySelector('.header'); // Selects the first element with class 'header'
+        var headerHeight = header.offsetHeight;
+        var blogProgressBar = document.getElementById('blogProgressBar');
+    }
+window.onscroll = function() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = Math.max(0, (winScroll / height) * 100);
+    document.getElementById('blogProgressBar').style.width = scrolled + "%";
+
+    var header = document.querySelector('.header'); // Selects the first element with class 'header'
+    var sticky = header.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+        document.getElementById('blogProgressBar').classList.add('sticky');
+        document.getElementById('blogProgressBar').style.top = '0px';
+    } else {
+        document.getElementById('blogProgressBar').classList.remove('sticky');
+        updateblogProgressBarPosition();
+    }
+};
+}
+window.onload = updateblogProgressBarPosition;
+
+window.onresize = updateblogProgressBarPosition;
+  
+</script>
+
+
+
+{% module "module_17080722766844" path='/FES-Website/templates/partials/footer website', label="footer website" %}
+{% endblock body %}

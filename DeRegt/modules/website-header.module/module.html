@@ -1,0 +1,545 @@
+{####################################################}
+{############### Header components ##################}
+{####################################################}
+
+{# Logo #}
+
+{% set has_logo = (module.logo.logo.override_inherited_src and module.logo.logo.src) or (not module.logo.logo.override_inherited_src and sbrand_settings.logo.src ) or (not module.logo.logo.suppress_company_name) %}
+
+{% macro logo() %}
+
+  {% unless (module.logo.link is string_startingwith "http") or (module.logo.link is string_startingwith "/") or (module.logo.link is string_startingwith "mailto") or (module.logo.link is string_startingwith "#") or !module.logo.link %}
+    {% set link = "//" ~ module.logo.link %}
+  {% else %}
+    {% set link = module.logo.link || "" %}
+  {% endunless %}
+
+  <div class="header__logo">
+
+    {% if link %}
+      <a class="header__logo-link" href="{{ link }}" {% if module.logo.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+    {% endif %}
+
+      {# If override is turned on for the logo field and a logo image is provided #}
+
+      {% if module.logo.logo.override_inherited_src && module.logo.logo.src %}
+
+        <img class="header__logo-image" src="{{ module.logo.logo.src }}" loading="eager" alt="{{ module.logo.logo.alt }}" height="{{ module.logo.logo.height }}" width="{{ module.logo.logo.width }}">
+
+      {# If override is turned off for the logo field and a logo image is set in site settings #}
+
+      {% elif !module.logo.logo.override_inherited_src && brand_settings.logo.src %}
+
+        <img class="header__logo-image" src="{{ brand_settings.logo.src  }}" loading="eager" alt="{{ brand_settings.logo.alt  }}" height="{{ brand_settings.logo.height }}" width="{{ brand_settings.logo.width }}">
+
+      {# If no image is provided and "show company name when logo isn't set" is equal to true #}
+
+      {% else %}
+
+        {% if !module.logo.logo.suppress_company_name %}
+          <span class="header__logo-company-name">{{ site_settings.company_name }}</span>
+        {% endif %}
+
+      {% endif %}
+
+    {% if link %}
+      </a>
+    {% endif %}
+
+  </div>
+
+{% endmacro %}
+
+
+{# Menu items #}
+
+{% macro navigation_items() %}
+
+  {% set menu = menu(module.menu.menu, "site_root").children %}
+
+  {% macro render_link_item(link, depth) %}
+    <li class="header__menu-item header__menu-item--depth-{{ depth }} {{ "header__menu-item--has-submenu" if link.children && depth < module.menu.max_levels }} hs-skip-lang-url-rewrite">
+      <a class="header__menu-link {{ "header__menu-link--toggle" if link.children && depth < module.menu.max_levels }} {{ "header__menu-link--active-link" if link.activeNode }}" href="{{ link.url }}" {{ 'aria-haspopup="true" aria-expanded="false"' if link.children && depth < module.menu.max_levels }} {{ 'aria-current="page"' if link.activeNode }} {{ 'target="_blank" rel="noopener"' if link.linkTarget }}>{{ link.label }}</a>
+      {% if link.children %}
+        {% if depth && depth < module.menu.max_levels %}
+   
+          <ul class="header__menu-submenu header__menu-submenu--level-{{ depth + 1 }} no-list">
+            {% set depth = depth + 1 %}
+            {% for sublink in link.children %}
+              {{ render_link_item(sublink, depth) }}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endif %}
+    </li>
+  {% endmacro %}
+
+  {% for link in menu %}
+    {{ render_link_item(link, 1) }}
+  {% endfor %}
+
+{% endmacro %}
+
+{# Desktop menu #}
+
+
+{% macro desktop_navigation() %}
+
+  <nav class="header__menu header__menu--desktop" aria-label="Desktop navigation">
+    <ul class="header__menu-wrapper no-list">
+      {{ navigation_items() }}
+    </ul>
+    {% if module.show_login %}
+	 {{ login_navigation() }}
+{% endif %}
+
+    <div class="header__menu--spacer">
+      
+    </div>
+</nav>
+{% endmacro %}
+  
+
+
+{% macro login_navigation() %}
+  <div class="btn__login">
+                                           <ul>
+                                             <li onclick="openModal()">Login
+                                             </li>
+    </ul> 
+                                        </div>
+
+
+
+{% endmacro %}
+
+{# Mobile menu #}
+
+{% macro mobile_navigation() %}
+<div class="header__menu-container header__menu-container--mobile">
+    <button class="header__menu-toggle header__menu-toggle--open header__menu-toggle--show no-button">
+      <span class="show-for-sr">Open main navigation</span>
+    <i class="fa-light fa-bars"></i>
+        <pre>menu</pre>
+    </button>
+
+    <nav class="header__menu header__menu--mobile" aria-label="Mobile navigation">
+         <button class="header__menu-toggle header__menu-toggle--close no-button">
+      <span class="show-for-sr">Close main navigation</span>
+ <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="24" height="24"
+viewBox="0 0 50 50">
+<path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"></path>
+</svg>
+         
+    </button>
+      <div class="header__menu-wrapper">
+        
+ 
+      <ul class="header__menu-wrapper no-list">
+        {{ navigation_items() }}
+        {% if content.translated_content.values()|selectattr("published")|length && module.language_switcher.add_language_switcher || is_listing_view && group.translations && module.language_switcher.add_language_switcher %}
+          <li class="header__menu-item header__menu-item--language-switcher header__menu-item--depth-1 hs-skip-lang-url-rewrite">
+            {{ language_switcher("mobile") }}
+          </li>
+        {% endif %}
+    
+      </ul>   
+           <div class="header__review-mobile">
+           
+             <div class="header__secondary-menu">
+        {% menu id="{{ module.secundary_menu }}" %}
+ 
+           {# if content.translated_content.values()|selectattr("published")|length && module.language_switcher.add_language_switcher || is_listing_view && group.translations && module.language_switcher.add_language_switcher }
+        <div class="header__language-switcher-col">
+         {{ language_switcher() }}
+      </div>
+    { endif #}
+     
+      </div>
+        </div>
+        
+        
+        
+        
+        {% if module.show_login %}
+	   <div class="btn__login">
+            <ul>
+              <li onclick="openModal()">Login
+              </li>
+            </ul> 
+        </div>
+{% endif %}
+                {% if module.cta_link_text %}
+                        <a class="cta_button" href="{{ module.cta_link }}">{{ module.cta_link_text }}</a>
+                  {% endif %}
+                          {% if module.cta_field %}
+                       {% cta guid="{{ module.cta_field }}" %}
+                          {% endif %}
+      <div class="header__menu-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Group_88" data-name="Group 88" width="174.391" height="124.725" viewBox="0 0 174.391 124.725">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4484" data-name="Rectangle 4484" width="174.391" height="124.725" fill="#000"/>
+    </clipPath>
+  </defs>
+  <g id="Group_86" data-name="Group 86" clip-path="url(#clip-path)">
+    <path id="Path_8" data-name="Path 8" d="M144.195,193.992h7.658V170.211h-7.658Zm-26.854,0H125V181.5c0-3.728,1.562-5.744,4.031-5.744,2.57,0,3.628,1.511,3.628,4.434v13.805h7.658V179.682c0-6.55-3.073-10.077-8.313-10.077a7.223,7.223,0,0,0-7.054,4.383V170.21h-7.608Zm-11.89,0h7.658V170.211H105.45Zm-16.475-5.139c-3.023,0-4.937-1.965-4.937-6.4v-.5c0-4.434,1.965-6.6,4.937-6.6,3.275,0,4.938,2.267,4.938,6.4v.554c0,4.132-1.713,6.55-4.938,6.55M86.557,194.6a8.877,8.877,0,0,0,7.154-3.527v2.922h7.507V160.184H93.611v12.9a8.5,8.5,0,0,0-7.053-3.476c-6.1,0-10.53,5.089-10.53,12.546,0,7.709,4.434,12.445,10.53,12.445m-21.463-.6h7.659V160.184H65.094Zm-16.626-4.383c-1.914,0-2.972-1.008-2.972-2.469,0-2.015,1.663-2.721,3.779-3.325a22.531,22.531,0,0,0,4.484-1.36v2.368c-.252,3.527-2.822,4.787-5.291,4.787M46,194.646c3.628,0,6.3-1.511,7.709-3.93v3.275h7.457V179.481c0-6.852-3.98-9.774-11.135-9.774-7.2,0-11.538,3.628-11.639,9.17H45.7v-.4c.151-1.915,1.511-3.275,4.232-3.275,2.67,0,3.829,1.058,3.829,2.519v.151c-.151,1.31-2.519,1.461-6.65,2.318-5.039,1.008-9.271,2.217-9.271,7.557,0,4.182,3.174,6.9,8.162,6.9m-19.1-.655h7.659V170.211H26.9Zm-14.409.5c6.7,0,10.228-3.225,11.689-8.313l-7.054-1.663c-.5,2.671-1.763,4.283-4.635,4.283-3.074,0-4.736-2.469-4.736-6.55v-.3c0-4.031,1.814-6.55,4.887-6.55,2.671,0,3.729,1.763,4.283,4.031l7.054-1.864c-1.562-4.837-4.988-7.86-11.387-7.86-7.608,0-12.6,4.988-12.6,12.344C0,189.659,4.635,194.5,12.5,194.5" transform="translate(0 -125.462)" fill="#000"/>
+    <rect id="Rectangle_4479" data-name="Rectangle 4479" width="7.658" height="23.781" transform="translate(3.409 10.916)" fill="#000"/>
+    <rect id="Rectangle_4480" data-name="Rectangle 4480" width="7.658" height="23.781" transform="translate(15.165 10.916)" fill="#000"/>
+    <rect id="Rectangle_4481" data-name="Rectangle 4481" width="7.658" height="23.781" transform="translate(26.921 10.916)" fill="#000"/>
+    <path id="Path_217" data-name="Path 217" d="M0,0H7.658V23.781H0V0Z" transform="translate(38.677 10.916)" fill="#000"/>
+    <rect id="Rectangle_4483" data-name="Rectangle 4483" width="42.927" height="6.974" transform="translate(3.409 0)" fill="#000"/>
+    <path id="Path_9" data-name="Path 9" d="M164.83,358.7c.353-3.023,2.267-4.736,4.938-4.736,2.922,0,4.434,1.562,4.635,4.736Zm5.19,14.762c6.651,0,10.177-2.721,11.79-7.054l-6.2-1.864c-.705,1.965-2.217,3.476-5.29,3.476a5.062,5.062,0,0,1-5.492-4.887h17.08v-1.864c0-7.86-4.434-12.6-12.042-12.6-7.457,0-12.394,5.038-12.394,12.546s4.736,12.243,12.546,12.243m-19.65-.5h5.643v-5.593h-2.62c-1.058-.05-1.562-.5-1.562-1.562V354.571h4.333V349.18h-4.283v-8.313l-7.507,3.678v4.635H141.2v5.391h3.174v11.538c.1,4.232,1.058,6.5,6,6.852m-26,.5a7.052,7.052,0,0,0,6.651-3.88v3.376h7.608V349.18h-7.658v12.5c0,3.476-1.159,5.744-3.93,5.744-2.469,0-3.678-1.612-3.678-4.434V349.18h-7.608v14.309c0,6.3,3.275,9.976,8.616,9.976m-17.13-.5h5.643v-5.593h-2.62c-1.058-.05-1.562-.5-1.562-1.562V354.571h4.333V349.18h-4.283v-8.313l-7.507,3.678v4.635H98.072v5.391h3.174v11.538c.1,4.232,1.058,6.5,6,6.852m-19.5,0H95.4V349.18H87.744Zm-9.119,0h5.643v-5.593h-2.62c-1.058-.05-1.562-.5-1.562-1.562V354.571H84.42V349.18H80.137v-8.313l-7.507,3.678v4.635H69.456v5.391H72.63v11.538c.1,4.232,1.058,6.5,6,6.852m-20.355.756c5.794,0,10.077-3.376,10.077-8.061,0-5.038-4.887-6.6-8.968-7.406-3.628-.756-4.988-1.008-4.988-2.469,0-1.26,1.159-2.015,3.073-2.015a8.235,8.235,0,0,1,6.147,2.922s4.534-3.325,4.534-3.426c-2.418-2.821-6.046-4.686-11.084-4.686-5.643,0-9.875,3.325-9.875,7.86,0,4.887,4.383,6.55,8.364,7.406,3.174.705,5.542,1.058,5.542,2.519,0,1.361-1.209,2.116-3.174,2.116a8.531,8.531,0,0,1-6.4-3.023l-4.686,3.628a14.961,14.961,0,0,0,11.437,4.635m-36.78-.756h7.658v-12.5c0-3.729,1.562-5.744,4.031-5.744,2.569,0,3.628,1.511,3.628,4.434v13.805h7.658V358.652c0-6.55-3.073-10.077-8.313-10.077a7.223,7.223,0,0,0-7.054,4.383V349.18H21.49Zm-11.89,0h7.658V349.18H9.6Z" transform="translate(-7.519 -266.98)" fill="#000"/>
+    <path id="Path_10" data-name="Path 10" d="M108.49,542.421a1.886,1.886,0,0,1,1.911-1.887,1.7,1.7,0,0,1,1.755,1.887Zm1.947,3.317a2.574,2.574,0,0,0,2.62-1.622l-.733-.277a1.806,1.806,0,0,1-1.887,1.2,1.887,1.887,0,0,1-1.947-1.971h4.531v-.313c0-1.8-1-2.909-2.608-2.909a2.744,2.744,0,0,0-2.752,2.969,2.677,2.677,0,0,0,2.777,2.921m-7.139,0a2.49,2.49,0,0,0,2.6-1.947l-.817-.216a1.679,1.679,0,0,1-1.779,1.454,1.949,1.949,0,0,1-1.923-2.212v-.048a1.962,1.962,0,0,1,1.935-2.224,1.667,1.667,0,0,1,1.743,1.442l.817-.228a2.472,2.472,0,0,0-2.548-1.911,2.95,2.95,0,0,0-.024,5.889m-9.627-.108h.841v-2.452c0-1.659.565-2.6,1.694-2.6.854,0,1.334.529,1.334,1.55v3.5h.842v-3.546c0-1.442-.757-2.247-1.959-2.247a1.9,1.9,0,0,0-1.923,1.454v-1.334h-.829Zm-6.826-3.209a1.886,1.886,0,0,1,1.911-1.887,1.7,1.7,0,0,1,1.755,1.887Zm1.947,3.317a2.574,2.574,0,0,0,2.62-1.622l-.733-.277a1.806,1.806,0,0,1-1.887,1.2,1.887,1.887,0,0,1-1.947-1.971h4.531v-.313c0-1.8-1-2.909-2.608-2.909a2.744,2.744,0,0,0-2.752,2.969,2.677,2.677,0,0,0,2.777,2.921m-7.776,0a1.893,1.893,0,0,0,1.935-1.406v1.3h.83v-5.673h-.841v2.476c0,1.575-.6,2.572-1.743,2.572-.865,0-1.274-.517-1.274-1.55v-3.5h-.853V543.5c0,1.418.7,2.236,1.947,2.236M75.7,545.63h.841v-8.1H75.7Zm-4.11,0h.83v-4.952h1.2v-.721h-1.2V539.2c0-.817.108-.913.913-.913h.409v-.757h-.661c-1.142.036-1.49.433-1.49,1.635v.793h-1.01v.721h1.01Zm-7.584,0h.841v-2.452c0-1.659.565-2.6,1.695-2.6.854,0,1.334.529,1.334,1.55v3.5h.841v-3.546c0-1.442-.757-2.247-1.959-2.247a1.9,1.9,0,0,0-1.923,1.454v-1.334h-.829Zm-3.45,0h.853v-5.673h-.853Zm-.048-6.682h.95V538h-.95ZM53,545.63h.829v-4.952h1.2v-.721h-1.2V539.2c0-.817.108-.913.913-.913h.409v-.757H54.49c-1.142.036-1.49.433-1.49,1.635v.793H51.99v.721H53Zm-5.252-.6a1.938,1.938,0,0,1-1.947-2.2v-.048a1.975,1.975,0,1,1,3.918,0v.048a1.954,1.954,0,0,1-1.971,2.2m0,.709a2.948,2.948,0,1,0-2.788-2.945,2.719,2.719,0,0,0,2.788,2.945m-12.8-3.317a1.886,1.886,0,0,1,1.911-1.887,1.7,1.7,0,0,1,1.755,1.887Zm1.947,3.317a2.574,2.574,0,0,0,2.62-1.622l-.733-.277a1.806,1.806,0,0,1-1.887,1.2,1.887,1.887,0,0,1-1.947-1.971h4.531v-.313c0-1.8-1-2.909-2.608-2.909a2.744,2.744,0,0,0-2.752,2.969,2.677,2.677,0,0,0,2.776,2.921m-12.62-.108h.842V542.6c0-1.274.541-2.019,1.406-2.019.757,0,1.178.456,1.178,1.538v3.509h.841v-3c0-1.262.517-2.043,1.406-2.043.769,0,1.166.456,1.166,1.406v3.642h.853v-3.69c0-1.334-.673-2.1-1.755-2.1a1.826,1.826,0,0,0-1.815,1.322,1.563,1.563,0,0,0-1.6-1.322,1.732,1.732,0,0,0-1.695,1.274v-1.154h-.83Zm-5.048-.6a1.938,1.938,0,0,1-1.947-2.2v-.048a1.975,1.975,0,1,1,3.918,0v.048a1.955,1.955,0,0,1-1.971,2.2m0,.709a2.948,2.948,0,1,0-2.788-2.945,2.719,2.719,0,0,0,2.788,2.945M9.6,545.63h.817v-2.452c0-1.659.565-2.6,1.694-2.6.841,0,1.322.529,1.322,1.55v3.5h.853v-3.546c0-1.442-.769-2.235-1.971-2.235a1.9,1.9,0,0,0-1.9,1.394v-3.714H9.6Z" transform="translate(-7.52 -421.013)" fill="#000"/>
+  </g>
+</svg>
+      </div>
+   
+             </div>
+    </nav>
+
+  </div>
+<div class="header__overlay"></div>
+
+
+{% endmacro %}
+
+
+{# Language switcher #}
+
+{% macro language_switcher(viewport) %}
+
+  <div class="header__language-switcher">
+    <div class="header__language-switcher-label">
+      {% if viewport == "mobile" %}
+        {% language_switcher "language_switcher_mobile"
+          display_mode="{{ module.language_switcher.display_mode }}",
+          overrideable=false
+        %}
+      {% else %}
+        {% language_switcher "language_switcher"
+          display_mode="{{ module.language_switcher.display_mode }}",
+          overrideable=false
+        %}
+      {% endif %}
+      <div class="header__language-switcher-current-label">
+        <span>{{ locale_name(locale) }}</span>
+        <button class="header__language-switcher-child-toggle no-button" aria-expanded="false">
+          <span class="show-for-sr">Show submenu for translations</span>
+            {% icon
+              name="chevron-down",
+              no_wrapper=True
+              purpose="decorative",
+              style="SOLID"
+            %}
+        </button>
+      </div>
+    </div>
+  </div>
+
+{% endmacro %}
+
+{####################################################}
+{################# Module styles ####################}
+{####################################################}
+
+{% require_css %}
+<style>
+{% scope_css %}
+
+  {# Top bar #}
+
+  .header__top {
+    background-color: rgba({{ module.styles.top_bar.background.color.color|convert_rgb }}, {{ module.styles.top_bar.background.color.opacity / 100 }});
+  }
+  @media (min-width: 992px){
+.header__menu--spacer {
+  width: 100px;
+  }
+  }
+  {# Language switcher #}
+
+  .header__language-switcher-current-label > span {
+    {% if module.styles.language_switcher.text.font.color %}
+      color: {{ module.styles.language_switcher.text.font.color }};
+    {% endif %}
+    {% if module.styles.language_switcher.text.font.size %}
+      font-size: {{ module.styles.language_switcher.text.font.size ~ module.styles.language_switcher.text.font.size_unit }};
+    {% endif %}
+    {% if module.styles.language_switcher.text.font.style %}
+      {{ module.styles.language_switcher.text.font.style }};
+    {% endif %}
+    {% if module.styles.language_switcher.text.text_transform %}
+      text-transform: {{ module.styles.language_switcher.text.text_transform }};
+    {% endif %}
+  }
+
+  .header__language-switcher:hover .header__language-switcher-current-label > span,
+  .header__language-switcher:focus .header__language-switcher-current-label > span {
+    {% if module.styles.language_switcher.hover.font.color %}
+      color: {{ module.styles.language_switcher.hover.font.color }};
+    {% endif %}
+    {% if module.styles.language_switcher.hover.font.size %}
+      font-size: {{ module.styles.language_switcher.hover.font.size ~ module.styles.language_switcher.hover.font.size_unit }};
+    {% endif %}
+    {% if module.styles.language_switcher.hover.font.style %}
+      {{ module.styles.language_switcher.hover.font.style }};
+    {% endif %}
+  }
+
+  {% if module.styles.language_switcher.text.font.color %}
+    .header__language-switcher-child-toggle svg {
+      fill: {{ module.styles.language_switcher.text.font.color }};
+    }
+  {% endif %}
+
+  {# Language switcher - submenu #}
+
+  {% if module.styles.language_switcher.drop_downs.background.color.color %}
+    .header__language-switcher .lang_list_class li {
+      background-color: rgba({{ module.styles.language_switcher.drop_downs.background.color.color|convert_rgb }}, {{ module.styles.language_switcher.drop_downs.background.color.opacity / 100 }});
+    }
+  {% endif %}
+
+  {% if module.styles.language_switcher.drop_downs.text.font_color.color %}
+    .header__language-switcher .lang_list_class a {
+    {% if module.styles.language_switcher.text.font.size %}
+      font-size: {{ module.styles.language_switcher.text.font.size ~ module.styles.language_switcher.text.font.size_unit }};
+    {% endif %}
+    {% if module.styles.language_switcher.text.font.style %}
+      {{ module.styles.language_switcher.text.font.style }};
+    {% endif %}
+      color: {{ module.styles.language_switcher.drop_downs.text.font_color.color }};
+    }
+  {% endif %}
+
+  .header__language-switcher .lang_list_class a:hover,
+  .header__language-switcher .lang_list_class a:focus {
+    {% if module.styles.language_switcher.drop_downs.hover.background_color.color %}
+      background-color: rgba({{ module.styles.language_switcher.drop_downs.hover.background_color.color|convert_rgb }}, {{ module.styles.language_switcher.drop_downs.hover.background_color.opacity / 100 }});
+    {% endif %}
+    {% if module.styles.language_switcher.drop_downs.hover.font_color.color %}
+      color: {{ module.styles.language_switcher.drop_downs.hover.font_color.color }};
+    {% endif %}
+  }
+
+  .header__language-switcher .lang_list_class a:active {
+    {% if module.styles.language_switcher.hover.font.color %}
+      color: {{ module.styles.language_switcher.hover.font.color }};
+    {% endif %}
+    {% if module.styles.language_switcher.hover.font.size %}
+      font-size: {{ module.styles.language_switcher.hover.font.size ~ module.styles.language_switcher.hover.font.size_unit }};
+    {% endif %}
+    {% if module.styles.language_switcher.hover.font.style %}
+      {{ module.styles.language_switcher.hover.font.style }};
+    {% endif %}
+    {% if module.styles.language_switcher.hover.font.color %}
+      color: {{ color_variant(module.styles.language_switcher.hover.font.color, 80) }};
+    {% endif %}
+  }
+
+  {# Logo #}
+
+  {% if has_logo and module.styles.logo.corner.radius >= 0 %}
+    .header__logo-image {
+      border-radius: {{ module.styles.logo.corner.radius ~ "px" }};
+    }
+  {% endif %}
+
+  {# Menu #}
+
+  .header__menu-link {
+    {% if module.styles.menu.text.font.color %}
+      color: {{ module.styles.menu.text.font.color }};
+    {% endif %}
+    {% if module.styles.menu.text.font.size %}
+      font-size: {{ module.styles.menu.text.font.size ~ module.styles.menu.text.font.size_unit }};
+    {% endif %}
+    {% if module.styles.menu.text.font.style %}
+      {{ module.styles.menu.text.font.style }};
+    {% endif %}
+    {% if module.styles.menu.text.text_transform %}
+      text-transform: {{ module.styles.menu.text.text_transform }};
+    {% endif %}
+  }
+
+  {# Menu items - top level #}
+
+  {% if module.styles.menu.text.font.color %}
+    .header__menu-item--depth-1 > .header__menu-child-toggle svg {
+      fill: {{ module.styles.menu.text.font.color }};
+    }
+  {% endif %}
+
+  .header__menu-item--depth-1 > .header__menu-link:hover,
+  .header__menu-item--depth-1 > .header__menu-link:focus {
+    {% if module.styles.menu.hover.font.color %}
+      color: {{ module.styles.menu.hover.font.color }};
+    {% endif %}
+    {% if module.styles.menu.hover.font.size %}
+      font-size: {{ module.styles.menu.hover.font.size ~ module.styles.menu.hover.font.size_unit }};
+    {% endif %}
+    {% if module.styles.menu.hover.font.style %}
+      {{ module.styles.menu.hover.font.style }};
+    {% endif %}
+  }
+
+  .header__menu-item--depth-1 > .header__menu-link:active {
+    {% if module.styles.menu.hover.font.size %}
+      font-size: {{ module.styles.menu.hover.font.size ~ module.styles.menu.hover.font.size_unit }};
+    {% endif %}
+    {% if module.styles.menu.hover.font.style %}
+      {{ module.styles.menu.hover.font.style }};
+    {% endif %}
+    {% if module.styles.menu.hover.font.color %}
+      color: {{ color_variant(module.styles.menu.hover.font.color, 80) }};
+    {% endif %}
+  }
+
+  .header__menu-item--depth-1 > .header__menu-link--active-link {
+    {% if module.styles.menu.active.font.color %}
+      color: {{ module.styles.menu.active.font.color }};
+    {% endif %}
+    {% if module.styles.menu.active.font.size %}
+      font-size: {{ module.styles.menu.active.font.size ~ module.styles.menu.active.font.size_unit }};
+    {% endif %}
+    {% if module.styles.menu.active.font.style %}
+      {{ module.styles.menu.active.font.style }};
+    {% endif %}
+  }
+
+  {# Menu items - submenus #}
+
+  {% if module.styles.menu.drop_downs.background.color.color %}
+    .header__menu-submenu {
+      background-color: rgba({{ module.styles.menu.drop_downs.background.color.color|convert_rgb }}, {{ module.styles.menu.drop_downs.background.color.opacity / 100 }});
+    }
+  {% endif %}
+
+  .header__menu-submenu .header__menu-link:hover,
+  .header__menu-submenu .header__menu-link:focus {
+    {% if module.styles.menu.drop_downs.hover.background_color.color %}
+      background-color: rgba({{ module.styles.menu.drop_downs.hover.background_color.color|convert_rgb }}, {{ module.styles.menu.drop_downs.hover.background_color.opacity / 100 }});
+    {% endif %}
+    {% if module.styles.menu.drop_downs.hover.font_color.color %}
+      color: {{ module.styles.menu.drop_downs.hover.font_color.color }};
+    {% endif %}
+  }
+
+  {% if module.styles.menu.drop_downs.text.font_color.color %}
+    .header__menu-submenu .header__menu-link {
+      color: {{ module.styles.menu.drop_downs.text.font_color.color }};
+    }
+
+    .header__menu-child-toggle svg {
+      fill: {{ module.styles.menu.drop_downs.text.font_color.color }};
+    }
+  {% endif %}
+
+ {% if not module.show_login %}
+  @media (min-width: 901px){
+.header__menu--desktop {
+    display: grid;
+  grid-template-columns: 4fr auto;
+  }
+  }
+  {% endif %} 
+{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{####################################################}
+{################# Header layout ####################}
+{####################################################}
+
+{# Logo left layout #}
+{% if module.layout == "left" %}
+
+  <div class="header__container header__container--left">
+
+   
+    <div class="header__bottom">
+      
+      <div class="header__wrapper header__wrapper--bottom">
+        {% if has_logo %}
+          <div class="header__logo-col">
+            {{ logo() }}
+          </div>
+        {% endif %}
+        <div class="header__upper">
+          
+     
+         <div class="header__review-col">
+     
+        
+           
+             <div class="header__secondary-menu">
+        {% menu id="{{ module.secundary_menu }}" %}
+ 
+           {# if content.translated_content.values()|selectattr("published")|length && module.language_switcher.add_language_switcher || is_listing_view && group.translations && module.language_switcher.add_language_switcher }
+        <div class="header__language-switcher-col">
+         {{ language_switcher() }}
+      </div>
+    { endif #}
+     
+      </div>
+        </div>
+        <div class="header__menu-col">
+         
+          {% if module.show_menu %}
+	      {{ desktop_navigation() }}
+      {% endif %}
+          
+          
+       
+          {% if module.show_login %}
+
+              {# login module is removed #}          
+       
+{% endif %}
+          
+          {% if module.show_menu %}
+	   {{ mobile_navigation() }}
+{% endif %}
+    </div>
+        </div>
+     
+
+      </div>
+    </div>
+
+  </div>
+
+{# Logo centered layout #}
+
+{% elif module.layout == "centered" %}
+
+  <div class="header__container header__container--centered">
+
+    <div class="header__top">
+      <div class="header__wrapper header__wrapper--top hidden-phone">
+        {% if content.translated_content.values()|selectattr("published")|length && module.language_switcher.add_language_switcher || is_listing_view && group.translations && module.language_switcher.add_language_switcher %}
+          <div class="header__language-switcher-col">
+            {{ language_switcher() }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__wrapper header__wrapper--bottom">
+        {% if has_logo %}
+          <div class="header__logo-col">
+            {{ logo() }}
+          </div>
+        {% endif %}
+        <div class="header__menu-col">
+          {{ desktop_navigation() }}
+          {{ mobile_navigation() }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{% endif %}

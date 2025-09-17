@@ -1,0 +1,127 @@
+.blog-post__wide-image img {
+ width: 100%; 
+}
+.blog-post__body h1 {
+    margin-top: 50px; 
+  text-align: center;
+}
+
+
+
+.blog-post__body div {
+ display: inline-block; 
+}
+.hs-blog-post .content-wrapper {
+ padding: 0; 
+}
+
+/* Date */
+
+.blog-post__timestamp {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+/* Author */
+
+.blog-post__author {
+  display: flex;
+  margin-bottom: 1.4rem;
+  align-items: center;
+}
+
+.blog-post__author-image {
+  height: auto;
+  width: 50px;
+  margin-right: 0.7rem;
+}
+
+.blog-post__author-name,
+.blog-post__author-name:hover,
+.blog-post__author-name:focus,
+.blog-post__author-name:active {
+  text-decoration: none;
+}
+
+/* Content */
+
+.blog-post__body img {
+  height: auto;
+  max-width: 887px !important;
+  margin-right: 30px;
+  margin-bottom: 80px;
+}
+@media (max-width: 768px){
+  .blog-post__body img {
+  margin-bottom: 20px;
+    margin-right: 0;
+}
+}
+.blog-post__body img[style*="float: right"] {
+    margin-left: 30px;
+    margin-right: 0px;
+}
+
+/* Comments */
+
+.blog-comments .hs-submit {
+  text-align: center;
+}
+
+.blog-comments .comment-reply-to {
+  border: 0 none;
+}
+
+.blog-comments .comment-reply-to:hover,
+.blog-comments .comment-reply-to:focus,
+.blog-comments .comment-reply-to:active {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+.blog-post__body ul {
+ position: relative; 
+  list-style: none;
+  margin-left: 15px;
+}
+.blog-post__body ol {
+   margin-left: 15px;
+}
+.blog-post__body ul li {
+  padding-left: 17px
+}  
+.blog-post__body li:marker {
+  display: none;
+}
+
+.blog-post__body ul li:before {
+  color: var(--clr-black);
+    content: "\e91d";
+    font-family: icomoon;
+    left: 0;
+    position: absolute;  
+  }
+
+.blog-post-section .card-blog {
+padding-bottom: 3.75rem;  
+}
+
+@media only screen and (max-width: 1350px){
+  .blog-post-section .card-blog,
+  .blog-post__meta,
+  .blog-post__body {
+padding: 0 1.875rem;
+  }
+}
+@media only screen and (max-width: 768px){
+.blog-post-section .blog-post .blog-post__body img{
+  width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 768px){
+  .blog-post-section .blog-post .blog-post__body img{
+  width: 50% !important;
+  }
+}

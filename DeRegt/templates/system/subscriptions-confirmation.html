@@ -1,0 +1,26 @@
+<!--
+  templateType: email_subscriptions_confirmation_page
+  isAvailableForNewContent: true
+  label: Lead - email subscriptions confirmation
+  screenshotPath: ../../images/template-previews/subscriptions-confirmation.png
+-->
+
+{% extends "../layouts/base-landingspagina.html" %}
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="systems-page">
+
+    {# Subscriptions confirmation #}
+
+    {% module "subscriptions_confirmation"
+      path="@hubspot/email_subscriptions_confirmation"
+    %}
+
+  </div>
+</section>
+{% endblock body %}
+
+    {% block footer %}
+             {% module "footer" path="../../templates/partials/footer"  %}
+      {% endblock footer %}

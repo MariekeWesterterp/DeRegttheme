@@ -1,0 +1,11 @@
+[ {
+  "id" : "37aeadd1-64ce-4722-2d58-6ff80d1aa75f",
+  "name" : "text_field",
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "12345"
+} ]

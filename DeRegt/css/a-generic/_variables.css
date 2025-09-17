@@ -1,0 +1,173 @@
+:root {
+    --ff-text: '{{ theme.global.text.body_font.font.font }}', {{ theme.global.text.body_font.font.fallback }};
+    --ff-headings: '{{ theme.fonts.secondary.font }}', {{ theme.fonts.secondary.fallback }};
+    --fs-11: 0.6875rem;
+    --fs-12: 0.75rem;
+    --fs-14: 0.875rem;
+    --fs-base: 16px;
+    --fs-17: 1.0625rem;
+    --fs-18: 1.125rem;
+    --fs-20: 1.25rem;
+    --fs-21: 1.3125rem;
+    --fs-25: 1.5625rem;
+    --fs-28: 1.75rem;
+    --fs-30: 1.875rem;
+    --fs-32: 2rem;
+    --fs-37: 2.31rem;
+    --fs-45: 2.81rem;
+    --clr-black: #000000;
+    --clr-black-dark: #00000010;
+    --clr-white: #ffffff;
+    --clr-gray: #F8F8F8;
+    --clr-gray-light: #F5F5F5;
+    --clr-gray-dark: #818181;
+   --clr-gray-soft: #8080804a;
+    --clr-gray-darker: #707070;
+    --clr-gray-shadow: #272726;
+    --clr-gray-medium: #EAEAEA;
+    --clr-checkbox-border: #CECECE;
+    --clr-checkbox-background: #F2F2F2;
+    --clr-checkbox-green: #009F2B;
+    --clr-checkbox-border-green: #009F2B5D;
+  
+    --fs-heading4: 25px;
+    --fs-heading3: 31px;
+    --fs-heading2: 34px;
+    --fs-heading1: 38px;
+  
+  --swiper-theme-color: #000000;
+
+    
+    --primary-color: {{ theme.colors.primary.color }};
+    --secondary-color: {{ theme.colors.secondary.color }};
+    --body-background-color: {{ theme.colors.body_background_color.color }};
+    --accent-one-color: {{ theme.colors.accent_one.color }};
+    --accent-two-color: {{ theme.colors.accent_two.color }};
+
+       --primary-font: '{{ theme.fonts.primary.font }}', {{ theme.fonts.primary.fallback }};
+    --secondary-font: '{{ theme.fonts.secondary.font }}', {{ theme.fonts.secondary.fallback }};
+    --primary-font-color: {{ theme.fonts.primary.color }};
+    --secondary-font-color: {{ theme.fonts.secondary.color }};
+
+    --container-width: 1440px;
+    --container-padding-inline: 1rem;
+
+    --h1-font-family: '{{ theme.global.text.h1.font.font }}', {{ theme.global.text.h1.font.fallback }};
+    --h1-font-size: {{ theme.global.text.h1.font.size }}{{ theme.global.text.h1.font.size_unit }};
+    --h1-color: {{ theme.global.text.h1.font.color }};
+    --h1-transform: {{ theme.global.text.h1.transform }};
+    
+    --h2-font-family: '{{ theme.global.text.h2.font.font }}', {{ theme.global.text.h2.font.fallback }};
+    --h2-font-size: {{ theme.global.text.h2.font.size }}{{ theme.global.text.h2.font.size_unit }};
+    --h2-color: {{ theme.global.text.h2.font.color }};
+    --h2-transform: {{ theme.global.text.h2.transform }};
+    
+    --h3-font-family: '{{ theme.global.text.h3.font.font }}', {{ theme.global.text.h3.font.fallback }};
+    --h3-font-size: {{ theme.global.text.h3.font.size }}{{ theme.global.text.h3.font.size_unit }};
+    --h3-color: {{ theme.global.text.h3.font.color }};
+    --h3-transform: {{ theme.global.text.h3.transform }};
+    
+    --h4-font-family: '{{ theme.global.text.h4.font.font }}', {{ theme.global.text.h4.font.fallback }};
+    --h4-font-size: {{ theme.global.text.h4.font.size }}{{ theme.global.text.h4.font.size_unit }};
+    --h4-color: {{ theme.global.text.h4.font.color }};
+    --h4-transform: {{ theme.global.text.h4.transform }};
+    
+    --h5-font-family: '{{ theme.global.text.h5.font.font }}', {{ theme.global.text.h5.font.fallback }};
+    --h5-font-size: {{ theme.global.text.h5.font.size }}{{ theme.global.text.h5.font.size_unit }};
+    --h5-color: {{ theme.global.text.h5.font.color }};
+    --h5-transform: {{ theme.global.text.h5.transform }};
+    
+    --h6-font-family: '{{ theme.global.text.h6.font.font }}', {{ theme.global.text.h6.font.fallback }};
+    --h6-font-size: {{ theme.global.text.h6.font.size }}{{ theme.global.text.h6.font.size_unit }};
+    --h6-color: {{ theme.global.text.h6.font.color }};
+    --h6-transform: {{ theme.global.text.h6.transform }};
+    
+    --body-font-family: '{{ theme.global.text.body_font.font.font }}', {{ theme.global.text.body_font.font.fallback }};
+    --body-font-size: {{ theme.global.text.body_font.font.size }}{{ theme.global.text.body_font.font.size_unit }};
+    --body-color: {{ theme.global.text.body_font.font.color }};
+    
+    --link-color: {{ theme.global.text.links.font.color }};
+    --link-text-decoration: {{ theme.global.text.links.font.styles['text-decoration'] }};
+    --link-hover-color: {{ theme.global.text.links.hover_font.color }};
+    --link-hover-text-decoration: {{ theme.global.text.links.hover_font.styles['text-decoration'] }};
+    
+    --blockquote-font-family: '{{ theme.global.text.blockquotes.font.font }}', {{ theme.global.text.blockquotes.font.fallback }};
+    --blockquote-font-size: {{ theme.global.text.blockquotes.font.size }}{{ theme.global.text.blockquotes.font.size_unit }};
+    --blockquote-color: {{ theme.global.text.blockquotes.font.color }};
+  
+     /* Button Sizes */
+    --btn-small-font-size: {{ theme.global.buttons.size.small.font_size }}px;
+    --btn-small-padding-top: {{ theme.global.buttons.size.small.spacing.padding.top.value }}px;
+    --btn-small-padding-right: {{ theme.global.buttons.size.small.spacing.padding.right.value }}px;
+    --btn-small-padding-bottom: {{ theme.global.buttons.size.small.spacing.padding.bottom.value }}px;
+    --btn-small-padding-left: {{ theme.global.buttons.size.small.spacing.padding.left.value }}px;
+
+    --btn-regular-font-size: {{ theme.global.buttons.size.regular.font_size }}px;
+    --btn-regular-padding-top: {{ theme.global.buttons.size.regular.spacing.padding.top.value }}px;
+    --btn-regular-padding-right: {{ theme.global.buttons.size.regular.spacing.padding.right.value }}px;
+    --btn-regular-padding-bottom: {{ theme.global.buttons.size.regular.spacing.padding.bottom.value }}px;
+    --btn-regular-padding-left: {{ theme.global.buttons.size.regular.spacing.padding.left.value }}px;
+
+    --btn-large-font-size: {{ theme.global.buttons.size.large.font_size }}px;
+    --btn-large-padding-top: {{ theme.global.buttons.size.large.spacing.padding.top.value }}px;
+    --btn-large-padding-right: {{ theme.global.buttons.size.large.spacing.padding.right.value }}px;
+    --btn-large-padding-bottom: {{ theme.global.buttons.size.large.spacing.padding.bottom.value }}px;
+    --btn-large-padding-left: {{ theme.global.buttons.size.large.spacing.padding.left.value }}px;
+
+    /* Primary Button */
+    --btn-primary-font-family: '{{ theme.global.buttons.primary.text.font.font }}', {{ theme.global.buttons.primary.text.font.fallback }};
+    --btn-primary-font-color: {{ theme.global.buttons.primary.text.font.color }};
+    --btn-primary-font-variant: {{ theme.global.buttons.primary.text.font.variant }};
+    --btn-primary-transform: {{ theme.global.buttons.primary.text.transform }};
+    --btn-primary-background-color: {{ theme.global.buttons.primary.background.color.color }};
+    --btn-primary-border-color: {{ theme.global.buttons.primary.border.border.top.color }};
+    --btn-primary-border-width: {{ theme.global.buttons.primary.border.border.top.width.value }}px;
+    --btn-primary-border-style: {{ theme.global.buttons.primary.border.border.top.style }};
+    --btn-primary-radius: {{ theme.global.buttons.primary.corner.radius }}px;
+    --btn-primary-hover-font-color: {{ theme.global.buttons.primary.hover.text.font.color }};
+    --btn-primary-hover-background-color: {{ theme.global.buttons.primary.hover.background.color.color }};
+    --btn-primary-hover-border-color: {{ theme.global.buttons.primary.hover.border.border.top.color }};
+
+    /* Secondary Button */
+    --btn-secondary-font-family: '{{ theme.global.buttons.secondary.text.font.font }}', {{ theme.global.buttons.secondary.text.font.fallback }};
+    --btn-secondary-font-color: {{ theme.global.buttons.secondary.text.font.color }};
+    --btn-secondary-font-variant: {{ theme.global.buttons.secondary.text.font.variant }};
+    --btn-secondary-transform: {{ theme.global.buttons.secondary.text.transform }};
+    --btn-secondary-background-color: {{ theme.global.buttons.secondary.background.color.color }};
+    --btn-secondary-border-color: {{ theme.global.buttons.secondary.border.border.top.color }};
+    --btn-secondary-border-width: {{ theme.global.buttons.secondary.border.border.top.width.value }}px;
+    --btn-secondary-border-style: {{ theme.global.buttons.secondary.border.border.top.style }};
+    --btn-secondary-radius: {{ theme.global.buttons.secondary.corner.radius }}px;
+    --btn-secondary-hover-font-color: {{ theme.global.buttons.secondary.hover.text.font.color }};
+    --btn-secondary-hover-background-color: {{ theme.global.buttons.secondary.hover.background.color.color }};
+    --btn-secondary-hover-border-color: {{ theme.global.buttons.secondary.hover.border.border.top.color }};
+
+}
+
+
+
+@media(min-width: 768px) {
+    :root {
+        --container-padding-inline: Max(calc((100vw - var(--container-width)) / 2), 2rem);
+        --fs-heading6: 1.125rem;
+        /* 18px */
+        --fs-heading5: 1.3125rem;
+        /* 20px */
+        --fs-heading4: 1.5625rem;
+        /* 25px */
+        --fs-heading3: 2rem;
+        /* 32px */
+        --fs-heading2: 2.8125rem;
+        /* 45px */
+        --fs-heading1: 3.125rem;
+        /* 50px */
+    }
+}
+
+@media (min-width:767px) and (max-width: 1500px) {
+    :root {
+        --container-width: var(--maximum-content-width);
+        --fs-base: 14px;
+        --container-padding-inline: Max(calc((100vw - var(--container-width)) / 2), 2rem);
+    }
+}

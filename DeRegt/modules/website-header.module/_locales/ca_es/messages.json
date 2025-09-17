@@ -1,0 +1,682 @@
+{
+  "cta_field.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_field.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_field.label" : {
+    "message" : "CTA",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_field.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link.label" : {
+    "message" : "Text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link_text.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link_text.label" : {
+    "message" : "Text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "cta_link_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "language_switcher.add_language_switcher.help_text" : {
+    "message" : "Ell selector d'idioma només apareixerà si hi ha una variació de diversos idiomes per a una pàgina.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "language_switcher.add_language_switcher.label" : {
+    "message" : "Afegeix un selector d'idioma",
+    "description" : "",
+    "placeholders" : null
+  },
+  "language_switcher.display_mode.choices.hybrid" : {
+    "message" : "Híbrid",
+    "description" : "",
+    "placeholders" : null
+  },
+  "language_switcher.display_mode.choices.localized" : {
+    "message" : "Localitzat",
+    "description" : "",
+    "placeholders" : null
+  },
+  "language_switcher.display_mode.choices.pagelang" : {
+    "message" : "PageLang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "language_switcher.display_mode.help_text" : {
+    "message" : "L'idioma del text al commutador d'idioma. PageLang significa que els noms dels idiomes es mostraran a l'idioma de la pàgina en què es troba el commutador. Localitzat significa que el nom de cada idioma es mostrarà en aquest idioma. Híbrid és una combinació dels dos.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "language_switcher.display_mode.label" : {
+    "message" : "Mode de visualització",
+    "description" : "",
+    "placeholders" : null
+  },
+  "language_switcher.display_mode.placeholder" : {
+    "message" : "Cerca",
+    "description" : "",
+    "placeholders" : null
+  },
+  "language_switcher.label" : {
+    "message" : "Selector d'idioma",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout.choices.centered" : {
+    "message" : "Logotip centrat",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout.choices.left" : {
+    "message" : "Logotip a l'esquerra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout.label" : {
+    "message" : "Disposició",
+    "description" : "",
+    "placeholders" : null
+  },
+  "logo.label" : {
+    "message" : "Logotip",
+    "description" : "",
+    "placeholders" : null
+  },
+  "logo.link.help_text" : {
+    "message" : "Si no s'especifica cap URL, el logotip enllaçarà al teu domini principal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "logo.link.label" : {
+    "message" : "Enllaç",
+    "description" : "",
+    "placeholders" : null
+  },
+  "logo.logo.label" : {
+    "message" : "Logotip",
+    "description" : "",
+    "placeholders" : null
+  },
+  "logo.open_in_new_tab.label" : {
+    "message" : "Obre l'enllaç en una pestanya nova quan els visitants hi facin clic",
+    "description" : "",
+    "placeholders" : null
+  },
+  "menu.label" : {
+    "message" : "Menú",
+    "description" : "",
+    "placeholders" : null
+  },
+  "menu.max_levels.help_text" : {
+    "message" : "Determina el nombre d'elements secundaris de l'arbre de menú que es poden expandir al menú",
+    "description" : "",
+    "placeholders" : null
+  },
+  "menu.max_levels.label" : {
+    "message" : "Nivells màxims",
+    "description" : "",
+    "placeholders" : null
+  },
+  "menu.menu.label" : {
+    "message" : "Menú",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "website-header",
+    "description" : null,
+    "placeholders" : null
+  },
+  "secundary_menu.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "secundary_menu.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "secundary_menu.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "secundary_menu.label" : {
+    "message" : "Menu",
+    "description" : null,
+    "placeholders" : null
+  },
+  "secundary_menu.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_login.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_login.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_login.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_login.label" : {
+    "message" : "Boolean",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_login.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_menu.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_menu.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_menu.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_menu.label" : {
+    "message" : "Boolean",
+    "description" : null,
+    "placeholders" : null
+  },
+  "show_menu.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "styles.button.alignment.alignment.label" : {
+    "message" : "Alineació",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.label" : {
+    "message" : "Alineació",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.color.label" : {
+    "message" : "Color",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.label" : {
+    "message" : "Fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.border.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.radius.label" : {
+    "message" : "Radi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.color.label" : {
+    "message" : "Color",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.label" : {
+    "message" : "Fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.border.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.label" : {
+    "message" : "Desplaçament",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.label" : {
+    "message" : "Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.label" : {
+    "message" : "Botó",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.large" : {
+    "message" : "Gran",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.regular" : {
+    "message" : "Normal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.small" : {
+    "message" : "Petit",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.label" : {
+    "message" : "Mida del botó",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.primary" : {
+    "message" : "Principal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.secondary" : {
+    "message" : "Secundari",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.simple" : {
+    "message" : "Senzill",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.label" : {
+    "message" : "Estil del botó",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.help_text" : {
+    "message" : "Utilitza els valors predefinits per ajustar ràpidament l'aparença de l'element seleccionat als valors predefinits.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.label" : {
+    "message" : "Valors predefinits",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.label" : {
+    "message" : "Espaiat",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.spacing.label" : {
+    "message" : "Espaiat",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.label" : {
+    "message" : "Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.text_transform.choices.capitalize" : {
+    "message" : "Posa en majúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.text_transform.choices.lowercase" : {
+    "message" : "Minúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.text_transform.choices.none" : {
+    "message" : "Cap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.text_transform.choices.uppercase" : {
+    "message" : "Majúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.text_transform.label" : {
+    "message" : "Transformació del text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Estils",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.drop_downs.background.color.label" : {
+    "message" : "Color",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.drop_downs.background.label" : {
+    "message" : "Fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.drop_downs.hover.background_color.label" : {
+    "message" : "Color de fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.drop_downs.hover.font_color.label" : {
+    "message" : "Color del tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.drop_downs.hover.label" : {
+    "message" : "Desplaçament",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.drop_downs.label" : {
+    "message" : "Menús desplegables",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.drop_downs.text.font_color.label" : {
+    "message" : "Color del tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.drop_downs.text.label" : {
+    "message" : "Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.hover.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.hover.label" : {
+    "message" : "Desplaçament",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.label" : {
+    "message" : "Selector d'idioma",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.text.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.text.label" : {
+    "message" : "Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.text.text_transform.choices.capitalize" : {
+    "message" : "Posa en majúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.text.text_transform.choices.lowercase" : {
+    "message" : "Minúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.text.text_transform.choices.none" : {
+    "message" : "Cap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.text.text_transform.choices.uppercase" : {
+    "message" : "Majúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.language_switcher.text.text_transform.label" : {
+    "message" : "Transformació del text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.logo.corner.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.logo.corner.radius.label" : {
+    "message" : "Radi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.logo.label" : {
+    "message" : "Logotip",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.active.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.active.label" : {
+    "message" : "Actiu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.active.background_color.label" : {
+    "message" : "Color de fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.active.font_color.label" : {
+    "message" : "Color del tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.active.label" : {
+    "message" : "Actiu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.background.color.label" : {
+    "message" : "Color",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.background.label" : {
+    "message" : "Fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.hover.background_color.label" : {
+    "message" : "Color de fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.hover.font_color.label" : {
+    "message" : "Color del tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.hover.label" : {
+    "message" : "Desplaçament",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.label" : {
+    "message" : "Menús desplegables",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.text.font_color.label" : {
+    "message" : "Color del tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.drop_downs.text.label" : {
+    "message" : "Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.hover.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.hover.label" : {
+    "message" : "Desplaçament",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.label" : {
+    "message" : "Menú",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.text.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.text.label" : {
+    "message" : "Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.text.text_transform.choices.capitalize" : {
+    "message" : "Posa en majúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.text.text_transform.choices.lowercase" : {
+    "message" : "Minúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.text.text_transform.choices.none" : {
+    "message" : "Cap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.text.text_transform.choices.uppercase" : {
+    "message" : "Majúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.menu.text.text_transform.label" : {
+    "message" : "Transformació del text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.top_bar.background.color.label" : {
+    "message" : "Color",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.top_bar.background.label" : {
+    "message" : "Fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.top_bar.label" : {
+    "message" : "Barra superior",
+    "description" : "",
+    "placeholders" : null
+  }
+}

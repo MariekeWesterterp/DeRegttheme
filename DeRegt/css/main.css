@@ -1,0 +1,60 @@
+/* Theme base styles */
+
+{## {% include "./theme-overrides.css" %} ##}
+
+/* Generic */
+
+{% include "./a-generic/_fonts.css" %}
+{% include "./a-generic/_variables.css" %}
+{% include "./a-generic/_reset.css" %}
+{% include "./a-generic/_normalize.css" %}
+{% include "./a-generic/_custom.css" %}
+
+/* Objects */
+
+{% include "./b-objects/_layout.css" %}
+{% include "./b-objects/_containers-dnd.css" %}
+
+/* Components */
+{% include "./d-components/_typography.css" %}
+{% include "./d-components/_headings.css" %}
+{% include "./d-components/_default-modules.css" %}
+{% include "./d-components/_cta_button.css" %}
+
+
+/* Templates */
+{% include "./f-templates/blog-post.css" %}
+{% include "./f-templates/membership.css" %}
+{% include "./f-templates/password-prompt.css" %}
+{% include "./f-templates/system.css" %}
+
+/* Utilities */
+{% include "./e-utilities/_helper.css" %}
+
+/* Layouts */
+{% include "./g-layouts/_header.css" %}
+{% include "./g-layouts/_footer.css" %}
+
+
+.legal-consent-container .hs-richtext p,
+.legal-consent-container .hs-richtext {
+  margin-bottom: 5px;
+    line-height: 1rem;
+}
+.legal-consent-container .hs-form-booleancheckbox-display {
+ margin-bottom: 30px; 
+}
+.legal-consent-container .hs-form-booleancheckbox-display span {
+line-height: 1rem;
+}
+.legal-consent-container .hs-form-booleancheckbox-display p {
+ font-weight: 300; 
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+.legal-consent-container .hs-input[type=checkbox] {
+  appearance:auto;
+  width: 0.8rem !important;
+  margin-top: 0;
+  margin-right: 0;
+}

@@ -1,0 +1,43 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Blank
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section"
+%}
+
+ {% dnd_section, full_width="true" %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+      {% dnd_module path='/DeRegt/modules/logo slider', label="logo slider"  %}
+     {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+ {% end_dnd_section %}
+
+ {% dnd_section, full_width="true" %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+      {% dnd_module path='/DeRegt/modules/text-image', label="text image"  %}
+     {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+ {% end_dnd_section %}
+
+
+ {% dnd_section, full_width="true" %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+      {% dnd_module path='/DeRegt/modules/website-footer', label="footer"  %}
+     {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+ {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}

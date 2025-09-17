@@ -1,0 +1,1632 @@
+{
+  "name": {
+    "message": "Groei",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.accent_one.label": {
+    "message": "Aksent 1",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.accent_two.label": {
+    "message": "Aksent 2",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.body_background_color.label": {
+    "message": "Agtergrondkleur van hoofdeel",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.label": {
+    "message": "Kleure",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.primary.label": {
+    "message": "Primêre",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.secondary.label": {
+    "message": "Sekondêre",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.label": {
+    "message": "Fonte",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.primary.label": {
+    "message": "Primêre",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.secondary.label": {
+    "message": "Sekondêre",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.label": {
+    "message": "Knoppies",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.corner.label": {
+    "message": "Hoek",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.corner.radius.label": {
+    "message": "Radius",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.label": {
+    "message": "Sweef",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.label": {
+    "message": "Primêre",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.corner.label": {
+    "message": "Hoek",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.corner.radius.label": {
+    "message": "Radius",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.label": {
+    "message": "Sweef",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.label": {
+    "message": "Sekondêre",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.label": {
+    "message": "Grootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.font_size.label": {
+    "message": "Fontgrootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.label": {
+    "message": "Groot",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.font_size.label": {
+    "message": "Fontgrootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.label": {
+    "message": "Gewone",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.font_size.label": {
+    "message": "Fontgrootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.label": {
+    "message": "Klein",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.corner.label": {
+    "message": "Hoek",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.corner.radius.label": {
+    "message": "Radius",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.label": {
+    "message": "Donker",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.label": {
+    "message": "Kaarte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.corner.label": {
+    "message": "Hoek",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.corner.radius.label": {
+    "message": "Radius",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.label": {
+    "message": "Lig",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.label": {
+    "message": "Webwerfvoetskrif",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.active.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.active.label": {
+    "message": "Aktief",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.hover.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.hover.label": {
+    "message": "Sweef",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.label": {
+    "message": "Kieslys",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.label": {
+    "message": "Knoppie",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.large": {
+    "message": "Groot",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.regular": {
+    "message": "Gewone",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.small": {
+    "message": "Klein",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.label": {
+    "message": "Knoppiegrootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.primary": {
+    "message": "Primêre",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.secondary": {
+    "message": "Sekondêre",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.simple": {
+    "message": "Eenvoudig",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.label": {
+    "message": "Knoppiestyl",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.help_text": {
+    "message": "Gebruik voorafinstellings om die voorkoms van die geselekteerde item vinnig na voorafgedefinieerde waardes te verstel.",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.label": {
+    "message": "Voorafinstellings",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.help_text": {
+    "message": "Beheer die paragraafinhoud van GDPR-velde",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.label": {
+    "message": "GDPR-teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.corner.label": {
+    "message": "Hoek",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.corner.radius.label": {
+    "message": "Radius",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.label": {
+    "message": "Insette",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.placeholder.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.placeholder.label": {
+    "message": "Plekhouer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.spacing.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.label": {
+    "message": "Velde",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.font.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.help_text": {
+    "message": "Beheer vormrykteksvelde",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.label": {
+    "message": "Ryk teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.links.label": {
+    "message": "Skakels",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.corner.label": {
+    "message": "Hoek",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.corner.radius.label": {
+    "message": "Radius",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.label": {
+    "message": "Vorm",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.spacing.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.label": {
+    "message": "Hulpteks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.label": {
+    "message": "Vorms",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.label": {
+    "message": "Etikette",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.spacing.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.corner.label": {
+    "message": "Hoek",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.corner.radius.label": {
+    "message": "Radius",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.label": {
+    "message": "Titel",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.spacing.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.label": {
+    "message": "Webwerfopskrif",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.label": {
+    "message": "Sweef",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.label": {
+    "message": "Tuimelkieslyste",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.hover.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.hover.label": {
+    "message": "Sweef",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.label": {
+    "message": "Taalwisselaar",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.active.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.active.label": {
+    "message": "Aktief",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.label": {
+    "message": "Aktief",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.text.font_color.label": {
+    "message": "Fontkleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.label": {
+    "message": "Sweef",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.label": {
+    "message": "Tuimelkieslyste",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.hover.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.hover.label": {
+    "message": "Sweef",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.label": {
+    "message": "Kieslys",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.label": {
+    "message": "Boonste balk",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.fill.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.fill.label": {
+    "message": "Vul",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.label": {
+    "message": "Donker",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.label": {
+    "message": "Ikone",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.fill.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.fill.label": {
+    "message": "Vul",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.label": {
+    "message": "Lig",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.label": {
+    "message": "Grootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.label": {
+    "message": "Groot",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.size.label": {
+    "message": "Grootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.label": {
+    "message": "Gewone",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.size.label": {
+    "message": "Grootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.label": {
+    "message": "Klein",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.size.label": {
+    "message": "Grootte",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.label": {
+    "message": "Nog instellings",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.label": {
+    "message": "Tabelle",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.label": {
+    "message": "Tabelhoofdeel",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.border.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.border.label": {
+    "message": "Raam",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.label": {
+    "message": "Tabelselle",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.spacing.spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.label": {
+    "message": "Tabelvoetskrif",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.background.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.background.label": {
+    "message": "Agtergrond",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.label": {
+    "message": "Tabelopskrif",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.text.color.label": {
+    "message": "Kleur",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.blockquotes.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.blockquotes.label": {
+    "message": "Blokkwotasies",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.body_font.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.body_font.label": {
+    "message": "Hoofdeel",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.label": {
+    "message": "Opskrif een (O1)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.label": {
+    "message": "Opskrif twee (O2)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.label": {
+    "message": "Opskrif drie (O3)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.label": {
+    "message": "Opskrif vier (O4)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.label": {
+    "message": "Opskrif vyf (O5)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.label": {
+    "message": "Opskrif ses (O6)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.capitalize": {
+    "message": "Kapitaliseer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.lowercase": {
+    "message": "Kleinletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.none": {
+    "message": "Geen",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.uppercase": {
+    "message": "Hoofletters",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.label": {
+    "message": "Transformeer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.label": {
+    "message": "Teks",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.hover_font.label": {
+    "message": "Sweeffont",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.label": {
+    "message": "Skakels",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.custom_maximum_content_width.label": {
+    "message": "Pas maksimum inhoudswydte aan",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.custom_vertical_spacing.label": {
+    "message": "Pas vertikale spasiëring aan",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.label": {
+    "message": "Spasiëring",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.comfortable": {
+    "message": "Gemaklik (1200pk)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.compact": {
+    "message": "Kompak (900pk)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.custom": {
+    "message": "Gepasmaak",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.default": {
+    "message": "Verstek (1000pk)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.label": {
+    "message": "Maksimum inhoudswydte",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.comfortable": {
+    "message": "Gemaklik (80pk)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.compact": {
+    "message": "Kompak (48pk)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.custom": {
+    "message": "Gepasmaak",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.default": {
+    "message": "Verstek (60pk)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.label": {
+    "message": "Vertikale spasiëring",
+    "description": "",
+    "placeholders": null
+  }
+}

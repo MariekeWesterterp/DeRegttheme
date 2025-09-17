@@ -1,0 +1,1632 @@
+{
+  "name": {
+    "message": "Rast",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.accent_one.label": {
+    "message": "Naglasak 1",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.accent_two.label": {
+    "message": "Naglasak 2",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.body_background_color.label": {
+    "message": "Pozadinska boja tijela",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.label": {
+    "message": "Boje",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.primary.label": {
+    "message": "Primarno",
+    "description": "",
+    "placeholders": null
+  },
+  "colors.secondary.label": {
+    "message": "Sekundarno",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.label": {
+    "message": "Fontovi",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.primary.label": {
+    "message": "Primarno",
+    "description": "",
+    "placeholders": null
+  },
+  "fonts.secondary.label": {
+    "message": "Sekundarno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.label": {
+    "message": "Gumbi",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.corner.label": {
+    "message": "Kut",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.corner.radius.label": {
+    "message": "Polumjer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.label": {
+    "message": "Drži iznad",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.hover.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.label": {
+    "message": "Primarno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.primary.text.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.corner.label": {
+    "message": "Kut",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.corner.radius.label": {
+    "message": "Polumjer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.label": {
+    "message": "Drži iznad",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.hover.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.label": {
+    "message": "Sekundarno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.secondary.text.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.label": {
+    "message": "Veličina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.font_size.label": {
+    "message": "Veličina fonta",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.label": {
+    "message": "Velika",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.large.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.font_size.label": {
+    "message": "Veličina fonta",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.label": {
+    "message": "Uobičajena",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.regular.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.font_size.label": {
+    "message": "Veličina fonta",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.label": {
+    "message": "Mala",
+    "description": "",
+    "placeholders": null
+  },
+  "global.buttons.size.small.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.corner.label": {
+    "message": "Kut",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.corner.radius.label": {
+    "message": "Polumjer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.label": {
+    "message": "Tamno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.dark.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.label": {
+    "message": "Kartice",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.corner.label": {
+    "message": "Kut",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.corner.radius.label": {
+    "message": "Polumjer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.label": {
+    "message": "Svijetlo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.cards.light.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.label": {
+    "message": "Podnožje web-mjesta",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.active.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.active.label": {
+    "message": "Aktivno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.hover.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.hover.label": {
+    "message": "Drži iznad",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.label": {
+    "message": "Izbornik",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.menu.text.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.footer.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.label": {
+    "message": "Gumb",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.large": {
+    "message": "Velika",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.regular": {
+    "message": "Uobičajena",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.choices.small": {
+    "message": "Mala",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_size.label": {
+    "message": "Veličina gumba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.primary": {
+    "message": "Primarno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.secondary": {
+    "message": "Sekundarno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.choices.simple": {
+    "message": "Jednostavno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.button_style.label": {
+    "message": "Stil gumba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.help_text": {
+    "message": "Pomoću zadanih postavki brzo prilagodite izgled odabrane stavke prema unaprijed određenim vrijednostima.",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.button.presets.label": {
+    "message": "Zadane postavke",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.help_text": {
+    "message": "Upravlja sadržajem odjeljka GDPR polja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.gdpr_text.label": {
+    "message": "Tekst GDPR-a",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.corner.label": {
+    "message": "Kut",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.corner.radius.label": {
+    "message": "Polumjer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.label": {
+    "message": "Unosi",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.placeholder.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.placeholder.label": {
+    "message": "Rezervirano mjesto",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.spacing.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.inputs.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.label": {
+    "message": "Polja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.font.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.help_text": {
+    "message": "Upravlja poljima formatiranog teksta obrasca",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.label": {
+    "message": "Formatirani tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.fields.rich_text.links.label": {
+    "message": "Veze",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.corner.label": {
+    "message": "Kut",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.corner.radius.label": {
+    "message": "Polumjer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.label": {
+    "message": "Obrazac",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.form.spacing.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.label": {
+    "message": "Tekst pomoći",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.help_text.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.label": {
+    "message": "Obrasci",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.label": {
+    "message": "Oznake",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.spacing.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.labels.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.corner.label": {
+    "message": "Kut",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.corner.radius.label": {
+    "message": "Polumjer",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.label": {
+    "message": "Naslov",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.spacing.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.forms.title.text.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.label": {
+    "message": "Zaglavlje web-mjesta",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.label": {
+    "message": "Drži iznad",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.hover.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.label": {
+    "message": "Padajuće",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.drop_downs.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.hover.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.hover.label": {
+    "message": "Drži iznad",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.label": {
+    "message": "Prebacivač jezika",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.language_switcher.text.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.active.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.active.label": {
+    "message": "Aktivno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.label": {
+    "message": "Aktivno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.text.font_color.label": {
+    "message": "Boja fonta",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.active.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.label": {
+    "message": "Drži iznad",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.hover.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.label": {
+    "message": "Padajuće",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.drop_downs.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.hover.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.hover.label": {
+    "message": "Drži iznad",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.label": {
+    "message": "Izbornik",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.menu.text.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.header.top_bar.label": {
+    "message": "Gornja traka",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.fill.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.fill.label": {
+    "message": "Ispuna",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.dark.label": {
+    "message": "Tamno",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.label": {
+    "message": "Ikone",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.fill.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.fill.label": {
+    "message": "Ispuna",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.light.label": {
+    "message": "Svijetlo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.label": {
+    "message": "Veličina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.label": {
+    "message": "Velika",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.size.label": {
+    "message": "Veličina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.large.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.label": {
+    "message": "Uobičajena",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.size.label": {
+    "message": "Veličina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.regular.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.label": {
+    "message": "Mala",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.size.label": {
+    "message": "Veličina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.icons.size.small.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.label": {
+    "message": "Više postavki",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.label": {
+    "message": "Tablice",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.label": {
+    "message": "Tijelo tablice",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_body.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.border.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.border.label": {
+    "message": "Obrub",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.label": {
+    "message": "Ćelije tablice",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_cells.spacing.spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.label": {
+    "message": "Podnožje tablice",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_footer.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.background.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.background.label": {
+    "message": "Pozadina",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.label": {
+    "message": "Zaglavlje tablice",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.text.color.label": {
+    "message": "Boja",
+    "description": "",
+    "placeholders": null
+  },
+  "global.tables.table_header.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.blockquotes.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.blockquotes.label": {
+    "message": "Citat u obliku odlomka",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.body_font.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.body_font.label": {
+    "message": "Tijelo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.label": {
+    "message": "Naslov 1 (H1)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h1.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.label": {
+    "message": "Naslov 2 (H2)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h2.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.label": {
+    "message": "Naslov 3 (H3)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h3.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.label": {
+    "message": "Naslov 4 (H4)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h4.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.label": {
+    "message": "Naslov 5 (H5)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h5.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.label": {
+    "message": "Naslov 6 (H6)",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.capitalize": {
+    "message": "Veliko početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.lowercase": {
+    "message": "Malo početno slovo",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.none": {
+    "message": "Ništa",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.choices.uppercase": {
+    "message": "Velika slova",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.h6.transform.label": {
+    "message": "Pretvorba",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.label": {
+    "message": "Tekst",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.font.label": {
+    "message": "Font",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.hover_font.label": {
+    "message": "Font teksta pri zadržavanju pokazivača",
+    "description": "",
+    "placeholders": null
+  },
+  "global.text.links.label": {
+    "message": "Veze",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.custom_maximum_content_width.label": {
+    "message": "Prilagođena maksimalna širina sadržaja",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.custom_vertical_spacing.label": {
+    "message": "Prilagođeni vertikalni razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.label": {
+    "message": "Razmak",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.comfortable": {
+    "message": "Ugodno (1200 px)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.compact": {
+    "message": "Kompaktno (900 px)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.custom": {
+    "message": "Prilagođeno",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.choices.default": {
+    "message": "Zadano (1000 px)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.maximum_content_width.label": {
+    "message": "Maksimalna širina sadržaja",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.comfortable": {
+    "message": "Ugodno (80 px)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.compact": {
+    "message": "Kompaktno (48 px)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.custom": {
+    "message": "Prilagođeno",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.choices.default": {
+    "message": "Zadano (60 px)",
+    "description": "",
+    "placeholders": null
+  },
+  "spacing.vertical_spacing.label": {
+    "message": "Vertikalni razmak",
+    "description": "",
+    "placeholders": null
+  }
+}

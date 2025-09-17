@@ -1,0 +1,118 @@
+body {
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+html[lang^='ja'] body,
+html[lang^='zh'] body,
+html[lang^='ko'] body {
+  line-break: strict;
+  overflow-wrap: normal;
+  word-break: break-all;
+}
+
+/* Paragraphs */
+
+p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Anchors */
+
+a {
+  cursor: pointer;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Lists */
+
+ul,
+ol {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+ul li,
+ol li {
+  /* margin: 0.7rem; */
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  /* margin: 1.4rem 0; */
+}
+
+.no-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.no-list li {
+  margin: 0;
+}
+
+/* Code blocks */
+
+pre {
+  overflow: auto;
+}
+
+code {
+  vertical-align: bottom;
+}
+
+/* Blockquotes */
+
+blockquote {
+  padding-left: 1rem;
+  border-left: 10px solid;
+  margin: 0;
+}
+
+/* Horizontal rules */
+
+hr {
+  border: 0 none;
+  border-bottom: 1px solid;
+}
+
+/* Subscripts and superscripts */
+
+sup,
+sub {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Image alt text */
+
+img {
+  font-size: 1rem;
+  word-break: normal;
+}
