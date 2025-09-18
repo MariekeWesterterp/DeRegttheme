@@ -1,0 +1,136 @@
+/* Features Module Styles */
+.feature__module {
+  width: 100%;
+}
+
+.feature__wrapper {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.feature__hero-text {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #1e3a8a;
+  margin-bottom: 50px;
+  line-height: 1.4;
+  max-width: 1000px;
+}
+
+.feature__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.feature__item {
+  flex: 1;
+  min-width: 280px;
+  padding-right: 20px;
+}
+
+.feature__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3b82f6;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature__title::before {
+  content: "✓";
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.feature__description {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #fbbf24;
+  color: #1f2937;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #f59e0b;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #3b82f6;
+  padding: 14px 28px;
+  border: 2px solid #3b82f6;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+  
+  .feature__hero-text {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  
+  .feature__list {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .feature__item {
+    min-width: auto;
+    padding-right: 0;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    text-align: center;
+  }
+}

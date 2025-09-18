@@ -1,0 +1,202 @@
+[ {
+  "id" : "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "name" : "anchor",
+  "label" : "Anchor",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "b2c3d4e5-f6g7-8901-bcde-f23456789012",
+  "name" : "hero_text",
+  "label" : "Hero Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Our unique multipurpose cables are the trusted and vital power and data connections that link the above and underwater worlds. DeRegt thrives on challenges that seem insurmountable. We combine innovation, persistence, and a deep understanding of our clients' needs to deliver solutions that not only meet but exceed expectations."
+}, {
+  "id" : "c3d4e5f6-g7h8-9012-cdef-345678901234",
+  "name" : "features",
+  "label" : "Features",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "d4e5f6g7-h8i9-0123-defg-456789012345",
+    "name" : "title",
+    "label" : "Feature Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Feature Title"
+  }, {
+    "id" : "e5f6g7h8-i9j0-1234-efgh-567890123456",
+    "name" : "description",
+    "label" : "Feature Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : true,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Feature description goes here"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "title" : "Feature Title",
+    "description" : "Feature description goes here"
+  }
+}, {
+  "id" : "f6g7h8i9-j0k1-2345-fghi-678901234567",
+  "name" : "primary_button",
+  "label" : "Primary Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "g7h8i9j0-k1l2-3456-ghij-789012345678",
+    "name" : "text",
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Request custom cable design"
+  }, {
+    "id" : "h8i9j0k1-l2m3-4567-hijk-890123456789",
+    "name" : "url",
+    "label" : "Button URL",
+    "required" : false,
+    "locked" : false,
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "url" : "#",
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "text" : "Request custom cable design",
+    "url" : {
+      "url" : "#",
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "i9j0k1l2-m3n4-5678-ijkl-901234567890",
+  "name" : "secondary_button",
+  "label" : "Secondary Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "j0k1l2m3-n4o5-6789-jklm-012345678901",
+    "name" : "text",
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Talk to a specialist"
+  }, {
+    "id" : "k1l2m3n4-o5p6-7890-klmn-123456789012",
+    "name" : "url",
+    "label" : "Button URL",
+    "required" : false,
+    "locked" : false,
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "url" : "#",
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "text" : "Talk to a specialist",
+    "url" : {
+      "url" : "#",
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "l2m3n4o5-p6q7-8901-lmno-234567890123",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "m3n4o5p6-q7r8-9012-mnop-345678901234",
+    "name" : "margin_block",
+    "label" : "Add top margin",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-margin", "No margin" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "medium"
+  }, {
+    "id" : "n4o5p6q7-r8s9-0123-nopq-456789012345",
+    "name" : "padding_block",
+    "label" : "Add top and bottom padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-padding", "No padding" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "medium"
+  }, {
+    "id" : "o5p6q7r8-s9t0-1234-opqr-567890123456",
+    "name" : "backgroundcolor",
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "show_opacity" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "margin_block" : "medium",
+    "padding_block" : "medium",
+    "backgroundcolor" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }
+} ]
