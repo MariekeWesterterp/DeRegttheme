@@ -1,60 +1,27 @@
-{
-  "name": "hero",
-  "label": "Hero",
-  "required": false,
-  "global": false,
-  "help_text": "Hero banner with nav, title and buttons",
-  "icon": "page-layout",
-  "tags": ["hero", "banner"],
-  "is_available_for_new_content": true,
-  "fields": [
-    { "name": "anchor", "label": "Anchor id", "type": "text", "required": false },
-    {
-      "name": "style",
-      "label": "Style",
-      "type": "group",
-      "occurrence": {"min": 1, "max": 1},
-      "children": [
-        { "name": "margin_block", "label": "Margin size", "type": "choice", "choices": ["none","xs","sm","md","lg","xl"], "default": "none" },
-        { "name": "padding_block", "label": "Padding size", "type": "choice", "choices": ["none","xs","sm","md","lg","xl"], "default": "none" },
-        { "name": "backgroundcolor", "label": "Background color", "type": "color", "visibility": {"hidden_subfields": {"color": false}}, "default": {"color": "rgba(0,0,0,0)"} }
-      ]
-    },
-    { "name": "background_image", "label": "Background image", "type": "image" },
-    { "name": "logo_text", "label": "Logo text", "type": "text", "default": "DeRegt" },
-    {
-      "name": "nav_links",
-      "label": "Nav links",
-      "type": "repeatable_group",
-      "children": [
-        { "name": "label", "label": "Label", "type": "text" },
-        { "name": "link", "label": "Link", "type": "link" }
-      ]
-    },
-    {
-      "name": "top_cta",
-      "label": "Top CTA",
-      "type": "group",
-      "children": [
-        { "name": "text", "label": "Text", "type": "text", "default": "Talk to a specialist" },
-        { "name": "url", "label": "URL", "type": "link" }
-      ]
-    },
-    { "name": "tagline", "label": "Tagline", "type": "text", "default": "High quality cable solutions since 1912" },
-    { "name": "title", "label": "Title", "type": "text", "default": "Always within reach" },
-    { "name": "description", "label": "Description", "type": "richtext" },
-    { "name": "explore_label", "label": "Explore label", "type": "text", "default": "Explore your market:" },
-    {
-      "name": "buttons",
-      "label": "Buttons",
-      "type": "repeatable_group",
-      "children": [
-        { "name": "text", "label": "Text", "type": "text" },
-        { "name": "url", "label": "URL", "type": "link" },
-        { "name": "style", "label": "Style", "type": "choice", "choices": ["primary", "outline"], "default": "primary" }
-      ]
-    }
-  ]
-}
-
-
+[
+  { "id": "a1", "name": "anchor", "label": "Anchor", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null },
+  { "id": "a2", "name": "logo_text", "label": "Logo text", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "DeRegt" },
+  { "id": "a3", "name": "tagline", "label": "Tagline", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "High quality cable solutions since 1912" },
+  { "id": "a4", "name": "title", "label": "Title", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "Always within reach" },
+  { "id": "a5", "name": "description", "label": "Description", "required": false, "locked": false, "type": "richtext", "display_width": null, "default": "<p>At DeRegt Cables, we understand that the future isn't a distant horizon. It's a series of challenges we face today and the innovations we bring to life</p>" },
+  { "id": "a6", "name": "explore_label", "label": "Explore label", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "Explore your market:" },
+  { "id": "a7", "name": "background_image", "label": "Background image", "required": false, "locked": false, "responsive": true, "resizable": false, "show_loading": true, "type": "image", "display_width": null, "default": { "size_type": "auto", "src": "", "alt": "", "loading": "lazy", "width": 1600, "height": 900, "max_width": 1600, "max_height": 900 } },
+  { "id": "a8", "name": "nav_links", "label": "Nav links", "required": false, "locked": false, "children": [
+      { "id": "a8a", "name": "text", "label": "Text", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null },
+      { "id": "a8b", "name": "link", "label": "Link", "required": false, "locked": false, "type": "url", "display_width": null, "default": { "content_id": null, "href": "", "type": "EXTERNAL" } }
+    ], "tab": "CONTENT", "expanded": false, "group_occurrence_meta": null, "type": "group", "display_width": null, "repeating": true },
+  { "id": "a9", "name": "top_cta", "label": "Top CTA", "required": false, "locked": false, "children": [
+      { "id": "a9a", "name": "text", "label": "Text", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "Talk to a specialist" },
+      { "id": "a9b", "name": "url", "label": "URL", "required": false, "locked": false, "type": "url", "display_width": null, "default": { "content_id": null, "href": "", "type": "EXTERNAL" } }
+    ], "tab": "CONTENT", "expanded": false, "group_occurrence_meta": null, "type": "group", "display_width": null },
+  { "id": "a10", "name": "buttons", "label": "Buttons", "required": false, "locked": false, "children": [
+      { "id": "a10a", "name": "text", "label": "Text", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null },
+      { "id": "a10b", "name": "url", "label": "URL", "required": false, "locked": false, "type": "url", "display_width": null, "default": { "content_id": null, "href": "", "type": "EXTERNAL" } },
+      { "id": "a10c", "name": "style", "label": "Style", "required": false, "locked": false, "display": "select", "choices": [["primary","Primary"],["outline","Outline"]], "multiple": false, "reordering_enabled": true, "preset": null, "type": "choice", "display_width": null, "default": "primary" }
+    ], "tab": "CONTENT", "expanded": false, "group_occurrence_meta": null, "type": "group", "display_width": null, "repeating": true },
+  { "id": "a11", "name": "style", "label": "Style", "required": false, "locked": false, "children": [
+      { "id": "a11a", "name": "margin_block", "label": "Add top margin", "required": false, "locked": false, "display": "select", "choices": [["no-margin","No margin"],["small","Small"],["medium","Medium"],["large","Large"]], "multiple": false, "reordering_enabled": true, "preset": null, "type": "choice", "display_width": null, "default": "large" },
+      { "id": "a11b", "name": "padding_block", "label": "Add top and bottom padding", "required": false, "locked": false, "display": "select", "choices": [["no-padding","No padding"],["small","Small"],["medium","Medium"],["large","Large"]], "multiple": false, "reordering_enabled": true, "preset": null, "type": "choice", "display_width": null, "default": "large" },
+      { "id": "a11c", "name": "backgroundcolor", "label": "Background color", "required": false, "locked": false, "show_opacity": false, "type": "color", "display_width": null, "default": { "color": "#000000", "opacity": 100 } }
+    ], "tab": "STYLE", "expanded": false, "group_occurrence_meta": null, "type": "group", "display_width": null, "default": { "margin_block": "large", "padding_block": "large", "backgroundcolor": { "color": "#000000", "opacity": 100 } } }
+]
