@@ -1,0 +1,60 @@
+{
+  "name": "hero",
+  "label": "Hero",
+  "required": false,
+  "global": false,
+  "help_text": "Hero banner with nav, title and buttons",
+  "icon": "page-layout",
+  "tags": ["hero", "banner"],
+  "is_available_for_new_content": true,
+  "fields": [
+    { "name": "anchor", "label": "Anchor id", "type": "text", "required": false },
+    {
+      "name": "style",
+      "label": "Style",
+      "type": "group",
+      "occurrence": {"min": 1, "max": 1},
+      "children": [
+        { "name": "margin_block", "label": "Margin size", "type": "choice", "choices": ["none","xs","sm","md","lg","xl"], "default": "none" },
+        { "name": "padding_block", "label": "Padding size", "type": "choice", "choices": ["none","xs","sm","md","lg","xl"], "default": "none" },
+        { "name": "backgroundcolor", "label": "Background color", "type": "color", "visibility": {"hidden_subfields": {"color": false}}, "default": {"color": "rgba(0,0,0,0)"} }
+      ]
+    },
+    { "name": "background_image", "label": "Background image", "type": "image" },
+    { "name": "logo_text", "label": "Logo text", "type": "text", "default": "DeRegt" },
+    {
+      "name": "nav_links",
+      "label": "Nav links",
+      "type": "repeatable_group",
+      "children": [
+        { "name": "label", "label": "Label", "type": "text" },
+        { "name": "link", "label": "Link", "type": "link" }
+      ]
+    },
+    {
+      "name": "top_cta",
+      "label": "Top CTA",
+      "type": "group",
+      "children": [
+        { "name": "text", "label": "Text", "type": "text", "default": "Talk to a specialist" },
+        { "name": "url", "label": "URL", "type": "link" }
+      ]
+    },
+    { "name": "tagline", "label": "Tagline", "type": "text", "default": "High quality cable solutions since 1912" },
+    { "name": "title", "label": "Title", "type": "text", "default": "Always within reach" },
+    { "name": "description", "label": "Description", "type": "richtext" },
+    { "name": "explore_label", "label": "Explore label", "type": "text", "default": "Explore your market:" },
+    {
+      "name": "buttons",
+      "label": "Buttons",
+      "type": "repeatable_group",
+      "children": [
+        { "name": "text", "label": "Text", "type": "text" },
+        { "name": "url", "label": "URL", "type": "link" },
+        { "name": "style", "label": "Style", "type": "choice", "choices": ["primary", "outline"], "default": "primary" }
+      ]
+    }
+  ]
+}
+
+

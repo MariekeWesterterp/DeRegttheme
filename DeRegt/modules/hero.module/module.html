@@ -1,0 +1,45 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+
+<section class="hero">
+  <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} hero__wrapper" style="background-color: {{ module.style.backgroundcolor.color }}">
+    <div class="container">
+      <nav class="hero__navbar">
+        <div class="hero__logo">{{ module.logo_text }}</div>
+        <ul class="hero__nav-links">
+          {% for item in module.nav_links %}
+          <li><a href="{{ item.link.href|escape_url }}" target="{{ item.link.target || '_self' }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+        {% if module.top_cta.url.href %}
+        <a href="{{ module.top_cta.url.href|escape_url }}" target="{{ module.top_cta.url.target || '_self' }}" class="cta_button">{{ module.top_cta.text }}</a>
+        {% endif %}
+      </nav>
+
+      <div class="hero__content" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ module.background_image.src|escape_url }}');">
+        {% if module.tagline %}
+        <p class="hero__tagline">{{ module.tagline }}</p>
+        {% endif %}
+        {% if module.title %}
+        <h1 class="hero__title">{{ module.title }}</h1>
+        {% endif %}
+        {% if module.description %}
+        <div class="hero__description">{{ module.description }}</div>
+        {% endif %}
+        {% if module.explore_label %}
+        <p class="hero__explore-label">{{ module.explore_label }}</p>
+        {% endif %}
+        <div class="hero__buttons">
+          {% for btn in module.buttons %}
+            {% if btn.url.href %}
+              <a href="{{ btn.url.href|escape_url }}" target="{{ btn.url.target || '_self' }}" class="{% if btn.style == 'outline' %}cta_second{% else %}cta_button{% endif %}">{{ btn.text }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
