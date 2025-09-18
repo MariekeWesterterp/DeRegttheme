@@ -1,0 +1,62 @@
+/* Text Image Simple Module Styles */
+.text-image-simple {
+  width: 100%;
+}
+
+.text-image-simple__wrapper {
+  width: 100%;
+}
+
+.text-image-simple__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.text-image-simple__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.text-image-simple__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-image-simple__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .text-image-simple__content {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+  }
+  
+  .text-image-simple__text {
+    flex: 1;
+  }
+  
+  .text-image-simple__image {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-image-simple__content {
+    gap: 3rem;
+  }
+  
+  .text-image-simple__text {
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "text_image_simple": {
+    "message": "Text Image Simple"
+  },
+  "text_field": {
+    "message": "Text"
+  },
+  "image_field": {
+    "message": "Image"
+  },
+  "anchor": {
+    "message": "Anchor"
+  },
+  "style": {
+    "message": "Style"
+  },
+  "background_color": {
+    "message": "Background color"
+  },
+  "text_color": {
+    "message": "Text color"
+  },
+  "margin_block": {
+    "message": "Add top margin"
+  },
+  "padding_block": {
+    "message": "Add top and bottom padding"
+  }
+}
