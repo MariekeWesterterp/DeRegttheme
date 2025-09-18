@@ -125,6 +125,22 @@
     "url" : ""
   }
 }, {
+  "id" : "cta1_field",
+  "name" : "cta1",
+  "label" : "CTA 1",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
+  "id" : "cta2_field",
+  "name" : "cta2",
+  "label" : "CTA 2",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
   "id" : "l2m3n4o5-p6q7-8901-lmno-234567890123",
   "name" : "style",
   "label" : "Style",

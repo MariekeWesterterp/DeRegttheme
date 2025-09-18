@@ -27,16 +27,22 @@
       {% endif %}
       
       <div class="buttons">
-        {% if module.primary_button.text %}
-          <a href="{{ module.primary_button.url }}" class="btn-primary">
-            {{ module.primary_button.text }}
-          </a>
-        {% endif %}
-        
-        {% if module.secondary_button.text %}
-          <a href="{{ module.secondary_button.url }}" class="btn-secondary">
-            {{ module.secondary_button.text }}
-          </a>
+        {% if module.cta1 %}
+          {{ module.cta1 }}
+        {% elif module.cta2 %}
+          {{ module.cta2 }}
+        {% else %}
+          {% if module.primary_button.text %}
+            <a href="{{ module.primary_button.url }}" class="btn-primary">
+              {{ module.primary_button.text }}
+            </a>
+          {% endif %}
+          
+          {% if module.secondary_button.text %}
+            <a href="{{ module.secondary_button.url }}" class="btn-secondary">
+              {{ module.secondary_button.text }}
+            </a>
+          {% endif %}
         {% endif %}
       </div>
     </div>
