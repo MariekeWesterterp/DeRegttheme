@@ -74,13 +74,10 @@
     "label" : "Button URL",
     "required" : false,
     "locked" : false,
-    "type" : "url",
+    "allow_new_line" : false,
+    "type" : "text",
     "display_width" : null,
-    "default" : {
-      "url" : "#",
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
+    "default" : ""
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -89,11 +86,7 @@
   "display_width" : null,
   "default" : {
     "text" : "Request custom cable design",
-    "url" : {
-      "url" : "#",
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
+    "url" : ""
   }
 }, {
   "id" : "i9j0k1l2-m3n4-5678-ijkl-901234567890",
@@ -117,13 +110,10 @@
     "label" : "Button URL",
     "required" : false,
     "locked" : false,
-    "type" : "url",
+    "allow_new_line" : false,
+    "type" : "text",
     "display_width" : null,
-    "default" : {
-      "url" : "#",
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
+    "default" : ""
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -132,11 +122,7 @@
   "display_width" : null,
   "default" : {
     "text" : "Talk to a specialist",
-    "url" : {
-      "url" : "#",
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
+    "url" : ""
   }
 }, {
   "id" : "l2m3n4o5-p6q7-8901-lmno-234567890123",

@@ -28,13 +28,13 @@
       
       <div class="buttons">
         {% if module.primary_button.text %}
-          <a href="{{ module.primary_button.url.url }}" class="btn-primary"{% if module.primary_button.url.open_in_new_tab %} target="_blank"{% endif %}{% if module.primary_button.url.no_follow %} rel="nofollow"{% endif %}>
+          <a href="{{ module.primary_button.url }}" class="btn-primary">
             {{ module.primary_button.text }}
           </a>
         {% endif %}
         
         {% if module.secondary_button.text %}
-          <a href="{{ module.secondary_button.url.url }}" class="btn-secondary"{% if module.secondary_button.url.open_in_new_tab %} target="_blank"{% endif %}{% if module.secondary_button.url.no_follow %} rel="nofollow"{% endif %}>
+          <a href="{{ module.secondary_button.url }}" class="btn-secondary">
             {{ module.secondary_button.text }}
           </a>
         {% endif %}
