@@ -1,0 +1,243 @@
+[
+  {
+    "id": "a1",
+    "name": "anchor",
+    "label": "Anchor",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null
+  },
+  {
+    "id": "a2",
+    "name": "branding",
+    "label": "Branding",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "display_width": null,
+    "children": [
+      {
+        "id": "a2a",
+        "name": "logo",
+        "label": "Logo",
+        "required": false,
+        "locked": false,
+        "show_loading": false,
+        "type": "logo",
+        "display_width": null,
+        "default": {
+          "override_inherited_src": true,
+          "src": "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/logoDeRegt.svg",
+          "alt": "DeRegt",
+          "width": 139,
+          "height": 40,
+          "suppress_company_name": true,
+          "loading": "disabled"
+        }
+      },
+      {
+        "id": "a2b",
+        "name": "link",
+        "label": "Logo link",
+        "required": false,
+        "locked": false,
+        "type": "url",
+        "display_width": null,
+        "default": {
+          "content_id": null,
+          "href": "/",
+          "type": "EXTERNAL"
+        }
+      }
+    ],
+    "default": {
+      "logo": {
+        "override_inherited_src": true,
+        "src": "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/logoDeRegt.svg",
+        "alt": "DeRegt",
+        "width": 139,
+        "height": 40,
+        "suppress_company_name": true,
+        "loading": "disabled"
+      },
+      "link": {
+        "content_id": null,
+        "href": "/",
+        "type": "EXTERNAL"
+      }
+    }
+  },
+  {
+    "id": "a3",
+    "name": "top_bar",
+    "label": "Top bar",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "display_width": null,
+    "children": [
+      {
+        "id": "a3a",
+        "name": "show",
+        "label": "Show top bar",
+        "required": false,
+        "locked": false,
+        "display": "checkbox",
+        "type": "boolean",
+        "display_width": null,
+        "default": true
+      },
+      {
+        "id": "a3b",
+        "name": "tagline",
+        "label": "Tagline",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "A SERCEL COMPANY"
+      },
+      {
+        "id": "a3c",
+        "name": "menu",
+        "label": "Top navigation menu",
+        "required": false,
+        "locked": false,
+        "type": "menu",
+        "display_width": null
+      }
+    ],
+    "default": {
+      "show": true,
+      "tagline": "A SERCEL COMPANY"
+    }
+  },
+  {
+    "id": "a4",
+    "name": "primary_navigation",
+    "label": "Primary navigation",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "display_width": null,
+    "children": [
+      {
+        "id": "a4a",
+        "name": "menu",
+        "label": "Menu",
+        "required": true,
+        "locked": false,
+        "type": "menu",
+        "display_width": null,
+        "default": "default"
+      }
+    ],
+    "default": {
+      "menu": "default"
+    }
+  },
+  {
+    "id": "a5",
+    "name": "cta_button",
+    "label": "CTA button",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "display_width": null,
+    "children": [
+      {
+        "id": "a5a",
+        "name": "show",
+        "label": "Show CTA",
+        "required": false,
+        "locked": false,
+        "display": "checkbox",
+        "type": "boolean",
+        "display_width": null,
+        "default": true
+      },
+      {
+        "id": "a5b",
+        "name": "text",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Talk to a specialist"
+      },
+      {
+        "id": "a5c",
+        "name": "url",
+        "label": "URL",
+        "required": false,
+        "locked": false,
+        "type": "url",
+        "display_width": null,
+        "default": {
+          "content_id": null,
+          "href": "",
+          "type": "EXTERNAL"
+        }
+      }
+    ],
+    "default": {
+      "show": true,
+      "text": "Talk to a specialist",
+      "url": {
+        "content_id": null,
+        "href": "",
+        "type": "EXTERNAL"
+      }
+    }
+  },
+  {
+    "id": "a6",
+    "name": "appearance",
+    "label": "Appearance",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "display_width": null,
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "a6a",
+        "name": "bottom_background",
+        "label": "Bottom navigation background",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          ["transparent", "Transparent (overlaps next module)"],
+          ["white", "White"]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "white"
+      },
+      {
+        "id": "a6b",
+        "name": "add_shadow",
+        "label": "Add subtle bottom shadow",
+        "required": false,
+        "locked": false,
+        "display": "checkbox",
+        "type": "boolean",
+        "display_width": null,
+        "default": true
+      }
+    ],
+    "default": {
+      "bottom_background": "white",
+      "add_shadow": true
+    }
+  }
+]

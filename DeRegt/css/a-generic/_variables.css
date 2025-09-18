@@ -29,6 +29,14 @@
     --clr-checkbox-background: #F2F2F2;
     --clr-checkbox-green: #009F2B;
     --clr-checkbox-border-green: #009F2B5D;
+
+    /* Brand extensions */
+    --clr-blue-royal: #0d4cd6;
+    --clr-blue-deep: #0a2f8f;
+    --clr-blue-navy: #09235c;
+    --clr-yellow-sun: #ffd11a;
+    --clr-navy-rgb: 9, 35, 92;
+    --clr-navy-deep-rgb: 10, 35, 92;
   
     --fs-heading4: 25px;
     --fs-heading3: 31px;
