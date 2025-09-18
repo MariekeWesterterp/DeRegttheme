@@ -38,8 +38,7 @@
     "label" : "Feature Description",
     "required" : false,
     "locked" : false,
-    "allow_new_line" : true,
-    "type" : "text",
+    "type" : "richtext",
     "display_width" : null,
     "default" : "Feature description goes here"
   } ],
@@ -48,6 +47,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "display_width" : null,
+  "repeating" : true,
   "default" : {
     "title" : "Feature Title",
     "description" : "Feature description goes here"

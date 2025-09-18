@@ -19,7 +19,7 @@
                 <h3 class="feature__title">{{ feature.title }}</h3>
               {% endif %}
               {% if feature.description %}
-                <p class="feature__description">{{ feature.description|nl2br }}</p>
+                <div class="feature__description">{{ feature.description }}</div>
               {% endif %}
             </div>
           {% endfor %}
