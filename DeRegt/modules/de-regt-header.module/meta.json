@@ -1,7 +1,8 @@
 {
-  "global": false,
-  "content_types": ["LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST"],
-  "host_template_types": ["PAGE", "BLOG_LISTING", "BLOG_POST"],
-  "label": "DeRegt Header",
-  "is_available_for_new_content": true
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "module_id" : 277677893832,
+  "label" : "DeRegt Header",
+  "is_available_for_new_content" : true
 }

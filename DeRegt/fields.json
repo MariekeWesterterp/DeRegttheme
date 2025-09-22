@@ -152,6 +152,14 @@
                 }
               },
               {
+                "label": "Mobile font size",
+                "name": "mobile_font_size",
+                "type": "number",
+                "display": "text",
+                "suffix": "px",
+                "default": 28
+              },
+              {
                 "label": "Transform",
                 "name": "transform",
                 "type": "choice",
@@ -188,6 +196,14 @@
                   "size": 32,
                   "size_unit": "px"
                 }
+              },
+              {
+                "label": "Mobile font size",
+                "name": "mobile_font_size",
+                "type": "number",
+                "display": "text",
+                "suffix": "px",
+                "default": 26
               },
               {
                 "label": "Transform",
@@ -228,6 +244,14 @@
                 }
               },
               {
+                "label": "Mobile font size",
+                "name": "mobile_font_size",
+                "type": "number",
+                "display": "text",
+                "suffix": "px",
+                "default": 24
+              },
+              {
                 "label": "Transform",
                 "name": "transform",
                 "type": "choice",
@@ -264,6 +288,14 @@
                   "size": 24,
                   "size_unit": "px"
                 }
+              },
+              {
+                "label": "Mobile font size",
+                "name": "mobile_font_size",
+                "type": "number",
+                "display": "text",
+                "suffix": "px",
+                "default": 20
               },
               {
                 "label": "Transform",
@@ -304,6 +336,14 @@
                 }
               },
               {
+                "label": "Mobile font size",
+                "name": "mobile_font_size",
+                "type": "number",
+                "display": "text",
+                "suffix": "px",
+                "default": 18
+              },
+              {
                 "label": "Transform",
                 "name": "transform",
                 "type": "choice",
@@ -340,6 +380,14 @@
                   "size": 16,
                   "size_unit": "px"
                 }
+              },
+              {
+                "label": "Mobile font size",
+                "name": "mobile_font_size",
+                "type": "number",
+                "display": "text",
+                "suffix": "px",
+                "default": 16
               },
               {
                 "label": "Transform",
@@ -385,6 +433,14 @@
                   "size": 16,
                   "size_unit": "px"
                 }
+              },
+              {
+                "label": "Mobile font size",
+                "name": "mobile_font_size",
+                "type": "number",
+                "display": "text",
+                "suffix": "px",
+                "default": 16
               }
             ]
           },
@@ -3287,4 +3343,3 @@
 
   
 ]
-

@@ -1,74 +1,177 @@
-.hero {
-    color: white;
-}
+
 
 .hero__wrapper {
-    background-color: #000;
-}
-
-.hero__navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-}
-
-.hero__logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFD700;
-}
-
-.hero__nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.hero__nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.hero__content {
-    padding: 0 50px;
-    min-height: 100vh;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: inherit;
+    background-image: var(--hero-background-image);
     background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+  background-color: var(--clr-blue-midnight);
+
+}
+
+
+.hero__content{
+      padding-top: 229px;
+    padding-bottom: 217px;
+    background: linear-gradient(90deg,rgba(21, 43, 86, 1) 0%, rgba(21, 43, 86, 1) 19%, rgba(21, 43, 86, 0) 50%, rgba(21, 43, 86, 0) 100%);
+}
+
+
+.hero__top-cta {
+    white-space: nowrap;
+}
+
+.hero__content__container {
+    max-width: 548px;
+    display: grid;
+    gap: 16px;
+}
+.hero__tagline-mobile p{
+    max-width: 548px;
+}
+.hero__navbar + .hero__content {
+    margin-top: clamp(2.5rem, 5vw, 4rem);
 }
 
 .hero__tagline {
+    margin: 0;
     font-size: 16px;
-    margin-bottom: 20px;
-    color: #FFD700;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    color: var(--hero-tagline-color, var(--clr-yellow-sun));
+    font-weight: 650;
 }
 
 .hero__title {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    margin: 0;
+    
+    line-height: 100%;
+    color: var(--hero-title-color, var(--h1-color, currentColor));
 }
 
 .hero__description {
-    font-size: 18px;
-    margin-bottom: 40px;
-    line-height: 1.6;
-    max-width: 600px;
+  
+    line-height: 150%;
+    color: var(--hero-description-color, rgba(255, 255, 255, 0.9));
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.hero__description p {
+    margin: 0 0 1rem 0;
+    line-height: 150%;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.hero__description p:last-child {
+    margin-bottom: 0;
 }
 
 .hero__explore-label {
-    margin-bottom: 30px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--hero-explore-label-color, rgba(255, 255, 255, 0.85));
 }
 
 .hero__buttons {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
 }
 
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
 
+.hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 12rem;
+    text-align: center;
+    transition: transform 150ms ease-in-out;
+}
+ .hero__tagline-mobile{
+    display: none;
+ }
+
+@media (max-width: 1024px) {
+    .hero__wrapper {
+        background-size: contain;
+    background-position: top;
+    padding-top: 285px;
+    }
+.hero__content, .hero__container{
+    padding-top: 0;
+    background-color: var(--clr-blue-midnight);
+}
+.hero__content{
+    padding-bottom: 56px;
+}
+        .hero__tagline-mobile {
+        display: block;
+        background: linear-gradient(180deg, rgba(21, 43, 86, 0) 0%, rgba(21, 43, 86, 0.83) 50%, rgba(21, 43, 86, 1) 100%);
+        padding-top: 57px;
+        padding-bottom: 18px;
+        color: var(--hero-tagline-color );
+    }
+    .hero__tagline{
+        display: none;
+    }
+    .hero__tagline-mobile .hero__tagline{
+        display: block;
+    }
+    .hero__description {
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+}
+
+@media (max-width: 768px) {
+    .hero__content{
+    padding-bottom: 0px;
+}
+    .hero__wrapper {
+
+    padding-top: 158px;
+    }
+    .hero__content__container {
+        min-height: auto;
+        
+        padding-top: 0;
+    }
+
+    .hero__content__container {
+        gap: 16px;
+    
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 8px;
+        padding-bottom: 56px;
+    }
+
+    .hero__cta {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero__button {
+        width: 100%;
+        min-width: 0;
+    }
+}

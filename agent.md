@@ -27,8 +27,12 @@ Conventions:
 - Use the margin/padding macro wrapper on the top-level content element:
   - `{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}`
 - Buttons use shared classes:
-  - Primary: `cta_button`
-  - Secondary/outline: `cta_second`
+  - Primary: `btn-primary`
+  - Secondary/outline: `btn-secondary`
+  - Secondary/outline white: `btn-secondary-white` in addition to `btn-secondary`
+- If there are buttons in a module, you should give the user the choice:
+  - Either they choose a button, where you offer a text field and URL field and the appearance of the button (primary, secondary or secondary-white)
+  - Or they choose the CTA option that Hubspot offers. See: https://developers.hubspot.com/docs/cms/reference/fields/module-theme-fields#cta
 
 ### Margin/padding and buttons
 - Use `macro/margin-padding.html` for spacing (`margin-top-…`, `padding-…`).
@@ -46,6 +50,7 @@ Conventions:
 ### CSS
 - Keep styles module-scoped (prefix with the module block class).
 - Reuse existing utility classes (e.g., `container`) and theme variables.
+- The buttons all share the same styling from the main CSS files. The yellow buttons are assigned the btn-primary class. The transparent buttons with a blue border are assigned the btn-secondary class. he white framed button should also have the class `btn-secondary-white` in addition to `btn-secondary` 
 
 ### Adding a new module (quick steps)
 1. Create folder: `DeRegt/modules/<name>.module/`
@@ -53,7 +58,7 @@ Conventions:
 3. In `module.html`, import macros as needed:
    - `{% import "/DeRegt/macro/margin-padding.html" as macros %}`
 4. Wrap content with the margin/padding macro and `container`.
-5. Use `cta_button` / `cta_second` for buttons.
+5. Use classes `btn-primary` / `btn-secondary` for buttons. The white framed button should also have the class `btn-secondary-white` in addition to `btn-secondary` 
 
 ### HubSpot CLI (upload/deploy)
 - Upload a single module (preferred during dev):
