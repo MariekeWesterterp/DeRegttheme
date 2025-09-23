@@ -4,58 +4,67 @@
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
 
 <section class="bloglist">
-  <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} default__wrapper" style="background-color: {{ module.style.backgroundcolor.color }}"> 
+  <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} default__wrapper default-padding" style="background-color: {{ module.style.backgroundcolor.color }}"> 
     <div class="container">
 
  
         <div class="bloglist__text">
-        
-          <h2>{{ module.title }}</h2>
-          <svg class="yellow-block" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
-            <path d="M48 0H0V6H48V0Z" fill="#F1C61A"/>
-            </svg>
-          <a class="bloglist__readmore" href="{{ module.link_field }}">{{ module.text_link }}</a>
+          <div class="bloglist__text__title">
+            <h2>{{ module.title }}</h2>
+            <svg class="yellow-block" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+              <path d="M48 0H0V6H48V0Z" fill="#F1C61A"/>
+              </svg>
+          </div>
+         
+          <a class="bloglist__readmore btn-secondary  btn-small" href="{{ module.link_field }}">{{ module.text_link }}</a>
      
    
 
         </div>
 
-        {% set tag_posts = blog_recent_tag_posts("default", [], 2, "AND") %}
-        <div class="bloglist__listing">
+        <ul class="bloglist__listing">
 
 
        
 
-                {% set tag_posts = blog_recent_tag_posts("default", [], 1, "AND") %}
+                {% set tag_posts = blog_recent_tag_posts("default", [], 4, "AND") %}
                 {% for tag_post in tag_posts %}
                 <li class="card">
-                  <a href="{{ tag_post.url }}">
+                  
                     <div class="card__container">
 
 
-                     <div class="card__tags">blog</div>
-                      <div class="card__image" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(25, 77, 180, 0.60) 100%), url('{{ tag_post.featuredImage }}') lightgray 50% / cover no-repeat;">
+                    <div class="card__tags">
+                        {% for topic in tag_post.topic_list %}
+                          <a href="{{ topic.url }}" class="card__tag">{{ topic.name }}</a>
+                        {% endfor %}
+                      </div>
+                     <div class="card__image" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(25, 77, 180, 0.60) 100%), url('{{ tag_post.featuredImage }}') lightgray 50% / cover no-repeat;">
                      
                     </div>
+                    <a href="{{ tag_post.url }}">
                     <div class="card__text">
                       <h3>{{ tag_post.name }}</h3>
-                    <h6>By {{ tag_post.blog_author.display_name }}</h6>
+                  
 
 
-                      <div class="card__readmore"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<g id="ArrowRight" clip-path="url(#clip0_460_2129)">
-<path id="Vector" d="M3.125 10H16.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_460_2129">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
-</svg></div>
+                      <div class="card__readmore">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <g id="ArrowRight" clip-path="url(#clip0_460_2129)">
+                          <path id="Vector" d="M3.125 10H16.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path id="Vector_2" d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_460_2129">
+                          <rect width="20" height="20" fill="white"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
                     </div>
+                    </a>
                     </div>
-                  </a>
+                  
                 </li>
 
                 {% endfor %}
@@ -64,32 +73,39 @@
                     <div class="card__container">
 
 
-                     <div class="card__tags">{{ module.text_tag }}</div>
+                     <div class="card__tags"><a class="card__tag" href="#">{{ module.text_tag }}</a></div>
                       <div class="card__image" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(25, 77, 180, 0.60) 100%), url('{{ module.image_field.src }}') lightgray 50% / cover no-repeat;">
                     
-</div>
-<div class="card__text">
-  <h3>{{ module.text_title }}</h3>
-<h6>{{ module.author_line }}</h6>
+                    </div>
+                    <div class="card__text">
+                      <h3>{{ module.text_title }}</h3>
 
 
-  <div class="card__readmore"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<g id="ArrowRight" clip-path="url(#clip0_460_2129)">
-<path id="Vector" d="M3.125 10H16.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_460_2129">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
-</svg></div>
-</div>
+                      <div class="card__readmore"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g id="ArrowRight" clip-path="url(#clip0_460_2129)">
+                    <path id="Vector" d="M3.125 10H16.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="Vector_2" d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_460_2129">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></div>
+                    </div>
                     </div>
                   </a>
                 </li>
 
            
+        </ul>
+
+         <div class="bloglist__footer">
+         
+          <a class="bloglist__readmore btn-secondary  btn-small" href="{{ module.link_field }}">{{ module.text_link }}</a>
+     
+   
+
         </div>
 
           

@@ -39,3 +39,9 @@ h6 {
   color: var(--h6-color);
   text-transform: var(--h6-transform);
 }
+
+/* svg under title  */
+.yellow-block {
+  display: block;
+  margin-top: 8px;
+}
