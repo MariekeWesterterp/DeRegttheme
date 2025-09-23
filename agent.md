@@ -24,6 +24,7 @@ Each module folder contains:
 Conventions:
 - Class names use block-element format: `modulename__element`, e.g., `hero__navbar`, `hero__buttons`.
 - Keep the shared wrapper class `container` for width/layout consistency.
+- Kep the shared top-bottom padding class `default-padding` for padding-consistency
 - Use the margin/padding macro wrapper on the top-level content element:
   - `{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}`
 - Buttons use shared classes:

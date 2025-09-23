@@ -37,25 +37,23 @@
         </div>
       {% endif %}
       
-      <div class="buttons">
-        {% if module.cta1 %}
-          {{ module.cta1 }}
-        {% elif module.cta2 %}
-          {{ module.cta2 }}
-        {% else %}
-          {% if module.primary_button.text %}
-            <a href="{{ module.primary_button.url }}" class="btn-primary">
-              {{ module.primary_button.text }}
-            </a>
-          {% endif %}
-          
-          {% if module.secondary_button.text %}
-            <a href="{{ module.secondary_button.url }}" class="btn-secondary">
-              {{ module.secondary_button.text }}
-            </a>
-          {% endif %}
-        {% endif %}
-      </div>
+      {% if module.buttons|length > 0 %}
+        <div class="feature__buttons">
+          {% for btn in module.buttons %}
+            {% set button_text = btn.text|trim %}
+            {% set has_standard_button = button_text and btn.url.href %}
+            {% set button_target = btn.url.target or ('_blank' if btn.url.open_in_new_tab else '_self') %}
+            {% set button_rel = 'noopener' if button_target == '_blank' else None %}
+            {% if has_standard_button %}
+              <a href="{{ btn.url.href|escape_url }}" target="{{ button_target }}" {% if button_rel %}rel="{{ button_rel }}"{% endif %} class="feature__button{% if btn.style == 'outline' %} btn-secondary{% elif btn.style == 'outline-white' %} btn-secondary btn-secondary-white{% else %} btn-primary{% endif %}">{{ button_text }}</a>
+            {% elif btn.cta_field %}
+              <div class="feature__cta">
+                {% cta guid="{{ btn.cta_field }}" %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>

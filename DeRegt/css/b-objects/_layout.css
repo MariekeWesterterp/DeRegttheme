@@ -452,3 +452,13 @@ max-width: 1360px;
   margin: 0 auto;
   padding-inline: 16px;
 }
+.default-padding{
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+@media (min-width: 768px){
+.default-padding{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+}

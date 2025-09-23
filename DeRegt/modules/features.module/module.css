@@ -7,11 +7,6 @@
   width: 100%;
 }
 
-.feature .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
 
 .feature__hero-text {
   font-size: 2.25rem;
