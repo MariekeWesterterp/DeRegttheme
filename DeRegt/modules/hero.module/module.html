@@ -1,45 +1,82 @@
 {% import "/DeRegt/macro/margin-padding.html" as macros %}
 
+
+{% macro color_to_rgba(value) %}
+  {% if value and value.color %}
+    {% set opacity = value.opacity if value.opacity is not none else 100 %}
+    rgba({{ value.color|convert_rgb }}, {{ opacity / 100 }})
+  {% endif %}
+{% endmacro %}
+
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
 
-<section class="hero">
-  <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} hero__wrapper" style="background-color: {{ module.style.backgroundcolor.color }}">
-    <div class="container">
-      <nav class="hero__navbar">
-        <div class="hero__logo">{{ module.logo_text }}</div>
-        <ul class="hero__nav-links">
-          {% for item in module.nav_links %}
-          <li><a href="{{ item.link.href|escape_url }}" target="{{ item.link.target || '_self' }}">{{ item.label }}</a></li>
-          {% endfor %}
-        </ul>
-        {% if module.top_cta.url.href %}
-        <a href="{{ module.top_cta.url.href|escape_url }}" target="{{ module.top_cta.url.target || '_self' }}" class="cta_button">{{ module.top_cta.text }}</a>
-        {% endif %}
-      </nav>
+{% set hero_styles = [] %}
+{% set wrapper_styles = [] %}
 
-      <div class="hero__content" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ module.background_image.src|escape_url }}');">
+{% if module.background_image.src %}
+  {% do wrapper_styles.append("--hero-background-image: url('" ~ module.background_image.src|escape_url ~ "')") %}
+{% endif %}
+
+{% set text_colors = module.style.text_colors %}
+{% if text_colors %}
+  {% set base_text_color = color_to_rgba(text_colors.base_text_color)|trim %}
+  {% if base_text_color %}{% do hero_styles.append('--hero-text-color: ' ~ base_text_color) %}{% endif %}
+
+  {% set tagline_color = color_to_rgba(text_colors.tagline_color)|trim %}
+  {% if tagline_color %}{% do wrapper_styles.append('--hero-tagline-color: ' ~ tagline_color) %}{% endif %}
+
+  {% set title_color = color_to_rgba(text_colors.title_color)|trim %}
+  {% if title_color %}{% do wrapper_styles.append('--hero-title-color: ' ~ title_color) %}{% endif %}
+
+  {% set description_color = color_to_rgba(text_colors.description_color)|trim %}
+  {% if description_color %}{% do wrapper_styles.append('--hero-description-color: ' ~ description_color) %}{% endif %}
+
+  {% set explore_label_color = color_to_rgba(text_colors.explore_label_color)|trim %}
+  {% if explore_label_color %}{% do wrapper_styles.append('--hero-explore-label-color: ' ~ explore_label_color) %}{% endif %}
+{% endif %}
+
+<section class="hero"{% if hero_styles %} style="{{ hero_styles|join('; ') }}"{% endif %}>
+  <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} hero__wrapper"{% if wrapper_styles %} style="{{ wrapper_styles|join('; ') }}"{% endif %}>
+  <div class="hero__tagline-mobile">
+    {% if module.tagline %}
+      <p class="hero__tagline container">{{ module.tagline }}</p>
+    {% endif %}
+  </div>
+  <div class="hero__content">
+      <div class="container">
+       <div class="hero__content__container">
         {% if module.tagline %}
+
         <p class="hero__tagline">{{ module.tagline }}</p>
         {% endif %}
         {% if module.title %}
         <h1 class="hero__title">{{ module.title }}</h1>
         {% endif %}
         {% if module.description %}
-        <div class="hero__description">{{ module.description }}</div>
+        <div class="hero__description rte">{{ module.description }}</div>
         {% endif %}
         {% if module.explore_label %}
         <p class="hero__explore-label">{{ module.explore_label }}</p>
         {% endif %}
+          </div>
+         {% if module.buttons|length > 0 %}
         <div class="hero__buttons">
           {% for btn in module.buttons %}
-            {% if btn.url.href %}
-              <a href="{{ btn.url.href|escape_url }}" target="{{ btn.url.target || '_self' }}" class="{% if btn.style == 'outline' %}cta_second{% else %}cta_button{% endif %}">{{ btn.text }}</a>
+            {% set button_text = btn.text|trim %}
+            {% set has_standard_button = button_text and btn.url.href %}
+            {% set button_target = btn.url.target or ('_blank' if btn.url.open_in_new_tab else '_self') %}
+            {% set button_rel = 'noopener' if button_target == '_blank' else None %}
+            {% if has_standard_button %}
+              <a href="{{ btn.url.href|escape_url }}" target="{{ button_target }}" {% if button_rel %}rel="{{ button_rel }}"{% endif %} class="hero__button{% if btn.style == 'outline' %} btn-secondary{% elif btn.style == 'outline-white' %} btn-secondary btn-secondary-white{% else %} btn-primary{% endif %}">{{ button_text }}</a>
+            {% elif btn.cta_field %}
+              <div class="hero__cta">
+                {% cta guid="{{ btn.cta_field }}" %}
+              </div>
             {% endif %}
           {% endfor %}
         </div>
-      </div>
+      {% endif %}
     </div>
   </div>
+  </div>
 </section>
-
-

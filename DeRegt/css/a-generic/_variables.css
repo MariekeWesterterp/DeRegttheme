@@ -20,7 +20,7 @@
     --clr-white: #ffffff;
     --clr-gray: #F8F8F8;
     --clr-gray-light: #F5F5F5;
-    --clr-gray-dark: #818181;
+    --clr-gray-dark: #5D5D5D;
    --clr-gray-soft: #8080804a;
     --clr-gray-darker: #707070;
     --clr-gray-shadow: #272726;
@@ -29,6 +29,24 @@
     --clr-checkbox-background: #F2F2F2;
     --clr-checkbox-green: #009F2B;
     --clr-checkbox-border-green: #009F2B5D;
+
+    /* Brand extensions */
+    --clr-blue-royal: #1761E1;
+    --clr-blue-royal-light: #DAEEFF;
+    --clr-blue-royal-medium-light: #BDE2FF;
+    --clr-blue-royal-xlight: #EEF8FF;
+    --clr-blue-deep: #0a2f8f;
+    --clr-blue-navy: #09235c;
+    --clr-yellow-sun: #ffd11a;
+    --clr-corn-secondary: #F1C61A;
+    --clr-corn-secondary-500: #E1AF11;
+    --clr-corn-950: #402008;
+    --clr-navy-rgb: 9, 35, 92;
+    --clr-navy-deep-rgb: 10, 35, 92;
+    --clr-blue-arrow: #1761E1;
+    --clr-blue-midnight: #152B56;
+    --clr-blue-royal-rgb: 13, 76, 214;
+
   
     --fs-heading4: 25px;
     --fs-heading3: 31px;
@@ -82,7 +100,7 @@
     --h6-color: {{ theme.global.text.h6.font.color }};
     --h6-transform: {{ theme.global.text.h6.transform }};
     
-    --body-font-family: '{{ theme.global.text.body_font.font.font }}', {{ theme.global.text.body_font.font.fallback }};
+    --body-font-family: '{{ theme.global.text.body_font.font.font }}', '{{ theme.global.text.body_font.font.fallback }}';
     --body-font-size: {{ theme.global.text.body_font.font.size }}{{ theme.global.text.body_font.font.size_unit }};
     --body-color: {{ theme.global.text.body_font.font.color }};
     
@@ -144,6 +162,17 @@
 
 }
 
+@media (max-width: 768px) {
+    :root {
+        --h1-font-size: {{ theme.global.text.h1.mobile_font_size|default(theme.global.text.h1.font.size) }}{{ theme.global.text.h1.font.size_unit }};
+        --h2-font-size: {{ theme.global.text.h2.mobile_font_size|default(theme.global.text.h2.font.size) }}{{ theme.global.text.h2.font.size_unit }};
+        --h3-font-size: {{ theme.global.text.h3.mobile_font_size|default(theme.global.text.h3.font.size) }}{{ theme.global.text.h3.font.size_unit }};
+        --h4-font-size: {{ theme.global.text.h4.mobile_font_size|default(theme.global.text.h4.font.size) }}{{ theme.global.text.h4.font.size_unit }};
+        --h5-font-size: {{ theme.global.text.h5.mobile_font_size|default(theme.global.text.h5.font.size) }}{{ theme.global.text.h5.font.size_unit }};
+        --h6-font-size: {{ theme.global.text.h6.mobile_font_size|default(theme.global.text.h6.font.size) }}{{ theme.global.text.h6.font.size_unit }};
+        --body-font-size: {{ theme.global.text.body_font.mobile_font_size|default(theme.global.text.body_font.font.size) }}{{ theme.global.text.body_font.font.size_unit }};
+    }
+}
 
 
 @media(min-width: 768px) {

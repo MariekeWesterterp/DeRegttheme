@@ -403,26 +403,26 @@ overflow: hidden;
 
 .margin-top-small{
      margin-top: 1rem;
-     }
-     .margin-top-medium{
-     margin-top: 2rem;
-     }
-     .margin-top-large{
-     margin-top: 3rem;
-     }
-     .padding-small{
-     padding-top: 1rem;
-       padding-bottom: 1rem;
-     }
-     .padding-medium{
-     padding-top: 2rem;
-       padding-bottom: 2rem;
-     }
-     .padding-large{
-     padding-top: 3rem;
-       padding-bottom: 3rem;
-     }
-     @media (min-width: 992px){
+}
+.margin-top-medium{
+margin-top: 2rem;
+}
+.margin-top-large{
+margin-top: 3rem;
+}
+.padding-small{
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+.padding-medium{
+padding-top: 2rem;
+padding-bottom: 2rem;
+}
+.padding-large{
+padding-top: 3rem;
+padding-bottom: 3rem;
+}
+@media (min-width: 992px){
      .margin-top-small{
      margin-top: 1.5rem;
      }
@@ -444,4 +444,11 @@ overflow: hidden;
      padding-top: 3.5rem;
        padding-bottom: 3.5rem;
      }
-     }
+}
+
+.container {
+/* max width is 1328 (like design) + 2x padding-inline: */
+max-width: 1360px;
+  margin: 0 auto;
+  padding-inline: 16px;
+}

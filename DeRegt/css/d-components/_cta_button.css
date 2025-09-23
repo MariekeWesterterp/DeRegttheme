@@ -1,33 +1,44 @@
-.text a.cta_button {
-  font-family: var(--btn-primary-font-family) !important;
-  color: var(--btn-primary-font-color) !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  font-variant: var(--btn-primary-font-variant);
-  text-transform: var(--btn-primary-transform);
-  background-color: var(--btn-primary-background-color) !important;
-  border-color: var(--btn-primary-border-color);
-  border-width: var(--btn-primary-border-width) !important;
-  border-style: var(--btn-primary-border-style);
-  border-radius: var(--btn-primary-radius)  !important;
-}   
 
-
-.text.cta-light .cta_button {
-    box-shadow: 4px 4px 1px var(--clr-white);
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #1f2937;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 650;
+line-height: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
 }
 
-.text .cta_button:hover {
-    transition: all .4s ease;
-    color: var(--btn-primary-hover-font-color);
-  background-color: var(--btn-primary-hover-background-color);
-  border-color: var(--btn-primary-hover-border-color);
+.btn-primary:hover {
+  background-color: var(--clr-corn-secondary);
 }
 
-.text .cta-light .cta_button:hover {
-    box-shadow: 6px 6px 1px var(--clr-white);
+.btn-secondary {
+  background-color: transparent;
+  color: var(--clr-blue-midnight);
+  padding: 16px 24px;
+  border: 1px solid var(--clr-blue-royal-medium-light);
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 650;
+line-height: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
 }
 
-.text .cta_second__dark::hover {
-      box-shadow: 6px 6px 1px var(--clr-white);
+.btn-secondary:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-secondary-white{
+  border-color: #ffffff;
+  color: #ffffff ;
 }

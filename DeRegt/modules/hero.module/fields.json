@@ -1,27 +1,347 @@
-[
-  { "id": "a1", "name": "anchor", "label": "Anchor", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null },
-  { "id": "a2", "name": "logo_text", "label": "Logo text", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "DeRegt" },
-  { "id": "a3", "name": "tagline", "label": "Tagline", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "High quality cable solutions since 1912" },
-  { "id": "a4", "name": "title", "label": "Title", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "Always within reach" },
-  { "id": "a5", "name": "description", "label": "Description", "required": false, "locked": false, "type": "richtext", "display_width": null, "default": "<p>At DeRegt Cables, we understand that the future isn't a distant horizon. It's a series of challenges we face today and the innovations we bring to life</p>" },
-  { "id": "a6", "name": "explore_label", "label": "Explore label", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "Explore your market:" },
-  { "id": "a7", "name": "background_image", "label": "Background image", "required": false, "locked": false, "responsive": true, "resizable": false, "show_loading": true, "type": "image", "display_width": null, "default": { "size_type": "auto", "src": "", "alt": "", "loading": "lazy", "width": 1600, "height": 900, "max_width": 1600, "max_height": 900 } },
-  { "id": "a8", "name": "nav_links", "label": "Nav links", "required": false, "locked": false, "children": [
-      { "id": "a8a", "name": "text", "label": "Text", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null },
-      { "id": "a8b", "name": "link", "label": "Link", "required": false, "locked": false, "type": "url", "display_width": null, "default": { "content_id": null, "href": "", "type": "EXTERNAL" } }
-    ], "tab": "CONTENT", "expanded": false, "group_occurrence_meta": null, "type": "group", "display_width": null, "repeating": true },
-  { "id": "a9", "name": "top_cta", "label": "Top CTA", "required": false, "locked": false, "children": [
-      { "id": "a9a", "name": "text", "label": "Text", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null, "default": "Talk to a specialist" },
-      { "id": "a9b", "name": "url", "label": "URL", "required": false, "locked": false, "type": "url", "display_width": null, "default": { "content_id": null, "href": "", "type": "EXTERNAL" } }
-    ], "tab": "CONTENT", "expanded": false, "group_occurrence_meta": null, "type": "group", "display_width": null },
-  { "id": "a10", "name": "buttons", "label": "Buttons", "required": false, "locked": false, "children": [
-      { "id": "a10a", "name": "text", "label": "Text", "required": false, "locked": false, "allow_new_line": false, "type": "text", "display_width": null },
-      { "id": "a10b", "name": "url", "label": "URL", "required": false, "locked": false, "type": "url", "display_width": null, "default": { "content_id": null, "href": "", "type": "EXTERNAL" } },
-      { "id": "a10c", "name": "style", "label": "Style", "required": false, "locked": false, "display": "select", "choices": [["primary","Primary"],["outline","Outline"]], "multiple": false, "reordering_enabled": true, "preset": null, "type": "choice", "display_width": null, "default": "primary" }
-    ], "tab": "CONTENT", "expanded": false, "group_occurrence_meta": null, "type": "group", "display_width": null, "repeating": true },
-  { "id": "a11", "name": "style", "label": "Style", "required": false, "locked": false, "children": [
-      { "id": "a11a", "name": "margin_block", "label": "Add top margin", "required": false, "locked": false, "display": "select", "choices": [["no-margin","No margin"],["small","Small"],["medium","Medium"],["large","Large"]], "multiple": false, "reordering_enabled": true, "preset": null, "type": "choice", "display_width": null, "default": "large" },
-      { "id": "a11b", "name": "padding_block", "label": "Add top and bottom padding", "required": false, "locked": false, "display": "select", "choices": [["no-padding","No padding"],["small","Small"],["medium","Medium"],["large","Large"]], "multiple": false, "reordering_enabled": true, "preset": null, "type": "choice", "display_width": null, "default": "large" },
-      { "id": "a11c", "name": "backgroundcolor", "label": "Background color", "required": false, "locked": false, "show_opacity": false, "type": "color", "display_width": null, "default": { "color": "#000000", "opacity": 100 } }
-    ], "tab": "STYLE", "expanded": false, "group_occurrence_meta": null, "type": "group", "display_width": null, "default": { "margin_block": "large", "padding_block": "large", "backgroundcolor": { "color": "#000000", "opacity": 100 } } }
-]
+[ {
+  "id" : "a1",
+  "name" : "anchor",
+  "label" : "Anchor",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "a3",
+  "name" : "tagline",
+  "label" : "Tagline",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "High quality cable solutions since 1912"
+}, {
+  "id" : "a4",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Always within reach"
+}, {
+  "id" : "a5",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>At DeRegt Cables, we understand that the future isn't a distant horizon. It's a series of challenges we face today and the innovations we bring to life</p>"
+}, {
+  "id" : "a6",
+  "name" : "explore_label",
+  "label" : "Explore label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Explore your market:"
+}, {
+  "id" : "a7",
+  "name" : "background_image",
+  "label" : "Background image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : true,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : "",
+    "loading" : "lazy",
+    "width" : 1600,
+    "height" : 900,
+    "max_width" : 1600,
+    "max_height" : 900
+  }
+}, {
+  "id" : "a9",
+  "name" : "top_cta",
+  "label" : "Top CTA",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a9a",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Talk to a specialist"
+  }, {
+    "id" : "a9b",
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "text" : "Talk to a specialist",
+    "url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  }
+}, {
+  "id" : "a10",
+  "name" : "buttons",
+  "label" : "Buttons",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "a10a",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "a10b",
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  }, {
+    "id" : "f9d9b6d7-d1a2-4fba-b710-0b0de0483a6d",
+    "name" : "cta_field",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "display_width" : null,
+    "type" : "cta"
+  }, {
+    "id" : "a10c",
+    "name" : "style",
+    "label" : "Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "primary", "Primary" ], [ "outline", "Outline" ], [ "outline-white", "Outline white" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "primary"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ ]
+}, {
+  "id" : "a11",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a11a",
+    "name" : "margin_block",
+    "label" : "Add top margin",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-margin", "No margin" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "large"
+  }, {
+    "id" : "a11b",
+    "name" : "padding_block",
+    "label" : "Add top and bottom padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-padding", "No padding" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "large"
+  }, {
+    "id" : "a11d",
+    "name" : "text_colors",
+    "label" : "Text colors",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "a11d1",
+      "name" : "base_text_color",
+      "label" : "Base text color",
+      "required" : false,
+      "locked" : false,
+      "show_opacity" : true,
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "a11d2",
+      "name" : "tagline_color",
+      "label" : "Tagline color",
+      "required" : false,
+      "locked" : false,
+      "show_opacity" : true,
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : "#F4B941",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "a11d3",
+      "name" : "title_color",
+      "label" : "Title color",
+      "required" : false,
+      "locked" : false,
+      "show_opacity" : true,
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "a11d4",
+      "name" : "description_color",
+      "label" : "Description color",
+      "required" : false,
+      "locked" : false,
+      "show_opacity" : true,
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : "#FFFFFF",
+        "opacity" : 90
+      }
+    }, {
+      "id" : "a11d5",
+      "name" : "explore_label_color",
+      "label" : "Explore label color",
+      "required" : false,
+      "locked" : false,
+      "show_opacity" : true,
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : "#FFFFFF",
+        "opacity" : 85
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "base_text_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
+      },
+      "tagline_color" : {
+        "color" : "#F4B941",
+        "opacity" : 100
+      },
+      "title_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
+      },
+      "description_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 90
+      },
+      "explore_label_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 85
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "margin_block" : "large",
+    "padding_block" : "large",
+    "backgroundcolor" : {
+      "color" : "#000000",
+      "opacity" : 100
+    },
+    "text_colors" : {
+      "base_text_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
+      },
+      "tagline_color" : {
+        "color" : "#F4B941",
+        "opacity" : 100
+      },
+      "title_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
+      },
+      "description_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 90
+      },
+      "explore_label_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 85
+      }
+    }
+  }
+} ]
