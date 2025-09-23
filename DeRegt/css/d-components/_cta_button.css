@@ -44,3 +44,7 @@ line-height: 20px;
   border-color: #ffffff;
   color: #ffffff ;
 }
+
+.btn-small{
+  padding: 12px 24px;
+}
