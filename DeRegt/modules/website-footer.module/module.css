@@ -1,0 +1,14 @@
+.footer li,
+.footer p {
+    color: var(--clr-gray-darker);
+}
+
+.footer-career-count {
+    display: inline-block;
+    background: var(--clr-yellow-sun, #ffd11a);
+    color: #222;
+    border-radius: 10px;
+    padding: 0 6px;
+    margin-left: 6px;
+    font-weight: 600;
+}
