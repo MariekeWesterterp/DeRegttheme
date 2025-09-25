@@ -74,4 +74,31 @@
             </div>
 
         </div>
+        <script>
+          (function() {
+            try {
+              var amount = {{ module.carreer_ammount | default(0) }};
+              if (!Number.isFinite(amount)) { amount = parseInt(amount, 10) || 0; }
+              var labelsToMatch = ["Careers", "Carreers"]; // handle both spellings
+              var footerEl = document.currentScript && document.currentScript.closest && document.currentScript.closest('footer');
+              var scope = footerEl || document;
+              var links = scope.querySelectorAll('.footer__links a');
+              links.forEach(function(link) {
+                var label = (link.textContent || '').trim();
+                if (labelsToMatch.indexOf(label) !== -1 && amount > 0) {
+                  // Append amount once if not already appended
+                  var alreadyHas = /\(\s*\d+\s*\)$/.test(label);
+                  if (!alreadyHas) {
+                    var newLabel = label + ' (' + amount + ')';
+                    link.textContent = newLabel;
+                    var singularPlural = amount === 1 ? 'career' : 'careers';
+                    link.setAttribute('aria-label', label + ' - ' + amount + ' ' + singularPlural);
+                  }
+                }
+              });
+            } catch (e) {
+              // silent fail
+            }
+          })();
+        </script>
     </footer>
