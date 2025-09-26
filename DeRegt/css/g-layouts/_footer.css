@@ -48,7 +48,6 @@ margin-bottom: 1px;
   color: var(--color-mine-shaft-600, #5D5D5D);
   text-decoration: none;
   text-align: left;
-  font-weight: 500;
   max-width: 250px;
   display: block;
 }
@@ -66,7 +65,6 @@ margin-bottom: 1px;
 .footer__bottom a,
 .footer__bottom p {
   color: {{ theme.global.footer.menu.text.font.color }};
-  font-weight: 300;
   margin-bottom: 0;
 }
 .footer__bottom a {
