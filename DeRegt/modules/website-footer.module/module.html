@@ -54,7 +54,6 @@
                     </div>
                 </div>
             </div>
-            <hr>
             <div class="footer__bottom">
                 <div class="footer__bottom-left">  
          <figure class="footer__image">
@@ -68,10 +67,44 @@
               </p>
               </div>
                   <div class="footer__bottom-right">
-                <p>Copyright {{ year }} - {{ site_settings.company_name }}</p>
+                <p>Copyright {{ year }} {{ site_settings.company_name }}</p>
               {{ module.legal_texts }}
               </div>
             </div>
+            <div class="footer__cta-mobile">
+              {% if module.cta_field_mobile %}
+                <div class="text">{% cta guid="{{ module.cta_field_mobile }}" %}</div>
+              {% elif module.cta_mobile_link and module.cta_mobile_text %}
+                <a class="btn-primary" href="{{ module.cta_mobile_link }}">{{ module.cta_mobile_text }}</a>
+              {% endif %}
+            </div>
 
         </div>
+        <script>
+          (function() {
+            try {
+              var amount = {{ module.carreer_ammount | default(0) }};
+              var links = document.querySelectorAll('.footer__links a');
+              links.forEach(function(link) {
+                var label = (link.textContent || '').trim();
+                var isCareer = /career/i.test(label);
+                if (isCareer && amount > 0) {
+                  // Append amount once if not already appended
+                  var alreadyHas = /\(\s*\d+\s*\)$/.test(label);
+                  if (!alreadyHas) {
+                    var badge = document.createElement('span');
+                    badge.className = 'footer-career-count';
+                    badge.textContent = '(' + amount + ')';
+                    link.appendChild(document.createTextNode(' '));
+                    link.appendChild(badge);
+                    var singularPlural = amount === 1 ? 'career' : 'careers';
+                    link.setAttribute('aria-label', label + ' - ' + amount + ' ' + singularPlural);
+                  }
+                }
+              });
+            } catch (e) {
+              
+            }
+          })();
+        </script>
     </footer>

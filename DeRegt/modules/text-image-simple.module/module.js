@@ -6,3 +6,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add any future JavaScript functionality here if needed
   console.log('Text Image Simple module loaded');
 });
+

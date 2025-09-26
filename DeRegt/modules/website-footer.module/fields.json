@@ -266,4 +266,41 @@
   "type" : "cta",
   "display_width" : null,
   "default" : "112785905376"
+}, {
+  "id" : "c4b5a3d2-7f9a-4c2b-8e6d-1a2b3c4d5e6f",
+  "name" : "carreer_ammount",
+  "label" : "Career amount",
+  "required" : false,
+  "locked" : true,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 0
+}, {
+  "id" : "e1b2c3d4-5678-49ab-90cd-ef1234567890",
+  "name" : "cta_field_mobile",
+  "label" : "CTA (mobile only)",
+  "required" : false,
+  "locked" : true,
+  "type" : "cta",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "a7c9e1d2-3456-47f8-9abc-de1234567890",
+  "name" : "cta_mobile_link",
+  "label" : "CTA mobile link",
+  "required" : false,
+  "locked" : true,
+  "type" : "url",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "b8d0f2e3-4567-48a9-abcd-ef2345678901",
+  "name" : "cta_mobile_text",
+  "label" : "CTA mobile text",
+  "required" : false,
+  "locked" : true,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
 } ]
