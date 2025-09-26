@@ -3,6 +3,7 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   color: var(--body-color);
+  font-weight: 400;
 }
 
 h1 {
@@ -10,6 +11,7 @@ h1 {
   font-size: var(--h1-font-size);
   color: var(--h1-color);
   text-transform: var(--h1-transform);
+  font-weight: 400;
 }
 
 h2 {
@@ -25,6 +27,7 @@ h3 {
   font-size: var(--h3-font-size);
   color: var(--h3-color);
   text-transform: var(--h3-transform);
+  font-weight: 400;
 }
 
 h4 {
@@ -32,6 +35,7 @@ h4 {
   font-size: var(--h4-font-size);
   color: var(--h4-color);
   text-transform: var(--h4-transform);
+  font-weight: 400;
 }
 
 h5 {
