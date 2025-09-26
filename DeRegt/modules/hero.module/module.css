@@ -41,9 +41,7 @@
     margin: 0;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0.08em;
     color: var(--hero-tagline-color, var(--clr-yellow-sun));
-    font-weight: 650;
 }
 
 .hero__title {
@@ -64,7 +62,6 @@
 .hero__description p {
     margin: 0 0 1rem 0;
     line-height: 150%;
-    font-weight: 600;
     font-size: 16px;
 }
 
