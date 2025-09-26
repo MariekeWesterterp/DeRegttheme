@@ -68,9 +68,16 @@
               </p>
               </div>
                   <div class="footer__bottom-right">
-                <p>Copyright {{ year }} - {{ site_settings.company_name }}</p>
+                <p>Copyright {{ year }} {{ site_settings.company_name }}</p>
               {{ module.legal_texts }}
               </div>
+            </div>
+            <div class="footer__cta-mobile">
+              {% if module.cta_field_mobile %}
+                <div class="text">{% cta guid="{{ module.cta_field_mobile }}" %}</div>
+              {% elif module.cta_mobile_link and module.cta_mobile_text %}
+                <a class="btn-primary" href="{{ module.cta_mobile_link }}">{{ module.cta_mobile_text }}</a>
+              {% endif %}
             </div>
 
         </div>
@@ -78,10 +85,7 @@
           (function() {
             try {
               var amount = {{ module.carreer_ammount | default(0) }};
-              if (!Number.isFinite(amount)) { amount = parseInt(amount, 10) || 0; }
-              var footerEl = document.currentScript && document.currentScript.closest && document.currentScript.closest('footer');
-              var scope = footerEl || document;
-              var links = scope.querySelectorAll('.footer__links a');
+              var links = document.querySelectorAll('.footer__links a');
               links.forEach(function(link) {
                 var label = (link.textContent || '').trim();
                 var isCareer = /career/i.test(label);

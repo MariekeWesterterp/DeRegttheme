@@ -4,11 +4,16 @@
 }
 
 .footer-career-count {
-    display: inline-block;
-    background: var(--clr-yellow-sun, #ffd11a);
-    color: #222;
-    border-radius: 10px;
-    padding: 0 6px;
-    margin-left: 6px;
-    font-weight: 600;
+    color: var(--clr-corn-secondary-500);
+}
+
+.footer__cta-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .footer__cta-mobile {
+        display: block;
+        margin-top: 16px;
+    }
 }
