@@ -1,0 +1,19 @@
+.footer li,
+.footer p {
+    color: var(--clr-gray-darker);
+}
+
+.footer-career-count {
+    color: var(--clr-corn-secondary-500);
+}
+
+.footer__cta-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .footer__cta-mobile {
+        display: block;
+        margin-top: 16px;
+    }
+}

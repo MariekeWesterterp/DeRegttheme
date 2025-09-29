@@ -10,7 +10,6 @@
 
 .feature__hero-text {
   font-size: var(--h3-font-size);
-  font-weight: 600;
   color: var(--clr-blue-midnight);
   line-height: 120%;
 }
@@ -34,7 +33,6 @@
 
 .feature__title {
   font-size: var(--h6-font-size);
-  font-weight: 600;
   color: var(--clr-blue-royal);
   margin-bottom: 8px;
   display: flex;
@@ -50,7 +48,6 @@
   color: var(--clr-gray-dark);
   font-size: var(--body-font-size);
   line-height: 150%;
-  font-weight: 600;
 }
 .feature__buttons{
      display: flex;

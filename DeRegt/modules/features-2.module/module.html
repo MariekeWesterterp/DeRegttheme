@@ -1,0 +1,58 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+
+<section class="feature-2">
+  <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} feature-2__wrapper" style="background-color: {{ module.style.backgroundcolor.color }}"> 
+    <div class="container">
+      {% if module.hero_text %}
+        <div class="feature-2__hero-text">
+          {{ module.hero_text }}
+        </div>
+      {% endif %}
+      
+      {% if module.features %}
+        <div class="feature-2__list">
+          {% for feature in module.features %}
+            <div class="feature-2__item">
+              {% if feature.title %}
+                <h3 class="feature-2__title">{{ feature.title }}</h3>
+              {% endif %}
+              {% if feature.description %}
+                <div class="feature-2__description">{{ feature.description }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      
+      <div class="feature-2__buttons">
+        {% if module.cta1 %}
+          {{ module.cta1 }}
+        {% elif module.cta2 %}
+          {{ module.cta2 }}
+        {% else %}
+          {% if module.primary_button.text %}
+            <a href="{{ module.primary_button.url }}" class="feature-2__btn-primary">
+              {{ module.primary_button.text }}
+            </a>
+          {% endif %}
+          
+          {% if module.secondary_button.text %}
+            <a href="{{ module.secondary_button.url }}" class="feature-2__btn-secondary">
+              {{ module.secondary_button.text }}
+            </a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+

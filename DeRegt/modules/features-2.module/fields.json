@@ -1,0 +1,206 @@
+[ {
+  "id" : "anchor_field",
+  "name" : "anchor",
+  "label" : "Anchor",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "hero_text_field",
+  "name" : "hero_text",
+  "label" : "Hero Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Our unique multipurpose cables are the trusted and vital power and data connections that link the above and underwater worlds. DeRegt thrives on challenges that seem insurmountable. We combine innovation, persistence, and a deep understanding of our clients' needs to deliver solutions that not only meet but exceed expectations."
+}, {
+  "id" : "features_group",
+  "name" : "features",
+  "label" : "Features",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "feature_title",
+    "name" : "title",
+    "label" : "Feature Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Custom Cable Co-Creation"
+  }, {
+    "id" : "feature_desc",
+    "name" : "description",
+    "label" : "Feature Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "Collaborate with us to create bespoke cable solutions that perfectly fit your requirements."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "repeating" : true,
+  "default" : {
+    "title" : "Custom Cable Co-Creation",
+    "description" : "Collaborate with us to create bespoke cable solutions that perfectly fit your requirements."
+  }
+}, {
+  "id" : "primary_btn_group",
+  "name" : "primary_button",
+  "label" : "Primary Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "primary_btn_text",
+    "name" : "text",
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Request custom cable design"
+  }, {
+    "id" : "primary_btn_url",
+    "name" : "url",
+    "label" : "Button URL",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "text" : "Request custom cable design",
+    "url" : ""
+  }
+}, {
+  "id" : "secondary_btn_group",
+  "name" : "secondary_button",
+  "label" : "Secondary Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "secondary_btn_text",
+    "name" : "text",
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Talk to a specialist"
+  }, {
+    "id" : "secondary_btn_url",
+    "name" : "url",
+    "label" : "Button URL",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "text" : "Talk to a specialist",
+    "url" : ""
+  }
+}, {
+  "id" : "cta1_field",
+  "name" : "cta1",
+  "label" : "CTA 1",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
+  "id" : "cta2_field",
+  "name" : "cta2",
+  "label" : "CTA 2",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
+  "id" : "style_group",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style_margin",
+    "name" : "margin_block",
+    "label" : "Add top margin",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-margin", "No margin" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "medium"
+  }, {
+    "id" : "style_padding",
+    "name" : "padding_block",
+    "label" : "Add top and bottom padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-padding", "No padding" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "medium"
+  }, {
+    "id" : "style_bg",
+    "name" : "backgroundcolor",
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "show_opacity" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : { "color" : "#eef5ff", "opacity" : 100 }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "margin_block" : "medium",
+    "padding_block" : "medium",
+    "backgroundcolor" : { "color" : "#eef5ff", "opacity" : 100 }
+  }
+} ]
+
+
+
+
+
+
+
+
