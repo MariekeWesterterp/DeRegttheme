@@ -10,7 +10,6 @@
 
 .feature__hero-text {
   font-size: var(--h3-font-size);
-  font-weight: 500;
   color: var(--clr-blue-midnight);
   line-height: 120%;
 }
