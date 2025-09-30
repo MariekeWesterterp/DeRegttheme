@@ -1,0 +1,212 @@
+[ {
+  "id" : "73d6c650-71d6-489e-9bc1-10c35c4fe342",
+  "name" : "anchor",
+  "label" : "Anchor",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "0268ade5-e4ea-4c51-9346-7735fc6a2e0b",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : true,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Custom design examples of our ROV Cables"
+}, {
+  "id" : "db009a02-7e25-492e-aef8-341e1040dc28",
+  "name" : "blocks",
+  "label" : "Product blocks",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 3,
+    "sorting_label_field": "931ac5bf-df51-4430-ae33-b38f74c94620",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "aaf28568-7e21-4d0f-a88b-e22121d134b4",
+    "name" : "image",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : true,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : "",
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "931ac5bf-df51-4430-ae33-b38f74c94620",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "IHC cable design"
+  }, {
+    "id" : "db83b32f-f51a-4f22-b92a-c5c6f1cb323b",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>50cm thickness<br>Material: Metal<br>Eigenschap: Waarde</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "IHC cable design",
+    "description" : "<p>50cm thickness<br>Material: Metal<br>Eigenschap: Waarde</p>"
+  }, {
+    "title" : "Geomill cable design",
+    "description" : "<p>50cm thickness<br>Material: Metal<br>Eigenschap: Waarde</p>"
+  }, {
+    "title" : "Honghai cable design",
+    "description" : "<p>50cm thickness<br>Material: Metal<br>Eigenschap: Waarde</p>"
+  } ]
+}, {
+  "id" : "f03be02d-dcbb-456f-8960-3bb3a5808c86",
+  "name" : "cta_block",
+  "label" : "CTA block",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7cff9b9d-137f-4ce7-bafb-131deee5b768",
+    "name" : "title",
+    "label" : "CTA title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : true,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Request a custom design"
+  }, {
+    "id" : "b4d95bcf-1e4a-4813-bb70-95f3ac42b7a3",
+    "name" : "button",
+    "label" : "Button",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "8866452a-d4c4-4cfa-b3e1-01f06e172465",
+      "name" : "text",
+      "label" : "Button text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Talk to a specialist"
+    }, {
+      "id" : "17d7b72f-29ab-4371-9532-748100f16cc3",
+      "name" : "url",
+      "label" : "Button URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "type" : "url",
+      "display_width" : null,
+      "default" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      }
+    }, {
+      "id" : "d468e97d-255a-4d03-82c0-522687bc69b6",
+      "name" : "cta_field",
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "type" : "cta",
+      "display_width" : null
+    }, {
+      "id" : "5fb85489-43f3-4b76-8f7a-f0b4727e23aa",
+      "name" : "style",
+      "label" : "Button style",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "primary", "Primary" ], [ "outline", "Outline" ], [ "outline-white", "Outline white" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "primary"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "title" : "Request a custom design",
+    "button" : {
+      "text" : "Talk to a specialist",
+      "style" : "primary"
+    }
+  }
+}, {
+  "id" : "f4141b1c-2bba-4ca6-9c21-d473da2f7bbb",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "af0afe72-7487-4bc5-9c58-fb86a8205cac",
+    "name" : "margin_block",
+    "label" : "Add top margin",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-margin", "No margin" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "medium"
+  }, {
+    "id" : "f2a5ed8d-7be1-4dd9-87d9-cade7589261d",
+    "name" : "backgroundcolor",
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "show_opacity" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : "#EEF8FF"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "margin_block" : "medium",
+    "padding_block" : "large",
+    "backgroundcolor" : "#EEF8FF"
+  }
+} ]

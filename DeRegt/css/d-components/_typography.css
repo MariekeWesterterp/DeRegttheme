@@ -17,8 +17,9 @@ html[lang^='ko'] body {
 
 p {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--body-font-size);
   font-weight: 400;
+  line-height: 150%;
 }
 
 /* Anchors */
