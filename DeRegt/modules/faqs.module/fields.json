@@ -7,27 +7,8 @@
   "allow_new_line" : false,
   "type" : "text",
   "display_width" : null
-}, {
-  "id" : "5b01db3c-3a15-5097-8364-76cd0931ef8d",
-  "name" : "has_intro_left",
-  "label" : "Has intro left",
-  "required" : false,
-  "locked" : false,
-  "display" : "checkbox",
-  "type" : "boolean",
-  "display_width" : null,
-  "default" : true
-}, {
-  "id" : "pill",
-  "name" : "pill",
-  "label" : "Pill",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Over Loyal"
-}, {
+},  
+{
   "id" : "d1223648-0a3f-4cf9-d44e-e068c902c393",
   "name" : "heading",
   "label" : "Heading",
@@ -36,95 +17,9 @@
   "allow_new_line" : true,
   "type" : "text",
   "display_width" : null,
-  "default" : "Frequently asked questions"
-}, {
-  "id" : "990dab98-60ef-a758-a470-46b514ba0866",
-  "name" : "intro",
-  "label" : "intro",
-  "required" : false,
-  "locked" : false,
-  "type" : "richtext",
-  "display_width" : null,
-  "default" : "Deze vragen horen we vaker"
-}, {
-  "id" : "cbf9e0ba-887f-90ad-a49c-7db707664324",
-  "name" : "service_agent",
-  "label" : "service agent",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "4e793a13-14a1-e66b-0c11-906e391cbe1f",
-    "name" : "image_service_agent",
-    "label" : "Image service agent",
-    "required" : false,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
-    "display_width" : null,
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/Ellipse%2035.jpg",
-      "alt" : "Ellipse 35",
-      "loading" : "lazy",
-      "width" : 80,
-      "height" : 81,
-      "max_width" : 80,
-      "max_height" : 81
-    }
-  }, {
-    "id" : "72ade65e-c84b-9b9b-9f96-fa2dbfae059a",
-    "name" : "name_service_desk_agent",
-    "label" : "Name service desk agent",
-    "required" : false,
-    "locked" : false,
-    "allow_new_line" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Inge de Vries"
-  }, {
-    "id" : "5e78e1f0-4e0d-1f07-006e-63b98265acc7",
-    "name" : "function_service_agent",
-    "label" : "Function service agent",
-    "required" : false,
-    "locked" : false,
-    "allow_new_line" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Financial controller"
-  }, {
-    "id" : "a4cbe725-4960-1063-bce4-c5c097bfc00e",
-    "name" : "phonenumber_service_agent",
-    "label" : "Phonenumber service agent",
-    "required" : false,
-    "locked" : false,
-    "allow_new_line" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "06 12 34 56 78"
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : {
-    "image_service_agent" : {
-      "size_type" : "auto",
-      "src" : "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/Ellipse%2035.jpg",
-      "alt" : "Ellipse 35",
-      "loading" : "lazy",
-      "width" : 80,
-      "height" : 81,
-      "max_width" : 80,
-      "max_height" : 81
-    },
-    "name_service_desk_agent" : "Inge de Vries",
-    "function_service_agent" : "Financial controller",
-    "phonenumber_service_agent" : "06 12 34 56 78"
-  }
-}, {
+  "default" : "Veelgestelde vragen"
+},
+{
   "id" : "2acacdea-a0cb-8888-8ae9-e618cd517786",
   "name" : "faq_item",
   "label" : "faq-item",
@@ -145,7 +40,7 @@
     "allow_new_line" : true,
     "type" : "text",
     "display_width" : null,
-    "default" : "Welke projecten hebben jullie?"
+    "default" : "Dit is een veelgestelde vraag"
   }, {
     "id" : "1506103f-5d0d-000f-b851-76f1cb0541cf",
     "name" : "faq_text",
@@ -154,7 +49,7 @@
     "locked" : false,
     "type" : "richtext",
     "display_width" : null,
-    "default" : "<p>Wij werken samen met toonaangevende organisaties. De projecten zijn uiteenlopend en sluiten altijd aan op jouw behoefte. Ben je niet gelukkig met jouw project? Dan kijken we samen verder. Zo blijf je elke dag met plezier werken aan uitdagende projecten.</p>"
+    "default" : "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.</p>"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -183,73 +78,16 @@
     "display_width" : null,
     "default" : "medium"
   }, {
-    "id" : "5fd295f5-b448-2fb3-3103-304dd70e62ba",
-    "name" : "padding_block",
-    "label" : "Add top and bottom padding",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null
-  }, {
-    "id" : "64d74d5b-967c-e3cf-8643-3d828ee827e8",
+    "id" : "1a5f3e2c-2b1e-4f0d-6f4c-8e3b1e5e2f4c",
     "name" : "backgroundcolor",
-    "label" : "Backgroundcolor",
+    "label" : "Background color",
     "required" : false,
     "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "#FFC837", "Yellow" ], [ "#000", "Black" ], [ "#fff", "White" ], [ "#F1F4F5", "Light gray" ], [ "#D9D9D6", "Gray" ], [ "transparent", "Transparent" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
+    "type" : "color",
     "display_width" : null,
-    "default" : "#F1F4F5"
-  }, {
-    "id" : "719d9c24-e16d-a538-127d-0500b4c5c8a0",
-    "name" : "rounded_border_top",
-    "label" : "Rounded border top",
-    "required" : false,
-    "locked" : false,
-    "children" : [ {
-      "id" : "248edd25-0c56-1018-42c2-c3acf25ba5a2",
-      "name" : "rounded_corners_on_top",
-      "label" : "Rounded corners on top",
-      "required" : false,
-      "locked" : false,
-      "display" : "checkbox",
-      "type" : "boolean",
-      "display_width" : null,
-      "default" : true
-    }, {
-      "id" : "56b61fec-1794-ffc7-688c-84dc9bce437c",
-      "name" : "background_color_rounded_corners",
-      "label" : "Backgroundcolor Rounded corners",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "#FFC837", "Yellow" ], [ "#000", "Black" ], [ "#fff", "White" ], [ "#F1F4F5", "Light gray" ], [ "#D9D9D6", "Gray" ], [ "transparent", "Transparent" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "display_width" : null,
-      "default" : "#fff"
-    } ],
-    "tab" : "STYLE",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "rounded_corners_on_top" : true,
-      "background_color_rounded_corners" : "#fff"
-    }
-  } ],
+    "default" : "#FFFFFF"
+  }
+],
   "tab" : "STYLE",
   "expanded" : false,
   "group_occurrence_meta" : null,
@@ -257,10 +95,6 @@
   "display_width" : null,
   "default" : {
     "margin_block" : "medium",
-    "backgroundcolor" : "#F1F4F5",
-    "rounded_border_top" : {
-      "rounded_corners_on_top" : true,
-      "background_color_rounded_corners" : "#fff"
-    }
+    "backgroundcolor" : "#F1F4F5"
   }
 } ]

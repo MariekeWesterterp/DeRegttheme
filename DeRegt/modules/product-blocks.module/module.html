@@ -1,0 +1,70 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+{% set section_background = module.style.backgroundcolor %}
+{% set spacing_classes = macros.margin_padding(module.style.margin_block) %}
+{% set cta_block = module.cta_block %}
+<section class="product-blocks default-padding {{ spacing_classes }}"{% if section_background %} style="background-color: {{ section_background }}"{% endif %}>
+  <div class="product-blocks__wrapper">
+    <div class="container">
+      {% if module.heading %}
+        <div class="product-blocks__header">
+          <h2 class="product-blocks__title">{{ module.heading }}</h2>
+          <svg class="product-blocks__underline" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+            <path d="M48 0H0V6H48V0Z" fill="#F1C61A"></path>
+          </svg>
+        </div>
+      {% endif %}
+      {% set has_blocks = module.blocks|length > 0 %}
+      {% set has_cta_title = cta_block.title %}
+      {% set cta_button = cta_block.button %}
+      {% set button_text = (cta_button.text|trim) if cta_button else '' %}
+      {% set button_url = cta_button.url.href if cta_button and cta_button.url and cta_button.url.href %}
+      {% set button_has_manual = button_text and button_url %}
+      {% set button_target = cta_button.url.target if cta_button and cta_button.url and cta_button.url.target else ('_blank' if cta_button and cta_button.url and cta_button.url.open_in_new_tab else '_self') %}
+      {% set button_rel = 'noopener' if button_target == '_blank' else None %}
+      {% set button_style = cta_button.style if cta_button and cta_button.style else 'primary' %}
+      {% set has_cta_button = button_has_manual or (cta_button and cta_button.cta_field) %}
+      {% if has_blocks or has_cta_title or has_cta_button %}
+        <div class="product-blocks__grid">
+          {% for item in module.blocks %}
+            {% set image = item.image %}
+            <article class="product-blocks__card">
+              {% if image.src %}
+                <div class="product-blocks__image">
+                  <img src="{{ image.src|escape_url }}" alt="{{ image.alt|escape_html }}" loading="{{ image.loading|default('lazy') }}">
+                </div>
+              {% endif %}
+              <div class="product-blocks__content">
+                {% if item.title %}
+                  <h3 class="product-blocks__card-title">{{ item.title }}</h3>
+                {% endif %}
+                {% if item.description %}
+                  <div class="product-blocks__card-description rte">{{ item.description }}</div>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+          {% if has_cta_title or has_cta_button %}
+            <div class="product-blocks__cta">
+              <div class="product-blocks__cta-inner">
+                {% if has_cta_title %}
+                  <h3 class="product-blocks__cta-title">{{ cta_block.title }}</h3>
+                {% endif %}
+                {% if has_cta_button %}
+                  {% if button_has_manual %}
+                    <a href="{{ button_url|escape_url }}" target="{{ button_target }}" {% if button_rel %}rel="{{ button_rel }}"{% endif %} class="product-blocks__cta-button{% if button_style == 'outline' %} btn-secondary{% elif button_style == 'outline-white' %} btn-secondary btn-secondary-white{% else %} btn-primary{% endif %}">{{ button_text }}</a>
+                  {% elif cta_button.cta_field %}
+                    <div class="product-blocks__cta-button">
+                      {% cta guid="{{ cta_button.cta_field }}" %}
+                    </div>
+                  {% endif %}
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
