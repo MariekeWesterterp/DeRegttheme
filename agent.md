@@ -47,6 +47,8 @@ Conventions:
 - Mirror choices format used elsewhere, e.g.:
   - `"display": "select"`
   - `"choices": [["value","Label"], …]`
+- When adding fields, use this format for the id's of the field: `a8784e45-bf00-4b97-9034-0c18b3b83a3a`
+
 
 ### CSS
 - Keep styles module-scoped (prefix with the module block class).

@@ -1,5 +1,5 @@
 {% import "/DeRegt/macro/margin-padding.html" as macros %}
-
+{% import "/DeRegt/macro/contact-card.html" as contact %}
 
 {% macro color_to_rgba(value) %}
   {% if value and value.color %}
@@ -39,15 +39,16 @@
   <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} hero__wrapper"{% if wrapper_styles %} style="{{ wrapper_styles|join('; ') }}"{% endif %}>
   <div class="hero__tagline-mobile">
     {% if module.tagline %}
-      <p class="hero__tagline container">{{ module.tagline }}</p>
+      {% set tagline_bg_color = color_to_rgba(text_colors.tagline_bg_color)|trim %}
+      <p class="hero__tagline container" style="background-color: {{ tagline_bg_color }}">{{ module.tagline }}</p>
     {% endif %}
   </div>
   <div class="hero__content">
       <div class="container">
        <div class="hero__content__container">
         {% if module.tagline %}
-
-        <p class="hero__tagline">{{ module.tagline }}</p>
+          {% set tagline_bg_color = color_to_rgba(text_colors.tagline_bg_color)|trim %}
+        <p class="hero__tagline" style="background-color: {{ tagline_bg_color }}">{{ module.tagline }}</p>
         {% endif %}
         {% if module.title %}
         <h1 class="hero__title">{{ module.title }}</h1>
@@ -76,7 +77,12 @@
           {% endfor %}
         </div>
       {% endif %}
+      {% set contact_card_text_color = color_to_rgba(text_colors.contact_card_text_color)|trim %}
+        {% if module.contact_card.show %}
+      <div class="hero__contact-card" style="color: {{ contact_card_text_color }}">
+      {{ contact.render(module.contact_card) }}
+      </div>
+      {% endif %}
     </div>
-  </div>
   </div>
 </section>

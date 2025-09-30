@@ -5,9 +5,7 @@ margin-bottom: 30px;
     align-items: self-end;
 
 }
-.bloglist__text h2 {
-font-weight: 600;
-}
+
 .bloglist__text .bloglist__readmore {
 display: none;
 }
