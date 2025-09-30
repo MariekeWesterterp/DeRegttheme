@@ -39,6 +39,13 @@ Conventions:
 - Use `macro/margin-padding.html` for spacing (`margin-top-…`, `padding-…`).
 - Use `macro/button-group.html` when you need a standard dual-CTA + text-link layout.
 
+
+### Contact card macro
+- Use `/DeRegt/macro/contact-card.html` whenever a module needs the specialist/contact block design.
+- Expected fields: a `contact_card` group with `show`, `photo`, `person_name`, `title`, a `phone` group (`display_text` + phone link field), `button` (choice/link/cta/style) and `secondary_link`.
+- Import with `{% import "/DeRegt/macro/contact-card.html" as contact_card %}` and render via `{% if module.contact_card.show %}{{ contact_card.render(module.contact_card) }}{% endif %}`.
+- Styling is shared via `css/d-components/_contact-card.css` (already included in `main.css`).
+
 ### fields.json schema (project style)
 - Use an array of field objects (not a single object with an inner `fields` array).
 - Include `id`, `name`, `label`, `type`, plus control props consistent with existing modules.
