@@ -1,0 +1,175 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: false
+-->
+
+{% macro render(card) %}
+  {% set card = card or {} %}
+  {% set photo = card.photo or {} %}
+  {% set has_photo = photo.src %}
+
+  {% set phone = card.phone or {} %}
+  {% set phone_label = phone.display_text or phone.label %}
+  {% set phone_link = phone.phone if phone.phone is defined else None %}
+  {% set phone_url = phone_link.url if phone_link and phone_link.url is defined else None %}
+
+  {% set phone_href = None %}
+  {% set phone_href_is_raw = false %}
+  {% set phone_target = None %}
+  {% set phone_rel = None %}
+
+  {% if phone_link %}
+    {% if phone_link.open_in_new_tab is defined and phone_link.open_in_new_tab %}
+      {% set phone_target = '_blank' %}
+    {% elif phone_link.target is defined and phone_link.target %}
+      {% set phone_target = phone_link.target %}
+    {% endif %}
+
+    {% if phone_link.rel is defined and phone_link.rel %}
+      {% set phone_rel = phone_link.rel %}
+    {% elif phone_link.no_follow is defined and phone_link.no_follow %}
+      {% set phone_rel = 'nofollow' %}
+    {% endif %}
+  {% endif %}
+
+  {% if phone_url and phone_url.href %}
+    {% set href_value = phone_url.href|trim %}
+    {% set url_type = phone_url.type|upper if phone_url.type is defined else '' %}
+    {% if url_type == 'EMAIL_ADDRESS' %}
+      {% set email_value = href_value|regex_replace('^mailto:', '') %}
+      {% if email_value %}
+        {% set phone_href = 'mailto:' ~ email_value %}
+      {% endif %}
+    {% elif url_type == 'PHONE_NUMBER' %}
+      {% set number_value = href_value|regex_replace('^tel:', '')|regex_replace('[^0-9+]', '') %}
+      {% if number_value %}
+        {% set phone_href = 'tel:' ~ number_value %}
+      {% endif %}
+    {% elif url_type == 'CALL_TO_ACTION' %}
+      {% set phone_href = href_value %}
+      {% set phone_href_is_raw = true %}
+    {% else %}
+      {% set phone_href = href_value %}
+    {% endif %}
+  {% endif %}
+
+  {% if not phone_href and phone_link and phone_link.href is defined %}
+    {% set fallback_href = phone_link.href|trim %}
+    {% if fallback_href %}
+      {% set phone_href = fallback_href %}
+    {% endif %}
+  {% endif %}
+
+  {% if not phone_href and phone.url is defined and phone.url.href is defined %}
+    {% set fallback_href = phone.url.href|trim %}
+    {% if fallback_href %}
+      {% set phone_href = fallback_href %}
+    {% endif %}
+  {% endif %}
+
+  {% if not phone_href and phone.href is defined %}
+    {% set fallback_href = phone.href|trim %}
+    {% if fallback_href %}
+      {% set phone_href = fallback_href %}
+    {% endif %}
+  {% endif %}
+
+  {% if not phone_href and phone.number is defined %}
+    {% set number_value = phone.number|regex_replace('[^0-9+]', '') %}
+    {% if number_value %}
+      {% set phone_href = 'tel:' ~ number_value %}
+    {% endif %}
+  {% endif %}
+
+  {% if not phone_href and phone_label %}
+    {% set number_value = phone_label|regex_replace('[^0-9+]', '') %}
+    {% if number_value %}
+      {% set phone_href = 'tel:' ~ number_value %}
+    {% endif %}
+  {% endif %}
+
+  {% if phone_href and not phone_href_is_raw %}
+    {% set phone_href_lower = phone_href|lower %}
+    {% if phone_href_lower[:4] != 'tel:' and phone_href_lower[:7] != 'mailto:' and '://' not in phone_href_lower %}
+      {% set digits = phone_href|regex_replace('[^0-9+]', '') %}
+      {% if digits %}
+        {% set phone_href = 'tel:' ~ digits %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  {% set phone_rel_attr = phone_rel %}
+  {% if phone_target == '_blank' %}
+    {% set phone_rel_attr = (phone_rel_attr ~ ' ' if phone_rel_attr else '') ~ 'noopener' %}
+  {% endif %}
+
+  {% set button = card.button or {} %}
+  {% set button_url = button.url or {} %}
+  {% set link = card.secondary_link or {} %}
+  {% set link_url = link.url or {} %}
+
+  {% set button_style = button.style or 'primary' %}
+  {% set button_classes = 'btn-primary' %}
+  {% if button_style == 'secondary' %}
+    {% set button_classes = 'btn-secondary' %}
+  {% elif button_style == 'secondary-white' %}
+    {% set button_classes = 'btn-secondary btn-secondary-white' %}
+  {% endif %}
+
+  {% set has_button = (button.choice == 'cta' and button.cta) or (button.choice != 'cta' and button.text and (button_url.href or button_url.content_id)) %}
+  {% set has_link = link.text and (link_url.href or link_url.content_id) %}
+  {% set contact_name = card.person_name or card.name %}
+  {% set has_content = has_photo or contact_name or card.title or phone_label or has_button or has_link %}
+
+  {% if has_content %}
+    <div class="contact-card">
+      <div class="contact-card__main">
+        {% if has_photo %}
+          <div class="contact-card__media">
+            <img class="contact-card__avatar" src="{{ photo.src|escape_url }}" alt="{{ photo.alt|default(contact_name)|escape_attr }}" width="{{ photo.width|default(128) }}" height="{{ photo.height|default(128) }}" loading="{{ photo.loading|default('lazy') }}">
+          </div>
+        {% endif %}
+        <div class="contact-card__body">
+          {% if contact_name %}
+            <p class="contact-card__name">{{ contact_name }}</p>
+          {% endif %}
+          {% if card.title %}
+            <p class="contact-card__title">{{ card.title }}</p>
+          {% endif %}
+          {% if phone_label %}
+            <div class="contact-card__phone">
+              <span class="contact-card__phone-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                  <path d="M12.4925 9.9425C12.3811 10.7894 11.9651 11.5668 11.3224 12.1294C10.6797 12.6921 9.8542 13.0015 9.00001 13C4.03751 13 5.6554e-06 8.9625 5.6554e-06 4C-0.00152558 3.1458 0.307935 2.32026 0.870589 1.67756C1.43324 1.03485 2.21061 0.618937 3.05751 0.507496C3.27166 0.481346 3.48854 0.525159 3.67575 0.632395C3.86296 0.73963 4.01047 0.904536 4.09626 1.1025L5.41626 4.04937V4.05687C5.48194 4.2084 5.50906 4.37385 5.49521 4.53842C5.48136 4.70299 5.42696 4.86157 5.33688 5C5.32563 5.01687 5.31376 5.0325 5.30126 5.04812L4.00001 6.59062C4.46813 7.54187 5.46313 8.52812 6.42688 8.9975L7.94813 7.70312C7.96307 7.69056 7.97872 7.67888 7.99501 7.66812C8.13331 7.57587 8.29244 7.51956 8.45799 7.50428C8.62353 7.48901 8.79028 7.51524 8.94313 7.58062L8.95126 7.58437L11.8956 8.90375C12.0939 8.98923 12.2592 9.13661 12.3668 9.32385C12.4744 9.51108 12.5185 9.72812 12.4925 9.9425Z" fill="white"/>
+                </svg>
+              </span>
+              {% if phone_href %}
+                <a class="contact-card__phone-link" href="{% if phone_href_is_raw %}{{ phone_href }}{% else %}{{ phone_href|escape_url }}{% endif %}"{% if phone_target %} target="{{ phone_target|escape_attr }}"{% endif %}{% if phone_rel_attr %} rel="{{ phone_rel_attr|trim|escape_attr }}"{% endif %}>{{ phone_label }}</a>
+              {% else %}
+                <span class="contact-card__phone-text">{{ phone_label }}</span>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="contact-card__actions">
+        {% if button.choice == 'cta' and button.cta %}
+          <div class="contact-card__button contact-card__button--cta">
+            {% cta guid=button.cta %}
+          </div>
+        {% elif button.choice != 'cta' and button.text and (button_url.href or button_url.content_id) %}
+          {% set btn_target = button_url.target or ('_blank' if button_url.open_in_new_tab else '_self') %}
+          {% set btn_rel = 'noopener' if btn_target == '_blank' else None %}
+          {% set btn_href = button_url.href or '' %}
+          <a class="{{ button_classes }} contact-card__button" href="{{ btn_href|escape_url }}" target="{{ btn_target }}" {% if btn_rel %}rel="{{ btn_rel }}"{% endif %}>{{ button.text }}</a>
+        {% endif %}
+        {% if has_link %}
+          {% set link_target = link_url.target or ('_blank' if link_url.open_in_new_tab else '_self') %}
+          {% set link_rel = 'noopener' if link_target == '_blank' else None %}
+          {% set link_href = link_url.href or '' %}
+          <a class="contact-card__link" href="{{ link_href|escape_url }}" target="{{ link_target }}" {% if link_rel %}rel="{{ link_rel }}"{% endif %}>{{ link.text }}</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endmacro %}

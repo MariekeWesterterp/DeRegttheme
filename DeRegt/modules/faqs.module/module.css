@@ -1,0 +1,103 @@
+
+.jobs-page-content__post .faqs .container{
+padding-inline: 0;
+}
+.faqs.has-intro .faqs__wrapper .container{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (min-width: 767px){
+  
+  .faqs.has-intro .faqs__wrapper .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+}
+.faqs__intro{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.faqs__title{
+  margin-bottom: 8px;
+}
+.faqs .client__details{
+  align-items: center;
+}
+.faqs .client__details p{
+  font-size: 16px;
+  line-height: 25px;
+}
+.faqs  .client__details-name{
+  margin-top: 0;
+}
+@media (min-width: 767px){
+  .faqs .client__details{
+    display: none;
+  }
+}
+
+.faqs__accordion-item{
+  
+border-bottom: 1px solid var(--color-gray, #D9D9D6);
+}
+.faqs__accordion-item:first-child{
+  border-top: 1px solid var(--color-gray, #D9D9D6);
+}
+
+.faqs__accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 16px 8px;
+}
+.faqs__accordion-content a,
+.faqs__accordion-content p{
+  font-size: 16px;
+  line-height: 25px;
+}
+@media (min-width: 767px){
+  .faqs__accordion-content a,
+.faqs__accordion-content p{
+  font-size: 18px;
+  line-height: 28px;
+}
+}
+.faqs__accordion-icon::after{
+content: '';
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.faqs__accordion-button[aria-expanded="false"] .faqs__accordion-icon::after {
+    
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><g clip-path="url(%23clip0_397_3685)"><path d="M5 16C13.5917 14.4898 18.408 14.3102 27 16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.9999 5C15.9522 13.7659 16.0181 18.6 15.9999 27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_397_3685"><rect width="32" height="32" fill="white"/></clipPath></defs></svg>');
+}
+
+.faqs__accordion-button[aria-expanded="true"] .faqs__accordion-icon::after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><g clip-path="url(%23clip0_397_3692)"><path d="M5 16C13.5161 15.9392 18.4097 16.0139 27 16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_397_3692"><rect width="32" height="32" fill="white"/></clipPath></defs></svg>');
+}
+.faqs__accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease-in;
+  padding: 0 8px;
+
+}
+
+.faqs__accordion-button[aria-expanded="true"] + .faqs__accordion-content {
+    max-height: 500px; 
+        padding: 8px 8px 32px 8px;
+   transition: all 1s ease-in;
+}

@@ -15,7 +15,7 @@
 
 
 .hero__content{
-      padding-top: 229px;
+    padding-top: 229px;
     padding-bottom: 217px;
     background: linear-gradient(90deg,rgba(21, 43, 86, 1) 0%, rgba(21, 43, 86, 1) 19%, rgba(21, 43, 86, 0) 50%, rgba(21, 43, 86, 0) 100%);
 }
@@ -42,6 +42,7 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--hero-tagline-color, var(--clr-yellow-sun));
+    width: fit-content;
 }
 
 .hero__title {
@@ -102,7 +103,10 @@
  .hero__tagline-mobile{
     display: none;
  }
-
+.hero__contact-card{
+    margin-top: 16px;
+    max-width: 587px;
+}
 @media (max-width: 1024px) {
     .hero__wrapper {
         background-size: contain;
@@ -161,7 +165,9 @@
         margin-top: 8px;
         padding-bottom: 56px;
     }
-
+.hero__contact-card{
+    padding-bottom: 56px;
+}
     .hero__cta {
         width: 100%;
         justify-content: center;
