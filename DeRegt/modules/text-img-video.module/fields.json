@@ -17,7 +17,7 @@
   "allow_new_line" : false,
   "type" : "text",
   "display_width" : null,
-  "default" : "ECo-create your cable with us"
+  "default" : "Co-create your cable with us"
 }, 
 {
   "id" : "d5d9d2cb-8ef1-aa19-c04e-1e2c049a5b19",
@@ -117,6 +117,88 @@
   "type": "group",
   "display_width": null,
   "default": []
+},
+{
+  "id": "1f587909-1a5f-4c3f-8f44-0f64d4a8c173",
+  "name": "layout",
+  "label": "Layout",
+  "required": false,
+  "locked": false,
+  "display": "select",
+  "choices": [
+    [
+      "text-left",
+      "Text left"
+    ],
+    [
+      "text-right",
+      "Text right"
+    ]
+  ],
+  "multiple": false,
+  "reordering_enabled": true,
+  "preset": null,
+  "type": "choice",
+  "display_width": null,
+  "default": "text-left",
+  "tab": "CONTENT",
+  "expanded": false,
+  "group_occurrence_meta": null
+},
+{
+  "id": "88c0f85a-1df4-4de9-bcaa-1fa53232de12",
+  "name": "use_test_video",
+  "label": "Render demo video (testing only)",
+  "help_text": "Enable this to load the built-in YouTube demo video when no HubSpot video is configured.",
+  "required": false,
+  "locked": false,
+  "type": "boolean",
+  "display": "toggle",
+  "display_width": null,
+  "default": false,
+  "tab": "CONTENT",
+  "expanded": false,
+  "group_occurrence_meta": null
+},
+{
+  "id": "7d4de179-2aaa-44ff-8cce-1b055f2f7ae3",
+  "name": "video_meta",
+  "label": "Video overlay",
+  "required": false,
+  "locked": false,
+  "children": [
+    {
+      "id": "5b57d4c0-9db6-4aa0-90d4-9f8c6d1200de",
+      "name": "title",
+      "label": "Video title",
+      "required": false,
+      "locked": false,
+      "allow_new_line": false,
+      "type": "text",
+      "display_width": null,
+      "default": ""
+    },
+    {
+      "id": "cd762d61-3b02-46b8-9c4d-47a6dd21f6bb",
+      "name": "description",
+      "label": "Video description",
+      "required": false,
+      "locked": false,
+      "allow_new_line": true,
+      "type": "text",
+      "display_width": null,
+      "default": ""
+    }
+  ],
+  "tab": "CONTENT",
+  "expanded": false,
+  "group_occurrence_meta": null,
+  "type": "group",
+  "display_width": null,
+  "default": {
+    "title": "",
+    "description": ""
+  }
 },
 {
   "id": "1090f015-58c4-163f-407f-670a876c33ab",
@@ -268,10 +350,20 @@
   "type": "group",
   "display_width": null,
   "default": {
+    "margin_block": "medium",
     "padding_block": "medium",
-    "backgroundcolor": "#FFC837",
+    "backgroundcolor": {
+      "color": "#152B56",
+      "opacity": 100
+    },
     "type_of_heading": "h1",
-    "color_heading": "#000",
-    "color_text": "#000"
+    "color_heading": {
+      "color": "#FFFFFF",
+      "opacity": 100
+    },
+    "color_text": {
+      "color": "#FFFFFF",
+      "opacity": 100
+    }
   }
 } ]

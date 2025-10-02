@@ -43,7 +43,7 @@
       <p class="hero__tagline container" style="background-color: {{ tagline_bg_color }}">{{ module.tagline }}</p>
     {% endif %}
   </div>
-  <div class="hero__content">
+  <div class="hero__content {% if module.style.add_gradient %} hero__content--with-gradient{% endif %}">
       <div class="container">
        <div class="hero__content__container">
         {% if module.tagline %}

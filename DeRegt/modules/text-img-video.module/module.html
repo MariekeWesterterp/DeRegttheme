@@ -1,84 +1,131 @@
-{% import "/DeRegt/macro/margin-padding.html" as macros%}
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
 
+{% set has_hubspot_video = module.video_long.player_id %}
+{% set use_test_video = module.use_test_video %}
+{% set fallback_video_url = 'https://www.youtube.com/embed/D0UnqGm_miA?si=WuEZdI5p5ExwITSQ' %}
+{% set request_scheme = request.scheme if request and request.scheme else 'https' %}
+{% set request_domain = request.domain if request and request.domain else '' %}
+{% set current_origin = request_scheme ~ '://' ~ request_domain if request_domain else '' %}
+{% set fallback_query = 'enablejsapi=1&playsinline=1' %}
+{% if current_origin %}
+  {% set fallback_query = fallback_query ~ '&origin=' ~ current_origin|urlencode %}
+{% endif %}
+{% set fallback_video_src = fallback_video_url ~ ('&' if '?' in fallback_video_url else '?') ~ fallback_query %}
+{% set has_fallback_video = use_test_video and not has_hubspot_video %}
+{% set has_any_video = has_hubspot_video or has_fallback_video %}
+{% set has_image = module.image_field.src %}
+{% set layout_option = module.layout or 'text-left' %}
+{% set reversed_class = 'text-img-video__inner--reversed' if layout_option == 'text-right' else '' %}
+{% set heading_color = module.style.color_heading.color %}
+{% set text_color = module.style.color_text.color %}
+{% set video_meta = module.video_meta or {} %}
+{% set meta_title = video_meta.title %}
+{% set meta_description = video_meta.description %}
+{% set has_meta_content = meta_title or meta_description %}
+{% set media_classes = 'text-img-video__media-wrapper' %}
+{% if has_any_video %}
+  {% set media_classes = media_classes ~ ' has-video' %}
+{% endif %}
+{% if has_any_video and not has_image %}
+  {% set media_classes = media_classes ~ ' playing' %}
+{% endif %}
 
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
 
-<section class="text-img-video">
- <div class="{{ macros.margin_padding(module.style.margin_block) }} feature__wrapper" style="background-color: {{ module.style.backgroundcolor.color }}"> 
-    <div class="container default-padding" style="color: {{ module.style.color_text.color }}">
-      <div class="text-img-video__content-left">
-        {% if module.title %}
-    
-        <{{ module.style.type_of_heading }} style="color: {{ module.style.color_heading.color }}" class="text-img-video__title">{{ module.title }}<span>.</span></{{ module.style.type_of_heading }}>
-          {% endif %}
-          {{ module.richtext_field }}
-                
-      {% if module.buttons|length > 0 %}
-        <div class="text-img-video__buttons">
-          {% for btn in module.buttons %}
-            {% set button_text = btn.text|trim %}
-            {% set has_standard_button = button_text and btn.url.href %}
-            {% set button_target = btn.url.target or ('_blank' if btn.url.open_in_new_tab else '_self') %}
-            {% set button_rel = 'noopener' if button_target == '_blank' else None %}
-            {% if has_standard_button %}
-              <a href="{{ btn.url.href|escape_url }}" target="{{ button_target }}" {% if button_rel %}rel="{{ button_rel }}"{% endif %} class="feature__button{% if btn.style == 'outline' %} btn-secondary{% elif btn.style == 'outline-white' %} btn-secondary btn-secondary-white{% else %} btn-primary{% endif %}">{{ button_text }}</a>
-            {% elif btn.cta_field %}
-              <div class="text-img-video__cta">
-                {% cta guid="{{ btn.cta_field }}" %}
+<section class="text-img-video" style="background-color: {{ module.style.backgroundcolor.color }}">
+  <div class="{{ macros.margin_padding(module.style.margin_block) }} text-img-video__wrapper" style="--text-img-video-heading-color: {{ heading_color }}; --text-img-video-text-color: {{ text_color }};">
+    <div class="text-img-video__inner {{ reversed_class }}">
+      <div class="text-img-video__text-col">
+        <div class="container default-padding">
+          <div class="text-img-video__text">
+            {% if module.title %}
+              <div class="text-img-video__text_title">
+              <{{ module.style.type_of_heading }} class="text-img-video__title">{{ module.title }}</{{ module.style.type_of_heading }}>
+              <svg class="yellow-block" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+            <path d="M48 0H0V6H48V0Z" fill="#F1C61A"></path>
+            </svg>
               </div>
             {% endif %}
-          {% endfor %}
+            <div class="text-img-video__richtext">
+              {{ module.richtext_field }}
+            </div>
+            {% if module.buttons|length > 0 %}
+              <div class="text-img-video__buttons">
+                {% for btn in module.buttons %}
+                  {% set button_text = btn.text|trim %}
+                  {% set has_standard_button = button_text and btn.url.href %}
+                  {% set button_target = btn.url.target or ('_blank' if btn.url.open_in_new_tab else '_self') %}
+                  {% set button_rel = 'noopener' if button_target == '_blank' else None %}
+                  {% if has_standard_button %}
+                    <a href="{{ btn.url.href|escape_url }}" target="{{ button_target }}" {% if button_rel %}rel="{{ button_rel }}"{% endif %} class="text-img-video__button{% if btn.style == 'outline' %} btn-secondary{% elif btn.style == 'outline-white' %} btn-secondary btn-secondary-white{% else %} btn-primary{% endif %}">{{ button_text }}</a>
+                  {% elif btn.cta_field %}
+                    <div class="text-img-video__cta">
+                      {% cta guid="{{ btn.cta_field }}" %}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% if has_image or has_any_video %}
+        <div class="text-img-video__media">
+          <div class="{{ media_classes }}">
+            {% if has_image %}
+              {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="' ~ module.image_field.loading|escape_attr ~ '"' : '' %}
+             
+              <div class="text-img-video__image">
+                <img src="{{ module.image_field.src|escape_url }}" alt="{{ module.image_field.alt|default('', true)|striptags|escape_attr }}" {{ loadingAttr }} style="max-width: 100%; height: 100%;">
+              </div>
+            {% endif %}
+            {% if has_meta_content or has_any_video %}
+              {% set meta_classes = 'text-img-video__meta' %}
+              {% if not has_meta_content %}
+                {% set meta_classes = meta_classes ~ ' text-img-video__meta--hidden' %}
+              {% endif %}
+              <div class="{{ meta_classes }}" data-video-meta>
+                {% if meta_title %}
+                  <p class="text-img-video__meta-title">{{ meta_title }}</p>
+                {% endif %}
+                {% if meta_description %}
+                  <p class="text-img-video__meta-description">{{ meta_description|replace('\n', '<br>')|safe }}</p>
+                {% endif %}
+                {% if has_any_video %}
+                  <p class="text-img-video__meta-duration" data-video-duration>--:--</p>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if has_any_video and has_image %}
+              <button class="text-img-video__play" type="button" aria-label="Play video">
+                <span class="text-img-video__play-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="26" viewBox="0 0 22 26" fill="none">
+                    <path d="M1 1.98509V24.0151C1.00327 24.1909 1.05282 24.3627 1.14368 24.5132C1.23453 24.6638 1.36347 24.7877 1.51749 24.8725C1.67152 24.9573 1.84518 25 2.02096 24.9963C2.19675 24.9926 2.36845 24.9426 2.51875 24.8513L20.5287 13.8363C20.6726 13.7493 20.7916 13.6266 20.8741 13.4801C20.9567 13.3336 21.0001 13.1683 21.0001 13.0001C21.0001 12.8319 20.9567 12.6666 20.8741 12.5201C20.7916 12.3736 20.6726 12.2509 20.5287 12.1638L2.51875 1.14884C2.36845 1.0576 2.19675 1.0076 2.02096 1.00389C1.84518 1.00017 1.67152 1.04287 1.51749 1.12767C1.36347 1.21248 1.23453 1.3364 1.14368 1.48693C1.05282 1.63747 1.00327 1.80929 1 1.98509Z" stroke="#152B56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+            {% endif %}
+            {% if has_hubspot_video %}
+              <div class="text-img-video__video" data-video-player>
+                {% video_player "embed_player"
+                  player_id={{ module.video_long.player_id }}
+                  type={{ module.video_long.player_type || 'scriptV4' }}
+                  full_width={{ module.video_long.size_type == 'auto_full_width' }},
+                  conversion_asset={{ module.video_long.conversion_asset|tojson|safe }}
+                  autoplay={{ module.video_long.autoplay }}
+                  hidden_controls={{ module.video_long.hide_controls }}
+                  loop={{ module.video_long.loop_video }}
+                  muted={{ module.video_long.mute_by_default }}
+                %}
+              </div>
+            {% elif has_fallback_video %}
+              <div class="text-img-video__video" data-video-player>
+                <iframe src="{{ fallback_video_src|escape_url }}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
-      </div>
-      <div class="text-img-video__content-right">
-        <div class="text-img-video__layers">
-              <div class="text-img-video__play">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <g clip-path="url(#clip0_655_8789)">
-                    <path d="M9 4.98509V27.0151C9.00327 27.1909 9.05282 27.3627 9.14368 27.5132C9.23453 27.6638 9.36347 27.7877 9.51749 27.8725C9.67152 27.9573 9.84518 28 10.021 27.9963C10.1967 27.9926 10.3684 27.9426 10.5188 27.8513L28.5287 16.8363C28.6726 16.7493 28.7916 16.6266 28.8741 16.4801C28.9567 16.3336 29.0001 16.1683 29.0001 16.0001C29.0001 15.8319 28.9567 15.6666 28.8741 15.5201C28.7916 15.3736 28.6726 15.2509 28.5287 15.1638L10.5188 4.14884C10.3684 4.0576 10.1967 4.0076 10.021 4.00389C9.84518 4.00017 9.67152 4.04287 9.51749 4.12767C9.36347 4.21248 9.23453 4.3364 9.14368 4.48693C9.05282 4.63747 9.00327 4.80929 9 4.98509Z" stroke="#152B56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_655_8789">
-                      <rect width="32" height="32" fill="white"/>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <div class="text-img-video__video">
-            {# dummy video: delete before live  #}
-
-                <div class="hs-video-widget" data-hsv-embed-id="9aeba1ad-bfa2-4e75-af9a-25563ace2835" data-hsv-status="loaded">
-                  <div class="hs-video-container" style="max-width: 100%; margin: 0 auto;">
-                    <div class="hs-video-wrapper" style="position: relative; padding-bottom: 56.25%">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D0UnqGm_miA?si=36zz42pqdjfIMyhm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                </div>
-
-            {# end dummy video  #}
-
-
-              {# add field for main video here: #}
-          {% if module.video_long.player_id %}
-                    {% set max_width = module.video_long.size_type == 'auto_custom_max' ? module.video_long.max_width : module.video_long.width %}
-                    {% set max_height = module.video_long.size_type == 'auto_custom_max' ? module.video_long.max_height : module.video_long.height %}
-                    {% video_player "embed_player"
-                      player_id={{ module.video_long.player_id }}
-                      type={{ module.video_long.player_type || 'scriptV4' }}
-                      full_width={{ module.video_long.size_type == 'auto_full_width' }},
-                      conversion_asset={{ module.video_long.conversion_asset|tojson|safe }}
-                      autoplay={{ module.video_long.autoplay }}
-                      hidden_controls={{ module.video_long.hide_controls }}
-                      loop={{ module.video_long.loop_video }}
-                      muted={{ module.video_long.mute_by_default }}
-                    %}
-                  {% endif %}
-              {# end main video#}
-          </div>  
-        </div>       
-      </div>
-          
     </div>
   </div>
 </section>

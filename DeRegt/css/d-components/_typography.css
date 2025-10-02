@@ -40,6 +40,10 @@ h6 {
   font-weight: 400;
 }
 
+h2{
+  line-height: 120%;
+}
+
 /* Lists */
 
 ul,
