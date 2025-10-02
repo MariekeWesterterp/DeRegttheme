@@ -436,7 +436,8 @@
   "label" : "Style",
   "required" : false,
   "locked" : false,
-  "children" : [ {
+  "children" : [ 
+    {
     "id" : "a11a",
     "name" : "margin_block",
     "label" : "Add top margin",
@@ -464,7 +465,16 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "large"
-  }, {
+  },
+  {
+    "type": "boolean",
+    "id": "e2ba2604-f787-ecc9-22b6-469742c0d4c0",
+    "default": true,
+    "display": "checkbox",
+    "label": "Add gradient on image",
+    "name": "add_gradient"
+  }, 
+  {
     "id" : "a11d",
     "name" : "text_colors",
     "label" : "Text colors",
@@ -636,3 +646,4 @@
     }
   }
 } ]
+

@@ -17,9 +17,11 @@
 .hero__content{
     padding-top: 229px;
     padding-bottom: 217px;
+    
+}
+.hero__content--with-gradient{
     background: linear-gradient(90deg,rgba(21, 43, 86, 1) 0%, rgba(21, 43, 86, 1) 19%, rgba(21, 43, 86, 0) 50%, rgba(21, 43, 86, 0) 100%);
 }
-
 
 .hero__top-cta {
     white-space: nowrap;
