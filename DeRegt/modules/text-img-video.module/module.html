@@ -1,0 +1,89 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros%}
+
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+
+<section class="text-img-video">
+ <div class="{{ macros.margin_padding(module.style.margin_block) }} feature__wrapper" style="background-color: {{ module.style.backgroundcolor.color }}"> 
+    <div class="container default-padding" style="color: {{ module.style.color_text.color }}">
+      <div class="text-img-video__content-left">
+        {% if module.title %}
+    
+        <{{ module.style.type_of_heading }} style="color: {{ module.style.color_heading.color }}" class="text-img-video__title">{{ module.title }}<span>.</span></{{ module.style.type_of_heading }}>
+          {% endif %}
+          {{ module.richtext_field }}
+                
+      {% if module.buttons|length > 0 %}
+        <div class="text-img-video__buttons">
+          {% for btn in module.buttons %}
+            {% set button_text = btn.text|trim %}
+            {% set has_standard_button = button_text and btn.url.href %}
+            {% set button_target = btn.url.target or ('_blank' if btn.url.open_in_new_tab else '_self') %}
+            {% set button_rel = 'noopener' if button_target == '_blank' else None %}
+            {% if has_standard_button %}
+              <a href="{{ btn.url.href|escape_url }}" target="{{ button_target }}" {% if button_rel %}rel="{{ button_rel }}"{% endif %} class="feature__button{% if btn.style == 'outline' %} btn-secondary{% elif btn.style == 'outline-white' %} btn-secondary btn-secondary-white{% else %} btn-primary{% endif %}">{{ button_text }}</a>
+            {% elif btn.cta_field %}
+              <div class="text-img-video__cta">
+                {% cta guid="{{ btn.cta_field }}" %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      </div>
+      <div class="text-img-video__content-right">
+        <div class="text-img-video__layers">
+              <div class="text-img-video__play">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <g clip-path="url(#clip0_655_8789)">
+                    <path d="M9 4.98509V27.0151C9.00327 27.1909 9.05282 27.3627 9.14368 27.5132C9.23453 27.6638 9.36347 27.7877 9.51749 27.8725C9.67152 27.9573 9.84518 28 10.021 27.9963C10.1967 27.9926 10.3684 27.9426 10.5188 27.8513L28.5287 16.8363C28.6726 16.7493 28.7916 16.6266 28.8741 16.4801C28.9567 16.3336 29.0001 16.1683 29.0001 16.0001C29.0001 15.8319 28.9567 15.6666 28.8741 15.5201C28.7916 15.3736 28.6726 15.2509 28.5287 15.1638L10.5188 4.14884C10.3684 4.0576 10.1967 4.0076 10.021 4.00389C9.84518 4.00017 9.67152 4.04287 9.51749 4.12767C9.36347 4.21248 9.23453 4.3364 9.14368 4.48693C9.05282 4.63747 9.00327 4.80929 9 4.98509Z" stroke="#152B56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_655_8789">
+                      <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="text-img-video__video">
+            {# dummy video: delete before live  #}
+
+                <div class="hs-video-widget" data-hsv-embed-id="9aeba1ad-bfa2-4e75-af9a-25563ace2835" data-hsv-status="loaded">
+                  <div class="hs-video-container" style="max-width: 100%; margin: 0 auto;">
+                    <div class="hs-video-wrapper" style="position: relative; padding-bottom: 56.25%">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D0UnqGm_miA?si=36zz42pqdjfIMyhm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+
+            {# end dummy video  #}
+
+
+              {# add field for main video here: #}
+          {% if module.video_long.player_id %}
+                    {% set max_width = module.video_long.size_type == 'auto_custom_max' ? module.video_long.max_width : module.video_long.width %}
+                    {% set max_height = module.video_long.size_type == 'auto_custom_max' ? module.video_long.max_height : module.video_long.height %}
+                    {% video_player "embed_player"
+                      player_id={{ module.video_long.player_id }}
+                      type={{ module.video_long.player_type || 'scriptV4' }}
+                      full_width={{ module.video_long.size_type == 'auto_full_width' }},
+                      conversion_asset={{ module.video_long.conversion_asset|tojson|safe }}
+                      autoplay={{ module.video_long.autoplay }}
+                      hidden_controls={{ module.video_long.hide_controls }}
+                      loop={{ module.video_long.loop_video }}
+                      muted={{ module.video_long.mute_by_default }}
+                    %}
+                  {% endif %}
+              {# end main video#}
+          </div>  
+        </div>       
+      </div>
+          
+    </div>
+  </div>
+</section>
+        
+
+        
+        
+       

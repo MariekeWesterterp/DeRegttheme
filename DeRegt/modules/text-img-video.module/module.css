@@ -1,0 +1,102 @@
+.text-img-video .container,
+.text-img-video__content-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.text-img-video__content-left .pill {
+  background: var(--clr-white);
+}
+.text-img-video__title span {
+  color: var(--clr-white);
+}
+.text-img-video__layers {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  border-radius: 32px;
+  overflow: hidden;
+}
+.text-img-video__play {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.text-img-video__play h3 {
+  color: var(--clr-white);
+}
+.text-img-video__play svg {
+  background: var(--clr-yellow);
+  border-radius: 50%;
+  /* padding: 16px; */
+  border: 16px solid var(--clr-yellow);
+  width: 88px;
+  height: 88px;
+}
+
+.text-img-video__short {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.text-img-video .hs-video-widget,
+.text-img-video .hs-video-container,
+.text-img-video .hs-video-wrapper {
+  height: 100%;
+}
+.text-img-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.text-img-video__video {
+  display: none;
+}
+.text-img-video__layers.playing .text-img-video__short {
+  display: none;
+}
+.text-img-video__layers.playing .text-img-video__play {
+  display: none;
+}
+.text-img-video__layers.playing .text-img-video__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+@media (min-width: 992px) {
+  .text-img-video .container {
+    grid-template-columns: auto 400px;
+    gap: 30px;
+    align-items: center;
+  }
+  .text-img-video h1 {
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%; /* 61.2px */
+    letter-spacing:  -4px;
+  }
+}
+@media (min-width: 1200px){
+ .text-img-video .container {
+    grid-template-columns: auto 600px;
+    gap: 66px;
+  }
+}
+@media (max-width: 767px) {
+  .text-img-video .text-img-video__wrapper {
+    padding-top: 16px;
+    padding-bottom: 56px;
+  }
+}
