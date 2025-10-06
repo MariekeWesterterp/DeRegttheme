@@ -66,7 +66,6 @@
 .product-blocks__card-description {
   color: var(--clr-mine-shaft-950);
   line-height: 1.5;
-  margin-top: 16px;
 }
 
 .product-blocks__card-description p {
@@ -114,7 +113,7 @@
 
   .product-blocks__card,
   .product-blocks__cta {
-    padding: 32px;
+    padding: 40px;
   }
 
   .product-blocks__card {
@@ -130,7 +129,7 @@
   .product-blocks__content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 4px;
   }
 }
 

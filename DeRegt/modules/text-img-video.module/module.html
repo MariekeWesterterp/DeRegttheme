@@ -22,6 +22,7 @@
 {% set meta_title = video_meta.title %}
 {% set meta_description = video_meta.description %}
 {% set has_meta_content = meta_title or meta_description %}
+{% set popup_label = meta_title or module.title or 'Video player' %}
 {% set media_classes = 'text-img-video__media-wrapper' %}
 {% if has_any_video %}
   {% set media_classes = media_classes ~ ' has-video' %}
@@ -97,7 +98,7 @@
               </div>
             {% endif %}
             {% if has_any_video and has_image %}
-              <button class="text-img-video__play" type="button" aria-label="Play video">
+              <button class="text-img-video__play" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Play video">
                 <span class="text-img-video__play-icon" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="26" viewBox="0 0 22 26" fill="none">
                     <path d="M1 1.98509V24.0151C1.00327 24.1909 1.05282 24.3627 1.14368 24.5132C1.23453 24.6638 1.36347 24.7877 1.51749 24.8725C1.67152 24.9573 1.84518 25 2.02096 24.9963C2.19675 24.9926 2.36845 24.9426 2.51875 24.8513L20.5287 13.8363C20.6726 13.7493 20.7916 13.6266 20.8741 13.4801C20.9567 13.3336 21.0001 13.1683 21.0001 13.0001C21.0001 12.8319 20.9567 12.6666 20.8741 12.5201C20.7916 12.3736 20.6726 12.2509 20.5287 12.1638L2.51875 1.14884C2.36845 1.0576 2.19675 1.0076 2.02096 1.00389C1.84518 1.00017 1.67152 1.04287 1.51749 1.12767C1.36347 1.21248 1.23453 1.3364 1.14368 1.48693C1.05282 1.63747 1.00327 1.80929 1 1.98509Z" stroke="#152B56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -106,22 +107,59 @@
               </button>
             {% endif %}
             {% if has_hubspot_video %}
-              <div class="text-img-video__video" data-video-player>
-                {% video_player "embed_player"
-                  player_id={{ module.video_long.player_id }}
-                  type={{ module.video_long.player_type || 'scriptV4' }}
-                  full_width={{ module.video_long.size_type == 'auto_full_width' }},
-                  conversion_asset={{ module.video_long.conversion_asset|tojson|safe }}
-                  autoplay={{ module.video_long.autoplay }}
-                  hidden_controls={{ module.video_long.hide_controls }}
-                  loop={{ module.video_long.loop_video }}
-                  muted={{ module.video_long.mute_by_default }}
-                %}
-              </div>
+              {% if has_image %}
+                <div class="text-img-video__popup" data-video-popup aria-hidden="true">
+                  <div class="text-img-video__popup-backdrop" data-video-popup-close></div>
+                  <div class="text-img-video__popup-content" role="dialog" aria-modal="true" aria-label="{{ popup_label }}" tabindex="-1">
+                    <button class="text-img-video__popup-close" type="button" data-video-popup-close aria-label="Close video">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="text-img-video__video" data-video-player>
+                      {% video_player "embed_player"
+                        player_id={{ module.video_long.player_id }}
+                        type={{ module.video_long.player_type || 'scriptV4' }}
+                        full_width={{ module.video_long.size_type == 'auto_full_width' }},
+                        conversion_asset={{ module.video_long.conversion_asset|tojson|safe }}
+                        autoplay={{ module.video_long.autoplay }}
+                        hidden_controls={{ module.video_long.hide_controls }}
+                        loop={{ module.video_long.loop_video }}
+                        muted={{ module.video_long.mute_by_default }}
+                      %}
+                    </div>
+                  </div>
+                </div>
+              {% else %}
+                <div class="text-img-video__video" data-video-player>
+                  {% video_player "embed_player"
+                    player_id={{ module.video_long.player_id }}
+                    type={{ module.video_long.player_type || 'scriptV4' }}
+                    full_width={{ module.video_long.size_type == 'auto_full_width' }},
+                    conversion_asset={{ module.video_long.conversion_asset|tojson|safe }}
+                    autoplay={{ module.video_long.autoplay }}
+                    hidden_controls={{ module.video_long.hide_controls }}
+                    loop={{ module.video_long.loop_video }}
+                    muted={{ module.video_long.mute_by_default }}
+                  %}
+                </div>
+              {% endif %}
             {% elif has_fallback_video %}
-              <div class="text-img-video__video" data-video-player>
-                <iframe src="{{ fallback_video_src|escape_url }}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
+              {% if has_image %}
+                <div class="text-img-video__popup" data-video-popup aria-hidden="true">
+                  <div class="text-img-video__popup-backdrop" data-video-popup-close></div>
+                  <div class="text-img-video__popup-content" role="dialog" aria-modal="true" aria-label="{{ popup_label }}" tabindex="-1">
+                    <button class="text-img-video__popup-close" type="button" data-video-popup-close aria-label="Close video">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="text-img-video__video" data-video-player>
+                      <iframe src="{{ fallback_video_src|escape_url }}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              {% else %}
+                <div class="text-img-video__video" data-video-player>
+                  <iframe src="{{ fallback_video_src|escape_url }}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              {% endif %}
             {% endif %}
           </div>
         </div>

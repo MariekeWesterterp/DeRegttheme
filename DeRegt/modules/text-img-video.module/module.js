@@ -21,6 +21,9 @@ const youTubeApiState = {
 }
 
 const youTubePlayers = new Map()
+const lastActiveTriggers = new WeakMap()
+let activePopupWrapper = null
+let keydownListenerBound = false
 
 const formatDuration = (seconds) => {
   if (!Number.isFinite(seconds) || seconds <= 0) {
@@ -62,6 +65,28 @@ const setDurationText = (mediaWrapper, seconds) => {
 
   mediaWrapper.dataset.durationResolved = 'true'
   return true
+}
+
+const toggleBodyScroll = (shouldLock) => {
+  if (typeof document === 'undefined') {
+    return
+  }
+
+  const body = document.body
+  if (!body) {
+    return
+  }
+
+  const className = 'text-img-video--no-scroll'
+  if (shouldLock) {
+    body.classList.add(className)
+    return
+  }
+
+  const anyVisiblePopup = document.querySelector('.text-img-video__popup.is-visible')
+  if (!anyVisiblePopup) {
+    body.classList.remove(className)
+  }
 }
 
 const ensureYouTubeApiReady = () => {
@@ -221,6 +246,29 @@ const bindYouTubeDuration = (iframe, mediaWrapper) => {
   })
 }
 
+const playYouTubeIframe = (iframe) => {
+  if (!iframe) {
+    return
+  }
+
+  const id = iframe.id || `text-img-video-player-${Math.random().toString(36).slice(2)}`
+  iframe.id = id
+
+  const attemptPlay = () => {
+    const player = youTubePlayers.get(id)
+    if (player && typeof player.playVideo === 'function') {
+      try {
+        player.playVideo()
+      } catch (err) {
+        // Ignore playback errors (e.g., user gesture requirements)
+      }
+    }
+  }
+
+  attemptPlay()
+  whenYouTubeReady(attemptPlay)
+}
+
 const updateDuration = (mediaWrapper) => {
   if (!mediaWrapper || mediaWrapper.dataset.durationResolved === 'true') {
     return
@@ -256,15 +304,20 @@ const enableVideoAutoplay = (mediaWrapper) => {
     return
   }
 
+  updateDuration(mediaWrapper)
+
   const iframe = mediaWrapper.querySelector('.text-img-video__video iframe')
-  if (iframe && !iframe.dataset.autoplayApplied) {
+  if (iframe) {
     prepareYouTubeIframe(iframe)
     const currentSrc = iframe.getAttribute('src') || ''
-    if (currentSrc && !/autoplay=/i.test(currentSrc)) {
-      const joiner = currentSrc.includes('?') ? '&' : '?'
-      iframe.setAttribute('src', `${currentSrc}${joiner}autoplay=1`)
+    if (!iframe.dataset.autoplayApplied) {
+      if (currentSrc && !/autoplay=/i.test(currentSrc)) {
+        const joiner = currentSrc.includes('?') ? '&' : '?'
+        iframe.setAttribute('src', `${currentSrc}${joiner}autoplay=1`)
+      }
+      iframe.dataset.autoplayApplied = 'true'
     }
-    iframe.dataset.autoplayApplied = 'true'
+    playYouTubeIframe(iframe)
   }
 
   const videoEl = mediaWrapper.querySelector('.text-img-video__video video')
@@ -275,26 +328,148 @@ const enableVideoAutoplay = (mediaWrapper) => {
       // Ignore errors from browsers blocking autoplay without user gesture
     }
   }
+}
 
-  updateDuration(mediaWrapper)
+const stopVideoPlayback = (mediaWrapper) => {
+  if (!mediaWrapper) {
+    return
+  }
+
+  const iframe = mediaWrapper.querySelector('.text-img-video__video iframe')
+  if (iframe) {
+    const id = iframe.id
+    const player = id ? youTubePlayers.get(id) : null
+    if (player && typeof player.stopVideo === 'function') {
+      try {
+        player.stopVideo()
+      } catch (err) {
+        // Ignore player stop errors
+      }
+    } else {
+      try {
+        const message = JSON.stringify({ event: 'command', func: 'stopVideo', args: [] })
+        if (iframe.contentWindow && typeof iframe.contentWindow.postMessage === 'function') {
+          iframe.contentWindow.postMessage(message, '*')
+        }
+      } catch (err) {
+        // Ignore postMessage failures
+      }
+    }
+  }
+
+  const videoEl = mediaWrapper.querySelector('.text-img-video__video video')
+  if (videoEl) {
+    try {
+      if (typeof videoEl.pause === 'function') {
+        videoEl.pause()
+      }
+      if (typeof videoEl.currentTime === 'number' && isFinite(videoEl.currentTime)) {
+        videoEl.currentTime = 0
+      }
+    } catch (err) {
+      // Ignore errors while resetting native video playback
+    }
+  }
+}
+
+const closePopup = (mediaWrapper) => {
+  if (!mediaWrapper) {
+    return
+  }
+
+  const popup = mediaWrapper.querySelector('[data-video-popup]')
+  if (popup && popup.classList.contains('is-visible')) {
+    popup.classList.remove('is-visible')
+    popup.setAttribute('aria-hidden', 'true')
+  }
+
+  stopVideoPlayback(mediaWrapper)
+
+  const trigger = lastActiveTriggers.get(mediaWrapper)
+  if (trigger) {
+    trigger.setAttribute('aria-expanded', 'false')
+    if (typeof trigger.focus === 'function') {
+      trigger.focus()
+    }
+    lastActiveTriggers.delete(mediaWrapper)
+  }
+
+  if (activePopupWrapper === mediaWrapper) {
+    activePopupWrapper = null
+  }
+
+  toggleBodyScroll(false)
+}
+
+const openPopup = (mediaWrapper, trigger) => {
+  if (!mediaWrapper) {
+    return
+  }
+
+  const popup = mediaWrapper.querySelector('[data-video-popup]')
+  if (!popup) {
+    mediaWrapper.classList.add('playing')
+    enableVideoAutoplay(mediaWrapper)
+    return
+  }
+
+  if (popup.classList.contains('is-visible')) {
+    return
+  }
+
+  if (activePopupWrapper && activePopupWrapper !== mediaWrapper) {
+    closePopup(activePopupWrapper)
+  }
+
+  popup.classList.add('is-visible')
+  popup.setAttribute('aria-hidden', 'false')
+
+  if (trigger) {
+    trigger.setAttribute('aria-expanded', 'true')
+    lastActiveTriggers.set(mediaWrapper, trigger)
+  }
+
+  activePopupWrapper = mediaWrapper
+  toggleBodyScroll(true)
+  enableVideoAutoplay(mediaWrapper)
+
+  const popupContent = popup.querySelector('.text-img-video__popup-content')
+  if (popupContent && typeof popupContent.focus === 'function') {
+    popupContent.focus()
+  }
+}
+
+const handleKeydown = (event) => {
+  if (!event) {
+    return
+  }
+
+  const key = event.key || event.code
+  if ((key !== 'Escape' && key !== 'Esc') || !activePopupWrapper) {
+    return
+  }
+
+  closePopup(activePopupWrapper)
+  event.preventDefault()
 }
 
 const initTextImgVideoModule = () => {
-  const playButtons = document.querySelectorAll('.text-img-video__play')
   const mediaWrappers = document.querySelectorAll('.text-img-video__media-wrapper')
 
-  mediaWrappers.forEach(updateDuration)
+  mediaWrappers.forEach((wrapper) => {
+    updateDuration(wrapper)
 
-  playButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const mediaWrapper = button.closest('.text-img-video__media-wrapper')
+    const playButton = wrapper.querySelector('.text-img-video__play')
+    if (playButton) {
+      playButton.addEventListener('click', () => openPopup(wrapper, playButton))
+    }
 
-      if (!mediaWrapper) {
-        return
-      }
-
-      mediaWrapper.classList.add('playing')
-      enableVideoAutoplay(mediaWrapper)
+    const closeElements = wrapper.querySelectorAll('[data-video-popup-close]')
+    closeElements.forEach((element) => {
+      element.addEventListener('click', (event) => {
+        event.preventDefault()
+        closePopup(wrapper)
+      })
     })
   })
 
@@ -303,6 +478,11 @@ const initTextImgVideoModule = () => {
   )
 
   autoPlayingWrappers.forEach((wrapper) => enableVideoAutoplay(wrapper))
+
+  if (!keydownListenerBound) {
+    document.addEventListener('keydown', handleKeydown)
+    keydownListenerBound = true
+  }
 }
 
 if (document.readyState === 'loading') {
