@@ -1,177 +1,261 @@
-[ {
-  "id" : "d9532fe2-d525-5cb5-470c-5e5e4216e16c",
-  "name" : "anchor",
-  "label" : "anchor",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null
-}, {
-  "id" : "1b3c4433-c7c0-c216-410d-c0808020ac39",
-  "name" : "title",
-  "label" : "Title",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Our latest insights"
-}, {
-  "id" : "c6b06287-d4b8-881d-69f0-ee6b4691c61b",
-  "name" : "style",
-  "label" : "Style",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "0a0e434c-62c9-b309-3114-e1fd6fb569f7",
-    "name" : "margin_block",
-    "label" : "Add top margin",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "no-margin", "No margin" ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "large"
-  }, {
-    "id" : "5fd295f5-b448-2fb3-3103-304dd70e62ba",
-    "name" : "padding_block",
-    "label" : "Add top and bottom padding",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "large"
-  }, {
-    "id" : "85e4319c-392b-bc26-1389-f0a55eedddc5",
-    "name" : "backgroundcolor",
-    "label" : "Backgroundcolor",
-    "required" : false,
-    "locked" : false,
-    "show_opacity" : false,
-    "type" : "color",
-    "display_width" : null,
-    "default" : {
-      "color" : "#EEF8FF",
-      "opacity" : 100
-    }
-  } ],
-  "tab" : "STYLE",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : {
-    "margin_block" : "no-margin",
-    "padding_block" : "no-padding",
-    "backgroundcolor" : {
-      "color" : "#EEF8FF",
-      "opacity" : 100
-    }
-  }
-}, {
-  "id" : "97ae5ced-9706-b209-a5fe-16ead049c1b4",
-  "name" : "link_field",
-  "label" : "Link",
-  "required" : false,
-  "locked" : false,
-  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
-  "show_advanced_rel_options" : false,
-  "type" : "link",
-  "display_width" : null,
-  "default" : {
-    "url" : {
-      "content_id" : null,
-      "href" : "https://nos.nl",
-      "type" : "EXTERNAL"
+[
+  {
+    "allow_new_line": false,
+    "display_width": null,
+    "id": "d9532fe2-d525-5cb5-470c-5e5e4216e16c",
+    "label": "anchor",
+    "locked": false,
+    "name": "anchor",
+    "required": false,
+    "type": "text"
+  },
+  {
+    "allow_new_line": false,
+    "default": "Our latest insights",
+    "display_width": null,
+    "id": "1b3c4433-c7c0-c216-410d-c0808020ac39",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": false,
+    "type": "text"
+  },
+  {
+    "default": {
+      "url": {
+        "content_id": null,
+        "href": "https://nos.nl",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
     },
-    "open_in_new_tab" : false,
-    "no_follow" : false
+    "display_width": null,
+    "id": "97ae5ced-9706-b209-a5fe-16ead049c1b4",
+    "label": "Link",
+    "locked": false,
+    "name": "link_field",
+    "required": false,
+    "show_advanced_rel_options": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG",
+      "CALL_TO_ACTION",
+      "PHONE_NUMBER",
+      "PAYMENT"
+    ],
+    "type": "link"
+  },
+  {
+    "children": [
+      {
+        "default": {
+          "size_type": "auto",
+          "src": "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/blogregt.png",
+          "alt": "blogregt",
+          "loading": "lazy",
+          "width": 1796,
+          "height": 940,
+          "max_width": 1796,
+          "max_height": 940
+        },
+        "display_width": null,
+        "id": "072bd869-3f71-c435-c0c5-179467a787dd",
+        "label": "Image",
+        "locked": false,
+        "name": "image_field",
+        "required": false,
+        "resizable": true,
+        "responsive": true,
+        "show_loading": false,
+        "type": "image"
+      },
+      {
+        "allow_new_line": false,
+        "default": "Transforming offshore wind to multi-use energy parks with cable pooling",
+        "display_width": null,
+        "id": "68bbd5e1-5de7-8906-564b-ebac98f9114d",
+        "label": "Text title",
+        "locked": false,
+        "name": "text_title",
+        "required": false,
+        "type": "text"
+      },
+      {
+        "allow_new_line": false,
+        "default": "Get more insights",
+        "display_width": null,
+        "id": "e77ca88a-f820-1460-b271-0696117f4245",
+        "label": "Text link",
+        "locked": false,
+        "name": "text_link",
+        "placeholder": "https://ns.nl",
+        "required": false,
+        "type": "text"
+      },
+      {
+        "allow_new_line": false,
+        "default": "whitepaper",
+        "display_width": null,
+        "id": "4f204a96-f9b2-7580-baf3-92cfd38b6410",
+        "label": "Text tag",
+        "locked": false,
+        "name": "text_tag",
+        "required": false,
+        "type": "text"
+      },
+      {
+        "default": {
+          "content_id": 112223875794,
+          "href": null,
+          "type": "CONTENT"
+        },
+        "display_width": null,
+        "id": "8096a5ff-00e3-8bef-d8ff-19dca72e205f",
+        "label": "URL whitepaper",
+        "locked": false,
+        "name": "url_whitepaper",
+        "required": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG",
+          "CALL_TO_ACTION",
+          "PHONE_NUMBER",
+          "PAYMENT"
+        ],
+        "type": "url"
+      }
+    ],
+    "default": [],
+    "display_width": null,
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "id": "3b31ac12-2829-9bb5-def7-16a677fc98ae",
+    "label": "Extra card",
+    "locked": false,
+    "name": "extra_card",
+    "occurrence": {
+      "max": 4,
+      "sorting_label_field": "68bbd5e1-5de7-8906-564b-ebac98f9114d"
+    },
+    "required": false,
+    "tab": "CONTENT",
+    "type": "group"
+  },
+  {
+    "display_width": null,
+    "id": "3685f38c-0db9-68ae-2e93-c5d58ff1e5c9",
+    "label": "Kind of blog",
+    "locked": false,
+    "name": "kind_of_blog",
+    "required": false,
+    "type": "blog"
+  },
+  {
+    "children": [
+      {
+        "choices": [
+          [
+            "no-margin",
+            "No margin"
+          ],
+          [
+            "small",
+            "small"
+          ],
+          [
+            "medium",
+            "medium"
+          ],
+          [
+            "large",
+            "large"
+          ]
+        ],
+        "default": "large",
+        "display": "select",
+        "display_width": null,
+        "id": "0a0e434c-62c9-b309-3114-e1fd6fb569f7",
+        "label": "Add top margin",
+        "locked": false,
+        "multiple": false,
+        "name": "margin_block",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice"
+      },
+      {
+        "choices": [
+          [
+            "no-padding",
+            "No padding"
+          ],
+          [
+            "small",
+            "small"
+          ],
+          [
+            "medium",
+            "medium"
+          ],
+          [
+            "large",
+            "large"
+          ]
+        ],
+        "default": "large",
+        "display": "select",
+        "display_width": null,
+        "id": "5fd295f5-b448-2fb3-3103-304dd70e62ba",
+        "label": "Add top and bottom padding",
+        "locked": false,
+        "multiple": false,
+        "name": "padding_block",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice"
+      },
+      {
+        "default": {
+          "color": "#EEF8FF",
+          "opacity": 100
+        },
+        "display_width": null,
+        "id": "85e4319c-392b-bc26-1389-f0a55eedddc5",
+        "label": "Backgroundcolor",
+        "locked": false,
+        "name": "backgroundcolor",
+        "required": false,
+        "show_opacity": false,
+        "type": "color"
+      }
+    ],
+    "default": {
+      "margin_block": "large",
+      "padding_block": "large",
+      "backgroundcolor": {
+        "color": "#EEF8FF",
+        "opacity": 100
+      }
+    },
+    "display_width": null,
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "id": "c6b06287-d4b8-881d-69f0-ee6b4691c61b",
+    "label": "Style",
+    "locked": false,
+    "name": "style",
+    "required": false,
+    "tab": "STYLE",
+    "type": "group"
   }
-}, {
-  "id" : "68bbd5e1-5de7-8906-564b-ebac98f9114d",
-  "name" : "text_title",
-  "label" : "Text title",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Transforming offshore wind to multi-use energy parks with cable pooling"
-}, {
-  "id" : "e77ca88a-f820-1460-b271-0696117f4245",
-  "name" : "text_link",
-  "label" : "Text link",
-  "required" : false,
-  "locked" : false,
-  "placeholder" : "https://ns.nl",
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Get more insights"
-}, {
-  "id" : "4f204a96-f9b2-7580-baf3-92cfd38b6410",
-  "name" : "text_tag",
-  "label" : "Text tag",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "whitepaper"
-}, {
-  "id" : "0db7106e-121b-8122-8489-3f29fd3370b7",
-  "name" : "author_line",
-  "label" : "author line",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "By George Brandenburg"
-}, {
-  "id" : "8096a5ff-00e3-8bef-d8ff-19dca72e205f",
-  "name" : "url_whitepaper",
-  "label" : "URL whitepaper",
-  "required" : false,
-  "locked" : false,
-  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
-  "type" : "url",
-  "display_width" : null,
-  "default" : {
-    "content_id" : 112223875794,
-    "href" : null,
-    "type" : "CONTENT"
-  }
-}, {
-  "id" : "072bd869-3f71-c435-c0c5-179467a787dd",
-  "name" : "image_field",
-  "label" : "Image",
-  "required" : false,
-  "locked" : false,
-  "responsive" : true,
-  "resizable" : true,
-  "show_loading" : false,
-  "type" : "image",
-  "display_width" : null,
-  "default" : {
-    "size_type" : "auto",
-    "src" : "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/blogregt.png",
-    "alt" : "blogregt",
-    "loading" : "lazy",
-    "width" : 1796,
-    "height" : 940,
-    "max_width" : 1796,
-    "max_height" : 940
-  }
-}
 ]
+

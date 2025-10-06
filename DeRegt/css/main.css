@@ -20,6 +20,7 @@
 {% include "./d-components/_headings.css" %}
 {% include "./d-components/_default-modules.css" %}
 {% include "./d-components/_cta_button.css" %}
+{% include "./d-components/_contact-card.css" %}
 
 
 /* Templates */

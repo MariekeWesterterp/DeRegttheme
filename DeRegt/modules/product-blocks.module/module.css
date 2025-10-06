@@ -1,0 +1,136 @@
+.product-blocks {
+  color: var(--clr-mine-shaft-950);
+}
+
+.product-blocks__wrapper {
+  width: 100%;
+}
+
+.product-blocks__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.product-blocks__title {
+  font-family: var(--ff-headings);
+  color: var(--clr-blue-midnight);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.product-blocks__underline {
+  display: block;
+}
+
+.product-blocks__grid {
+  display: grid;
+  gap: 8px;
+}
+
+.product-blocks__card,
+.product-blocks__cta {
+  background-color: var(--clr-white);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+.product-blocks__cta{
+  padding: 26px;
+}
+.product-blocks__card {
+  justify-content: flex-start;
+}
+
+.product-blocks__image {
+  display: flex;
+}
+
+.product-blocks__image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.product-blocks__card-title {
+  margin: 0;
+  font-family: var(--ff-headings);
+  color: var(--clr-mine-shaft-950);
+}
+
+.product-blocks__card-description {
+  color: var(--clr-mine-shaft-950);
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+.product-blocks__card-description p {
+  margin: 0;
+}
+
+.product-blocks__card-description br {
+  display: block;
+}
+
+.product-blocks__cta {
+  background-color: var(--clr-blue-midnight);
+  border-color: var(--clr-blue-midnight);
+  color: var(--clr-white);
+  justify-content: center;
+}
+
+.product-blocks__cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.product-blocks__cta-title {
+  color: inherit;
+}
+
+.product-blocks__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-blocks__cta-button .hs-cta-wrapper {
+  display: inline-flex;
+}
+
+@media (min-width: 768px) {
+  .product-blocks__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-blocks__card,
+  .product-blocks__cta {
+    padding: 32px;
+  }
+
+  .product-blocks__card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .product-blocks__image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .product-blocks__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+

@@ -15,11 +15,13 @@
 
 
 .hero__content{
-      padding-top: 229px;
+    padding-top: 229px;
     padding-bottom: 217px;
+    
+}
+.hero__content--with-gradient{
     background: linear-gradient(90deg,rgba(21, 43, 86, 1) 0%, rgba(21, 43, 86, 1) 19%, rgba(21, 43, 86, 0) 50%, rgba(21, 43, 86, 0) 100%);
 }
-
 
 .hero__top-cta {
     white-space: nowrap;
@@ -42,6 +44,8 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--hero-tagline-color, var(--clr-yellow-sun));
+    width: fit-content;
+  font-weight: 500;
 }
 
 .hero__title {
@@ -72,7 +76,6 @@
 .hero__explore-label {
     margin: 0;
     font-size: 1rem;
-    font-weight: 600;
     color: var(--hero-explore-label-color, rgba(255, 255, 255, 0.85));
 }
 
@@ -95,14 +98,16 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 12rem;
     text-align: center;
     transition: transform 150ms ease-in-out;
 }
  .hero__tagline-mobile{
     display: none;
  }
-
+.hero__contact-card{
+    margin-top: 16px;
+    max-width: 587px;
+}
 @media (max-width: 1024px) {
     .hero__wrapper {
         background-size: contain;
@@ -161,7 +166,9 @@
         margin-top: 8px;
         padding-bottom: 56px;
     }
-
+.hero__contact-card{
+    padding-bottom: 56px;
+}
     .hero__cta {
         width: 100%;
         justify-content: center;

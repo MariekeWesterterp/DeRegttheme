@@ -22,13 +22,13 @@
   "label" : "Features",
   "required" : false,
   "locked" : false,
-  "occurrence": {
-    "min": null,
-    "max": null,
-    "default": null
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
   },
-  "children" : [ 
-    {
+  "children" : [ {
     "id" : "d4e5f6g7-h8i9-0123-defg-456789012345",
     "name" : "title",
     "label" : "Feature Title",
@@ -57,97 +57,71 @@
     "title" : "Custom Cable Co-Creation",
     "description" : "Collaborate with us to create bespoke cable solutions that perfectly fit your requirements."
   }
-}, 
-{
-  "id": "a10",
-  "name": "buttons",
-  "label": "Buttons",
-  "required": false,
-  "locked": false,
-  "occurrence": {
-    "min": null,
-    "max": null,
-    "sorting_label_field": null,
-    "default": null
+}, {
+  "id" : "a10",
+  "name" : "buttons",
+  "label" : "Buttons",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
   },
-  "children": [
-    {
-      "id": "a10a",
-      "name": "text",
-      "label": "Text",
-      "required": false,
-      "locked": false,
-      "allow_new_line": false,
-      "type": "text",
-      "display_width": null
-    },
-    {
-      "id": "a10b",
-      "name": "url",
-      "label": "URL",
-      "required": false,
-      "locked": false,
-      "supported_types": [
-        "EXTERNAL",
-        "CONTENT",
-        "FILE",
-        "EMAIL_ADDRESS",
-        "BLOG"
-      ],
-      "type": "url",
-      "display_width": null,
-      "default": {
-        "content_id": null,
-        "href": "",
-        "type": "EXTERNAL"
-      }
-    },
-    {
-      "id": "f9d9b6d7-d1a2-4fba-b710-0b0de0483a6d",
-      "name": "cta_field",
-      "label": "CTA",
-      "required": false,
-      "locked": false,
-      "display_width": null,
-      "type": "cta"
-    },
-    {
-      "id": "a10c",
-      "name": "style",
-      "label": "Style",
-      "required": false,
-      "locked": false,
-      "display": "select",
-      "choices": [
-        [
-          "primary",
-          "Primary"
-        ],
-        [
-          "outline",
-          "Outline"
-        ],
-        [
-          "outline-white",
-          "Outline white"
-        ]
-      ],
-      "multiple": false,
-      "reordering_enabled": true,
-      "preset": null,
-      "type": "choice",
-      "display_width": null,
-      "default": "primary"
+  "children" : [ {
+    "id" : "a10a",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "a10b",
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
     }
-  ],
-  "tab": "CONTENT",
-  "expanded": false,
-  "group_occurrence_meta": null,
-  "type": "group",
-  "display_width": null,
-  "default": []
-},
-{
+  }, {
+    "id" : "f9d9b6d7-d1a2-4fba-b710-0b0de0483a6d",
+    "name" : "cta_field",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
+    "id" : "a10c",
+    "name" : "style",
+    "label" : "Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "primary", "Primary" ], [ "outline", "Outline" ], [ "outline-white", "Outline white" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "primary"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ ]
+}, {
   "id" : "l2m3n4o5-p6q7-8901-lmno-234567890123",
   "name" : "style",
   "label" : "Style",

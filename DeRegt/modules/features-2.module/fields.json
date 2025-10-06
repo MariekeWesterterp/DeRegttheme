@@ -47,7 +47,6 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "display_width" : null,
-  "repeating" : true,
   "default" : {
     "title" : "Custom Cable Co-Creation",
     "description" : "Collaborate with us to create bespoke cable solutions that perfectly fit your requirements."
@@ -183,7 +182,10 @@
     "show_opacity" : false,
     "type" : "color",
     "display_width" : null,
-    "default" : { "color" : "#eef5ff", "opacity" : 100 }
+    "default" : {
+      "color" : "#eef5ff",
+      "opacity" : 100
+    }
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -193,14 +195,9 @@
   "default" : {
     "margin_block" : "medium",
     "padding_block" : "medium",
-    "backgroundcolor" : { "color" : "#eef5ff", "opacity" : 100 }
+    "backgroundcolor" : {
+      "color" : "#eef5ff",
+      "opacity" : 100
+    }
   }
 } ]
-
-
-
-
-
-
-
-

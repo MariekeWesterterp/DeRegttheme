@@ -1,30 +1,47 @@
 {
-  "text_image_simple": {
-    "message": "Text Image Simple"
+  "anchor" : {
+    "message" : "Anchor",
+    "description" : null,
+    "placeholders" : null
   },
-  "text_field": {
-    "message": "Text"
+  "background_color" : {
+    "message" : "Background color",
+    "description" : null,
+    "placeholders" : null
   },
-  "image_field": {
-    "message": "Image"
+  "image_field" : {
+    "message" : "Image",
+    "description" : null,
+    "placeholders" : null
   },
-  "anchor": {
-    "message": "Anchor"
+  "margin_block" : {
+    "message" : "Add top margin",
+    "description" : null,
+    "placeholders" : null
   },
-  "style": {
-    "message": "Style"
+  "padding_block" : {
+    "message" : "Add top and bottom padding",
+    "description" : null,
+    "placeholders" : null
   },
-  "background_color": {
-    "message": "Background color"
+  "style" : {
+    "message" : "Style",
+    "description" : null,
+    "placeholders" : null
   },
-  "text_color": {
-    "message": "Text color"
+  "text_color" : {
+    "message" : "Text color",
+    "description" : null,
+    "placeholders" : null
   },
-  "margin_block": {
-    "message": "Add top margin"
+  "text_field" : {
+    "message" : "Text",
+    "description" : null,
+    "placeholders" : null
   },
-  "padding_block": {
-    "message": "Add top and bottom padding"
+  "text_image_simple" : {
+    "message" : "Text Image Simple",
+    "description" : null,
+    "placeholders" : null
   }
 }
-
