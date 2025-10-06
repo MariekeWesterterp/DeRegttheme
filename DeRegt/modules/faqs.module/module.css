@@ -31,76 +31,6 @@ border-bottom: 1px solid var(--clr-blue-royal-medium-light);
 .faqs__accordion-title{
   line-height: 150%;
   color: var(--clr-mine-shaft-950);
-}
-.faqs__accordion-content a,
-.faqs__accordion-content p{
-
-  color: var(--clr-mine-shaft-700);
-}
-
-.faqs__accordion-icon{
-content: '';
-    width: 32px;
-    height: 32px;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  transition: rotate 0.3s ease-in;
-}
-
-
-.faqs__accordion-button[aria-expanded="true"] .faqs__accordion-icon {
-rotate: 180deg;
-}
-.faqs__accordion-button[aria-expanded="true"]{
-  padding-bottom: 8px;
-}
-.faqs__accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-in;
-
-
-}
-
-.faqs__accordion-button[aria-expanded="true"] + .faqs__accordion-content {
-   transition: all 1s ease-in;
-   max-height: 10000px;
-   margin-bottom: 16px;
-
-.jobs-page-content__post .faqs .container{
-padding-inline: 0;
-}
-.faqs__intro{
-  margin-bottom: 32px;
-}
-.faqs__title{
-  line-height: 120%;
-}
-.faqs__accordion-item{
-  
-border-bottom: 1px solid var(--clr-blue-royal-medium-light);
-}
-.faqs__accordion-item:last-child{
-  border-bottom: none;
-}
-
-.faqs__accordion-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: none;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    font-weight: 400;
-    padding: 16px 0;
-}
-.faqs__accordion-title{
-  line-height: 150%;
-  color: var(--clr-mine-shaft-950);
   font-weight: 500;
 }
 .faqs__accordion-content a,
@@ -153,3 +83,4 @@ min-height: 10px;
     overflow: hidden;
   margin-top: 16px;
   margin-bottom: 16px;
+}

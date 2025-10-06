@@ -3,7 +3,7 @@
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "master_language" : "en",
   "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "module_id" : 197006705795,
+  "module_id" : 112354564324,
   "label" : "Website Header",
   "icon" : "../../../mV0_hubspot/growth/images/module-icons/menu.svg",
   "is_available_for_new_content" : true
