@@ -30,9 +30,3 @@
   }
 }
 
-@media (min-width: 1400px) {
-  .container,
-  .dnd-section > .row-fluid {
-    padding-inline: 56px;
-  }
-}

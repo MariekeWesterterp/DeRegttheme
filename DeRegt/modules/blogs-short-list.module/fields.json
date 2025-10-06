@@ -129,13 +129,15 @@
   "locked" : false,
   "type" : "blog",
   "display_width" : null
-}, {
+}, 
+{
   "id" : "c6b06287-d4b8-881d-69f0-ee6b4691c61b",
   "name" : "style",
   "label" : "Style",
   "required" : false,
   "locked" : false,
-  "children" : [ {
+  "children" : [ 
+    {
     "id" : "0a0e434c-62c9-b309-3114-e1fd6fb569f7",
     "name" : "margin_block",
     "label" : "Add top margin",

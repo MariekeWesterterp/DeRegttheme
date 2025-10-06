@@ -33,7 +33,9 @@ a {
 }
 
 /* Headings */
-
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
 h1, .heading-1 {
   font-family: var(--h1-font-family);
   font-size: var(--h1-font-size);
@@ -82,6 +84,7 @@ h6, .heading-6 {
   color: var(--h6-color);
   text-transform: var(--h6-transform);
   line-height: 150%;
+  font-weight: 400;
 }
 
 /* svg under title  */

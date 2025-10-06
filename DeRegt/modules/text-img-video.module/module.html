@@ -33,11 +33,11 @@
 
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
 
-<section class="text-img-video {{ macros.margin_padding(module.style.margin_block) }}" style="background-color: {{ module.style.backgroundcolor.color }}">
+<section class="text-img-video {{ macros.margin_padding(module.style.margin_block,'') }}" style="background-color: {{ module.style.backgroundcolor.color }}">
   <div class="text-img-video__wrapper" style="--text-img-video-heading-color: {{ heading_color }}; --text-img-video-text-color: {{ text_color }};">
     <div class="text-img-video__inner {{ reversed_class }}">
       <div class="text-img-video__text-col">
-        <div class="container {{ macros.margin_padding(module.style.padding_block) }}">
+        <div class="container {{ macros.margin_padding('',module.style.padding_block) }}">
           <div class="text-img-video__text">
             {% if module.title %}
               <div class="text-img-video__text_title">

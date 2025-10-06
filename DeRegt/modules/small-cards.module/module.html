@@ -1,0 +1,58 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+{% set section_background = module.style.backgroundcolor %}
+{% set spacing_classes = macros.margin_padding(module.style.margin_block) %}
+{% set cta_block = module.cta_block %}
+{% set mobile_limit = 4 %}
+{% set load_more_text = module.mobile_load_more_text|trim|default('Toon meer') %}
+<section class="small-cards {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}" style="background-color: {{ section_background }}">
+  <div class="small-cards__wrapper">
+    <div class="container">
+      {% if module.heading %}
+        <div class="small-cards__header">
+          <h2 class="small-cards__title">{{ module.heading }}</h2>
+          <svg class="yellow-block" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+            <path d="M48 0H0V6H48V0Z" fill="#F1C61A"></path>
+          </svg>
+        </div>
+      {% endif %}
+      {% set has_blocks = module.blocks|length > 0 %}
+      {% set has_cta_title = cta_block.title %}
+      {% set cta_button = cta_block.button %}
+      {% set button_text = (cta_button.text|trim) if cta_button else '' %}
+      {% set button_url = cta_button.url.href if cta_button and cta_button.url and cta_button.url.href %}
+      {% set button_has_manual = button_text and button_url %}
+      {% set button_target = cta_button.url.target if cta_button and cta_button.url and cta_button.url.target else ('_blank' if cta_button and cta_button.url and cta_button.url.open_in_new_tab else '_self') %}
+      {% set button_rel = 'noopener' if button_target == '_blank' else None %}
+      {% set button_style = cta_button.style if cta_button and cta_button.style else 'primary' %}
+      {% set has_cta_button = button_has_manual or (cta_button and cta_button.cta_field) %}
+      {% set has_mobile_toggle = has_blocks and module.blocks|length > mobile_limit %}
+      {% if has_blocks or has_cta_title or has_cta_button %}
+        <div class="small-cards__grid{% if has_mobile_toggle %} small-cards__grid--collapsible{% endif %}"{% if has_mobile_toggle %} data-mobile-limit="{{ mobile_limit }}"{% endif %}>
+          {% for item in module.blocks %}
+            {% set image = item.image %}
+            <article class="small-cards__card" style="background-color:{{ module.style.backgroundcolor_cards }}">
+            
+              <div class="small-cards__content">
+                {% if item.title %}
+                  <h6 style="color:{{ module.style.title_color_cards }}" class="small-cards__card-title">{{ item.title }}</h6>
+                {% endif %}
+                {% if item.description %}
+                  <div class="small-cards__card-description rte" style="color:{{ module.style.text_color_cards }}">{{ item.description }}</div>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+        {% if has_mobile_toggle %}
+          <div class="small-cards__actions">
+            <button class="small-cards__load-more" type="button" aria-expanded="false">
+              <span class="small-cards__load-more-label">{{ load_more_text }}</span>
+            </button>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -17,6 +17,16 @@
   "type" : "boolean",
   "display_width" : null,
   "default" : true
+},{
+  "id": "248edd25-0c56-1018-42c2-c3acf25ba3d5",
+  "name": "img_on_top_mobile",
+  "label": "Image on top on mobile",
+  "required": false,
+  "locked": false,
+  "display": "checkbox",
+  "type": "boolean",
+  "display_width": null,
+  "default": true
 }, {
   "id" : "1b3c4433-c7c0-c216-410d-c0808020ac39",
   "name" : "title",
@@ -36,7 +46,8 @@
   "type" : "richtext",
   "display_width" : null,
   "default" : "<ul>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod laoreet</li>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod laoreet</li>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod laoreet</li>\n</ul>"
-}, {
+}, 
+{
   "id" : "1090f015-58c4-163f-407f-670a876c33ab",
   "name" : "image_field",
   "label" : "Image",
@@ -56,6 +67,27 @@
     "height" : 667,
     "max_width" : 1000,
     "max_height" : 667
+  }
+},{
+  "id": "1090f015-58c4-163f-407f-670a876c32gh",
+  "name": "image_field_mobile",
+  "label": "Image Mobile",
+  "required": false,
+  "locked": false,
+  "responsive": true,
+  "resizable": false,
+  "show_loading": true,
+  "type": "image",
+  "display_width": null,
+  "default": {
+    "size_type": "auto",
+    "src": "https://25402188.fs1.hubspotusercontent-eu1.net/hubfs/25402188/Boat%20drifting%20away%20in%20middle%20ocean%20after%20storm%20without%20course%20moonlight%20sky%20night%20skyline%20clouds%20background.%20Nature%20landscape%20screen%20saver.%20Life%20hope%20concept.%20Elements%20of%20this%20image%20furnished%20by%20NASA.jpeg",
+    "alt": "Boat drifting away in middle ocean after storm without course moonlight sky night skyline clouds background. Nature landscape screen saver. Life hope concept. Elements of this image furnished by NASA",
+    "loading": "lazy",
+    "width": 1000,
+    "height": 667,
+    "max_width": 1000,
+    "max_height": 667
   }
 }, {
   "id" : "c6b06287-d4b8-881d-69f0-ee6b4691c61b",
@@ -84,13 +116,24 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
+    "choices" : [ [ "no-padding", "No padding" ], [
+        "default",
+        "Default"
+      ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
     "display_width" : null
-  }, {
+  }, 
+  {
+    "type": "boolean",
+    "id": "2a6d2dd7-59ac-30c6-84bc-7257e85ee911",
+    "default": false,
+    "display": "checkbox",
+    "label": "only padding top",
+    "name": "only_padding_top"
+  },{
     "id" : "85e4319c-392b-bc26-1389-f0a55eedddc5",
     "name" : "backgroundcolor",
     "label" : "Backgroundcolor",
@@ -131,6 +174,20 @@
     "default" : {
       "color" : "#000000",
       "opacity" : 100
+    }
+  },
+  {
+    "id": "5b92df9e-a4ea-2e0b-b9bf-74a266bbc678",
+    "name": "color_text",
+    "label": "Color text",
+    "required": false,
+    "locked": false,
+    "show_opacity": false,
+    "type": "color",
+    "display_width": null,
+    "default": {
+      "color": "#FFFFFF",
+      "opacity": 100
     }
   }, {
     "id" : "719d9c24-e16d-a538-127d-0500b4c5c8a0",
@@ -228,13 +285,43 @@
     "max_height" : 81
   }
 }, {
-  "id" : "31932f9f-1efe-0be7-1f1c-9fd0d8f83d8d",
-  "name" : "button_group",
-  "label" : "Button group",
+  "id" : "8c3bb120-df4c-4e58-8972-0ddae4a92f39",
+  "name" : "buttons",
+  "label" : "Buttons",
   "required" : false,
   "locked" : false,
-  "children" : [ {
-    "id" : "31932f9f-1efe-0be7-1f1c-9fd0dabc",
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ 
+    {
+    "id" : "b592b8c4-196f-4dd0-8c36-1e62d059472d",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "9a293dbf-0dab-4d65-8f7a-698d54c46951",
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
+  }, {
+    "id" : "8eb0553f-3218-4ee1-aeb2-47db7f78e420",
     "name" : "cta_field",
     "label" : "CTA",
     "required" : false,
@@ -242,13 +329,19 @@
     "type" : "cta",
     "display_width" : null
   }, {
-    "id" : "31932f9f-1efe-0be7-1f1c-9fd0d123",
-    "name" : "simple_cta",
-    "label" : "Simple CTA",
+    "id" : "f0a9c6ac-3d7c-4f8e-9d20-1d347079a870",
+    "name" : "style",
+    "label" : "Style",
     "required" : false,
     "locked" : false,
-    "type" : "cta",
-    "display_width" : null
+    "display" : "select",
+    "choices" : [ [ "primary", "Primary" ], [ "outline", "Outline" ], [ "outline-white", "Outline white" ], [ "link", "Link" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "primary"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
