@@ -149,20 +149,42 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "large"
-  }, {
-    "id" : "5fd295f5-b448-2fb3-3103-304dd70e62ba",
-    "name" : "padding_block",
-    "label" : "Add top and bottom padding",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "large"
+  },
+  {
+    "id": "n4o5p6q7-r8s9-0123-nopq-456789012345",
+    "name": "padding_block",
+    "label": "Add top and bottom padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "no-padding",
+        "No padding"
+      ],
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "small",
+        "Small"
+      ],
+      [
+        "medium",
+        "Medium"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
   }, {
     "id" : "85e4319c-392b-bc26-1389-f0a55eedddc5",
     "name" : "backgroundcolor",

@@ -1,25 +1,20 @@
 [ {
-  "id" : "layout",
-  "name" : "layout",
-  "label" : "Layout",
-  "required" : true,
+  "id" : "a1",
+  "name" : "anchor",
+  "label" : "Anchor",
+  "required" : false,
   "locked" : false,
-  "display" : "select",
-  "choices" : [ [ "left", "Logo left" ], [ "centered", "Logo centered" ] ],
-  "multiple" : false,
-  "reordering_enabled" : true,
-  "preset" : null,
-  "type" : "choice",
-  "display_width" : null,
-  "default" : "left"
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
 }, {
-  "id" : "logo",
-  "name" : "logo",
-  "label" : "Logo",
+  "id" : "a2",
+  "name" : "branding",
+  "label" : "Branding",
   "required" : false,
   "locked" : false,
   "children" : [ {
-    "id" : "logo.logo",
+    "id" : "a2a",
     "name" : "logo",
     "label" : "Logo",
     "required" : false,
@@ -30,40 +25,26 @@
     "default" : {
       "override_inherited_src" : true,
       "src" : "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/logoDeRegt.svg",
-      "alt" : "logoDeRegt",
+      "alt" : "DeRegt",
       "width" : 139,
       "height" : 40,
       "suppress_company_name" : true,
       "loading" : "disabled"
     }
   }, {
-    "id" : "logo.link",
+    "id" : "a2b",
     "name" : "link",
-    "label" : "Link",
-    "help_text" : "If no url is specified, your logo will link to your primary domain",
+    "label" : "Logo link",
     "required" : false,
     "locked" : false,
-    "allow_new_line" : false,
-    "type" : "text",
-    "display_width" : null
-  }, {
-    "id" : "logo.open_in_new_tab",
-    "name" : "open_in_new_tab",
-    "label" : "Open link in new tab when visitors click",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : "logo.link",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : null,
-      "property" : null,
-      "operator" : null,
-      "access" : null
-    },
-    "display" : "checkbox",
-    "type" : "boolean",
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
     "display_width" : null,
-    "default" : false
+    "default" : {
+      "content_id" : null,
+      "href" : "/",
+      "type" : "EXTERNAL"
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -74,64 +55,28 @@
     "logo" : {
       "override_inherited_src" : true,
       "src" : "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/logoDeRegt.svg",
-      "alt" : "logoDeRegt",
+      "alt" : "DeRegt",
       "width" : 139,
       "height" : 40,
       "suppress_company_name" : true,
       "loading" : "disabled"
     },
-    "open_in_new_tab" : false
+    "link" : {
+      "content_id" : null,
+      "href" : "/",
+      "type" : "EXTERNAL"
+    }
   }
 }, {
-  "id" : "menu",
-  "name" : "menu",
-  "label" : "Menu",
+  "id" : "a3",
+  "name" : "top_bar",
+  "label" : "Top bar",
   "required" : false,
   "locked" : false,
   "children" : [ {
-    "id" : "menu.menu",
-    "name" : "menu",
-    "label" : "Menu",
-    "required" : true,
-    "locked" : false,
-    "type" : "menu",
-    "display_width" : null,
-    "default" : "default"
-  }, {
-    "id" : "menu.max_levels",
-    "name" : "max_levels",
-    "label" : "Max levels",
-    "help_text" : "Determines the number of menu tree children that can be expanded in the menu",
-    "required" : true,
-    "locked" : false,
-    "display" : "text",
-    "min" : 1,
-    "max" : 3,
-    "step" : 1,
-    "type" : "number",
-    "display_width" : null,
-    "default" : 3
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : {
-    "menu" : "default",
-    "max_levels" : 3
-  }
-}, {
-  "id" : "language_switcher",
-  "name" : "language_switcher",
-  "label" : "Language switcher",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "language_switcher.add_language_switcher",
-    "name" : "add_language_switcher",
-    "label" : "Add language switcher",
-    "help_text" : "The language switcher will only appear if there is a multi-language variation for a page.",
+    "id" : "a3a",
+    "name" : "show",
+    "label" : "Show top bar",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
@@ -139,29 +84,45 @@
     "display_width" : null,
     "default" : true
   }, {
-    "id" : "language_switcher.display_mode",
-    "name" : "display_mode",
-    "label" : "Display mode",
-    "help_text" : "The language of the text in the language switcher. PageLang means the names of languages will display in the language of the page the switcher is on. Localized means the name of each language will display in that language. Hybrid is a combination of the two.",
-    "required" : true,
+    "id" : "a3b",
+    "name" : "tagline",
+    "label" : "Tagline",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "A SERCEL COMPANY"
+  }, {
+    "id" : "a3c",
+    "name" : "menu",
+    "label" : "Top navigation menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "display_width" : null
+  }, {
+    "id" : "a3d",
+    "name" : "background_color",
+    "label" : "Background color",
+    "required" : false,
     "locked" : false,
     "visibility" : {
-      "controlling_field" : "language_switcher.add_language_switcher",
+      "controlling_field" : null,
       "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
+      "controlling_value_regex" : null,
       "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
+      "operator" : null,
+      "access" : null,
+      "hidden_subfields" : {
+        "opacity" : true
+      }
     },
-    "display" : "select",
-    "placeholder" : "Search",
-    "choices" : [ [ "localized", "Localized" ], [ "pagelang", "PageLang" ], [ "hybrid", "Hybrid" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
+    "type" : "color",
     "display_width" : null,
-    "default" : "localized"
+    "default" : {
+      "color" : "#1761E1"
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -169,1344 +130,129 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "add_language_switcher" : true,
-    "display_mode" : "localized"
+    "show" : true,
+    "tagline" : "A SERCEL COMPANY",
+    "background_color" : {
+      "color" : "#1761E1"
+    }
   }
 }, {
-  "id" : "styles",
-  "name" : "styles",
-  "label" : "Styles",
+  "id" : "a4",
+  "name" : "primary_navigation",
+  "label" : "Primary navigation",
   "required" : false,
   "locked" : false,
   "children" : [ {
-    "id" : "styles.top_bar",
-    "name" : "top_bar",
-    "label" : "Top bar",
-    "required" : false,
-    "locked" : false,
-    "children" : [ {
-      "id" : "styles.top_bar.background",
-      "name" : "background",
-      "label" : "Background",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.top_bar.background.color",
-        "name" : "color",
-        "label" : "Color",
-        "required" : false,
-        "locked" : false,
-        "type" : "color",
-        "display_width" : null,
-        "default" : {
-          "color" : "#FFFFFF",
-          "opacity" : 100
-        }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "color" : {
-          "color" : "#FFFFFF",
-          "opacity" : 100
-        }
-      }
-    } ],
-    "tab" : "STYLE",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "background" : {
-        "color" : {
-          "color" : "#FFFFFF",
-          "opacity" : 100
-        }
-      }
-    }
-  }, {
-    "id" : "styles.language_switcher",
-    "name" : "language_switcher",
-    "label" : "Language switcher",
-    "required" : false,
-    "locked" : false,
-    "children" : [ {
-      "id" : "styles.language_switcher.text",
-      "name" : "text",
-      "label" : "Text",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.language_switcher.text.font",
-        "name" : "font",
-        "label" : "Font",
-        "required" : false,
-        "locked" : false,
-        "load_external_fonts" : true,
-        "type" : "font",
-        "display_width" : null,
-        "default" : {
-          "size_unit" : "px"
-        }
-      }, {
-        "id" : "styles.language_switcher.text.text_transform",
-        "name" : "text_transform",
-        "label" : "Text transform",
-        "required" : false,
-        "locked" : false,
-        "display" : "select",
-        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
-        "multiple" : false,
-        "reordering_enabled" : true,
-        "preset" : null,
-        "type" : "choice",
-        "display_width" : null
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      }
-    }, {
-      "id" : "styles.language_switcher.hover",
-      "name" : "hover",
-      "label" : "Hover",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.language_switcher.hover.font",
-        "name" : "font",
-        "label" : "Font",
-        "required" : false,
-        "locked" : false,
-        "visibility" : {
-          "controlling_field" : null,
-          "controlling_field_path" : null,
-          "controlling_value_regex" : null,
-          "property" : null,
-          "operator" : null,
-          "access" : null,
-          "hidden_subfields" : {
-            "size" : true
-          }
-        },
-        "load_external_fonts" : true,
-        "type" : "font",
-        "display_width" : null,
-        "default" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      }
-    }, {
-      "id" : "styles.language_switcher.drop_downs",
-      "name" : "drop_downs",
-      "label" : "Drop downs",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.language_switcher.drop_downs.text",
-        "name" : "text",
-        "label" : "Text",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.language_switcher.drop_downs.text.font_color",
-          "name" : "font_color",
-          "label" : "Font color",
-          "required" : false,
-          "locked" : false,
-          "visibility" : {
-            "controlling_field" : null,
-            "controlling_field_path" : null,
-            "controlling_value_regex" : null,
-            "property" : null,
-            "operator" : null,
-            "access" : null,
-            "hidden_subfields" : {
-              "opacity" : true
-            }
-          },
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }, {
-        "id" : "styles.language_switcher.drop_downs.background",
-        "name" : "background",
-        "label" : "Background",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.language_switcher.drop_downs.background.color",
-          "name" : "color",
-          "label" : "Color",
-          "required" : false,
-          "locked" : false,
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }, {
-        "id" : "styles.language_switcher.drop_downs.hover",
-        "name" : "hover",
-        "label" : "Hover",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.language_switcher.drop_downs.hover.font_color",
-          "name" : "font_color",
-          "label" : "Font color",
-          "required" : false,
-          "locked" : false,
-          "visibility" : {
-            "controlling_field" : null,
-            "controlling_field_path" : null,
-            "controlling_value_regex" : null,
-            "property" : null,
-            "operator" : null,
-            "access" : null,
-            "hidden_subfields" : {
-              "opacity" : true
-            }
-          },
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }, {
-          "id" : "styles.language_switcher.drop_downs.hover.background_color",
-          "name" : "background_color",
-          "label" : "Background color",
-          "required" : false,
-          "locked" : false,
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "text" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "hover" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }
-    } ],
-    "tab" : "STYLE",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "text" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      },
-      "hover" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      },
-      "drop_downs" : {
-        "text" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "hover" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }
-    }
-  }, {
-    "id" : "styles.logo",
-    "name" : "logo",
-    "label" : "Logo",
-    "required" : false,
-    "locked" : false,
-    "visibility_rules" : "ADVANCED",
-    "advanced_visibility" : {
-      "boolean_operator" : "OR",
-      "criteria" : [ {
-        "controlling_field" : "logo.logo",
-        "controlling_field_path" : null,
-        "controlling_value_regex" : "(?=.*\"override_inherited_src\":false)",
-        "property" : null,
-        "operator" : "MATCHES_REGEX",
-        "access" : null
-      }, {
-        "controlling_field" : "logo.logo",
-        "controlling_field_path" : null,
-        "controlling_value_regex" : "src\":\"\\w+",
-        "property" : null,
-        "operator" : "MATCHES_REGEX",
-        "access" : null
-      } ],
-      "children" : [ ]
-    },
-    "children" : [ {
-      "id" : "styles.logo.corner",
-      "name" : "corner",
-      "label" : "Corner",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.logo.corner.radius",
-        "name" : "radius",
-        "label" : "Radius",
-        "required" : false,
-        "locked" : false,
-        "display" : "text",
-        "max" : 100,
-        "step" : 1,
-        "suffix" : "px",
-        "type" : "number",
-        "display_width" : null
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : { }
-    } ],
-    "tab" : "STYLE",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "corner" : { }
-    }
-  }, {
-    "id" : "styles.menu",
+    "id" : "a4a",
     "name" : "menu",
     "label" : "Menu",
+    "required" : true,
+    "locked" : false,
+    "type" : "menu",
+    "display_width" : null,
+    "default" : "default"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "menu" : "default"
+  }
+}, {
+  "id" : "a5",
+  "name" : "cta_button",
+  "label" : "CTA button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a5a",
+    "name" : "show",
+    "label" : "Show CTA",
     "required" : false,
     "locked" : false,
-    "children" : [ {
-      "id" : "styles.menu.text",
-      "name" : "text",
-      "label" : "Text",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.menu.text.font",
-        "name" : "font",
-        "label" : "Font",
-        "required" : false,
-        "locked" : false,
-        "load_external_fonts" : true,
-        "type" : "font",
-        "display_width" : null,
-        "default" : {
-          "size_unit" : "px"
-        }
-      }, {
-        "id" : "styles.menu.text.text_transform",
-        "name" : "text_transform",
-        "label" : "Text transform",
-        "required" : false,
-        "locked" : false,
-        "display" : "select",
-        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
-        "multiple" : false,
-        "reordering_enabled" : true,
-        "preset" : null,
-        "type" : "choice",
-        "display_width" : null
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      }
-    }, {
-      "id" : "styles.menu.hover",
-      "name" : "hover",
-      "label" : "Hover",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.menu.hover.font",
-        "name" : "font",
-        "label" : "Font",
-        "required" : false,
-        "locked" : false,
-        "visibility" : {
-          "controlling_field" : null,
-          "controlling_field_path" : null,
-          "controlling_value_regex" : null,
-          "property" : null,
-          "operator" : null,
-          "access" : null,
-          "hidden_subfields" : {
-            "size" : true
-          }
-        },
-        "load_external_fonts" : true,
-        "type" : "font",
-        "display_width" : null,
-        "default" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      }
-    }, {
-      "id" : "styles.menu.active",
-      "name" : "active",
-      "label" : "Active",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.menu.active.font",
-        "name" : "font",
-        "label" : "Font",
-        "required" : false,
-        "locked" : false,
-        "visibility" : {
-          "controlling_field" : null,
-          "controlling_field_path" : null,
-          "controlling_value_regex" : null,
-          "property" : null,
-          "operator" : null,
-          "access" : null,
-          "hidden_subfields" : {
-            "size" : true
-          }
-        },
-        "load_external_fonts" : true,
-        "type" : "font",
-        "display_width" : null,
-        "default" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      }
-    }, {
-      "id" : "styles.menu.drop_downs",
-      "name" : "drop_downs",
-      "label" : "Drop downs",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.menu.drop_downs.text",
-        "name" : "text",
-        "label" : "Text",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.menu.drop_downs.text.font_color",
-          "name" : "font_color",
-          "label" : "Font color",
-          "required" : false,
-          "locked" : false,
-          "visibility" : {
-            "controlling_field" : null,
-            "controlling_field_path" : null,
-            "controlling_value_regex" : null,
-            "property" : null,
-            "operator" : null,
-            "access" : null,
-            "hidden_subfields" : {
-              "opacity" : true
-            }
-          },
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }, {
-        "id" : "styles.menu.drop_downs.background",
-        "name" : "background",
-        "label" : "Background",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.menu.drop_downs.background.color",
-          "name" : "color",
-          "label" : "Color",
-          "required" : false,
-          "locked" : false,
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }, {
-        "id" : "styles.menu.drop_downs.hover",
-        "name" : "hover",
-        "label" : "Hover",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.menu.drop_downs.hover.font_color",
-          "name" : "font_color",
-          "label" : "Font color",
-          "required" : false,
-          "locked" : false,
-          "visibility" : {
-            "controlling_field" : null,
-            "controlling_field_path" : null,
-            "controlling_value_regex" : null,
-            "property" : null,
-            "operator" : null,
-            "access" : null,
-            "hidden_subfields" : {
-              "opacity" : true
-            }
-          },
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }, {
-          "id" : "styles.menu.drop_downs.hover.background_color",
-          "name" : "background_color",
-          "label" : "Background color",
-          "required" : false,
-          "locked" : false,
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }, {
-        "id" : "styles.menu.drop_downs.active",
-        "name" : "active",
-        "label" : "Active",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.menu.drop_downs.active.font_color",
-          "name" : "font_color",
-          "label" : "Font color",
-          "required" : false,
-          "locked" : false,
-          "visibility" : {
-            "controlling_field" : null,
-            "controlling_field_path" : null,
-            "controlling_value_regex" : null,
-            "property" : null,
-            "operator" : null,
-            "access" : null,
-            "hidden_subfields" : {
-              "opacity" : true
-            }
-          },
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }, {
-          "id" : "styles.menu.drop_downs.active.background_color",
-          "name" : "background_color",
-          "label" : "Background color",
-          "required" : false,
-          "locked" : false,
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "text" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "hover" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "active" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }
-    } ],
-    "tab" : "STYLE",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "a5b",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Talk to a specialist"
+  }, {
+    "id" : "a5c",
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
     "display_width" : null,
     "default" : {
-      "text" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      },
-      "hover" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      },
-      "active" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      },
-      "drop_downs" : {
-        "text" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "hover" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "active" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
     }
   }, {
-    "id" : "styles.button",
-    "name" : "button",
-    "label" : "Button",
+    "id" : "7d09a67b-42b3-eebf-a4f6-56f6db02c391",
+    "name" : "cta_field",
+    "label" : "CTA",
     "required" : false,
     "locked" : false,
-    "children" : [ {
-      "id" : "styles.button.presets",
-      "name" : "presets",
-      "label" : "Presets",
-      "help_text" : "Use presets to quickly adjust the appearance of the selected item to predefined values.",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.button.presets.button_style",
-        "name" : "button_style",
-        "label" : "Button style",
-        "required" : true,
-        "locked" : false,
-        "display" : "select",
-        "choices" : [ [ "primary", "Primary" ], [ "secondary", "Secondary" ], [ "simple", "Simple" ] ],
-        "multiple" : false,
-        "reordering_enabled" : true,
-        "preset" : null,
-        "type" : "choice",
-        "display_width" : null,
-        "default" : "primary"
-      }, {
-        "id" : "styles.button.presets.button_size",
-        "name" : "button_size",
-        "label" : "Button size",
-        "required" : true,
-        "locked" : false,
-        "display" : "select",
-        "choices" : [ [ "small", "Small" ], [ "regular", "Regular" ], [ "large", "Large" ] ],
-        "multiple" : false,
-        "reordering_enabled" : true,
-        "preset" : null,
-        "type" : "choice",
-        "display_width" : null,
-        "default" : "regular"
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "button_style" : "primary",
-        "button_size" : "regular"
-      }
-    }, {
-      "id" : "styles.button.text",
-      "name" : "text",
-      "label" : "Text",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.button.text.font",
-        "name" : "font",
-        "label" : "Font",
-        "required" : false,
-        "locked" : false,
-        "load_external_fonts" : true,
-        "type" : "font",
-        "display_width" : null,
-        "default" : {
-          "size_unit" : "px"
-        }
-      }, {
-        "id" : "styles.button.text.text_transform",
-        "name" : "text_transform",
-        "label" : "Text transform",
-        "required" : false,
-        "locked" : false,
-        "display" : "select",
-        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
-        "multiple" : false,
-        "reordering_enabled" : true,
-        "preset" : null,
-        "type" : "choice",
-        "display_width" : null
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      }
-    }, {
-      "id" : "styles.button.background",
-      "name" : "background",
-      "label" : "Background",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.button.background.color",
-        "name" : "color",
-        "label" : "Color",
-        "required" : false,
-        "locked" : false,
-        "type" : "color",
-        "display_width" : null,
-        "default" : {
-          "color" : null,
-          "opacity" : null
-        }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "color" : {
-          "color" : null,
-          "opacity" : null
-        }
-      }
-    }, {
-      "id" : "styles.button.border",
-      "name" : "border",
-      "label" : "Border",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.button.border.border",
-        "name" : "border",
-        "label" : "Border",
-        "required" : false,
-        "locked" : false,
-        "allow_custom_border_sides" : false,
-        "type" : "border",
-        "display_width" : null,
-        "default" : { }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "border" : { }
-      }
-    }, {
-      "id" : "styles.button.corner",
-      "name" : "corner",
-      "label" : "Corner",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.button.corner.radius",
-        "name" : "radius",
-        "label" : "Radius",
-        "required" : false,
-        "locked" : false,
-        "display" : "text",
-        "max" : 100,
-        "step" : 1,
-        "suffix" : "px",
-        "type" : "number",
-        "display_width" : null
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : { }
-    }, {
-      "id" : "styles.button.spacing",
-      "name" : "spacing",
-      "label" : "Spacing",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.button.spacing.spacing",
-        "name" : "spacing",
-        "label" : "Spacing",
-        "required" : false,
-        "locked" : false,
-        "visibility" : {
-          "controlling_field" : null,
-          "controlling_field_path" : null,
-          "controlling_value_regex" : null,
-          "property" : null,
-          "operator" : null,
-          "access" : null,
-          "hidden_subfields" : {
-            "margin" : true
-          }
-        },
-        "type" : "spacing",
-        "display_width" : null,
-        "default" : { }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "spacing" : { }
-      }
-    }, {
-      "id" : "styles.button.hover",
-      "name" : "hover",
-      "label" : "Hover",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.button.hover.text",
-        "name" : "text",
-        "label" : "Text",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.button.hover.text.font",
-          "name" : "font",
-          "label" : "Font",
-          "required" : false,
-          "locked" : false,
-          "visibility" : {
-            "controlling_field" : null,
-            "controlling_field_path" : null,
-            "controlling_value_regex" : null,
-            "property" : null,
-            "operator" : null,
-            "access" : null,
-            "hidden_subfields" : {
-              "size" : true
-            }
-          },
-          "load_external_fonts" : true,
-          "type" : "font",
-          "display_width" : null,
-          "default" : {
-            "font" : null,
-            "font_set" : "DEFAULT",
-            "styles" : null,
-            "size" : null,
-            "size_unit" : null,
-            "color" : null,
-            "variant" : null,
-            "fallback" : null,
-            "style" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "font" : {
-            "font" : null,
-            "font_set" : "DEFAULT",
-            "styles" : null,
-            "size" : null,
-            "size_unit" : null,
-            "color" : null,
-            "variant" : null,
-            "fallback" : null,
-            "style" : null
-          }
-        }
-      }, {
-        "id" : "styles.button.hover.background",
-        "name" : "background",
-        "label" : "Background",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.button.hover.background.color",
-          "name" : "color",
-          "label" : "Color",
-          "required" : false,
-          "locked" : false,
-          "type" : "color",
-          "display_width" : null,
-          "default" : {
-            "color" : null,
-            "opacity" : null
-          }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }, {
-        "id" : "styles.button.hover.border",
-        "name" : "border",
-        "label" : "Border",
-        "required" : false,
-        "locked" : false,
-        "children" : [ {
-          "id" : "styles.button.hover.border.border",
-          "name" : "border",
-          "label" : "Border",
-          "required" : false,
-          "locked" : false,
-          "allow_custom_border_sides" : false,
-          "type" : "border",
-          "display_width" : null,
-          "default" : { }
-        } ],
-        "tab" : "STYLE",
-        "expanded" : false,
-        "group_occurrence_meta" : null,
-        "type" : "group",
-        "display_width" : null,
-        "default" : {
-          "border" : { }
-        }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "text" : {
-          "font" : {
-            "font" : null,
-            "font_set" : "DEFAULT",
-            "styles" : null,
-            "size" : null,
-            "size_unit" : null,
-            "color" : null,
-            "variant" : null,
-            "fallback" : null,
-            "style" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "border" : {
-          "border" : { }
-        }
-      }
-    }, {
-      "id" : "styles.button.alignment",
-      "name" : "alignment",
-      "label" : "Alignment",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "styles.button.alignment.alignment",
-        "name" : "alignment",
-        "label" : "Alignment",
-        "required" : false,
-        "locked" : false,
-        "alignment_direction" : "HORIZONTAL",
-        "type" : "alignment",
-        "display_width" : null,
-        "default" : { }
-      } ],
-      "tab" : "STYLE",
-      "expanded" : false,
-      "group_occurrence_meta" : null,
-      "type" : "group",
-      "display_width" : null,
-      "default" : {
-        "alignment" : { }
-      }
-    } ],
-    "tab" : "STYLE",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "presets" : {
-        "button_style" : "primary",
-        "button_size" : "regular"
-      },
-      "text" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      },
-      "background" : {
-        "color" : {
-          "color" : null,
-          "opacity" : null
-        }
-      },
-      "border" : {
-        "border" : { }
-      },
-      "corner" : { },
-      "spacing" : {
-        "spacing" : { }
-      },
-      "hover" : {
-        "text" : {
-          "font" : {
-            "font" : null,
-            "font_set" : "DEFAULT",
-            "styles" : null,
-            "size" : null,
-            "size_unit" : null,
-            "color" : null,
-            "variant" : null,
-            "fallback" : null,
-            "style" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "border" : {
-          "border" : { }
-        }
-      },
-      "alignment" : {
-        "alignment" : { }
-      }
+    "type" : "cta",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "show" : true,
+    "text" : "Talk to a specialist",
+    "url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
     }
+  }
+}, {
+  "id" : "a6",
+  "name" : "appearance",
+  "label" : "Appearance",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a6a",
+    "name" : "bottom_background",
+    "label" : "Bottom navigation background",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "transparent", "Transparent (overlaps next module)" ], [ "white", "White" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "white"
+  }, {
+    "id" : "a6b",
+    "name" : "add_shadow",
+    "label" : "Add subtle bottom shadow",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -1514,234 +260,7 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "top_bar" : {
-      "background" : {
-        "color" : {
-          "color" : "#FFFFFF",
-          "opacity" : 100
-        }
-      }
-    },
-    "language_switcher" : {
-      "text" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      },
-      "hover" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      },
-      "drop_downs" : {
-        "text" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "hover" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }
-    },
-    "logo" : {
-      "corner" : { }
-    },
-    "menu" : {
-      "text" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      },
-      "hover" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      },
-      "active" : {
-        "font" : {
-          "font" : null,
-          "font_set" : "DEFAULT",
-          "styles" : null,
-          "size" : null,
-          "size_unit" : null,
-          "color" : null,
-          "variant" : null,
-          "fallback" : null,
-          "style" : null
-        }
-      },
-      "drop_downs" : {
-        "text" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "hover" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "active" : {
-          "font_color" : {
-            "color" : null,
-            "opacity" : null
-          },
-          "background_color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        }
-      }
-    },
-    "button" : {
-      "presets" : {
-        "button_style" : "primary",
-        "button_size" : "regular"
-      },
-      "text" : {
-        "font" : {
-          "size_unit" : "px"
-        }
-      },
-      "background" : {
-        "color" : {
-          "color" : null,
-          "opacity" : null
-        }
-      },
-      "border" : {
-        "border" : { }
-      },
-      "corner" : { },
-      "spacing" : {
-        "spacing" : { }
-      },
-      "hover" : {
-        "text" : {
-          "font" : {
-            "font" : null,
-            "font_set" : "DEFAULT",
-            "styles" : null,
-            "size" : null,
-            "size_unit" : null,
-            "color" : null,
-            "variant" : null,
-            "fallback" : null,
-            "style" : null
-          }
-        },
-        "background" : {
-          "color" : {
-            "color" : null,
-            "opacity" : null
-          }
-        },
-        "border" : {
-          "border" : { }
-        }
-      },
-      "alignment" : {
-        "alignment" : { }
-      }
-    }
+    "bottom_background" : "white",
+    "add_shadow" : true
   }
-}, {
-  "id" : "10d07bdd-952a-66da-a40f-333abb63516f",
-  "name" : "cta_field",
-  "label" : "CTA",
-  "required" : false,
-  "locked" : false,
-  "type" : "cta",
-  "display_width" : null,
-  "default" : "fa8cd90a-a03c-4b5c-a468-9f23c078d0c5"
-}, {
-  "id" : "dbac5c28-002b-881d-1c4e-a69078781665",
-  "name" : "show_login",
-  "label" : "show login",
-  "required" : false,
-  "locked" : false,
-  "display" : "checkbox",
-  "type" : "boolean",
-  "display_width" : null,
-  "default" : false
-}, {
-  "id" : "5ed728f3-5b92-ffee-bb4b-67ef3a64606b",
-  "name" : "cta_link_text",
-  "label" : "cta-link-text",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null
-}, {
-  "id" : "7f0fb9a0-af27-251c-0dd6-b8a7540b5efa",
-  "name" : "cta_link",
-  "label" : "cta-link",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null
-}, {
-  "id" : "0e227866-284e-6df6-2061-7d7e59759853",
-  "name" : "show_menu",
-  "label" : "show menu",
-  "required" : false,
-  "locked" : false,
-  "display" : "checkbox",
-  "type" : "boolean",
-  "display_width" : null,
-  "default" : false
-}, {
-  "id" : "f19e82b1-7ff9-1f5f-bc86-6f50dbe04642",
-  "name" : "secundary_menu",
-  "label" : "Secundary menu",
-  "required" : false,
-  "locked" : false,
-  "type" : "menu",
-  "display_width" : null,
-  "default" : 107589973218
 } ]

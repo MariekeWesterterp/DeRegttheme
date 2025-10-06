@@ -76,6 +76,42 @@
     "display_width" : null,
     "default" : "medium"
   }, {
+    "id": "n4o5p6q7-r8s9-0123-nopq-456789012345",
+    "name": "padding_block",
+    "label": "Add top and bottom padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "no-padding",
+        "No padding"
+      ],
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "small",
+        "Small"
+      ],
+      [
+        "medium",
+        "Medium"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },
+  {
     "id" : "1a5f3e2c-2b1e-4f0d-6f4c-8e3b1e5e2f4c",
     "name" : "backgroundcolor",
     "label" : "Background color",
@@ -84,20 +120,8 @@
     "type" : "color",
     "display_width" : null,
     "default" : "#FFFFFF"
-  }, {
-    "id" : "ef873285-7a28-c3f9-43f2-6286c8c7fb67",
-    "name" : "padding_block",
-    "label" : "Padding block",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null
-  } ],
+  }
+],
   "tab" : "STYLE",
   "expanded" : false,
   "group_occurrence_meta" : null,

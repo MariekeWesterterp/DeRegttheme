@@ -67,51 +67,7 @@
     "max_width" : 1600,
     "max_height" : 900
   }
-}, {
-  "id" : "a9",
-  "name" : "top_cta",
-  "label" : "Top CTA",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "a9a",
-    "name" : "text",
-    "label" : "Text",
-    "required" : false,
-    "locked" : false,
-    "allow_new_line" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Talk to a specialist"
-  }, {
-    "id" : "a9b",
-    "name" : "url",
-    "label" : "URL",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-    "type" : "url",
-    "display_width" : null,
-    "default" : {
-      "content_id" : null,
-      "href" : "",
-      "type" : "EXTERNAL"
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : {
-    "text" : "Talk to a specialist",
-    "url" : {
-      "content_id" : null,
-      "href" : "",
-      "type" : "EXTERNAL"
-    }
-  }
-}, {
+},  {
   "id" : "a10",
   "name" : "buttons",
   "label" : "Buttons",

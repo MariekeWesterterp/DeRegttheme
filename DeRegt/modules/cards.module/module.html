@@ -22,7 +22,7 @@
 {% endif %}
 
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
-<section class="cards default-padding {{ spacing_classes }}"{% if section_background %} style="background-color: {{ section_background }}"{% endif %}>
+<section class="cards {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} {{ spacing_classes }}"{% if section_background %} style="background-color: {{ section_background }}"{% endif %}>
   <div class="cards__wrapper">
     <div class="container">
       {% set has_heading = module.heading %}
