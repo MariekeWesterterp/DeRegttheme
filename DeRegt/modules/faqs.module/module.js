@@ -1,0 +1,19 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.faqs__accordion-button')
+
+
+  function toggleAccordion() {
+    const itemToggle = this.getAttribute('aria-expanded')
+    console.log('Toggle status voor knop:', itemToggle) 
+
+    for (let i = 0; i < items.length; i++) {
+      items[i].setAttribute('aria-expanded', 'false')
+    }
+
+    if (itemToggle === 'false') {
+      this.setAttribute('aria-expanded', 'true')
+    }
+  }
+
+  items.forEach((item) => item.addEventListener('click', toggleAccordion))
+})

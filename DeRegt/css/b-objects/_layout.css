@@ -445,9 +445,15 @@ padding-bottom: 3rem;
        padding-bottom: 3.5rem;
      }
 }
-
+body{
+    background-color: var(--clr-blue-royal-light);
+}
+.body-wrapper{
+    max-width: 1680px;
+    margin: 0 auto;
+}
 .container {
-/* max width is 1328 (like design) + 2x padding-inline: */
+/* max width is 1328 (like design) + 2x padding-inline (32px) = 1360: */
 max-width: 1360px;
   margin: 0 auto;
   padding-inline: 16px;

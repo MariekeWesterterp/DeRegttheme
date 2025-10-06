@@ -5,8 +5,8 @@
   "required" : false,
   "locked" : false,
   "allow_new_line" : false,
-  "display_width" : null,
-  "type" : "text"
+  "type" : "text",
+  "display_width" : null
 }, {
   "id" : "a2",
   "name" : "branding",
@@ -20,8 +20,8 @@
     "required" : false,
     "locked" : false,
     "show_loading" : false,
-    "display_width" : null,
     "type" : "logo",
+    "display_width" : null,
     "default" : {
       "override_inherited_src" : true,
       "src" : "https://26859049.fs1.hubspotusercontent-eu1.net/hubfs/26859049/logoDeRegt.svg",
@@ -38,8 +38,8 @@
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-    "display_width" : null,
     "type" : "url",
+    "display_width" : null,
     "default" : {
       "content_id" : null,
       "href" : "/",
@@ -49,8 +49,8 @@
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
-  "display_width" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "logo" : {
       "override_inherited_src" : true,
@@ -80,8 +80,8 @@
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
-    "display_width" : null,
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "a3b",
@@ -90,8 +90,8 @@
     "required" : false,
     "locked" : false,
     "allow_new_line" : false,
-    "display_width" : null,
     "type" : "text",
+    "display_width" : null,
     "default" : "A SERCEL COMPANY"
   }, {
     "id" : "a3c",
@@ -99,8 +99,8 @@
     "label" : "Top navigation menu",
     "required" : false,
     "locked" : false,
-    "display_width" : null,
-    "type" : "menu"
+    "type" : "menu",
+    "display_width" : null
   }, {
     "id" : "a3d",
     "name" : "background_color",
@@ -108,12 +108,18 @@
     "required" : false,
     "locked" : false,
     "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : null,
+      "controlling_value_regex" : null,
+      "property" : null,
+      "operator" : null,
+      "access" : null,
       "hidden_subfields" : {
         "opacity" : true
       }
     },
-    "display_width" : null,
     "type" : "color",
+    "display_width" : null,
     "default" : {
       "color" : "#1761E1"
     }
@@ -121,8 +127,8 @@
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
-  "display_width" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "show" : true,
     "tagline" : "A SERCEL COMPANY",
@@ -142,15 +148,15 @@
     "label" : "Menu",
     "required" : true,
     "locked" : false,
-    "display_width" : null,
     "type" : "menu",
+    "display_width" : null,
     "default" : "default"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
-  "display_width" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "menu" : "default"
   }
@@ -167,8 +173,8 @@
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
-    "display_width" : null,
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "a5b",
@@ -177,8 +183,8 @@
     "required" : false,
     "locked" : false,
     "allow_new_line" : false,
-    "display_width" : null,
     "type" : "text",
+    "display_width" : null,
     "default" : "Talk to a specialist"
   }, {
     "id" : "a5c",
@@ -187,8 +193,8 @@
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-    "display_width" : null,
     "type" : "url",
+    "display_width" : null,
     "default" : {
       "content_id" : null,
       "href" : "",
@@ -200,14 +206,14 @@
     "label" : "CTA",
     "required" : false,
     "locked" : false,
-    "display_width" : null,
-    "type" : "cta"
+    "type" : "cta",
+    "display_width" : null
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
-  "display_width" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "show" : true,
     "text" : "Talk to a specialist",
@@ -234,8 +240,8 @@
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
-    "display_width" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "white"
   }, {
     "id" : "a6b",
@@ -244,15 +250,15 @@
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
-    "display_width" : null,
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   } ],
   "tab" : "STYLE",
   "expanded" : false,
   "group_occurrence_meta" : null,
-  "display_width" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "bottom_background" : "white",
     "add_shadow" : true

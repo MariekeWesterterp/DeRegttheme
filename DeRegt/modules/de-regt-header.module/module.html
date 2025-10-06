@@ -99,7 +99,7 @@
               {% set cta_rel = 'noopener' if cta_target == '_blank' else None %}
               <div class="dr-header__nav-cta">
                 {% if module.cta_button.text %} 
-                <a class="btn-primary" href="{{ module.cta_button.url.href|escape_url }}" target="{{ cta_target }}" {% if cta_rel %}rel="{{ cta_rel }}"{% endif %}>{{ module.cta_button.text }}</a>
+                <a class="btn-primary btn-small" href="{{ module.cta_button.url.href|escape_url }}" target="{{ cta_target }}" {% if cta_rel %}rel="{{ cta_rel }}"{% endif %}>{{ module.cta_button.text }}</a>
                {% else %} 
                 
                 {% cta guid="{{ module.cta_button.cta_field }}" %}
