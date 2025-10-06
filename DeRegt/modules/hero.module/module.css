@@ -45,6 +45,7 @@
     line-height: 20px;
     color: var(--hero-tagline-color, var(--clr-yellow-sun));
     width: fit-content;
+  font-weight: 500;
 }
 
 .hero__title {
@@ -75,7 +76,6 @@
 .hero__explore-label {
     margin: 0;
     font-size: 1rem;
-    font-weight: 600;
     color: var(--hero-explore-label-color, rgba(255, 255, 255, 0.85));
 }
 
@@ -98,7 +98,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 12rem;
     text-align: center;
     transition: transform 150ms ease-in-out;
 }

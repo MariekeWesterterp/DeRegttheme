@@ -152,8 +152,8 @@
     "label" : "CTA",
     "required" : false,
     "locked" : false,
-    "display_width" : null,
-    "type" : "cta"
+    "type" : "cta",
+    "display_width" : null
   }, {
     "id" : "a10c",
     "name" : "style",
@@ -557,6 +557,19 @@
       "default" : {
         "color" : "#FFFFFF",
         "opacity" : 85
+      }
+    }, {
+      "id" : "d3288105-eea4-47d5-8d40-699572e3bc2e",
+      "name" : "contact_card_text_color",
+      "label" : "Contact card text color",
+      "required" : false,
+      "locked" : false,
+      "show_opacity" : true,
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
       }
     },
     {

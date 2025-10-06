@@ -25,8 +25,8 @@
   "locked" : false,
   "occurrence" : {
     "min" : null,
-    "max" : 3,
-    "sorting_label_field": "931ac5bf-df51-4430-ae33-b38f74c94620",
+    "max" : null,
+    "sorting_label_field" : "931ac5bf-df51-4430-ae33-b38f74c94620",
     "default" : null
   },
   "children" : [ {
@@ -71,16 +71,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "display_width" : null,
-  "default" : [ {
-    "title" : "IHC cable design",
-    "description" : "<p>50cm thickness<br>Material: Metal<br>Eigenschap: Waarde</p>"
-  }, {
-    "title" : "Geomill cable design",
-    "description" : "<p>50cm thickness<br>Material: Metal<br>Eigenschap: Waarde</p>"
-  }, {
-    "title" : "Honghai cable design",
-    "description" : "<p>50cm thickness<br>Material: Metal<br>Eigenschap: Waarde</p>"
-  } ]
+  "default" : [ ]
 }, {
   "id" : "f03be02d-dcbb-456f-8960-3bb3a5808c86",
   "name" : "cta_block",
@@ -154,7 +145,16 @@
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
-    "display_width" : null
+    "display_width" : null,
+    "default" : {
+      "text" : "Talk to a specialist",
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "style" : "primary"
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -165,6 +165,11 @@
     "title" : "Request a custom design",
     "button" : {
       "text" : "Talk to a specialist",
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
       "style" : "primary"
     }
   }
@@ -206,7 +211,6 @@
   "display_width" : null,
   "default" : {
     "margin_block" : "medium",
-    "padding_block" : "large",
     "backgroundcolor" : "#EEF8FF"
   }
 } ]
