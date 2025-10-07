@@ -73,7 +73,10 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
+    "choices" : [ [ "no-padding", "No padding" ], [
+        "default",
+        "Default"
+      ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,

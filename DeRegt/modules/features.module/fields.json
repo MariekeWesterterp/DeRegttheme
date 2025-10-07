@@ -148,13 +148,16 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "choices" : [ [ "no-padding", "No padding" ], [
+        "default",
+        "Default"
+      ],[ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "medium"
+    "default" : "default"
   }, {
     "id" : "o5p6q7r8-s9t0-1234-opqr-567890123456",
     "name" : "backgroundcolor",

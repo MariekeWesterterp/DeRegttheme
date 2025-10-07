@@ -50,12 +50,13 @@ h6 {
 
 a {
   color: var(--link-color);
-  text-decoration: var(--link-text-decoration);
+  text-decoration: var(--link-text-decoration, underline);
 }
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: var(--link-hover-text-decoration);
+  text-decoration: var(--link-hover-text-decoration, none);
+  transition: all 0.4s ease;
 }
 
 blockquote {

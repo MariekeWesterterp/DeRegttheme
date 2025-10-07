@@ -1,7 +1,6 @@
 {% import "/DeRegt/macro/margin-padding.html" as macros %}
 
 {% set has_hubspot_video = module.video_long.player_id %}
-{% set use_test_video = module.use_test_video %}
 {% set fallback_video_url = 'https://www.youtube.com/embed/D0UnqGm_miA?si=WuEZdI5p5ExwITSQ' %}
 {% set request_scheme = request.scheme if request and request.scheme else 'https' %}
 {% set request_domain = request.domain if request and request.domain else '' %}
@@ -11,18 +10,14 @@
   {% set fallback_query = fallback_query ~ '&origin=' ~ current_origin|urlencode %}
 {% endif %}
 {% set fallback_video_src = fallback_video_url ~ ('&' if '?' in fallback_video_url else '?') ~ fallback_query %}
-{% set has_fallback_video = use_test_video and not has_hubspot_video %}
+{% set has_fallback_video = module.use_test_video and not has_hubspot_video %}
 {% set has_any_video = has_hubspot_video or has_fallback_video %}
 {% set has_image = module.image_field.src %}
 {% set layout_option = module.layout or 'text-left' %}
 {% set reversed_class = 'text-img-video__inner--reversed' if layout_option == 'text-right' else '' %}
-{% set heading_color = module.style.color_heading.color %}
-{% set text_color = module.style.color_text.color %}
 {% set video_meta = module.video_meta or {} %}
-{% set meta_title = video_meta.title %}
-{% set meta_description = video_meta.description %}
-{% set has_meta_content = meta_title or meta_description %}
-{% set popup_label = meta_title or module.title or 'Video player' %}
+{% set has_meta_content = video_meta.title or video_meta.description %}
+{% set popup_label = video_meta.title or module.title or 'Video player' %}
 {% set media_classes = 'text-img-video__media-wrapper' %}
 {% if has_any_video %}
   {% set media_classes = media_classes ~ ' has-video' %}
@@ -33,11 +28,11 @@
 
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
 
-<section class="text-img-video" style="background-color: {{ module.style.backgroundcolor.color }}">
-  <div class="{{ macros.margin_padding(module.style.margin_block) }} text-img-video__wrapper" style="--text-img-video-heading-color: {{ heading_color }}; --text-img-video-text-color: {{ text_color }};">
+<section class="text-img-video {{ macros.margin_padding(module.style.margin_block,'') }}" style="background-color: {{ module.style.backgroundcolor.color }}">
+  <div class="text-img-video__wrapper" style="--text-img-video-heading-color: {{ module.style.color_heading.color }}; --text-img-video-text-color: {{ module.style.color_text.color}};">
     <div class="text-img-video__inner {{ reversed_class }}">
       <div class="text-img-video__text-col">
-        <div class="container default-padding">
+        <div class="container {{ macros.margin_padding('',module.style.padding_block) }}">
           <div class="text-img-video__text">
             {% if module.title %}
               <div class="text-img-video__text_title">
@@ -86,11 +81,11 @@
                 {% set meta_classes = meta_classes ~ ' text-img-video__meta--hidden' %}
               {% endif %}
               <div class="{{ meta_classes }}" data-video-meta>
-                {% if meta_title %}
-                  <p class="text-img-video__meta-title">{{ meta_title }}</p>
+                {% if video_meta.title %}
+                  <p class="text-img-video__meta-title">{{ video_meta.title }}</p>
                 {% endif %}
-                {% if meta_description %}
-                  <p class="text-img-video__meta-description">{{ meta_description|replace('\n', '<br>')|safe }}</p>
+                {% if video_meta.description %}
+                  <p class="text-img-video__meta-description">{{ video_meta.description|replace('\n', '<br>')|safe }}</p>
                 {% endif %}
                 {% if has_any_video %}
                   <p class="text-img-video__meta-duration" data-video-duration>--:--</p>
