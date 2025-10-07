@@ -1,19 +1,16 @@
 {% import "/DeRegt/macro/margin-padding.html" as macros %}
 
-{% set spacing_classes = macros.margin_padding(module.style.margin_block) %}
-{% set section_background = module.style.backgroundcolor %}
-{% set button_group = module.button %}
-{% set button_text = button_group.text|trim if button_group and button_group.text else '' %}
-{% set button_url = button_group.url.href if button_group and button_group.url and button_group.url.href %}
+{% set button_text = module.button.text|trim if module.button and module.button.text else '' %}
+{% set button_url = module.button.url.href if module.button and module.button.url and module.button.url.href %}
 {% set button_has_manual = button_text and button_url %}
-{% set button_cta = button_group.cta_field if button_group %}
+{% set button_cta = module.button.cta_field if module.button %}
 {% set has_button = button_has_manual or button_cta %}
 {% set button_target = '_self' %}
-{% if button_group and button_group.url %}
-  {% set button_target = button_group.url.target if button_group.url.target else ('_blank' if button_group.url.open_in_new_tab else '_self') %}
+{% if module.button and module.button.url %}
+  {% set button_target = module.button.url.target if module.button.url.target else ('_blank' if module.button.url.open_in_new_tab else '_self') %}
 {% endif %}
 {% set button_rel = 'noopener' if button_target == '_blank' else None %}
-{% set button_style = button_group.style if button_group and button_group.style else 'secondary' %}
+{% set button_style = module.button.style if module.button and module.button.style else 'secondary' %}
 {% set button_class = 'btn-secondary' %}
 {% if button_style == 'primary' %}
   {% set button_class = 'btn-primary' %}
@@ -22,7 +19,7 @@
 {% endif %}
 
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
-<section class="cards {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} {{ spacing_classes }}"{% if section_background %} style="background-color: {{ section_background }}"{% endif %}>
+<section class="cards {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}"{% if module.style.backgroundcolor %} style="background-color: {{ module.style.backgroundcolor }}"{% endif %}>
   <div class="cards__wrapper">
     <div class="container">
       {% set has_heading = module.heading %}
@@ -53,15 +50,10 @@
       {% if module.cards|length %}
         <div class="cards__grid">
           {% for item in module.cards %}
-            {% set image = item.image %}
-            {% set has_image = image.src %}
-            {% set label_text = item.label_text|trim %}
-            {% set label_position = module.label_position|default('top') %}
-            {% set card_link = item.link %}
-            {% set card_url = card_link.href if card_link and card_link.href %}
-            {% set card_target = card_link.target if card_link and card_link.target else ('_blank' if card_link and card_link.open_in_new_tab else '_self') %}
+            {% set card_url = item.link.href if item.link and item.link.href %}
+            {% set card_target = item.link.target if item.link and item.link.target else ('_blank' if item.link and item.link.open_in_new_tab else '_self') %}
             {% set card_rel = 'noopener' if card_target == '_blank' else None %}
-            {% set card_classes = 'cards__item cards__item--label-' ~ label_position %}
+            {% set card_classes = 'cards__item cards__item--label-' ~ module.label_position %}
             <article class="{{ card_classes }}">
               {% if card_url %}
                 <a class="cards__card cards__card-{{ module.appearance_cards }}" href="{{ card_url|escape_url }}" target="{{ card_target }}"{% if card_rel %} rel="{{ card_rel }}"{% endif %}>
@@ -69,15 +61,15 @@
                 <div class="cards__card cards__card-{{ module.appearance_cards }}">
               {% endif %}
                   <div class="cards__media" >
-                    {% if has_image %}
-                      <img src="{{ image.src|escape_url }}" alt="{{ image.alt|escape_html }}" loading="{{ image.loading|default('lazy') }}">
+                    {% if item.image.src %}
+                      <img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_html }}" loading="{{ item.image.loading|default('lazy') }}">
                     {% endif %}
-                    {% if label_text and label_position == 'top' %}
-                      <span class="cards__label cards__label--top">{{ label_text }}</span>
+                    {% if item.label_text and module.label_position == 'top' %}
+                      <span class="cards__label cards__label--top">{{ item.label_text }}</span>
                     {% endif %}
                     <div class="cards__content">
-                      {% if label_text and label_position == 'bottom' %}
-                        <span class="cards__label cards__label--bottom">{{ label_text }}</span>
+                      {% if item.label_text and module.label_position == 'bottom' %}
+                        <span class="cards__label cards__label--bottom">{{ item.label_text }}</span>
                       {% endif %}
                       {% if item.title %}
                         <h3 class="cards__card-title align-title-{{ module.align_items_title_and_button }}"><span>{{ item.title }} </span>  {% if card_url %}<span class="cards__icon" aria-hidden="true">

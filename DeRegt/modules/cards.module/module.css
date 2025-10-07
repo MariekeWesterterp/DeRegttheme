@@ -56,6 +56,7 @@
 
 .cards__item {
   list-style: none;
+  width: 100%;
 }
 
 .cards__card {
@@ -154,6 +155,9 @@
   z-index: 2;
 }
 
+.cards__card .cards__media img{
+  transition: transform 0.3s ease;
+}
 .cards__card:hover .cards__media img,
 .cards__card:focus-visible .cards__media img {
   transform: scale(1.05);
