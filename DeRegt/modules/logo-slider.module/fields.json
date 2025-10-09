@@ -18,15 +18,6 @@
   "display_width" : null,
   "default" : "Bewezen track record<span>.</span>"
 }, {
-  "id" : "d5d9d2cb-8ef1-aa19-c04e-1e2c049a5b19",
-  "name" : "richtext_field",
-  "label" : "Rich text",
-  "required" : false,
-  "locked" : false,
-  "type" : "richtext",
-  "display_width" : null,
-  "default" : "<ul>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod laoreet</li>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod laoreet</li>\n<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod laoreet</li>\n</ul>"
-}, {
   "id" : "1090f015-58c4-163f-407f-670a876c33ab",
   "name" : "logo",
   "label" : "logo",
@@ -54,6 +45,68 @@
     "max_height" : 110
   }
 }, {
+  "id" : "6a75a4c2-028d-4b76-87ad-9e84dd0c5d90",
+  "name" : "slider_settings",
+  "label" : "Slider settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "4dd1d1c1-7ab9-4f49-b8f0-6052df2c1854",
+    "name" : "autoplay_desktop",
+    "label" : "Autoplay (desktop)",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true,
+    "inline_help_text" : "Toggle desktop autoplay on or off."
+  }, {
+    "id" : "87a70d28-3a81-4ce6-8d5b-86f5f42b3c53",
+    "name" : "autoplay_mobile",
+    "label" : "Autoplay (mobile)",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false,
+    "inline_help_text" : "Toggle mobile autoplay on or off."
+  }, {
+    "id" : "c4f26f9b-0d7b-49ab-b267-16a4fee6f1c9",
+    "name" : "autoplay_speed",
+    "label" : "Autoplay speed (ms)",
+    "required" : false,
+    "locked" : false,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 4500,
+    "inline_help_text" : "Set autoplay interval in milliseconds. Leave empty for default (4500ms)."
+  }, {
+    "id" : "d441df02-4e9b-42de-b05b-0944a47d8bb2",
+    "name" : "pagination_desktop",
+    "label" : "Pagination (desktop)",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false,
+    "inline_help_text" : "Show pagination dots on desktop."
+  }, {
+    "id" : "1b3d5c5e-98a3-47eb-8d07-2924731b2865",
+    "name" : "pagination_mobile",
+    "label" : "Pagination (mobile)",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true,
+    "inline_help_text" : "Show pagination dots on mobile."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+}, {
   "id" : "c6b06287-d4b8-881d-69f0-ee6b4691c61b",
   "name" : "style",
   "label" : "Style",
@@ -79,13 +132,16 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
+    "choices" : [ [ "no-padding", "No padding" ], [
+        "default",
+        "Default"
+      ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "medium"
+    "default" : "default"
   }, {
     "id" : "85e4319c-392b-bc26-1389-f0a55eedddc5",
     "name" : "backgroundcolor",

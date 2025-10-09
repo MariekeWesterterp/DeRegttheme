@@ -1,0 +1,104 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+{% set heading = module.heading|trim if module.heading else '' %}
+{% set heading_tag = module.style.heading_tag if module.style and module.style.heading_tag else 'h2' %}
+{% set highlights = module.highlights if module.highlights else [] %}
+{% set button_group = module.button %}
+{% set button_text = button_group.text|trim if button_group and button_group.text else '' %}
+{% set button_url = button_group.url if button_group and button_group.url else none %}
+{% set button_href = button_url.href if button_url and button_url.href else '' %}
+{% set button_target = button_url.target if button_url and button_url.target else ('_blank' if button_url and button_url.open_in_new_tab else '_self') %}
+{% set button_rel = 'noopener' if button_target == '_blank' else none %}
+{% set button_cta = button_group.cta_field if button_group %}
+{% set has_manual_button = button_text and button_href %}
+{% set has_cta_button = button_cta %}
+{% set has_button = has_manual_button or has_cta_button %}
+{% set button_style = button_group.style if button_group and button_group.style else 'primary' %}
+{% set button_class = 'btn-primary' %}
+{% if button_style == 'secondary' %}
+  {% set button_class = 'btn-secondary' %}
+{% elif button_style == 'secondary-white' %}
+  {% set button_class = 'btn-secondary btn-secondary-white' %}
+{% endif %}
+
+{% set desktop_image = module.image_desktop %}
+{% set mobile_image = module.image_mobile %}
+{% set has_desktop_image = desktop_image.src %}
+{% set has_mobile_image = mobile_image.src %}
+{% set mobile_image_object = mobile_image if has_mobile_image else desktop_image %}
+{% set has_any_image = has_desktop_image or mobile_image_object and mobile_image_object.src %}
+
+{% if module.anchor %}
+  <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+{% endif %}
+
+<section class="cta-whitepaper {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}"{% if module.style.backgroundcolor %} style="background-color: {{ module.style.backgroundcolor }}"{% endif %}>
+  <div class="cta-whitepaper__wrapper">
+    <div class="container">
+      <div class="cta-whitepaper__inner">
+        <div class="cta-whitepaper__content">
+          {% if heading %}
+            <div class="cta-whitepaper__heading">
+              <{{ heading_tag }} class="cta-whitepaper__title">{{ heading }}</{{ heading_tag }}>
+              <svg class="cta-whitepaper__underline" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none" role="presentation" aria-hidden="true">
+                <path d="M48 0H0V6H48V0Z" fill="#F1C61A" />
+              </svg>
+            </div>
+          {% endif %}
+
+          {% if highlights|length %}
+            <ul class="cta-whitepaper__list">
+              {% for item in highlights %}
+                {% set item_text = item.text|trim if item.text else '' %}
+                {% if item_text %}
+                  <li class="cta-whitepaper__list-item">
+                    <span class="cta-whitepaper__icon" aria-hidden="true"></span>
+                    <span class="cta-whitepaper__list-text">{{ item_text }}</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if has_button %}
+            <div class="cta-whitepaper__cta">
+              {% if has_manual_button %}
+                <a href="{{ button_href|escape_url }}" class="{{ button_class }}" target="{{ button_target }}"{% if button_rel %} rel="{{ button_rel }}"{% endif %}>{{ button_text }}</a>
+              {% else %}
+                <div class="cta-whitepaper__cta-embed">
+                  {% cta guid="{{ button_cta }}" %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+
+        {% if has_any_image %}
+          <div class="cta-whitepaper__media">
+            {% if has_desktop_image %}
+              {% set desktop_loading = desktop_image.loading != 'disabled' ? 'loading=\"' ~ desktop_image.loading|escape_attr ~ '\"' : '' %}
+              {% set desktop_width = desktop_image.width if desktop_image.width else desktop_image.max_width %}
+              {% set desktop_height = desktop_image.height if desktop_image.height else desktop_image.max_height %}
+              {% set desktop_dimensions = '' %}
+              {% if desktop_width and desktop_height %}
+                {% set desktop_dimensions = 'width=\"' ~ desktop_width|escape_attr ~ '\" height=\"' ~ desktop_height|escape_attr ~ '\"' %}
+              {% endif %}
+              <img class="cta-whitepaper__image cta-whitepaper__image--desktop" src="{{ desktop_image.src|escape_url }}" alt="{{ desktop_image.alt|default('Whitepaper cover')|escape_attr }}"{% if desktop_loading %} {{ desktop_loading|safe }}{% endif %}{% if desktop_dimensions %} {{ desktop_dimensions|safe }}{% endif %}>
+            {% endif %}
+
+            {% if mobile_image_object and mobile_image_object.src %}
+              {% set mobile_loading = mobile_image_object.loading != 'disabled' ? 'loading=\"' ~ mobile_image_object.loading|escape_attr ~ '\"' : '' %}
+              {% set mobile_width = mobile_image_object.width if mobile_image_object.width else mobile_image_object.max_width %}
+              {% set mobile_height = mobile_image_object.height if mobile_image_object.height else mobile_image_object.max_height %}
+              {% set mobile_dimensions = '' %}
+              {% if mobile_width and mobile_height %}
+                {% set mobile_dimensions = 'width=\"' ~ mobile_width|escape_attr ~ '\" height=\"' ~ mobile_height|escape_attr ~ '\"' %}
+              {% endif %}
+              <img class="cta-whitepaper__image cta-whitepaper__image--mobile" src="{{ mobile_image_object.src|escape_url }}" alt="{{ mobile_image_object.alt|default('Whitepaper cover')|escape_attr }}"{% if mobile_loading %} {{ mobile_loading|safe }}{% endif %}{% if mobile_dimensions %} {{ mobile_dimensions|safe }}{% endif %}>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
