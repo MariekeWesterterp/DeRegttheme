@@ -12,23 +12,25 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
            
     <div class="client-logos__container">
         {% if module.title %}
-         <h2 style="color: {{ module.style.color_heading.color }}">{{ module.title }}</h2>
+         <h6 class="client-logos__title" style="color: {{ module.style.color_heading.color }}">{{ module.title }}</h6>
          {% endif %}
                   {{ module.richtext_field }}
       
 
        
       <div class="client-logos__wrapper">
-<div id="splide" class="splide" role="group">
+{% set slider_id = "splide-" ~ module.module_id %}
+<div id="{{ slider_id }}" class="splide" role="group">
   <div class="splide__track">
 		<ul class="splide__list">
         {% for item in module.logo %}
 			<li class="splide__slide"> <figure class="client-logos__logo">
-                                {% if item.src %}
-                                {% set loadingAttr = item.loading != 'disabled' ? 'loading="{{ item.loading }}"' : '' %}
-                                <img src="{{ resize_image_url(item.src, item.width, item.height) }}" alt="{{ item.alt }}" width="171" height="71" {{ loadingAttr }}>
-                                {% endif %}
-                            </figure></li>
+            {% if item.src %}
+            {% set loadingAttr = item.loading != 'disabled' ? 'loading="{{ item.loading }}"' : '' %}
+            <img src="{{ resize_image_url(item.src, item.width, item.height) }}" alt="{{ item.alt }}" width="171" height="71" {{ loadingAttr }}>
+            {% endif %}
+        </figure>
+      </li>
       
       {% endfor %}
 
@@ -37,18 +39,40 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 </div>
 <script>
   document.addEventListener( 'DOMContentLoaded', function() {
-var splide = new Splide( '.splide', {
-  type   : 'slide',
-  padding: '3rem',
-  arrows: false,
-    gap: 15,
-    perPage: 5,
-  breakpoints: {
-		640: {
-			perPage: 2,
-		},
-  }
-} );
+    var sliderElement = document.getElementById('{{ slider_id }}');
+    if (!sliderElement || typeof Splide === 'undefined') {
+      return;
+    }
+
+    var desktopAutoplay = {{ module.slider_settings.autoplay_desktop|default(true)|tojson }};
+    var mobileAutoplay = {{ module.slider_settings.autoplay_mobile|default(false)|tojson }};
+    var desktopPagination = {{ module.slider_settings.pagination_desktop|default(false)|tojson }};
+    var mobilePagination = {{ module.slider_settings.pagination_mobile|default(true)|tojson }};
+    var autoplayInterval = {{ module.slider_settings.autoplay_speed|default(4500)|int|tojson }};
+    if (!autoplayInterval || autoplayInterval < 0) {
+      autoplayInterval = 4500;
+    }
+
+    var splide = new Splide(sliderElement, {
+      type   : 'loop',
+      arrows: false,
+      gap: 24,
+      perPage: 5,
+      pagination: desktopPagination,
+      autoplay: desktopAutoplay,
+      interval: autoplayInterval,
+      speed: 800,
+      perMove: 1,
+      breakpoints: {
+        678: {
+          perPage: 3,
+          gap: 8,
+          pagination: mobilePagination,
+          autoplay: mobileAutoplay,
+          interval: autoplayInterval,
+        },
+      }
+    } );
 
     splide.mount();
      

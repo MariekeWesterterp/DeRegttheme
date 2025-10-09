@@ -34,6 +34,7 @@ Conventions:
 - If there are buttons in a module, you should give the user the choice:
   - Either they choose a button, where you offer a text field and URL field and the appearance of the button (primary, secondary or secondary-white)
   - Or they choose the CTA option that Hubspot offers. See: https://developers.hubspot.com/docs/cms/reference/fields/module-theme-fields#cta
+- Keep the code in the module as clean and light as possible
 
 ### Margin/padding and buttons
 - Use `macro/margin-padding.html` for spacing (`margin-top-…`, `padding-…`).

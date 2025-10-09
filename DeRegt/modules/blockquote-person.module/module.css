@@ -1,0 +1,60 @@
+.blockquote-person {
+  position: relative;
+}
+
+.blockquote-person__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 40px;
+  background-color: var(--clr-blue-royal-xlight);
+  border-radius: 16px;
+  color: var(--clr-blue-midnight);
+}
+
+.blockquote-person__quote {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.blockquote-person__quote p:first-child {
+  margin-top: 0;
+}
+
+.blockquote-person__quote p:last-child {
+  margin-bottom: 0;
+}
+
+.blockquote-person__contact-card {
+  width: 100%;
+}
+
+.blockquote-person__contact-card--light {
+  color: inherit;
+}
+
+.blockquote-person__contact-card--light .contact-card {
+  border-top-color: rgba(21, 43, 86, 0.12);
+}
+
+.blockquote-person__contact-card--dark {
+  color: var(--clr-white);
+}
+
+.blockquote-person__contact-card--dark .contact-card {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 767px) {
+  .blockquote-person__box {
+    padding: 32px 24px;
+    gap: 24px;
+  }
+
+  .blockquote-person__quote {
+    max-width: 100%;
+    font-size: clamp(1.125rem, 2.4vw + 1rem, var(--blockquote-font-size, 1.5rem));
+  }
+}

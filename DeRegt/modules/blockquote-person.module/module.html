@@ -1,0 +1,36 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+{% import "/DeRegt/macro/contact-card.html" as contact_card %}
+
+{% macro color_to_rgba(value) %}
+  {% if value %}
+    {% if value is string %}
+      {{ value }}
+    {% elif value.color %}
+      {% set opacity = value.opacity if value.opacity is not none else 100 %}
+      rgba({{ value.color|convert_rgb }}, {{ opacity / 100 }})
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
+{% set background_color = color_to_rgba(module.style.backgroundcolor)|trim %}
+{% set text_color = color_to_rgba(module.style.text_color)|trim %}
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+
+<section class="blockquote-person {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}">
+  <div class="container">
+    <div class="blockquote-person__box"{% if background_color or text_color %} style="{% if background_color %}background-color: {{ background_color }}{% endif %}{% if background_color and text_color %}; {% endif %}{% if text_color %}color: {{ text_color }}{% endif %}"{% endif %}>
+      {% if module.quote %}
+        <blockquote class="blockquote-person__quote rte">
+          {{ module.quote }}
+        </blockquote>
+      {% endif %}
+
+      {% if module.contact_card.show %}
+        <div class="blockquote-person__contact-card blockquote-person__contact-card--{{ module.style.contact_card_theme }}">
+          {{ contact_card.render(module.contact_card) }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
