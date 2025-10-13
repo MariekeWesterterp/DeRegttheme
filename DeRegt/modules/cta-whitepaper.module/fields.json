@@ -247,15 +247,32 @@
         "default": "default"
       },
       {
-        "id": "7b605026-9ef6-47e3-944b-214c2e0ea3e2",
-        "name": "backgroundcolor",
-        "label": "Background color",
+        "id": "0b2d29fb-2a3a-4df5-8ea2-0622a1e0f5a9",
+        "name": "backgroundcolor_module",
+        "label": "Background color module",
         "required": false,
         "locked": false,
-        "show_opacity": false,
+        "show_opacity": true,
         "type": "color",
         "display_width": null,
-        "default": "#EEF8FF"
+        "default": {
+          "color": "#EEF8FF",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "7b605026-9ef6-47e3-944b-214c2e0ea3e2",
+        "name": "backgroundcolor",
+        "label": "Background color block",
+        "required": false,
+        "locked": false,
+        "show_opacity": true,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#EEF8FF",
+          "opacity": 100
+        }
       },
       {
         "id": "2b9e58b0-8c64-468a-b418-78b2274d3385",
@@ -298,7 +315,14 @@
     "default": {
       "margin_block": "medium",
       "padding_block": "default",
-      "backgroundcolor": "#EEF8FF",
+      "backgroundcolor_module": {
+        "color": "#EEF8FF",
+        "opacity": 100
+      },
+      "backgroundcolor": {
+        "color": "#EEF8FF",
+        "opacity": 100
+      },
       "heading_tag": "h2"
     }
   }

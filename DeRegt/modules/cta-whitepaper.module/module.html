@@ -1,5 +1,16 @@
 {% import "/DeRegt/macro/margin-padding.html" as macros %}
 
+{% macro color_to_rgba(value) %}
+  {% if value %}
+    {% if value is string %}
+      {{ value }}
+    {% elif value.color %}
+      {% set opacity = value.opacity if value.opacity is not none else 100 %}
+      rgba({{ value.color|convert_rgb }}, {{ opacity / 100 }})
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
 {% set heading = module.heading|trim if module.heading else '' %}
 {% set heading_tag = module.style.heading_tag if module.style and module.style.heading_tag else 'h2' %}
 {% set highlights = module.highlights if module.highlights else [] %}
@@ -11,8 +22,7 @@
 {% set button_rel = 'noopener' if button_target == '_blank' else none %}
 {% set button_cta = button_group.cta_field if button_group %}
 {% set has_manual_button = button_text and button_href %}
-{% set has_cta_button = button_cta %}
-{% set has_button = has_manual_button or has_cta_button %}
+{% set has_button = has_manual_button or button_cta %}
 {% set button_style = button_group.style if button_group and button_group.style else 'primary' %}
 {% set button_class = 'btn-primary' %}
 {% if button_style == 'secondary' %}
@@ -21,21 +31,26 @@
   {% set button_class = 'btn-secondary btn-secondary-white' %}
 {% endif %}
 
-{% set desktop_image = module.image_desktop %}
-{% set mobile_image = module.image_mobile %}
-{% set has_desktop_image = desktop_image.src %}
-{% set has_mobile_image = mobile_image.src %}
-{% set mobile_image_object = mobile_image if has_mobile_image else desktop_image %}
-{% set has_any_image = has_desktop_image or mobile_image_object and mobile_image_object.src %}
+
+{% set module.image_mobile_object = module.image_mobile if module.image_mobile.src else module.image_desktop %}
+{% set has_any_image = module.image_desktop.src or module.image_mobile_object and module.image_mobile_object.src %}
+
+{% set style_settings = module.style if module.style else {} %}
+{% set section_background = color_to_rgba(style_settings.backgroundcolor_module)|trim %}
+{% set block_background = color_to_rgba(style_settings.backgroundcolor)|trim %}
+
+{% if not section_background %}
+  {% set section_background = block_background %}
+{% endif %}
 
 {% if module.anchor %}
   <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
 {% endif %}
 
-<section class="cta-whitepaper {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}"{% if module.style.backgroundcolor %} style="background-color: {{ module.style.backgroundcolor }}"{% endif %}>
+<section class="cta-whitepaper {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}"{% if section_background %} style="background-color: {{ section_background }}"{% endif %}>
   <div class="cta-whitepaper__wrapper">
     <div class="container">
-      <div class="cta-whitepaper__inner">
+      <div class="cta-whitepaper__inner"{% if block_background %} style="background-color: {{ block_background }}"{% endif %}>
         <div class="cta-whitepaper__content">
           {% if heading %}
             <div class="cta-whitepaper__heading">
@@ -75,26 +90,26 @@
 
         {% if has_any_image %}
           <div class="cta-whitepaper__media">
-            {% if has_desktop_image %}
-              {% set desktop_loading = desktop_image.loading != 'disabled' ? 'loading=\"' ~ desktop_image.loading|escape_attr ~ '\"' : '' %}
-              {% set desktop_width = desktop_image.width if desktop_image.width else desktop_image.max_width %}
-              {% set desktop_height = desktop_image.height if desktop_image.height else desktop_image.max_height %}
+            {% if module.image_desktop.src %}
+              {% set desktop_loading = module.image_desktop.loading != 'disabled' ? 'loading=\"' ~ module.image_desktop.loading|escape_attr ~ '\"' : '' %}
+              {% set desktop_width = module.image_desktop.width if module.image_desktop.width else module.image_desktop.max_width %}
+              {% set desktop_height = module.image_desktop.height if module.image_desktop.height else module.image_desktop.max_height %}
               {% set desktop_dimensions = '' %}
               {% if desktop_width and desktop_height %}
                 {% set desktop_dimensions = 'width=\"' ~ desktop_width|escape_attr ~ '\" height=\"' ~ desktop_height|escape_attr ~ '\"' %}
               {% endif %}
-              <img class="cta-whitepaper__image cta-whitepaper__image--desktop" src="{{ desktop_image.src|escape_url }}" alt="{{ desktop_image.alt|default('Whitepaper cover')|escape_attr }}"{% if desktop_loading %} {{ desktop_loading|safe }}{% endif %}{% if desktop_dimensions %} {{ desktop_dimensions|safe }}{% endif %}>
+              <img class="cta-whitepaper__image cta-whitepaper__image--desktop" src="{{ module.image_desktop.src|escape_url }}" alt="{{ module.image_desktop.alt|default('Whitepaper cover')|escape_attr }}"{% if desktop_loading %} {{ desktop_loading|safe }}{% endif %}{% if desktop_dimensions %} {{ desktop_dimensions|safe }}{% endif %}>
             {% endif %}
 
-            {% if mobile_image_object and mobile_image_object.src %}
-              {% set mobile_loading = mobile_image_object.loading != 'disabled' ? 'loading=\"' ~ mobile_image_object.loading|escape_attr ~ '\"' : '' %}
-              {% set mobile_width = mobile_image_object.width if mobile_image_object.width else mobile_image_object.max_width %}
-              {% set mobile_height = mobile_image_object.height if mobile_image_object.height else mobile_image_object.max_height %}
+            {% if module.image_mobile_object and module.image_mobile_object.src %}
+              {% set mobile_loading = module.image_mobile_object.loading != 'disabled' ? 'loading=\"' ~ module.image_mobile_object.loading|escape_attr ~ '\"' : '' %}
+              {% set mobile_width = module.image_mobile_object.width if module.image_mobile_object.width else module.image_mobile_object.max_width %}
+              {% set mobile_height = module.image_mobile_object.height if module.image_mobile_object.height else module.image_mobile_object.max_height %}
               {% set mobile_dimensions = '' %}
               {% if mobile_width and mobile_height %}
                 {% set mobile_dimensions = 'width=\"' ~ mobile_width|escape_attr ~ '\" height=\"' ~ mobile_height|escape_attr ~ '\"' %}
               {% endif %}
-              <img class="cta-whitepaper__image cta-whitepaper__image--mobile" src="{{ mobile_image_object.src|escape_url }}" alt="{{ mobile_image_object.alt|default('Whitepaper cover')|escape_attr }}"{% if mobile_loading %} {{ mobile_loading|safe }}{% endif %}{% if mobile_dimensions %} {{ mobile_dimensions|safe }}{% endif %}>
+              <img class="cta-whitepaper__image cta-whitepaper__image--mobile" src="{{ module.image_mobile_object.src|escape_url }}" alt="{{ module.image_mobile_object.alt|default('Whitepaper cover')|escape_attr }}"{% if mobile_loading %} {{ mobile_loading|safe }}{% endif %}{% if mobile_dimensions %} {{ mobile_dimensions|safe }}{% endif %}>
             {% endif %}
           </div>
         {% endif %}

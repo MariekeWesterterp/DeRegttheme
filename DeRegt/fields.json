@@ -91,8 +91,7 @@
         "default": {
           "color": "#231f20",
           "fallback": "sans-serif",
-          "font": "Montserrat",
-          "font_set": "GOOGLE",
+          "font": "Flama1",
           "variant": "400"
         }
       },
@@ -111,9 +110,8 @@
         "default": {
           "color": "#231f20",
           "fallback": "serif",
-          "font": "Source Serif Pro",
-          "font_set": "GOOGLE",
-          "variant": "600"
+          "font": "Flama1",
+          "variant": "400"
         }
       }
     ]
@@ -139,16 +137,14 @@
                 "type": "font",
                 "inherited_value": {
                   "property_value_paths": {
-                    "color": "theme.fonts.secondary.color",
                     "fallback": "theme.fonts.secondary.fallback",
-                    "font": "theme.fonts.secondary.font",
-                    "font_set": "theme.fonts.secondary.font_set",
-                    "variant": "theme.fonts.secondary.variant"
+                    "font": "theme.fonts.secondary.font"
                   }
                 },
                 "default": {
-                  "size": 40,
-                  "size_unit": "px"
+                  "size": 68,
+                  "size_unit": "px",
+                  "color": "#152B56"
                 }
               },
               {
@@ -157,7 +153,7 @@
                 "type": "number",
                 "display": "text",
                 "suffix": "px",
-                "default": 28
+                "default": 44
               },
               {
                 "label": "Transform",
@@ -185,16 +181,14 @@
                 "type": "font",
                 "inherited_value": {
                   "property_value_paths": {
-                    "color": "theme.fonts.secondary.color",
                     "fallback": "theme.fonts.secondary.fallback",
-                    "font": "theme.fonts.secondary.font",
-                    "font_set": "theme.fonts.secondary.font_set",
-                    "variant": "theme.fonts.secondary.variant"
+                    "font": "theme.fonts.secondary.font"
                   }
                 },
                 "default": {
-                  "size": 32,
-                  "size_unit": "px"
+                  "size": 40,
+                  "size_unit": "px",
+                  "color": "#152B56"
                 }
               },
               {
@@ -203,7 +197,7 @@
                 "type": "number",
                 "display": "text",
                 "suffix": "px",
-                "default": 26
+                "default": 28
               },
               {
                 "label": "Transform",
@@ -231,16 +225,14 @@
                 "type": "font",
                 "inherited_value": {
                   "property_value_paths": {
-                    "color": "theme.fonts.secondary.color",
                     "fallback": "theme.fonts.secondary.fallback",
-                    "font": "theme.fonts.secondary.font",
-                    "font_set": "theme.fonts.secondary.font_set",
-                    "variant": "theme.fonts.secondary.variant"
+                    "font": "theme.fonts.secondary.font"
                   }
                 },
                 "default": {
-                  "size": 28,
-                  "size_unit": "px"
+                  "size": 32,
+                  "size_unit": "px",
+                  "color": "#152B56"
                 }
               },
               {
@@ -249,7 +241,7 @@
                 "type": "number",
                 "display": "text",
                 "suffix": "px",
-                "default": 24
+                "default": 20
               },
               {
                 "label": "Transform",
@@ -359,7 +351,7 @@
             ]
           },
           {
-            "label": "Heading six (H6)",
+            "label": "Heading six (H6) - Text large",
             "name": "h6",
             "type": "group",
             "children": [
@@ -369,15 +361,12 @@
                 "type": "font",
                 "inherited_value": {
                   "property_value_paths": {
-                    "color": "theme.fonts.secondary.color",
                     "fallback": "theme.fonts.secondary.fallback",
-                    "font": "theme.fonts.secondary.font",
-                    "font_set": "theme.fonts.secondary.font_set",
-                    "variant": "theme.fonts.secondary.variant"
+                    "font": "theme.fonts.secondary.font"
                   }
                 },
                 "default": {
-                  "size": 16,
+                  "size": 24,
                   "size_unit": "px"
                 }
               },
@@ -387,7 +376,7 @@
                 "type": "number",
                 "display": "text",
                 "suffix": "px",
-                "default": 16
+                "default": 20
               },
               {
                 "label": "Transform",
@@ -422,16 +411,14 @@
                 },
                 "inherited_value": {
                   "property_value_paths": {
-                    "color": "theme.fonts.primary.color",
                     "fallback": "theme.fonts.primary.fallback",
-                    "font": "theme.fonts.primary.font",
-                    "font_set": "theme.fonts.primary.font_set",
-                    "variant": "theme.fonts.primary.variant"
+                    "font": "theme.fonts.primary.font"
                   }
                 },
                 "default": {
                   "size": 16,
-                  "size_unit": "px"
+                  "size_unit": "px",
+                  "color": "#4F4F4F"
                 }
               },
               {
@@ -510,17 +497,29 @@
                 "type": "font",
                 "inherited_value": {
                   "property_value_paths": {
-                    "color": "theme.fonts.secondary.color",
                     "fallback": "theme.fonts.secondary.fallback",
-                    "font": "theme.fonts.secondary.font",
-                    "font_set": "theme.fonts.secondary.font_set",
-                    "variant": "theme.fonts.secondary.variant"
+                    "font": "theme.fonts.secondary.font"
                   }
                 },
                 "default": {
                   "size": 24,
-                  "size_unit": "px"
+                  "size_unit": "px",
+                  "color": "#2B2B2B"
                 }
+              },
+              {
+                "label": "Mobile font size",
+                "name": "mobile_font_size",
+                "type": "number",
+                "display": "text",
+                "suffix": "px",
+                "default": 20
+              },
+              {
+                "label": "Background color",
+                "name": "background_color",
+                "type": "color",
+                "default": "#EEF8FF"             
               }
             ]
           }
