@@ -118,8 +118,9 @@
 
   {% set has_button = (button.choice == 'cta' and button.cta) or (button.choice != 'cta' and button.text and (button_url.href or button_url.content_id)) %}
   {% set has_link = link.text and (link_url.href or link_url.content_id) %}
+  {% set has_actions = has_button or has_link %}
   {% set contact_name = card.person_name or card.name %}
-  {% set has_content = has_photo or contact_name or card.title or phone_label or has_button or has_link %}
+  {% set has_content = has_photo or contact_name or card.title or phone_label or has_actions %}
 
   {% if has_content %}
     <div class="contact-card">
@@ -152,24 +153,26 @@
           {% endif %}
         </div>
       </div>
-      <div class="contact-card__actions">
-        {% if button.choice == 'cta' and button.cta %}
-          <div class="contact-card__button contact-card__button--cta">
-            {% cta guid=button.cta %}
-          </div>
-        {% elif button.choice != 'cta' and button.text and (button_url.href or button_url.content_id) %}
-          {% set btn_target = button_url.target or ('_blank' if button_url.open_in_new_tab else '_self') %}
-          {% set btn_rel = 'noopener' if btn_target == '_blank' else None %}
-          {% set btn_href = button_url.href or '' %}
-          <a class="{{ button_classes }} contact-card__button" href="{{ btn_href|escape_url }}" target="{{ btn_target }}" {% if btn_rel %}rel="{{ btn_rel }}"{% endif %}>{{ button.text }}</a>
-        {% endif %}
-        {% if has_link %}
-          {% set link_target = link_url.target or ('_blank' if link_url.open_in_new_tab else '_self') %}
-          {% set link_rel = 'noopener' if link_target == '_blank' else None %}
-          {% set link_href = link_url.href or '' %}
-          <a class="contact-card__link" href="{{ link_href|escape_url }}" target="{{ link_target }}" {% if link_rel %}rel="{{ link_rel }}"{% endif %}>{{ link.text }}</a>
-        {% endif %}
-      </div>
+      {% if has_actions %}
+        <div class="contact-card__actions">
+          {% if button.choice == 'cta' and button.cta %}
+            <div class="contact-card__button contact-card__button--cta">
+              {% cta guid=button.cta %}
+            </div>
+          {% elif button.choice != 'cta' and button.text and (button_url.href or button_url.content_id) %}
+            {% set btn_target = button_url.target or ('_blank' if button_url.open_in_new_tab else '_self') %}
+            {% set btn_rel = 'noopener' if btn_target == '_blank' else None %}
+            {% set btn_href = button_url.href or '' %}
+            <a class="{{ button_classes }} contact-card__button" href="{{ btn_href|escape_url }}" target="{{ btn_target }}" {% if btn_rel %}rel="{{ btn_rel }}"{% endif %}>{{ button.text }}</a>
+          {% endif %}
+          {% if has_link %}
+            {% set link_target = link_url.target or ('_blank' if link_url.open_in_new_tab else '_self') %}
+            {% set link_rel = 'noopener' if link_target == '_blank' else None %}
+            {% set link_href = link_url.href or '' %}
+            <a class="contact-card__link" href="{{ link_href|escape_url }}" target="{{ link_target }}" {% if link_rel %}rel="{{ link_rel }}"{% endif %}>{{ link.text }}</a>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   {% endif %}
 {% endmacro %}

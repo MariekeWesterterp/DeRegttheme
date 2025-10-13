@@ -167,7 +167,7 @@
         "content_id" : null
       }
     }, {
-      "id" : "f7fa3795-e4db-448b-9267-c9ac20a1c4ec",
+      "id" : "f7fa3795-e4db-448b-9267-c9ac20a f1c4ec",
       "name" : "cta",
       "label" : "CTA",
       "required" : false,
@@ -266,7 +266,36 @@
   "label" : "Style",
   "required" : false,
   "locked" : false,
-  "children" : [ {
+  "children" : [ 
+    {
+      "id": "45e8f1e5-061d-41db-8947-682ee89a65g8",
+      "name": "container_width",
+      "label": "Container width",
+      "required": false,
+      "locked": false,
+      "display": "select",
+      "choices": [
+        [
+          "default",
+          "Default"
+        ],
+        [
+          "small",
+          "Small"
+        ],
+        [
+          "no-max-width",
+          "No max-width"
+        ]
+      ],
+      "multiple": false,
+      "reordering_enabled": true,
+      "preset": null,
+      "type": "choice",
+      "display_width": null,
+      "default": "small"
+    },
+    {
     "id" : "45e8f1e5-061d-41db-8947-682ee89a52c7",
     "name" : "margin_block",
     "label" : "Add top margin",
@@ -294,20 +323,35 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "default"
-  }, {
-    "id" : "57a0113d-d9ce-44c9-9dd3-e281ffb0342a",
-    "name" : "backgroundcolor",
-    "label" : "Background color",
-    "required" : false,
-    "locked" : false,
-    "show_opacity" : true,
-    "type" : "color",
-    "display_width" : null,
-    "default" : {
-      "color" : "#EEF8FF",
-      "opacity" : 100
+  }, 
+  {
+    "id": "57a0113d-d9ce-44c9-9dd3-e281ffb076hg",
+    "name": "backgroundcolor_module",
+    "label": "Background color module",
+    "required": false,
+    "locked": false,
+    "show_opacity": true,
+    "type": "color",
+    "display_width": null,
+    "default": {
+      "color": "#FFFFFF",
+      "opacity": 100
     }
   }, {
+    "id": "57a0113d-d9ce-44c9-9dd3-e281ffb0342a",
+    "name": "backgroundcolor",
+    "label": "Background color block",
+    "required": false,
+    "locked": false,
+    "show_opacity": true,
+    "type": "color",
+    "display_width": null,
+    "default": {
+      "color": "#EEF8FF",
+      "opacity": 100
+    }
+  },
+  {
     "id" : "d6b86b87-3f96-4bc9-97af-d1afdf9a76ac",
     "name" : "text_color",
     "label" : "Text color",
@@ -317,7 +361,7 @@
     "type" : "color",
     "display_width" : null,
     "default" : {
-      "color" : "#152B56",
+      "color" : "#2B2B2B",
       "opacity" : 100
     }
   }, {

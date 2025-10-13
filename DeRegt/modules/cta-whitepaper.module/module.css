@@ -2,6 +2,11 @@
   background-color: var(--clr-blue-royal-xlight);
 }
 
+.cta-whitepaper.padding-default {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
 .cta-whitepaper__wrapper {
   width: 100%;
 }
@@ -128,6 +133,11 @@
 }
 
 @media (min-width: 992px) {
+  .cta-whitepaper.padding-default {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
   .cta-whitepaper__inner {
     flex-direction: row;
     align-items: center;

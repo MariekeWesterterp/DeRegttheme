@@ -12,18 +12,14 @@
   {% endif %}
 {% endmacro %}
 
-{% set background_color = color_to_rgba(module.style.backgroundcolor)|trim %}
-{% set text_color = color_to_rgba(module.style.text_color)|trim %}
 
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
-
-<section class="blockquote-person {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}">
-  <div class="container">
-    <div class="blockquote-person__box"{% if background_color or text_color %} style="{% if background_color %}background-color: {{ background_color }}{% endif %}{% if background_color and text_color %}; {% endif %}{% if text_color %}color: {{ text_color }}{% endif %}"{% endif %}>
+<section class="blockquote-person {{ macros.margin_padding(module.style.margin_block, '') }}" {% if color_to_rgba(module.style.backgroundcolor_module)|trim %} style="background-color: {{ color_to_rgba(module.style.backgroundcolor_module)|trim }}"{% endif %}>
+<div class="container container-{{ module.style.container_width }}">
+<blockquote class="{{ macros.margin_padding('', module.style.padding_block) }}" {% if color_to_rgba(module.style.backgroundcolor)|trim or color_to_rgba(module.style.text_color)|trim %} style="{% if color_to_rgba(module.style.backgroundcolor)|trim %}background-color: {{ color_to_rgba(module.style.backgroundcolor)|trim }}; {% endif %} {% if color_to_rgba(module.style.text_color)|trim %}color: {{ color_to_rgba(module.style.text_color)|trim }}; {% endif %}"{% endif %}>
+    <div class="blockquote-person__box">
       {% if module.quote %}
-        <blockquote class="blockquote-person__quote rte">
           {{ module.quote }}
-        </blockquote>
       {% endif %}
 
       {% if module.contact_card.show %}
@@ -32,5 +28,7 @@
         </div>
       {% endif %}
     </div>
-  </div>
+</blockquote>
+</div>
+
 </section>
