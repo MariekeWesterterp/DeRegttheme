@@ -48,9 +48,6 @@ ol li {
     font-family: var(--ff-text);
 }
 
-p, li {
-    line-height: 1.9;
-}
 
 
 .content-wrapper {

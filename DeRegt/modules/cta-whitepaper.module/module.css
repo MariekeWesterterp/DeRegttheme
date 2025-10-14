@@ -2,9 +2,12 @@
   background-color: var(--clr-blue-royal-xlight);
 }
 
-.cta-whitepaper.padding-default {
-  padding-top: 56px;
-  padding-bottom: 56px;
+.cta-whitepaper .padding-default{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.cta-whitepaper__inner{
+  
 }
 
 .cta-whitepaper__wrapper {
@@ -18,9 +21,10 @@
 
 .cta-whitepaper__inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 32px;
   width: 100%;
+  padding-inline: 16px;
 }
 
 .cta-whitepaper__content {
@@ -58,7 +62,7 @@
 .cta-whitepaper__list-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   font-size: var(--fs-base);
   line-height: 1.5;
   color: inherit;
@@ -70,17 +74,10 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
-  background-color: rgba(var(--clr-navy-rgb), 0.12);
   color: var(--clr-blue-midnight);
-  font-size: 14px;
   font-weight: 600;
 }
 
-.cta-whitepaper__icon::before {
-  content: "\2713";
-  line-height: 1;
-}
 
 .cta-whitepaper__cta {
   display: flex;
@@ -98,15 +95,15 @@
 .cta-whitepaper__media {
   display: flex;
   justify-content: center;
+  max-width: 159px;
+  margin: 0 auto;
 }
 
 .cta-whitepaper__image {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 16px;
   object-fit: cover;
-  box-shadow: 0 16px 32px rgba(var(--clr-navy-rgb), 0.12);
 }
 
 .cta-whitepaper__image--desktop {
@@ -118,21 +115,8 @@
   max-width: 240px;
 }
 
+
 @media (min-width: 768px) {
-  .cta-whitepaper__inner {
-    gap: 40px;
-  }
-
-  .cta-whitepaper__content {
-    max-width: 520px;
-  }
-
-  .cta-whitepaper__image--mobile {
-    max-width: 320px;
-  }
-}
-
-@media (min-width: 992px) {
   .cta-whitepaper.padding-default {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -141,6 +125,8 @@
   .cta-whitepaper__inner {
     flex-direction: row;
     align-items: center;
+    gap: 32px;
+    padding-inline: 40px;
   }
 
   .cta-whitepaper__content,
@@ -150,14 +136,9 @@
 
   .cta-whitepaper__media {
     justify-content: flex-end;
+    max-width: unset;
+    min-width: 344px;
   }
 
-  .cta-whitepaper__image--desktop {
-    display: block;
-    max-width: 400px;
-  }
 
-  .cta-whitepaper__image--mobile {
-    display: none;
-  }
 }

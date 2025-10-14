@@ -201,7 +201,7 @@
 
 @media (min-width:767px) and (max-width: 1500px) {
     :root {
-        --container-width: var(--maximum-content-width);
+        /* --container-width: var(--maximum-content-width); */
         --fs-base: 14px;
         --container-padding-inline: Max(calc((100vw - var(--container-width)) / 2), 2rem);
     }
