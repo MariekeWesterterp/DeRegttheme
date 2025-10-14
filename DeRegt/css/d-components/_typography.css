@@ -23,7 +23,7 @@ p {
   font-size: var(--body-font-size);
   font-weight: 400;
   font-family: var(--ff-text);
-  line-height: 1.9;
+  line-height: 150%;
 }
 
 /* Anchors */

@@ -1,0 +1,11 @@
+[ {
+  "id" : "21704b68-5a2b-0a9f-04f6-d7f1726dd861",
+  "name" : "show_first_item",
+  "label" : "show first item",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+} ]
