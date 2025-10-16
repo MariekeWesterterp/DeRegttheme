@@ -1,0 +1,115 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+{% set button_text = module.button.text|trim if module.button and module.button.text else '' %}
+{% set button_url = module.button.url.href if module.button and module.button.url and module.button.url.href %}
+{% set button_has_manual = button_text and button_url %}
+{% set button_cta = module.button.cta_field if module.button %}
+{% set has_button = button_has_manual or button_cta %}
+{% set button_target = '_self' %}
+{% if module.button and module.button.url %}
+  {% set button_target = module.button.url.target if module.button.url.target else ('_blank' if module.button.url.open_in_new_tab else '_self') %}
+{% endif %}
+{% set button_rel = 'noopener' if button_target == '_blank' else None %}
+{% set button_style = module.button.style if module.button and module.button.style else 'secondary' %}
+{% set button_class = 'btn-secondary' %}
+{% if button_style == 'primary' %}
+  {% set button_class = 'btn-primary' %}
+{% elif button_style == 'secondary-white' %}
+  {% set button_class = 'btn-secondary btn-secondary-white' %}
+{% endif %}
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+<section class="cards {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}"{% if module.style.backgroundcolor %} style="background-color: {{ module.style.backgroundcolor }}"{% endif %}>
+  <div class="cards__wrapper">
+    <div class="container">
+      {% set has_heading = module.heading %}
+      {% if has_heading or has_button %}
+        <div class="cards__header margin-bottom-{{ module.margin_under_title }}">
+          {% if has_heading %}
+            <div class="cards__title-wrap">
+              <h2 class="cards__title">{{ module.heading }}</h2>
+              <svg class="cards__underline" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+                <path d="M48 0H0V6H48V0Z" fill="#F1C61A" />
+              </svg>
+            </div>
+          {% endif %}
+          {% if has_button %}
+            <div class="cards__cta cards__cta--desktop">
+              {% if button_has_manual %}
+                <a href="{{ button_url|escape_url }}" class="{{ button_class }}" target="{{ button_target }}"{% if button_rel %} rel="{{ button_rel }}"{% endif %}>{{ button_text }}</a>
+              {% else %}
+                <div class="cards__cta-wrapper">
+                  {% cta guid="{{ button_cta }}" %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if module.cards|length %}
+        <div class="cards__grid">
+          {% for item in module.cards %}
+            {% set card_url = item.link.href if item.link and item.link.href %}
+            {% set card_target = item.link.target if item.link and item.link.target else ('_blank' if item.link and item.link.open_in_new_tab else '_self') %}
+            {% set card_rel = 'noopener' if card_target == '_blank' else None %}
+            {% set card_classes = 'cards__item cards__item--label-' ~ module.label_position %}
+            <article class="{{ card_classes }}">
+              {% if card_url %}
+                <a class="cards__card cards__card-{{ module.appearance_cards }}" href="{{ card_url|escape_url }}" target="{{ card_target }}"{% if card_rel %} rel="{{ card_rel }}"{% endif %}>
+              {% else %}
+                <div class="cards__card cards__card-{{ module.appearance_cards }}">
+              {% endif %}
+                  <div class="cards__media" >
+                    {% if item.image.src %}
+                      <img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_html }}" loading="{{ item.image.loading|default('lazy') }}">
+                    {% endif %}
+                    {% if item.label_text and module.label_position == 'top' %}
+                      <span class="cards__label cards__label--top">{{ item.label_text }}</span>
+                    {% endif %}
+                    <div class="cards__content">
+                      {% if item.label_text and module.label_position == 'bottom' %}
+                        <span class="cards__label cards__label--bottom">{{ item.label_text }}</span>
+                      {% endif %}
+                      {% if item.title %}
+                        <h3 class="cards__card-title align-title-{{ module.align_items_title_and_button }}"><span>{{ item.title }} </span>  {% if card_url %}<span class="cards__icon" aria-hidden="true">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M3.125 10H16.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>    {% endif %}</h3>
+                       
+                      
+                
+                      {% endif %}
+                      {% if item.description %}
+                        <div class="cards__description rte">{{ item.description }}</div>
+                      {% endif %}
+                    </div>
+                   
+                  </div>
+              {% if card_url %}
+                </a>
+              {% else %}
+                </div>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if has_button %}
+        <div class="cards__cta cards__cta--mobile">
+          {% if button_has_manual %}
+            <a href="{{ button_url|escape_url }}" class="{{ button_class }}" target="{{ button_target }}"{% if button_rel %} rel="{{ button_rel }}"{% endif %}>{{ button_text }}</a>
+          {% else %}
+            <div class="cards__cta-wrapper">
+              {% cta guid="{{ button_cta }}" %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
