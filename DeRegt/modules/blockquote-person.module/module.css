@@ -1,0 +1,36 @@
+.blockquote-person blockquote{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.blockquote-person .container.container-small{
+  max-width: 832px;
+}
+.blockquote-person .container.container-no-max-width{
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.blockquote-person blockquote.padding-default{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.blockquote-person__contact-card {
+  width: 100%;
+}
+
+.blockquote-person__contact-card .contact-card__avatar{
+  box-shadow: none;
+}
+
+.blockquote-person__contact-card--dark {
+  color: var(--clr-white);
+}
+.blockquote-person__contact-card--light{
+  color: var(--clr-mine-shaft-950);
+}
+.blockquote-person__contact-card--light .blockquote-person__contact-card .contact-card__title{
+  color: var(--clr-mine-shaft-500);
+}
+

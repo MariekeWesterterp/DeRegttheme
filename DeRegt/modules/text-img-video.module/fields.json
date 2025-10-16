@@ -182,7 +182,10 @@
   "show_preview" : true,
   "show_advanced_options" : true,
   "type" : "videoplayer",
-  "display_width" : null
+  "display_width" : null,
+  "default" : {
+    "autoplay" : true
+  }
 }, {
   "id" : "c6b06287-d4b8-881d-69f0-ee6b4691c61b",
   "name" : "style",
@@ -203,6 +206,41 @@
     "type" : "choice",
     "display_width" : null
   }, {
+    "id": "n4o5p6q7-r8s9-0123-nopq-456789012345",
+    "name": "padding_block",
+    "label": "Add top and bottom padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "no-padding",
+        "No padding"
+      ],
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "small",
+        "Small"
+      ],
+      [
+        "medium",
+        "Medium"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },{
     "id" : "o5p6q7r8-s9t0-1234-opqr-567890123456",
     "name" : "backgroundcolor",
     "label" : "Background color",

@@ -67,51 +67,7 @@
     "max_width" : 1600,
     "max_height" : 900
   }
-}, {
-  "id" : "a9",
-  "name" : "top_cta",
-  "label" : "Top CTA",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "a9a",
-    "name" : "text",
-    "label" : "Text",
-    "required" : false,
-    "locked" : false,
-    "allow_new_line" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Talk to a specialist"
-  }, {
-    "id" : "a9b",
-    "name" : "url",
-    "label" : "URL",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-    "type" : "url",
-    "display_width" : null,
-    "default" : {
-      "content_id" : null,
-      "href" : "",
-      "type" : "EXTERNAL"
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : {
-    "text" : "Talk to a specialist",
-    "url" : {
-      "content_id" : null,
-      "href" : "",
-      "type" : "EXTERNAL"
-    }
-  }
-}, {
+},  {
   "id" : "a10",
   "name" : "buttons",
   "label" : "Buttons",
@@ -175,269 +131,274 @@
   "type" : "group",
   "display_width" : null,
   "default" : [ ]
-},
-  {
-    "id": "d0db461b-9f1f-474a-ac51-fa92c8787b90",
-    "name": "contact_card",
-    "label": "Contact card",
-    "type": "group",
-    "tab": "CONTENT",
-    "expanded": false,
-    "children": [
-      {
-        "id": "03b7aee9-b597-4473-bfbc-97d05429df53",
-        "name": "show",
-        "label": "Show contact card",
-        "type": "boolean",
-        "display": "checkbox",
-        "default": true
-      },
-      {
-        "id": "a6e879fb-87df-4666-80d5-744cca3c8f65",
-        "name": "photo",
-        "label": "Photo",
-        "type": "image",
-        "responsive": true,
-        "resizable": false,
-        "show_loading": true,
-        "default": {
-          "size_type": "auto",
-          "src": "",
-          "alt": "",
-          "loading": "lazy",
-          "width": 128,
-          "height": 128
-        }
-      },
-      {
-        "id": "82b9599e-99fe-4146-921d-ca220a718006",
-        "name": "person_name",
-        "label": "Contact name",
-        "type": "text",
-        "allow_new_line": false,
-        "default": "Jan Janssen"
-      },
-      {
-        "id": "7859c62c-41ac-40c5-9500-49a689ce6abe",
-        "name": "title",
-        "label": "Title",
-        "type": "text",
-        "allow_new_line": false,
-        "default": "ROV Cable specialist"
-      },
-      {
-        "id": "e5380a58-f9e3-460e-b61f-fccc59233a6c",
-        "name": "phone",
-        "label": "Phone",
-        "type": "group",
-        "children": [
-          {
-            "id": "5ca9d326-2eb0-4dc8-9328-d58396df168b",
-            "name": "display_text",
-            "label": "Phone display text",
-            "type": "text",
-            "allow_new_line": false,
-            "default": "Call 06 12 34 56 78"
-          },
-          {
-            "default": {
-              "url": {
-                "content_id": null,
-                "href": "+31612345678",
-                "type": "PHONE_NUMBER"
-              },
-              "open_in_new_tab": false,
-              "no_follow": false
-            },
-            "display_width": null,
-            "id": "ac6e88b2-ca96-a36b-281d-98ea8272b0e9",
-            "label": "phonenumber (link)",
-            "locked": false,
-            "name": "phone",
-            "required": false,
-            "show_advanced_rel_options": false,
-            "supported_types": [
-              "PHONE_NUMBER"
-            ],
-            "type": "link"
-          }
-        ],
-        "default": {
-          "display_text": "Call 06 12 34 56 78",
-          "number": "0612345678"
-        }
-      },
-      {
-        "id": "57c214be-28d6-4d47-b9ef-8343ff177d40",
-        "name": "button",
-        "label": "Button",
-        "type": "group",
-        "children": [
-          {
-            "id": "db0a0a75-e89a-4b70-ba91-62aa7eee9151",
-            "name": "choice",
-            "label": "Button type",
-            "type": "choice",
-            "display": "select",
-            "choices": [
-              [
-                "link",
-                "Manual button"
-              ],
-              [
-                "cta",
-                "HubSpot CTA"
-              ]
-            ],
-            "default": "link"
-          },
-          {
-            "id": "b834568b-9105-4274-b9fd-eb54beecc83a",
-            "name": "text",
-            "label": "Button text",
-            "type": "text",
-            "allow_new_line": false,
-            "default": "Get in touch"
-          },
-          {
-            "id": "f6f35134-33b6-425b-92ed-1d24abc1d2e9",
-            "name": "url",
-            "label": "Button URL",
-            "type": "url",
-            "supported_types": [
-              "EXTERNAL",
-              "CONTENT",
-              "FILE",
-              "EMAIL_ADDRESS",
-              "BLOG"
-            ],
-            "default": {
-              "href": "",
-              "type": "EXTERNAL",
-              "content_id": null
-            }
-          },
-          {
-            "id": "686d61ee-296f-45f6-9eba-36fd7ea912a0",
-            "name": "cta",
-            "label": "CTA",
-            "type": "cta"
-          },
-          {
-            "id": "257a48a1-189b-460d-b913-28d85b27419b",
-            "name": "style",
-            "label": "Button style",
-            "type": "choice",
-            "display": "select",
-            "choices": [
-              [
-                "primary",
-                "Primary"
-              ],
-              [
-                "secondary",
-                "Secondary"
-              ],
-              [
-                "secondary-white",
-                "Secondary white"
-              ]
-            ],
-            "default": "primary"
-          }
-        ],
-        "default": {
-          "choice": "link",
-          "text": "Get in touch",
-          "style": "primary",
-          "url": {
-            "href": "",
-            "type": "EXTERNAL",
-            "content_id": null
-          },
-          "cta": null
-        }
-      },
-      {
-        "id": "b1059f94-5554-424b-9a6e-723468923cda",
-        "name": "secondary_link",
-        "label": "Secondary link",
-        "type": "group",
-        "children": [
-          {
-            "id": "53393e8b-d441-4dda-826a-bb4a78509689",
-            "name": "text",
-            "label": "Link text",
-            "type": "text",
-            "allow_new_line": false,
-            "default": "Request custom cable design"
-          },
-          {
-            "id": "89f8d03b-965c-47af-bc92-a450d2ea7673",
-            "name": "url",
-            "label": "Link URL",
-            "type": "url",
-            "supported_types": [
-              "EXTERNAL",
-              "CONTENT",
-              "FILE",
-              "EMAIL_ADDRESS",
-              "BLOG"
-            ],
-            "default": {
-              "href": "",
-              "type": "EXTERNAL",
-              "content_id": null
-            }
-          }
-        ],
-        "default": {
-          "text": "Request custom cable design",
-          "url": {
-            "href": "",
-            "type": "EXTERNAL",
-            "content_id": null
-          }
-        }
-      }
-    ],
-    "default": {
-      "show": true,
-      "person_name": "Jan Janssen",
-      "title": "ROV Cable specialist",
-      "phone": {
-        "display_text": "Call 06 12 34 56 78",
-        "number": "0612345678"
-      },
-      "button": {
-        "choice": "link",
-        "text": "Get in touch",
-        "style": "primary",
-        "url": {
-          "href": "",
-          "type": "EXTERNAL",
-          "content_id": null
+}, {
+  "id" : "d0db461b-9f1f-474a-ac51-fa92c8787b90",
+  "name" : "contact_card",
+  "label" : "Contact card",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "03b7aee9-b597-4473-bfbc-97d05429df53",
+    "name" : "show",
+    "label" : "Show contact card",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "a6e879fb-87df-4666-80d5-744cca3c8f65",
+    "name" : "photo",
+    "label" : "Photo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : true,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : "",
+      "loading" : "lazy",
+      "width" : 128,
+      "height" : 128
+    }
+  }, {
+    "id" : "82b9599e-99fe-4146-921d-ca220a718006",
+    "name" : "person_name",
+    "label" : "Contact name",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Jan Janssen"
+  }, {
+    "id" : "7859c62c-41ac-40c5-9500-49a689ce6abe",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "ROV Cable specialist"
+  }, {
+    "id" : "e5380a58-f9e3-460e-b61f-fccc59233a6c",
+    "name" : "phone",
+    "label" : "Phone",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "5ca9d326-2eb0-4dc8-9328-d58396df168b",
+      "name" : "display_text",
+      "label" : "Phone display text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Call 06 12 34 56 78"
+    }, {
+      "id" : "ac6e88b2-ca96-a36b-281d-98ea8272b0e9",
+      "name" : "phone",
+      "label" : "phonenumber (link)",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "display_width" : null,
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "+31612345678",
+          "type" : "PHONE_NUMBER"
         },
-        "cta": null
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "display_text" : "Call 06 12 34 56 78",
+      "number" : "0612345678"
+    }
+  }, {
+    "id" : "57c214be-28d6-4d47-b9ef-8343ff177d40",
+    "name" : "button",
+    "label" : "Button",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "db0a0a75-e89a-4b70-ba91-62aa7eee9151",
+      "name" : "choice",
+      "label" : "Button type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "link", "Manual button" ], [ "cta", "HubSpot CTA" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "link"
+    }, {
+      "id" : "b834568b-9105-4274-b9fd-eb54beecc83a",
+      "name" : "text",
+      "label" : "Button text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Get in touch"
+    }, {
+      "id" : "f6f35134-33b6-425b-92ed-1d24abc1d2e9",
+      "name" : "url",
+      "label" : "Button URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "type" : "url",
+      "display_width" : null,
+      "default" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
+      }
+    }, {
+      "id" : "686d61ee-296f-45f6-9eba-36fd7ea912a0",
+      "name" : "cta",
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "type" : "cta",
+      "display_width" : null
+    }, {
+      "id" : "257a48a1-189b-460d-b913-28d85b27419b",
+      "name" : "style",
+      "label" : "Button style",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "primary", "Primary" ], [ "secondary", "Secondary" ], [ "secondary-white", "Secondary white" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "primary"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "choice" : "link",
+      "text" : "Get in touch",
+      "style" : "primary",
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
       },
-      "secondary_link": {
-        "text": "Request custom cable design",
-        "url": {
-          "href": "",
-          "type": "EXTERNAL",
-          "content_id": null
-        }
+      "cta" : null
+    }
+  }, {
+    "id" : "b1059f94-5554-424b-9a6e-723468923cda",
+    "name" : "secondary_link",
+    "label" : "Secondary link",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "53393e8b-d441-4dda-826a-bb4a78509689",
+      "name" : "text",
+      "label" : "Link text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Request custom cable design"
+    }, {
+      "id" : "89f8d03b-965c-47af-bc92-a450d2ea7673",
+      "name" : "url",
+      "label" : "Link URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "type" : "url",
+      "display_width" : null,
+      "default" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "text" : "Request custom cable design",
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
       }
     }
-  }, 
-{
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "show" : true,
+    "person_name" : "Jan Janssen",
+    "title" : "ROV Cable specialist",
+    "phone" : {
+      "display_text" : "Call 06 12 34 56 78",
+      "number" : "0612345678"
+    },
+    "button" : {
+      "choice" : "link",
+      "text" : "Get in touch",
+      "style" : "primary",
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
+      },
+      "cta" : null
+    },
+    "secondary_link" : {
+      "text" : "Request custom cable design",
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
+      }
+    }
+  }
+}, {
   "id" : "a11",
   "name" : "style",
   "label" : "Style",
   "required" : false,
   "locked" : false,
-  "children" : [ 
-    {
+  "children" : [ {
     "id" : "a11a",
     "name" : "margin_block",
     "label" : "Add top margin",
@@ -465,16 +426,17 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "large"
-  },
-  {
-    "type": "boolean",
-    "id": "e2ba2604-f787-ecc9-22b6-469742c0d4c0",
-    "default": true,
-    "display": "checkbox",
-    "label": "Add gradient on image",
-    "name": "add_gradient"
-  }, 
-  {
+  }, {
+    "id" : "e2ba2604-f787-ecc9-22b6-469742c0d4c0",
+    "name" : "add_gradient",
+    "label" : "Add gradient on image",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
     "id" : "a11d",
     "name" : "text_colors",
     "label" : "Text colors",
@@ -506,18 +468,18 @@
         "color" : "#F4B941",
         "opacity" : 100
       }
-    },{
-      "id": "2abf7422-71ae-4a8f-9fd7-f154fa1e4e6b",
-      "name": "tagline_bg_color",
-      "label": "Tagline background color",
-      "required": false,
-      "locked": false,
-      "show_opacity": true,
-      "type": "color",
-      "display_width": null,
-      "default": {
-        "color": "#FFFFFF",
-        "opacity": 0
+    }, {
+      "id" : "2abf7422-71ae-4a8f-9fd7-f154fa1e4e6b",
+      "name" : "tagline_bg_color",
+      "label" : "Tagline background color",
+      "required" : false,
+      "locked" : false,
+      "show_opacity" : true,
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : "#FFFFFF",
+        "opacity" : 0
       }
     }, {
       "id" : "a11d3",
@@ -571,22 +533,7 @@
         "color" : "#FFFFFF",
         "opacity" : 100
       }
-    },
-    {
-      "id": "d3288105-eea4-47d5-8d40-699572e3bc2e",
-      "name": "contact_card_text_color",
-      "label": "Contact card text color",
-      "required": false,
-      "locked": false,
-      "show_opacity": true,
-      "type": "color",
-      "display_width": null,
-      "default": {
-        "color": "#FFFFFF",
-        "opacity": 100
-      }
-    }
-  ],
+    } ],
     "tab" : "STYLE",
     "expanded" : false,
     "group_occurrence_meta" : null,
@@ -613,9 +560,9 @@
         "color" : "#FFFFFF",
         "opacity" : 85
       },
-      "contact_card_text_color": {
-        "color": "#FFFFFF",
-        "opacity": 100
+      "contact_card_text_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
       }
     }
   } ],
@@ -652,11 +599,10 @@
         "color" : "#FFFFFF",
         "opacity" : 85
       },
-      "contact_card_text_color": {
-        "color": "#FFFFFF",
-        "opacity": 100
+      "contact_card_text_color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
       }
     }
   }
 } ]
-

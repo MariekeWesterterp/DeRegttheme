@@ -1,0 +1,400 @@
+[ {
+  "id" : "d4e061b6-f560-48fa-82a4-95ac50ac91bb",
+  "name" : "anchor",
+  "label" : "Anchor",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null
+}, {
+  "id" : "90116465-f918-41f9-b9fb-3cb5ec9eb563",
+  "name" : "quote",
+  "label" : "Quote",
+  "required" : false,
+  "locked" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "“DeRegt Cables ensures top-quality and reliability for our defense systems with seamless integration and optimal performance.”"
+}, {
+  "id" : "eb5f5da5-a827-41ee-b260-6fac844f2adf",
+  "name" : "contact_card",
+  "label" : "Contact card",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "0557efbe-40b2-4880-95c0-cbe052ed0c8e",
+    "name" : "show",
+    "label" : "Show contact card",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "0331da88-c41f-49e4-9962-d462280dbd9a",
+    "name" : "photo",
+    "label" : "Photo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : true,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : "",
+      "loading" : "lazy",
+      "width" : 72,
+      "height" : 72
+    }
+  }, {
+    "id" : "366ea396-e82e-42c3-961a-1ffcffa25f4e",
+    "name" : "person_name",
+    "label" : "Contact name",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "John Smith"
+  }, {
+    "id" : "bd972a3e-5afc-4975-9ed0-4d9511c17d0d",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Defense Systems Engineer"
+  }, {
+    "id" : "61addc33-bb53-4c80-bf0d-a0e224765cd2",
+    "name" : "phone",
+    "label" : "Phone",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "eefea20b-e7fb-469c-a937-502f0db15f4f",
+      "name" : "display_text",
+      "label" : "Phone display text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : ""
+    }, {
+      "id" : "5b571999-5afe-44f3-95af-be999c6a4ba8",
+      "name" : "phone",
+      "label" : "Phone (link)",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "display_width" : null,
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "PHONE_NUMBER"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "display_text" : "",
+      "phone" : {
+        "url" : {
+          "href" : "",
+          "type" : "PHONE_NUMBER",
+          "content_id" : null
+        }
+      }
+    }
+  }, {
+    "id" : "d85b3da1-f54e-43a5-af56-b4d9355cad8e",
+    "name" : "button",
+    "label" : "Button",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "597381e4-d2be-4f20-987a-8d52ea482999",
+      "name" : "choice",
+      "label" : "Button type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "link", "Manual button" ], [ "cta", "HubSpot CTA" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "link"
+    }, {
+      "id" : "35dc332e-3d5a-400b-a582-09f259e12cd2",
+      "name" : "text",
+      "label" : "Button text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : ""
+    }, {
+      "id" : "0cc58550-bec7-4ad5-b16d-4bf531586571",
+      "name" : "url",
+      "label" : "Button URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "type" : "url",
+      "display_width" : null,
+      "default" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
+      }
+    }, {
+      "id" : "f7fa3795-e4db-448b-9267-c9ac20a f1c4ec",
+      "name" : "cta",
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "type" : "cta",
+      "display_width" : null
+    }, {
+      "id" : "ad42ea18-ad30-44e5-b7b6-1ea800a8a934",
+      "name" : "style",
+      "label" : "Button style",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "primary", "Primary" ], [ "secondary", "Secondary" ], [ "secondary-white", "Secondary white" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "secondary"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "choice" : "link",
+      "text" : "",
+      "style" : "secondary",
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
+      },
+      "cta" : null
+    }
+  }, {
+    "id" : "0a5b218f-e328-4dd0-94fc-d487147c1007",
+    "name" : "secondary_link",
+    "label" : "Secondary link",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "c1eb099b-f6b4-4872-add7-e2548fe0f74e",
+      "name" : "text",
+      "label" : "Link text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : ""
+    }, {
+      "id" : "5893dd86-03dc-4e03-bb32-5eac6bf027f7",
+      "name" : "url",
+      "label" : "Link URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "type" : "url",
+      "display_width" : null,
+      "default" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "text" : "",
+      "url" : {
+        "href" : "",
+        "type" : "EXTERNAL",
+        "content_id" : null
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "show" : true,
+    "person_name" : "John Smith",
+    "title" : "Defense Systems Engineer"
+  }
+}, {
+  "id" : "53e9437b-c694-4a75-b652-79a6481d7986",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ 
+    {
+      "id": "45e8f1e5-061d-41db-8947-682ee89a65g8",
+      "name": "container_width",
+      "label": "Container width",
+      "required": false,
+      "locked": false,
+      "display": "select",
+      "choices": [
+        [
+          "default",
+          "Default"
+        ],
+        [
+          "small",
+          "Small"
+        ],
+        [
+          "no-max-width",
+          "No max-width"
+        ]
+      ],
+      "multiple": false,
+      "reordering_enabled": true,
+      "preset": null,
+      "type": "choice",
+      "display_width": null,
+      "default": "small"
+    },
+    {
+    "id" : "45e8f1e5-061d-41db-8947-682ee89a52c7",
+    "name" : "margin_block",
+    "label" : "Add top margin",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-margin", "No margin" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "medium"
+  }, {
+    "id" : "42cc0f34-2d87-4b96-9aa1-aac8fae7fdf9",
+    "name" : "padding_block",
+    "label" : "Add top and bottom padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-padding", "No padding" ], [ "default", "Default" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "default"
+  }, 
+  {
+    "id": "57a0113d-d9ce-44c9-9dd3-e281ffb076hg",
+    "name": "backgroundcolor_module",
+    "label": "Background color module",
+    "required": false,
+    "locked": false,
+    "show_opacity": true,
+    "type": "color",
+    "display_width": null,
+    "default": {
+      "color": "#FFFFFF",
+      "opacity": 100
+    }
+  }, {
+    "id": "57a0113d-d9ce-44c9-9dd3-e281ffb0342a",
+    "name": "backgroundcolor",
+    "label": "Background color block",
+    "required": false,
+    "locked": false,
+    "show_opacity": true,
+    "type": "color",
+    "display_width": null,
+    "default": {
+      "color": "#EEF8FF",
+      "opacity": 100
+    }
+  },
+  {
+    "id" : "d6b86b87-3f96-4bc9-97af-d1afdf9a76ac",
+    "name" : "text_color",
+    "label" : "Text color",
+    "required" : false,
+    "locked" : false,
+    "show_opacity" : true,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#2B2B2B",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "7e85c512-f958-40d3-bd29-deb015d8ae00",
+    "name" : "contact_card_theme",
+    "label" : "Contact card theme",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "light", "On light background" ], [ "dark", "On dark background" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "light"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "margin_block" : "medium",
+    "padding_block" : "default",
+    "backgroundcolor" : {
+      "color" : "#EEF8FF",
+      "opacity" : 100
+    },
+    "text_color" : {
+      "color" : "#152B56",
+      "opacity" : 100
+    },
+    "contact_card_theme" : "light"
+  }
+} ]

@@ -31,6 +31,8 @@
     --clr-checkbox-border-green: #009F2B5D;
     --clr-mine-shaft-950: #2B2B2B;
     --clr-mine-shaft-700: #4F4F4F;
+    --clr-mine-shaft-500: #6D6D6D;
+    --clr-blockquote-bg: {{ theme.global.text.blockquotes.background_color }};
 
     /* Brand extensions */
     --clr-blue-royal: #1761E1;
@@ -173,6 +175,8 @@
         --h5-font-size: {{ theme.global.text.h5.mobile_font_size|default(theme.global.text.h5.font.size) }}{{ theme.global.text.h5.font.size_unit }};
         --h6-font-size: {{ theme.global.text.h6.mobile_font_size|default(theme.global.text.h6.font.size) }}{{ theme.global.text.h6.font.size_unit }};
         --body-font-size: {{ theme.global.text.body_font.mobile_font_size|default(theme.global.text.body_font.font.size) }}{{ theme.global.text.body_font.font.size_unit }};
+        --blockquote-font-size: {{ theme.global.text.blockquotes.mobile_font.size|default(theme.global.text.blockquotes.font.size) }}{{ theme.global.text.blockquotes.font.size_unit }};
+
     }
 }
 

@@ -4,7 +4,7 @@
 {% set section_background = module.style.backgroundcolor %}
 {% set spacing_classes = macros.margin_padding(module.style.margin_block) %}
 {% set cta_block = module.cta_block %}
-<section class="product-blocks default-padding {{ spacing_classes }}"{% if section_background %} style="background-color: {{ section_background }}"{% endif %}>
+<section class="product-blocks {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} {{ spacing_classes }}"{% if section_background %} style="background-color: {{ section_background }}"{% endif %}>
   <div class="product-blocks__wrapper">
     <div class="container">
       {% if module.heading %}

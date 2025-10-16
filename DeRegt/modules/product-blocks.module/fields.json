@@ -194,6 +194,42 @@
     "display_width" : null,
     "default" : "medium"
   }, {
+    "id": "n4o5p6q7-r8s9-0123-nopq-456789012345",
+    "name": "padding_block",
+    "label": "Add top and bottom padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "no-padding",
+        "No padding"
+      ],
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "small",
+        "Small"
+      ],
+      [
+        "medium",
+        "Medium"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },
+  {
     "id" : "f2a5ed8d-7be1-4dd9-87d9-cade7589261d",
     "name" : "backgroundcolor",
     "label" : "Background color",

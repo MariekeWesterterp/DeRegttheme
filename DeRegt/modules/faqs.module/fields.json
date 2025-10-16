@@ -7,8 +7,7 @@
   "allow_new_line" : false,
   "type" : "text",
   "display_width" : null
-},  
-{
+}, {
   "id" : "d1223648-0a3f-4cf9-d44e-e068c902c393",
   "name" : "heading",
   "label" : "Heading",
@@ -18,8 +17,7 @@
   "type" : "text",
   "display_width" : null,
   "default" : "Veelgestelde vragen"
-},
-{
+}, {
   "id" : "2acacdea-a0cb-8888-8ae9-e618cd517786",
   "name" : "faq_item",
   "label" : "faq-item",
@@ -78,6 +76,42 @@
     "display_width" : null,
     "default" : "medium"
   }, {
+    "id": "n4o5p6q7-r8s9-0123-nopq-456789012345",
+    "name": "padding_block",
+    "label": "Add top and bottom padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "no-padding",
+        "No padding"
+      ],
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "small",
+        "Small"
+      ],
+      [
+        "medium",
+        "Medium"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },
+  {
     "id" : "1a5f3e2c-2b1e-4f0d-6f4c-8e3b1e5e2f4c",
     "name" : "backgroundcolor",
     "label" : "Background color",
@@ -88,115 +122,6 @@
     "default" : "#FFFFFF"
   }
 ],
-  "tab" : "STYLE",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : {
-    "margin_block" : "medium",
-    "backgroundcolor" : "#F1F4F5"
-  }
-} ][ {
-  "id" : "211b02f8-95df-f4bd-10d0-9ce82d071d6d",
-  "name" : "anchor",
-  "label" : "anchor",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : false,
-  "type" : "text",
-  "display_width" : null
-}, {
-  "id" : "d1223648-0a3f-4cf9-d44e-e068c902c393",
-  "name" : "heading",
-  "label" : "Heading",
-  "required" : false,
-  "locked" : false,
-  "allow_new_line" : true,
-  "type" : "text",
-  "display_width" : null,
-  "default" : "Veelgestelde vragen"
-}, {
-  "id" : "2acacdea-a0cb-8888-8ae9-e618cd517786",
-  "name" : "faq_item",
-  "label" : "faq-item",
-  "required" : false,
-  "locked" : false,
-  "occurrence" : {
-    "min" : null,
-    "max" : null,
-    "sorting_label_field" : null,
-    "default" : null
-  },
-  "children" : [ {
-    "id" : "ed7fc119-33a7-3cbd-b386-65b8b4a69308",
-    "name" : "faq_heading",
-    "label" : "faq-heading",
-    "required" : false,
-    "locked" : false,
-    "allow_new_line" : true,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Dit is een veelgestelde vraag"
-  }, {
-    "id" : "1506103f-5d0d-000f-b851-76f1cb0541cf",
-    "name" : "faq_text",
-    "label" : "Faq-text",
-    "required" : false,
-    "locked" : false,
-    "type" : "richtext",
-    "display_width" : null,
-    "default" : "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.</p>"
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : [ ]
-}, {
-  "id" : "c6b06287-d4b8-881d-69f0-ee6b4691c61b",
-  "name" : "style",
-  "label" : "Style",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "0a0e434c-62c9-b309-3114-e1fd6fb569f7",
-    "name" : "margin_block",
-    "label" : "Add top margin",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "no-margin", "No margin" ], [ "small", "small" ], [ "medium", "medium" ], [ "large", "large" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "medium"
-  }, {
-    "id" : "1a5f3e2c-2b1e-4f0d-6f4c-8e3b1e5e2f4c",
-    "name" : "backgroundcolor",
-    "label" : "Background color",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "display_width" : null,
-    "default" : "#FFFFFF"
-  }, {
-    "id" : "ef873285-7a28-c3f9-43f2-6286c8c7fb67",
-    "name" : "padding_block",
-    "label" : "Padding block",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "no-padding", "No padding" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null
-  } ],
   "tab" : "STYLE",
   "expanded" : false,
   "group_occurrence_meta" : null,

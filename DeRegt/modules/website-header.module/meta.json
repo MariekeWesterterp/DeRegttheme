@@ -1,10 +1,8 @@
 {
   "global" : false,
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "master_language" : "en",
   "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "module_id" : 197006705795,
-  "label" : "Website Header",
-  "icon" : "../../../mV0_hubspot/growth/images/module-icons/menu.svg",
+  "module_id" : 277677893832,
+  "label" : "website-header",
   "is_available_for_new_content" : true
 }
