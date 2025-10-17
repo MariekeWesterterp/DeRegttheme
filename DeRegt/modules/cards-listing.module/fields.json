@@ -163,13 +163,17 @@
   }, {
     "id" : "e3b3de20-94f1-437f-b5e9-5b392ce6f475",
     "name" : "label_text",
-    "label" : "Label text",
+    "label" : "Sector",
     "required" : false,
     "locked" : false,
-    "allow_new_line" : false,
-    "type" : "text",
+    "display" : "select",
+    "choices" : [ [ "Defense", "Defense & Security" ], [ "ROV", "Remotely Operated Vehicles" ], [ "energy", "Energy" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
     "display_width" : null,
-    "default" : "ROV"
+    "default" : "Defense"
   }, {
     "id" : "b42c6f51-3b5c-4689-85fc-26b6c062450c",
     "name" : "title",

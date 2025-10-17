@@ -17,3 +17,29 @@
         margin-top: 16px;
     }
 }
+.footer__bottom-right {
+align-items: center;
+    justify-content: flex-end;
+}
+
+.footer__bottom-right a {
+  text-decoration: none;
+  color: var(--clr-gray-darker);
+  position: relative;
+  display: inline-block;
+}
+
+.footer__bottom-right a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--clr-gray-darker);
+  transition: width 0.3s ease;
+}
+
+.footer__bottom-right a:hover::after {
+  width: 100%;
+}

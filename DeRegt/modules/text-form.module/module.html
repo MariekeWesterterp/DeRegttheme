@@ -1,0 +1,50 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+<style>
+
+.text-form__left ul[style="list-style-type: circle;"] li:before{
+    background-image: url('{{ get_asset_url('/DeRegt/images/CheckSquare.svg') }}');
+    }
+</style>
+<section class="text-form {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}"{% if module.style.backgroundcolor %} style="background-color: {{ module.style.backgroundcolor }}"{% endif %}>
+  <div class="container">
+    <div class="text-form__wrapper">
+      
+      <!-- Left Column: Rich Text and Text Blocks -->
+      <div class="text-form__left">
+        {% if module.main_text %}
+          <div class="text-form__main-text">
+            {{ module.main_text }}
+          </div>
+        {% endif %}
+        
+        {% if module.text_blocks|length %}
+          <div class="text-form__blocks">
+            {% for block in module.text_blocks %}
+              <div class="text-form__block">
+                {{ block.block_text }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      
+      <!-- Right Column: Form -->
+      <div class="text-form__right">
+        {% if module.form %}
+          <div class="text-form__form">
+            {% form
+              form_to_use="{{ module.form.form_id }}",
+              response_response_type="{{ module.form.response_type }}",
+              response_message="{{ module.form.message }}",
+              response_redirect_url="{{ module.form.redirect_url }}",
+              response_redirect_id="{{ module.form.redirect_id }}",
+              gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
+            %}
+          </div>
+        {% endif %}
+      </div>
+      
+    </div>
+  </div>
+</section>
+

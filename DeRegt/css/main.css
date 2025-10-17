@@ -35,11 +35,12 @@
 {% include "./g-layouts/_header.css" %}
 {% include "./g-layouts/_footer.css" %}
 
-
+  .legal-consent-container .hs-richtext a,
 .legal-consent-container .hs-richtext p,
 .legal-consent-container .hs-richtext {
   margin-bottom: 5px;
-    line-height: 1rem;
+    line-height: 1.5;
+    color: var(--clr-mine-shaft-700, #4F4F4F);
 }
 .legal-consent-container .hs-form-booleancheckbox-display {
  margin-bottom: 30px; 
