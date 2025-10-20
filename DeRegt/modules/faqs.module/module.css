@@ -31,7 +31,6 @@ border-bottom: 1px solid var(--clr-blue-royal-medium-light);
 .faqs__accordion-title{
   line-height: 150%;
   color: var(--clr-mine-shaft-950);
-  font-weight: 500;
 }
 .faqs__accordion-content a,
 .faqs__accordion-content p{
