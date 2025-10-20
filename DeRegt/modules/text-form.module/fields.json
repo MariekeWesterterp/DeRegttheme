@@ -1,0 +1,116 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "main_text",
+    "label": "Main Text",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Add your main text here</p>"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "name": "form",
+    "label": "Form",
+    "required": false,
+    "locked": false,
+    "type": "form",
+    "display_width": null
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+    "name": "text_blocks",
+    "label": "Text Blocks",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "sorting_label_field": null,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "d4e5f6a7-b8c9-0123-def1-234567890123",
+        "name": "block_text",
+        "label": "Block Text",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p>Add block text here</p>"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-ef12-345678901234",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "f6a7b8c9-d0e1-2345-f123-456789012345",
+        "name": "margin_block",
+        "label": "Add top margin",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          ["no-margin", "No margin"],
+          ["small", "Small"],
+          ["medium", "Medium"],
+          ["large", "Large"]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "medium"
+      },
+      {
+        "id": "a7b8c9d0-e1f2-3456-1234-567890123456",
+        "name": "padding_block",
+        "label": "Add top and bottom padding",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          ["no-padding", "No padding"],
+          ["default", "Default"],
+          ["small", "Small"],
+          ["medium", "Medium"],
+          ["large", "Large"]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "b8c9d0e1-f2a3-4567-2345-678901234567",
+        "name": "backgroundcolor",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "show_opacity": false,
+        "type": "color",
+        "display_width": null,
+        "default": "#FFFFFF"
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "type": "group",
+    "display_width": null
+  }
+]
+

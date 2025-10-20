@@ -23,7 +23,7 @@ p {
   font-size: var(--body-font-size);
   font-weight: 400;
   font-family: var(--ff-text);
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 /* Anchors */
@@ -76,6 +76,7 @@ h5, .heading-5 {
   color: var(--h5-color);
   text-transform: var(--h5-transform);
   line-height: 36px;
+  font-weight: 500;
 }
 
 h6, .heading-6 {
@@ -193,4 +194,9 @@ img {
 button {
   cursor: pointer;
   font-weight: 700;
+}
+
+ul.hs-error-msgs .hs-error-msg {
+color: #EC2D13;
+margin-bottom: 0;
 }

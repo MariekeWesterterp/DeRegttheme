@@ -10,6 +10,14 @@
 {% dnd_area "dnd_area"
   label="Main section"
 %}
+{% dnd_section, full_width="true" %}
+  {% dnd_column width=12 %}
+    {% dnd_row %}
+  {% dnd_module path='/DeRegt/modules/hero', label="hero"  %}
+ {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
 
  {% dnd_section, full_width="true" %}
       {% dnd_column width=12 %}
@@ -20,14 +28,6 @@
       {% end_dnd_column %}
  {% end_dnd_section %}
 
- {% dnd_section, full_width="true" %}
-      {% dnd_column width=12 %}
-        {% dnd_row %}
-      {% dnd_module path='/DeRegt/modules/text-image', label="text image"  %}
-     {% end_dnd_module %}
-        {% end_dnd_row %}
-      {% end_dnd_column %}
- {% end_dnd_section %}
 
 
  {% dnd_section, full_width="true" %}
