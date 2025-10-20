@@ -1,0 +1,184 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+<section id="list" class="cards {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}"{% if module.style.backgroundcolor %} style="background-color: {{ module.style.backgroundcolor }}"{% endif %}>
+  <div class="cards__wrapper">
+    <div class="container">
+      {% set has_heading = module.heading %}
+      {% if has_heading %}
+        <div class="cards__header margin-bottom-{{ module.margin_under_title }}">
+          {% if has_heading %}
+            <div class="cards__title-wrap">
+              <h1 class="cards__title">{{ module.heading }}</h1>
+              <svg class="cards__underline" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+                <path d="M48 0H0V6H48V0Z" fill="#F1C61A" />
+              </svg>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <!-- Filter Buttons -->
+      {% set current_sector = request.query_dict.sector %}
+      <div class="cards__filters">
+        <div class="filter-buttons">
+          <a href="{{ request.path }}#list" 
+             class="filter-button{% if not current_sector %} filter-button--active{% endif %}" 
+             data-filter="all">All markets</a>
+          <a href="?sector=ROV#list" 
+             class="filter-button{% if current_sector == 'ROV' %} filter-button--active{% endif %}" 
+             data-filter="ROV">Remotely Operated Vehicles</a>
+          <a href="?sector=Defense#list" 
+             class="filter-button{% if current_sector == 'Defense' %} filter-button--active{% endif %}" 
+             data-filter="Defense">Defense & Security</a>
+          <a href="?sector=energy#list  " 
+             class="filter-button{% if current_sector == 'Energy' %} filter-button--active{% endif %}" 
+             data-filter="energy">Energy</a>
+        </div>
+      </div>
+
+
+
+      {% set items_per_page = 3 %}
+      {% set filtered_cards = [] %}
+        {% if current_sector %}
+      {% for card in module.cards %} {{  card.label_text }} {{ current_sector }}
+        {% set card_sector = card.label_text %}
+        {% if card_sector == current_sector %}
+          {% do filtered_cards.append(card) %}
+        {% endif %}
+      {% endfor %}
+      {% else %}
+        {% for card in module.cards %}
+          {% do filtered_cards.append(card) %}
+        {% endfor %}
+      {% endif %}
+
+      {% set total_items = filtered_cards|length %}
+      {% set total_pages = (total_items / items_per_page)|round(0, 'ceil') %}
+      {% set current_page = request.query_dict.page|int or 1 %}
+      {% set start_index = (current_page - 1) * items_per_page %}
+      {% set end_index = start_index + items_per_page %}
+      {% set paginated_cards = filtered_cards[start_index:end_index] %}
+
+
+      {% if paginated_cards|length %}
+
+
+        <div class="cards__grid">
+          {% for item in paginated_cards %}
+    
+            <article class="cards__item cards__item--label-{{ module.label_position }}">
+              {% if item.link.href %}
+                <a class="cards__card cards__card-{{ module.appearance_cards }}" href="{{ item.link.href|escape_url }}" target="{{ item.link.target }}">
+              {% else %}
+                <div class="cards__card cards__card-{{ module.appearance_cards }}">
+              {% endif %}
+                  <div class="cards__media" >
+                    {% if item.image.src %}
+                      <img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_html }}" loading="{{ item.image.loading|default('lazy') }}">
+                    {% endif %}
+                    {% if item.label_text and module.label_position == 'top' %}
+                      <span class="cards__label cards__label--top">{{ item.label_text }}</span>
+                    {% endif %}
+                    <div class="cards__content">
+                      {% if item.label_text and module.label_position == 'bottom' %}
+                        <span class="cards__label cards__label--bottom">{{ item.label_text }}</span>
+                      {% endif %}
+                      {% if item.title %}
+                        <h3 class="cards__card-title align-title-{{ module.align_items_title_and_button }}"><span>{{ item.title }} </span>  {% if card_url %}<span class="cards__icon" aria-hidden="true">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16" fill="none">
+                          <path d="M3.125 10H16.875" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>    {% endif %}</h3>
+                       
+                      
+                
+                      {% endif %}
+                      {% if item.description %}
+                        <div class="cards__description rte">{{ item.description }}</div>
+                      {% endif %}
+                    </div>
+                   
+                  </div>
+              {% if card_url %}
+                </a>
+              {% else %}
+                </div>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <!-- Pagination -->
+   
+      
+      {% if total_pages > 1 %}
+        <div class="cards__pagination">
+          <nav class="pagination" role="navigation" aria-label="Pagination Navigation">
+            <ul class="pagination__list">
+              <!-- Previous Button -->
+              <li class="pagination__item">
+                {% if current_page > 1 %}
+                  <a href="?sector={{ current_sector }}&page={{ current_page - 1 }}#list" class="pagination__button pagination__button--prev" aria-label="Previous page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16" fill="none">
+                      <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                {% else %}
+                  <span class="pagination__button pagination__button--prev" aria-label="Previous page" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16" fill="none">
+                      <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                {% endif %}
+              </li>
+              
+              <!-- Page Numbers -->
+              {% for page_num in range(1, total_pages + 1) %}
+                {% if page_num <= 5 or page_num > total_pages - 2 or (page_num >= current_page - 1 and page_num <= current_page + 1) %}
+                  <li class="pagination__item">
+                    {% if page_num == current_page %}
+                      <span class="pagination__button pagination__button--number pagination__button--active" aria-label="Page {{ page_num }}" aria-current="page">{{ page_num }}</span>
+                    {% else %}
+                      <a href="?sector={{ current_sector }}&page={{ page_num }}#list" class="pagination__button pagination__button--number" aria-label="Page {{ page_num }}">{{ page_num }}</a>
+                    {% endif %}
+                  </li>
+                {% elif page_num == 6 and current_page > 4 %}
+                  <li class="pagination__item">
+                    <span class="pagination__ellipsis">...</span>
+                  </li>
+                {% elif page_num == total_pages - 1 and current_page < total_pages - 3 %}
+                  <li class="pagination__item">
+                    <span class="pagination__ellipsis">...</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
+              
+              <!-- Next Button -->
+              <li class="pagination__item">
+                {% if current_page < total_pages %}
+                  <a href="?sector={{ current_sector }}&page={{ current_page + 1 }}#list" class="pagination__button pagination__button--next" aria-label="Next page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16" fill="none">
+                      <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                {% else %}
+                  <span class="pagination__button pagination__button--next" aria-label="Next page" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16" fill="none">
+                      <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                {% endif %}
+              </li>
+            </ul>
+          </nav>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
