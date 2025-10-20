@@ -1,0 +1,17 @@
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.breadcrumbs a{
+    text-decoration: none;
+    color: var(--clr-blue-royal);
+    font-weight: 500;
+    font-size: var(--body-font-size);
+    line-height: 150%;
+    font-family: var(--body-font-family);
+}
+.breadcrumbs svg{
+ margin-top: 4px;
+}

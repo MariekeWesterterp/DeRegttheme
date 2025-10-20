@@ -260,41 +260,14 @@
     "person_name" : "John Smith",
     "title" : "Defense Systems Engineer"
   }
-}, {
+}, 
+{
   "id" : "53e9437b-c694-4a75-b652-79a6481d7986",
   "name" : "style",
   "label" : "Style",
   "required" : false,
   "locked" : false,
   "children" : [ 
-    {
-      "id": "45e8f1e5-061d-41db-8947-682ee89a65g8",
-      "name": "container_width",
-      "label": "Container width",
-      "required": false,
-      "locked": false,
-      "display": "select",
-      "choices": [
-        [
-          "default",
-          "Default"
-        ],
-        [
-          "small",
-          "Small"
-        ],
-        [
-          "no-max-width",
-          "No max-width"
-        ]
-      ],
-      "multiple": false,
-      "reordering_enabled": true,
-      "preset": null,
-      "type": "choice",
-      "display_width": null,
-      "default": "small"
-    },
     {
     "id" : "45e8f1e5-061d-41db-8947-682ee89a52c7",
     "name" : "margin_block",
@@ -323,21 +296,7 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "default"
-  }, 
-  {
-    "id": "57a0113d-d9ce-44c9-9dd3-e281ffb076hg",
-    "name": "backgroundcolor_module",
-    "label": "Background color module",
-    "required": false,
-    "locked": false,
-    "show_opacity": true,
-    "type": "color",
-    "display_width": null,
-    "default": {
-      "color": "#FFFFFF",
-      "opacity": 100
-    }
-  }, {
+  },{
     "id": "57a0113d-d9ce-44c9-9dd3-e281ffb0342a",
     "name": "backgroundcolor",
     "label": "Background color block",

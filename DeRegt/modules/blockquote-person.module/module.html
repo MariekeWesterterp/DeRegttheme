@@ -14,8 +14,8 @@
 
 
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
-<section class="blockquote-person {{ macros.margin_padding(module.style.margin_block, '') }}" {% if color_to_rgba(module.style.backgroundcolor_module)|trim %} style="background-color: {{ color_to_rgba(module.style.backgroundcolor_module)|trim }}"{% endif %}>
-<div class="container container-{{ module.style.container_width }}">
+<section class="blockquote-person {{ macros.margin_padding(module.style.margin_block, '') }}">
+<div class="container">
 <blockquote class="{{ macros.margin_padding('', module.style.padding_block) }}" {% if color_to_rgba(module.style.backgroundcolor)|trim or color_to_rgba(module.style.text_color)|trim %} style="{% if color_to_rgba(module.style.backgroundcolor)|trim %}background-color: {{ color_to_rgba(module.style.backgroundcolor)|trim }}; {% endif %} {% if color_to_rgba(module.style.text_color)|trim %}color: {{ color_to_rgba(module.style.text_color)|trim }}; {% endif %}"{% endif %}>
     <div class="blockquote-person__box">
       {% if module.quote %}

@@ -1,12 +1,5 @@
-{% set header_classes = "dr-header" %}
-{% if module.appearance.bottom_background == "transparent" %}
-  {% set header_classes = header_classes ~ " dr-header--transparent dr-header--overlay" %}
-{% else %}
-  {% set header_classes = header_classes ~ " dr-header--white" %}
-{% endif %}
-{% if module.appearance.add_shadow %}
-  {% set header_classes = header_classes ~ " dr-header--shadow" %}
-{% endif %}
+
+
 
 {% set top_menu = None %}
 {% if module.top_bar.menu %}
@@ -23,7 +16,7 @@
   <a id="{{ module.anchor|escape_attr }}" class="dr-header__anchor" data-hs-anchor="true"></a>
 {% endif %}
 
-<header class="{{ header_classes }}" data-module-instance="{{ instance_id }}" role="banner">
+<header class="dr-header dr-header--transparent dr-header--overlay" data-module-instance="{{ instance_id }}" role="banner">
 {% if module.top_bar.show and (module.top_bar.tagline or (top_menu and top_menu.children)) %}
     <div class="dr-header__top" style="background-color: {{ top_bar_color|escape_attr }};">
       <div class="container dr-header__top-container">

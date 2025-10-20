@@ -1,0 +1,141 @@
+
+
+{% set top_menu = None %}
+{% if module.top_bar.menu %}
+  {% set top_menu = menu(module.top_bar.menu, "site_root") %}
+{% endif %}
+
+{% set top_bar_color = module.top_bar.background_color.color|default('#1761E1') %}
+
+{% set logo_settings = module.branding.logo %}
+{% set has_logo = (logo_settings.override_inherited_src and logo_settings.src) or (not logo_settings.override_inherited_src and brand_settings.logo.src) or (not logo_settings.suppress_company_name) %}
+{% set instance_id = module.module_instance_id or module.module_id %}
+
+{% if module.anchor %}
+  <a id="{{ module.anchor|escape_attr }}" class="dr-header__anchor" data-hs-anchor="true"></a>
+{% endif %}
+
+<header class="dr-header dr-header--white" data-module-instance="{{ instance_id }}" role="banner">
+{% if module.top_bar.show and (module.top_bar.tagline or (top_menu and top_menu.children)) %}
+    <div class="dr-header__top" style="background-color: {{ top_bar_color|escape_attr }};">
+      <div class="container dr-header__top-container">
+        <div class="dr-header__top-inner">
+          <div class="dr-header__tagline-wrap">
+            {% if module.top_bar.tagline %}
+              <span class="dr-header__tagline">{{ module.top_bar.tagline }}</span>
+            {% endif %}
+          </div>
+          {% if top_menu and top_menu.children %}
+            <nav class="dr-header__top-nav" aria-label="Secondary navigation">
+              <ul class="dr-header__top-list">
+                {% for item in top_menu.children %}
+                  <li class="dr-header__top-item">
+                    <a class="dr-header__top-link {{ "is-active" if item.activeNode }}" href="{{ item.url }}" {{ "aria-current=\"page\"" if item.activeNode }} {{ 'target="_blank" rel="noopener"' if item.linkTarget }}>{{ item.label }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="dr-header__bottom">
+    <div class="container">
+      <div class="dr-header__bottom-inner">
+        <div class="dr-header__brand">
+          <button class="dr-header__toggle" type="button" aria-expanded="false" aria-controls="dr-header-nav-{{ instance_id }}">
+            <span class="show-for-sr">Toggle navigation</span>
+            <span class="dr-header__toggle-icon dr-header__toggle-icon--closed" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M5 16H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11 8H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 24H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="dr-header__toggle-icon dr-header__toggle-icon--open" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M25 7L7 25" stroke="#152B56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M25 25L7 7" stroke="#152B56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+
+          {% if has_logo %}
+            {% set logo_src = logo_settings.src if logo_settings.override_inherited_src else brand_settings.logo.src %}
+            {% set logo_alt = logo_settings.alt if logo_settings.override_inherited_src else brand_settings.logo.alt %}
+            {% set logo_width = logo_settings.width if logo_settings.override_inherited_src else brand_settings.logo.width %}
+            {% set logo_height = logo_settings.height if logo_settings.override_inherited_src else brand_settings.logo.height %}
+            {% set logo_loading = logo_settings.loading if logo_settings.loading else 'eager' %}
+            {% set logo_link = module.branding.link %}
+            {% set logo_href = logo_link.href if logo_link.href else '/' %}
+            {% set logo_target = logo_link.target if logo_link.target else ('_blank' if logo_link.open_in_new_tab else '_self') %}
+            {% set logo_rel = 'noopener' if logo_target == '_blank' else None %}
+            <a class="dr-header__logo" href="{{ logo_href|escape_url }}" target="{{ logo_target }}" {% if logo_rel %}rel="{{ logo_rel }}"{% endif %}>
+              <img src="{{ logo_src|escape_url }}" alt="{{ logo_alt|default(site_settings.company_name)|escape_attr }}" width="{{ logo_width }}" height="{{ logo_height }}" loading="{{ logo_loading }}">
+            </a>
+          {% else %}
+            <span class="dr-header__logo dr-header__logo--text">{{ site_settings.company_name }}</span>
+          {% endif %}
+        </div>
+
+        {% set primary_menu = menu(module.primary_navigation.menu, "site_root") %}
+        {% set has_primary_nav = primary_menu.children %}
+        {% set has_secondary_nav = top_menu and top_menu.children %}
+
+        {% if has_primary_nav or has_secondary_nav or has_cta %}
+          <nav class="dr-header__nav" id="dr-header-nav-{{ instance_id }}" aria-label="Primary navigation">
+            {% if module.cta_button.show %}
+              {% set cta_target = module.cta_button.url.target || ('_blank' if module.cta_button.url.open_in_new_tab else '_self') %}
+              {% set cta_rel = 'noopener' if cta_target == '_blank' else None %}
+              <div class="dr-header__nav-cta">
+                {% if module.cta_button.text %} 
+                <a class="btn-primary btn-small" href="{{ module.cta_button.url.href|escape_url }}" target="{{ cta_target }}" {% if cta_rel %}rel="{{ cta_rel }}"{% endif %}>{{ module.cta_button.text }}</a>
+               {% else %} 
+                
+                {% cta guid="{{ module.cta_button.cta_field }}" %}
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if has_primary_nav %}
+              <ul class="dr-header__nav-list dr-header__nav-list--primary">
+                {% for item in primary_menu.children %}
+                  <li class="dr-header__nav-item">
+                    <a class="dr-header__nav-link {{ "is-active" if item.activeNode }}" href="{{ item.url }}" {{ "aria-current=\"page\"" if item.activeNode }} {{ 'target="_blank" rel="noopener"' if item.linkTarget }}>
+                      <span class="dr-header__nav-label">{{ item.label }}</span>
+                      <span class="dr-header__nav-arrow" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M9 4.5L16.5 12L9 19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+            {% if has_secondary_nav %}
+              <div class="dr-header__nav-divider" aria-hidden="true"></div>
+              <ul class="dr-header__nav-list dr-header__nav-list--secondary">
+                {% for item in top_menu.children %}
+                  <li class="dr-header__nav-item dr-header__nav-item--secondary">
+                    <a class="dr-header__nav-link {{ "is-active" if item.activeNode }}" href="{{ item.url }}" {{ "aria-current=\"page\"" if item.activeNode }} {{ 'target="_blank" rel="noopener"' if item.linkTarget }}>
+                      <span class="dr-header__nav-label">{{ item.label }}</span>
+                      <span class="dr-header__nav-arrow" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M9 4.5L16.5 12L9 19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </nav>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>

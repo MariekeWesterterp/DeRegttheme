@@ -411,16 +411,16 @@ margin-top: 2rem;
 margin-top: 3rem;
 }
 .padding-small{
-padding-top: 1rem;
-padding-bottom: 1rem;
+padding-top: 30px;
+padding-bottom: 30px;
 }
 .padding-medium{
-padding-top: 2rem;
-padding-bottom: 2rem;
+padding-top: 60px;
+padding-bottom: 60px;
 }
 .padding-large{
-padding-top: 3rem;
-padding-bottom: 3rem;
+padding-top: 100px;
+padding-bottom: 100px;
 }
 .padding-default{
     padding-top: 56px;
@@ -437,17 +437,17 @@ padding-bottom: 3rem;
      margin-top: 3.5rem;
      }
      .padding-small{
-     padding-top: 1.5rem;
-       padding-bottom: 1.5rem;
-     }
-     .padding-medium{
-     padding-top: 2.5rem;
-       padding-bottom: 2.5rem;
-     }
-     .padding-large{
-     padding-top: 3.5rem;
-       padding-bottom: 3.5rem;
-     }
+padding-top: 40px;
+padding-bottom: 40px;
+}
+.padding-medium{
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.padding-large{
+padding-top: 120px;
+padding-bottom: 120px;
+}
      .padding-default{
     padding-top: 120px;
     padding-bottom: 120px;

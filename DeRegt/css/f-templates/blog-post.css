@@ -1,18 +1,77 @@
-.blog-post__wide-image img {
- width: 100%; 
+.hs-blog-post{
+  background-color: #fff;
 }
-.blog-post__body h1 {
-    margin-top: 50px; 
-  text-align: center;
+.blog-post .hs_cos_wrapper_type_rich_text{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+/* Blog Post heading */
+.blog-post-heading .padding-default{
+  padding-top: 50px;
 }
 
-
-
-.blog-post__body div {
- display: inline-block; 
+.blog-post-heading__breadcrumbs{
+  margin-bottom: 24px;
 }
-.hs-blog-post .content-wrapper {
- padding: 0; 
+.blog-post-heading__title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.blog-post-heading__title-author{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.blog-post-heading__title-author a{
+  color: var(--clr-blue-royal);
+  text-decoration: none;
+}
+.blog-post-heading__author .contact-card{
+  padding-top: 0;
+}
+.blog-post-heading__author  .contact-card__body{
+  gap: 0;
+}
+.blog-post__featured-image{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Blog post content */
+.blog-post__content__wrapper{
+  max-width: 800px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.blog-post__content__wrapper .container{
+padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width: 768px){
+  .blog-post-heading .padding-default{
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .blog-post-heading__title-author{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .blog-post-heading__author{
+    min-width: 277px;
+  }
+  .blog-post__featured-image{
+    height: 560px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .blog-post__content__wrapper{
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
 }
 
 /* Date */
@@ -24,23 +83,8 @@
 
 /* Author */
 
-.blog-post__author {
-  display: flex;
-  margin-bottom: 1.4rem;
-  align-items: center;
-}
-
-.blog-post__author-image {
-  height: auto;
-  width: 50px;
-  margin-right: 0.7rem;
-}
-
-.blog-post__author-name,
-.blog-post__author-name:hover,
-.blog-post__author-name:focus,
-.blog-post__author-name:active {
-  text-decoration: none;
+.blog-post-heading__author img{
+  box-shadow: none;
 }
 
 /* Content */

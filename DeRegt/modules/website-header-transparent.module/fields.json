@@ -223,44 +223,5 @@
       "type" : "EXTERNAL"
     }
   }
-}, {
-  "id" : "a6",
-  "name" : "appearance",
-  "label" : "Appearance",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "a6a",
-    "name" : "bottom_background",
-    "label" : "Bottom navigation background",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "transparent", "Transparent (overlaps next module)" ], [ "white", "White" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "white"
-  }, {
-    "id" : "a6b",
-    "name" : "add_shadow",
-    "label" : "Add subtle bottom shadow",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "display_width" : null,
-    "default" : true
-  } ],
-  "tab" : "STYLE",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "display_width" : null,
-  "default" : {
-    "bottom_background" : "white",
-    "add_shadow" : true
-  }
-} ]
+} 
+]

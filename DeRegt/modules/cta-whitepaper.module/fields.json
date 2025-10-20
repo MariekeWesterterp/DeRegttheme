@@ -137,26 +137,8 @@
   },
   {
     "id": "446bb3d5-508a-4689-ae0d-426d4d08fe3d",
-    "name": "image_desktop",
-    "label": "Image (desktop)",
-    "required": false,
-    "locked": false,
-    "responsive": true,
-    "resizable": false,
-    "show_loading": true,
-    "type": "image",
-    "display_width": null,
-    "default": {
-      "size_type": "auto",
-      "src": "",
-      "alt": "",
-      "loading": "lazy"
-    }
-  },
-  {
-    "id": "82861564-cc89-41df-90fc-c73dee3d9dfa",
-    "name": "image_mobile",
-    "label": "Image (mobile)",
+    "name": "image",
+    "label": "Image",
     "required": false,
     "locked": false,
     "responsive": true,
@@ -179,7 +161,7 @@
     "locked": false,
     "children": [
       {
-        "id": "c738639f-851b-4183-988d-37d00469a64d",
+        "id": "45e8f1e5-061d-41db-8947-682ee89a52c7",
         "name": "margin_block",
         "label": "Add top margin",
         "required": false,
@@ -211,7 +193,7 @@
         "default": "medium"
       },
       {
-        "id": "f9607018-558d-417b-8883-e4b2d47c97d6",
+        "id": "42cc0f34-2d87-4b96-9aa1-aac8fae7fdf9",
         "name": "padding_block",
         "label": "Add top and bottom padding",
         "required": false,
@@ -247,9 +229,9 @@
         "default": "default"
       },
       {
-        "id": "0b2d29fb-2a3a-4df5-8ea2-0622a1e0f5a9",
-        "name": "backgroundcolor_module",
-        "label": "Background color module",
+        "id": "57a0113d-d9ce-44c9-9dd3-e281ffb0342a",
+        "name": "backgroundcolor",
+        "label": "Background color",
         "required": false,
         "locked": false,
         "show_opacity": true,
@@ -261,16 +243,16 @@
         }
       },
       {
-        "id": "7b605026-9ef6-47e3-944b-214c2e0ea3e2",
-        "name": "backgroundcolor",
-        "label": "Background color block",
+        "id": "d6b86b87-3f96-4bc9-97af-d1afdf9a76ac",
+        "name": "text_color",
+        "label": "Text color",
         "required": false,
         "locked": false,
         "show_opacity": true,
         "type": "color",
         "display_width": null,
         "default": {
-          "color": "#EEF8FF",
+          "color": "#2B2B2B",
           "opacity": 100
         }
       },
@@ -313,12 +295,8 @@
     "type": "group",
     "display_width": null,
     "default": {
-      "margin_block": "medium",
       "padding_block": "default",
-      "backgroundcolor_module": {
-        "color": "#EEF8FF",
-        "opacity": 100
-      },
+     
       "backgroundcolor": {
         "color": "#EEF8FF",
         "opacity": 100
