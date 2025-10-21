@@ -59,7 +59,7 @@ a:hover {
   transition: all 0.4s ease;
 }
 
-blockquote {
+blockquote , blockquote > p{
   font-family: var(--blockquote-font-family);
   font-size: var(--blockquote-font-size);
   color: var(--blockquote-color);
