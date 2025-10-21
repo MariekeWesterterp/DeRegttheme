@@ -36,7 +36,7 @@
   "allow_new_line" : false,
   "type" : "text",
   "display_width" : null,
-  "default" : ""
+  "default" : "Connect with our specialists today"
 }, {
   "id" : "d5d9d2cb-8ef1-aa19-c04e-1e2c049a5b19",
   "name" : "richtext_field",
@@ -143,7 +143,7 @@
     "type" : "color",
     "display_width" : null,
     "default" : {
-      "color" : "#ffffff",
+      "color" : "#152B56",
       "opacity" : 100
     }
   }, {
@@ -200,14 +200,7 @@
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
-    "display_width" : null,
-    "default" : {
-      "rounded_corners_on_top" : true,
-      "background_color_rounded_corners" : {
-        "color" : null,
-        "opacity" : 100
-      }
-    }
+    "display_width" : null
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -224,13 +217,6 @@
     "color_heading" : {
       "color" : "#000000",
       "opacity" : 100
-    },
-    "rounded_border_top" : {
-      "rounded_corners_on_top" : true,
-      "background_color_rounded_corners" : {
-        "color" : null,
-        "opacity" : 100
-      }
     }
   }
 }, {

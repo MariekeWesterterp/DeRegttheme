@@ -1,0 +1,250 @@
+[
+  {
+    "allow_new_line": false,
+    "display_width": null,
+    "id": "d9532fe2-d525-5cb5-470c-5e5e4216e16c",
+    "label": "anchor",
+    "locked": false,
+    "name": "anchor",
+    "required": false,
+    "type": "text"
+  },
+  {
+    "allow_new_line": false,
+    "default": "Facts & figures",
+    "display_width": null,
+    "id": "1b3c4433-c7c0-c216-410d-c0808020ac39",
+    "label": "Title",
+    "locked": false,
+    "name": "title",
+    "required": false,
+    "type": "text"
+  },
+  {
+    "default": true,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "f3613008-44b4-409b-9f2a-be0c712a3d81",
+    "label": "Enable animation",
+    "locked": false,
+    "name": "enable_animation",
+    "required": false,
+    "type": "boolean"
+  },
+  {
+    "type": "group",
+    "id": "7ca2dc44-1d2f-34f1-1948-ef4c2d0c5fe0",
+    "label": "Counter-group",
+    "children": [
+      {
+        "type": "number",
+        "id": "f687da60-f26a-27fb-a52e-42efef59f6f5",
+        "display": "text",
+        "step": 1,
+        "label": "Number",
+        "name": "number_field",
+        "default": 1000
+      },
+      {
+        "type": "text",
+        "id": "a59bdafe-3ccc-45b7-a1d8-ba9ade70cb83",
+        "validation_regex": "",
+        "label": "Suffix",
+        "name": "suffix",
+        "default": "km"
+      },
+      {
+        "type": "text",
+        "id": "553a70b4-2e59-bca1-9c56-4abbd02ce7be",
+        "validation_regex": "",
+        "label": "Text under number",
+        "name": "text_under_number"
+      }
+    ],
+    "name": "counter_group",
+    "default": [],
+    "occurrence": {}
+  },
+  {
+    "children": [
+      {
+        "choices": [
+          [
+            "no-margin",
+            "No margin"
+          ],
+          [
+            "small",
+            "Small"
+          ],
+          [
+            "medium",
+            "Medium"
+          ],
+          [
+            "large",
+            "Large"
+          ]
+        ],
+        "default": "medium",
+        "display": "select",
+        "display_width": null,
+        "id": "45e8f1e5-061d-41db-8947-682ee89a52c7",
+        "label": "Add top margin",
+        "locked": false,
+        "multiple": false,
+        "name": "margin_block",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice"
+      },
+      {
+        "choices": [
+          [
+            "no-padding",
+            "No padding"
+          ],
+          [
+            "default",
+            "Default"
+          ],
+          [
+            "small",
+            "Small"
+          ],
+          [
+            "medium",
+            "Medium"
+          ],
+          [
+            "large",
+            "Large"
+          ]
+        ],
+        "default": "default",
+        "display": "select",
+        "display_width": null,
+        "id": "42cc0f34-2d87-4b96-9aa1-aac8fae7fdf9",
+        "label": "Add top and bottom padding",
+        "locked": false,
+        "multiple": false,
+        "name": "padding_block",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice"
+      },
+      {
+        "default": {
+          "color": "#152B56",
+          "opacity": 100
+        },
+        "display_width": null,
+        "id": "57a0113d-d9ce-44c9-9dd3-e281ffb0342a",
+        "label": "Background color",
+        "locked": false,
+        "name": "backgroundcolor",
+        "required": false,
+        "show_opacity": true,
+        "type": "color"
+      },
+      {
+        "default": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        },
+        "display_width": null,
+        "label": "Heading color",
+        "locked": false,
+        "name": "heading_color",
+        "required": false,
+        "show_opacity": false,
+        "type": "color",
+        "oldId": "d6b86b87-3f96-4bc9-97af-d1afdf9a76ac",
+        "id": "ffc0cde2-be52-2028-8a73-de1b34114305"
+      },
+      {
+        "choices": [
+          [
+            "h1",
+            "H1"
+          ],
+          [
+            "h2",
+            "H2"
+          ],
+          [
+            "h3",
+            "H3"
+          ],
+          [
+            "h4",
+            "H4"
+          ],
+          [
+            "h5",
+            "H5"
+          ],
+          [
+            "h6",
+            "H6"
+          ]
+        ],
+        "default": "h6",
+        "display": "select",
+        "display_width": null,
+        "id": "2b9e58b0-8c64-468a-b418-78b2274d3385",
+        "label": "Heading level",
+        "locked": false,
+        "multiple": false,
+        "name": "heading_tag",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice"
+      },
+      {
+        "default": {
+          "color": "#8FD1FF",
+          "opacity": 100
+        },
+        "display_width": null,
+        "id": "d6b86b87-3f96-4bc9-97af-d1afdf9a76ac",
+        "label": "Color counter",
+        "locked": false,
+        "name": "text_color",
+        "required": false,
+        "show_opacity": false,
+        "type": "color"
+      }
+    ],
+    "default": {
+      "margin_block": "medium",
+      "padding_block": "default",
+      "backgroundcolor": {
+        "color": "#152B56",
+        "opacity": 100
+      },
+      "heading_color": {
+        "color": "#FFFFFF",
+        "opacity": 100
+      },
+      "heading_tag": "h6",
+      "text_color": {
+        "color": "#8FD1FF",
+        "opacity": 100
+      }
+    },
+    "display_width": null,
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "id": "cc7e73a3-df12-4a7e-80b7-0d4bb2b067d5",
+    "label": "Style",
+    "locked": false,
+    "name": "style",
+    "required": false,
+    "tab": "STYLE",
+    "type": "group"
+  }
+]
