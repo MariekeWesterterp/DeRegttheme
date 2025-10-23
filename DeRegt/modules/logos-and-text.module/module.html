@@ -1,0 +1,50 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+{% set load_more_text = module.mobile_load_more_text|trim|default('Toon meer') %}
+<section class="logos-text {{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }}" style="background-color: {{ module.style.backgroundcolor }};">
+  <div class="logos-text__wrapper">
+    <div class="container">
+      {% if module.heading %}
+        <div class="logos-text__header">
+          <h2 class="logos-text__title" style="color:{{ module.style.text_color_title }}">{{ module.heading }}</h2>
+          <svg class="yellow-block" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+            <path d="M48 0H0V6H48V0Z" fill="#F1C61A"></path>
+          </svg>
+        </div>
+      {% endif %}
+    
+      {% if module.logos_and_texts|length > 0 %}
+        <div class="logos-text__grid">
+
+        {% for item in module.logos_and_texts %}
+
+            <article class="logos-text__card">
+            
+              <div class="logos-text__content">
+              <div class="logos-text__card__img-wrapper">
+               {% if item.logo.src %}
+                    {% set sizeAttrs = 'width="{{ item.logo.width|escape_attr }}" height="{{ item.logo.height|escape_attr }}"' %}
+                    {% if item.logo.size_type == 'auto' %}
+                      {% set sizeAttrs = 'width="{{ item.logo.width|escape_attr }}" height="{{ item.logo.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                    {% elif item.logo.size_type == 'auto_custom_max' %}
+                      {% set sizeAttrs = 'width="{{ item.logo.max_width|escape_attr }}" height="{{ item.logo.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                    {% endif %}
+                    {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading|escape_attr }}"' : '' %}
+                    <img src="{{ item.logo.src|escape_url }}" alt="{{ item.logo.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+              </div>
+              
+                {% if item.text %}
+                  <p style="color:{{ module.style.text_color_cards }}" class="logos-text__card-title">{{ item.text }}</p>
+                {% endif %}
+
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      
+      {% endif %}
+    </div>
+  </div>
+</section>
