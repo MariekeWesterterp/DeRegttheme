@@ -55,14 +55,27 @@
             {% set card_title = post.name %}
             {% set card_url = post.url|default('#') %}
           {% elif item.type == "extra" %}
+        
             {% set extra = item.data %}
+        
+        {% if content_by_id(extra.page_field) %}
+        
+        {% set extra_page_content = content_by_id(extra.page_field) %}
+        
+          {% set card_img = extra_page_content.featured_image %}
+            {% set card_tag = extra.text_tag %}
+            {% set card_title = extra_page_content.name %}
+            {% set card_url = extra_page_content.absolute_url %}
+      	{% else %}
             {% set card_img = extra.image_field.src|default('') %}
             {% set card_tag = extra.text_tag %}
             {% set card_title = extra.text_title %}
             {% set card_url = extra.url_whitepaper.href|default('#') %}
-              {% set card_position = extra.position_of_card %}
+              
+            {% endif %}
+        {% set card_position = extra.position_of_card %}
           {% endif %}
-  
+
             <li class="card">
           
               <a href="{{ card_url }}">

@@ -86,15 +86,53 @@
   "occurrence" : {
     "min" : null,
     "max" : 4,
-    "sorting_label_field" : "68bbd5e1-5de7-8906-564b-ebac98f9114d",
+    "sorting_label_field" : "81514887-25f0-6aa0-9a58-261504784ddb",
     "default" : null
   },
   "children" : [ {
+    "id" : "46db4476-c61a-a0ed-f0b2-8d1778872b49",
+    "name" : "type_of_content",
+    "label" : "Type of content",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "page", "Page" ], [ "manual", "Manual" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "manual"
+  }, {
+    "id" : "d079dfe4-7120-b470-5d4b-3aa663640054",
+    "name" : "page_field",
+    "label" : "Page",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "extra_card.type_of_content",
+      "controlling_value_regex" : "page",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "page",
+    "display_width" : null
+  }, {
     "id" : "072bd869-3f71-c435-c0c5-179467a787dd",
     "name" : "image_field",
     "label" : "Image",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "extra_card.type_of_content",
+      "controlling_value_regex" : "manual",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
     "responsive" : true,
     "resizable" : true,
     "show_loading" : false,
@@ -116,6 +154,14 @@
     "label" : "Text title",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "extra_card.type_of_content",
+      "controlling_value_regex" : "manual",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
     "allow_new_line" : false,
     "type" : "text",
     "display_width" : null,
@@ -136,6 +182,14 @@
     "label" : "URL",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "extra_card.type_of_content",
+      "controlling_value_regex" : "manual",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
     "type" : "url",
     "display_width" : null,
@@ -148,13 +202,13 @@
     "id" : "81514887-25f0-6aa0-9a58-261504784ddb",
     "name" : "position_of_card",
     "label" : "Position of card",
+    "help_text" : "After this amount of blogs this card will appear.",
     "required" : false,
     "locked" : false,
     "display" : "text",
     "min" : 1,
-    "max" : 4,
     "step" : 1,
-    "prefix" : "position ",
+    "prefix" : "",
     "suffix" : "",
     "type" : "number",
     "display_width" : null
