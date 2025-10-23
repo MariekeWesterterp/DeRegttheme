@@ -18,9 +18,19 @@
   "display_width" : null,
   "default" : "Our latest insights"
 }, {
+  "id" : "a1860e7f-30af-f5e2-a5bb-9566dfda577d",
+  "name" : "text_button",
+  "label" : "Text button",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Get more insights"
+}, {
   "id" : "97ae5ced-9706-b209-a5fe-16ead049c1b4",
   "name" : "link_field",
-  "label" : "Link",
+  "label" : "Link button",
   "required" : false,
   "locked" : false,
   "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
@@ -36,6 +46,37 @@
     "open_in_new_tab" : false,
     "no_follow" : false
   }
+}, {
+  "id" : "81514887-25f0-6aa0-9a58-261504788kjhb",
+  "name" : "cards_amount",
+  "label" : "Show amount of cards",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 1,
+  "step" : 1,
+  "prefix" : "",
+  "suffix" : "",
+  "type" : "number",
+  "display_width" : null
+}, {
+  "id" : "3685f38c-0db9-68ae-2e93-c5d58ff1e5c9",
+  "name" : "kind_of_blog",
+  "label" : "Kind of blog",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "display_width" : null
+}, {
+  "id" : "7284dd00-0912-0b70-b11f-76c23defecc9",
+  "name" : "label_for_blogpost",
+  "label" : "Label for blogpost",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Blog"
 }, {
   "id" : "3b31ac12-2829-9bb5-def7-16a677fc98ae",
   "name" : "extra_card",
@@ -80,17 +121,6 @@
     "display_width" : null,
     "default" : "Transforming offshore wind to multi-use energy parks with cable pooling"
   }, {
-    "id" : "e77ca88a-f820-1460-b271-0696117f4245",
-    "name" : "text_link",
-    "label" : "Text link",
-    "required" : false,
-    "locked" : false,
-    "placeholder" : "https://ns.nl",
-    "allow_new_line" : false,
-    "type" : "text",
-    "display_width" : null,
-    "default" : "Get more insights"
-  }, {
     "id" : "4f204a96-f9b2-7580-baf3-92cfd38b6410",
     "name" : "text_tag",
     "label" : "Text tag",
@@ -103,7 +133,7 @@
   }, {
     "id" : "8096a5ff-00e3-8bef-d8ff-19dca72e205f",
     "name" : "url_whitepaper",
-    "label" : "URL whitepaper",
+    "label" : "URL",
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
@@ -114,6 +144,20 @@
       "href" : null,
       "type" : "CONTENT"
     }
+  }, {
+    "id" : "81514887-25f0-6aa0-9a58-261504784ddb",
+    "name" : "position_of_card",
+    "label" : "Position of card",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "min" : 1,
+    "max" : 4,
+    "step" : 1,
+    "prefix" : "position ",
+    "suffix" : "",
+    "type" : "number",
+    "display_width" : null
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -122,22 +166,12 @@
   "display_width" : null,
   "default" : [ ]
 }, {
-  "id" : "3685f38c-0db9-68ae-2e93-c5d58ff1e5c9",
-  "name" : "kind_of_blog",
-  "label" : "Kind of blog",
-  "required" : false,
-  "locked" : false,
-  "type" : "blog",
-  "display_width" : null
-}, 
-{
   "id" : "c6b06287-d4b8-881d-69f0-ee6b4691c61b",
   "name" : "style",
   "label" : "Style",
   "required" : false,
   "locked" : false,
-  "children" : [ 
-    {
+  "children" : [ {
     "id" : "0a0e434c-62c9-b309-3114-e1fd6fb569f7",
     "name" : "margin_block",
     "label" : "Add top margin",
@@ -151,42 +185,20 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "large"
-  },
-  {
-    "id": "n4o5p6q7-r8s9-0123-nopq-456789012345",
-    "name": "padding_block",
-    "label": "Add top and bottom padding",
-    "required": false,
-    "locked": false,
-    "display": "select",
-    "choices": [
-      [
-        "no-padding",
-        "No padding"
-      ],
-      [
-        "default",
-        "Default"
-      ],
-      [
-        "small",
-        "Small"
-      ],
-      [
-        "medium",
-        "Medium"
-      ],
-      [
-        "large",
-        "Large"
-      ]
-    ],
-    "multiple": false,
-    "reordering_enabled": true,
-    "preset": null,
-    "type": "choice",
-    "display_width": null,
-    "default": "default"
+  }, {
+    "id" : "n4o5p6q7-r8s9-0123-nopq-456789012345",
+    "name" : "padding_block",
+    "label" : "Add top and bottom padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "no-padding", "No padding" ], [ "default", "Default" ], [ "small", "Small" ], [ "medium", "Medium" ], [ "large", "Large" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "default"
   }, {
     "id" : "85e4319c-392b-bc26-1389-f0a55eedddc5",
     "name" : "backgroundcolor",
@@ -208,7 +220,7 @@
   "display_width" : null,
   "default" : {
     "margin_block" : "large",
-    "padding_block" : "large",
+    "padding_block" : "default",
     "backgroundcolor" : {
       "color" : "#EEF8FF",
       "opacity" : 100
