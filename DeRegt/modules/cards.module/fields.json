@@ -20,7 +20,7 @@
 }, {
   "id" : "f504f890-e1a3-40dd-9929-b10611303d4a",
   "name" : "margin_under_title",
-  "label" : "Margin under title",
+  "label" : "Margin under heading",
   "required" : false,
   "locked" : false,
   "display" : "select",
@@ -117,20 +117,6 @@
   "type" : "choice",
   "display_width" : null,
   "default" : "top"
-}, {
-  "id" : "d9170a58-2b1b-a791-81e1-54f8ddfbe156",
-  "name" : "appearance_cards",
-  "label" : "Appearance cards",
-  "required" : false,
-  "locked" : false,
-  "display" : "select",
-  "choices" : [ [ "vertical", "Vertical (on desktop)" ], [ "horizontal", "Horizontal (on desktop)" ] ],
-  "multiple" : false,
-  "reordering_enabled" : true,
-  "preset" : null,
-  "type" : "choice",
-  "display_width" : null,
-  "default" : "vertical"
 }, {
   "id" : "94f3105d-1a39-48ff-8925-9b07ad005c07",
   "name" : "cards",
