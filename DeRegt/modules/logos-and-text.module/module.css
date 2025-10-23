@@ -1,0 +1,78 @@
+.logos-text {
+  color: var(--clr-mine-shaft-950);
+}
+
+.logos-text__wrapper {
+  width: 100%;
+}
+
+.logos-text__header {
+
+  margin-bottom: 40px;
+}
+
+.logos-text__title {
+  color: var(--clr-blue-midnight);
+}
+
+.logos-text__underline {
+  display: block;
+}
+
+.logos-text__grid {
+  display: grid;
+  gap: 24px;
+}
+
+.logos-text__card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.logos-text__card {
+  justify-content: flex-start;
+}
+
+.logos-text__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.logos-text__card__img-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logos-text__card__img-wrapper img{
+    max-height: 78px;
+    width: auto;
+    object-fit: contain;
+    align-self: flex-start;
+    max-width: 100%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+@media (min-width: 768px) {
+  .logos-text__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+ .logos-text__card__img-wrapper{
+  height: 80px;
+}
+ 
+  .logos-text__card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .logos-text__card__img-wrapper img{
+  max-width: 160px;
+ }
+}

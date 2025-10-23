@@ -43,7 +43,6 @@ display: grid;
     width: 100%;
 }
 .card h3 {
-font-weight: 600;
 line-height: 120%;
 text-decoration: none;
 color: white;
