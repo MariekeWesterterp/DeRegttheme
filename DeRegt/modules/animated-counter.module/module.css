@@ -1,0 +1,52 @@
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.animatednumbers__title{
+    text-align: center;
+        margin-bottom:  24px;
+
+}
+.animatednumbers .animatednumbers__inner{
+    padding-inline: 40px;
+}
+.animatednumbers .animatednumbers__inner.padding-default{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.animatednumbers .animatednumbers__counter-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.animatednumbers .animatednumbers__counter-wrapper p{
+    width: fit-content;
+}
+@media (min-width: 992px) {
+    .animatednumbers .animatednumbers__inner.padding-default{
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+    .animatednumbers .animatednumbers__counter-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+   
+}

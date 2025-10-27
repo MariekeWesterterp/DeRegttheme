@@ -1,0 +1,45 @@
+{% import "/DeRegt/macro/margin-padding.html" as macros %}
+{% set animation_enabled = module.enable_animation|default(true) %}
+
+{% macro color_to_rgba(value) %}
+  {% if value %}
+    {% if value is string %}
+      {{ value }}
+    {% elif value.color %}
+      {% set opacity = value.opacity if value.opacity is not none else 100 %}
+      rgba({{ value.color|convert_rgb }}, {{ opacity / 100 }})
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
+<a id="{{ module.anchor }}" data-hs-anchor="true"></a>
+
+<section class="animatednumbers {{ macros.margin_padding(module.style.margin_block, '') }}">
+  <div class="animatednumbers__inner {{ macros.margin_padding('', module.style.padding_block) }}" {% if color_to_rgba(module.style.backgroundcolor)|trim or color_to_rgba(module.style.text_color)|trim %} style="{% if color_to_rgba(module.style.backgroundcolor)|trim %}background-color: {{ color_to_rgba(module.style.backgroundcolor)|trim }}; {% endif %} {% if color_to_rgba(module.style.text_color)|trim %}color: {{ color_to_rgba(module.style.text_color)|trim }}; {% endif %}"{% endif %}> 
+    <div class="container">
+      <div>
+        <{{ module.style.heading_tag }} style="color: {{ module.style.heading_color.color }}" class="animatednumbers__title">{{ module.title }}</{{ module.style.heading_tag }}>
+      </div>
+
+      <div class="animatednumbers__counter-wrapper" data-animate="{{ 'true' if animation_enabled else 'false' }}">
+            {% for item in module.counter_group %}
+
+          <div class="animatednumbers__content-column">
+           <div class="number">
+               <div class="counter-container" id="counter">
+                   <h2 style="color: {{ module.style.text_color.color }}"><span  class="count">{{ item.number_field }}</span> {{ item.suffix }}</h2>
+                   <p style="color: {{ module.style.text_color.color }}">{{ item.text_under_number }}</p>
+               </div>
+           </div>
+          </div>
+          {% endfor %}
+
+
+        </div>
+        </div>
+      </div>
+ </section>
+        
+        
+        
+       

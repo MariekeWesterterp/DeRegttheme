@@ -1,5 +1,4 @@
-{% import "/deregt/macro/margin-padding.html" as macros%}
-
+{% import "/deregt/macro/margin-padding.html" as macros %}
 
 <a id="{{ module.anchor }}" data-hs-anchor="true"></a>
 
@@ -7,129 +6,109 @@
   <div class="{{ macros.margin_padding(module.style.margin_block, module.style.padding_block) }} default__wrapper" style="background-color: {{ module.style.backgroundcolor.color }}"> 
     <div class="container">
 
- 
-        <div class="bloglist__text">
-          <div class="bloglist__text__title">
-            <h2>{{ module.title }}</h2>
-            <svg class="yellow-block" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
-              <path d="M48 0H0V6H48V0Z" fill="#F1C61A"/>
-              </svg>
-          </div>
-         
-          <a class="bloglist__readmore btn-secondary  btn-small" href="{{ module.link_field }}">{{ module.text_link }}</a>
-     
-   
-
+      <div class="bloglist__text">
+        <div class="bloglist__text__title">
+          <h2>{{ module.title }}</h2>
+          <svg class="yellow-block" xmlns="http://www.w3.org/2000/svg" width="48" height="6" viewBox="0 0 48 6" fill="none">
+            <path d="M48 0H0V6H48V0Z" fill="#F1C61A"/>
+          </svg>
         </div>
+        <a class="bloglist__readmore btn-secondary btn-small" href="{{ module.link_field }}">{{ module.text_button }}</a>
+      </div>
+{% if module.kind_of_blog %}
+      {% set blogposts = blog_recent_tag_posts(module.kind_of_blog, [], module.cards_amount, "AND") %}
+      {% set blog_tag_label = module.label_for_blogpost %}
 
-        <ul class="bloglist__listing">
+      {# --- Maak lijsten --- #}
+      {% set def_list = [] %}
+      {% for post in blogposts %}
+        {% do def_list.append({
+          "type": "blog",
+          "data": post
+        }) %}
+    {% set loopnumber = loop.index %}
+        {% for extra in module.extra_card %}
+        {% if extra.position_of_card == loopnumber %}
+          {% do def_list.append({
+            "type": "extra",
+            "data": extra
+          }) %}
+        {% endif %}
+        {% endfor %}
+    
+      {% endfor %}
+{% else %}
+      {% for extra in module.extra_card %}
+      {% do def_list.append({
+            "type": "extra",
+            "data": extra
+          }) %}
+      {% endfor %}
+ {% endif %}
 
-
-       
-
-                {% set tag_posts = blog_recent_tag_posts("default", [], 4, "AND") %}
-                {% for tag_post in tag_posts %}
-                <li class="card">
-                  
-                    <div class="card__container">
-
-
-                    <div class="card__tags">
-                        {% for topic in tag_post.topic_list %}
-                          <a href="{{ topic.url }}" class="card__tag">{{ topic.name }}</a>
-                        {% endfor %}
-                      </div>
-                     <div class="card__image" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(25, 77, 180, 0.60) 100%), url('{{ tag_post.featuredImage }}') lightgray 50% / cover no-repeat;">
-                     
-                    </div>
-                    <a href="{{ tag_post.url }}">
-                    <div class="card__text">
-                      <h3>{{ tag_post.name }}</h3>
-                  
-
-
-                      <div class="card__readmore">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                          <g id="ArrowRight" clip-path="url(#clip0_460_2129)">
-                          <path id="Vector" d="M3.125 10H16.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path id="Vector_2" d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </g>
-                          <defs>
-                          <clipPath id="clip0_460_2129">
-                          <rect width="20" height="20" fill="white"/>
-                          </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                    </a>
-                    </div>
-                  
-                </li>
-
-                {% endfor %}
-
-                   
-          {% for item in module.extra_card %}
-            {% if item.image_field.src %}
-              {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
-              {% if item.image_field.size_type == 'auto' %}
-                {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-              {% elif item.image_field.size_type == 'auto_custom_max' %}
-                {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-              {% endif %}
-               {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-              <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      <ul class="bloglist__listing">
+        {% for item in def_list %} 
+          {% if item.type == "blog" %}
+            {% set post = item.data %}
+            {% set card_img = post.featured_image|default('') %}
+            {% set card_tag = module.label_for_blogpost %}
+            {% set card_title = post.name %}
+            {% set card_url = post.url|default('#') %}
+          {% elif item.type == "extra" %}
+        
+            {% set extra = item.data %}
+        
+        {% if content_by_id(extra.page_field) %}
+        
+        {% set extra_page_content = content_by_id(extra.page_field) %}
+        
+          {% set card_img = extra_page_content.featured_image %}
+            {% set card_tag = extra.text_tag %}
+            {% set card_title = extra_page_content.name %}
+            {% set card_url = extra_page_content.absolute_url %}
+      	{% else %}
+            {% set card_img = extra.image_field.src|default('') %}
+            {% set card_tag = extra.text_tag %}
+            {% set card_title = extra.text_title %}
+            {% set card_url = extra.url_whitepaper.href|default('#') %}
+              
             {% endif %}
-            {% inline_text field="text_title" value="{{ item.text_title }}" %}
-            {% inline_text field="text_link" value="{{ item.text_link }}" %}
-            {% inline_text field="text_tag" value="{{ item.text_tag }}" %}
-            {{ item.url_whitepaper.href|escape_url }}
+        {% set card_position = extra.position_of_card %}
+          {% endif %}
 
-
-
-                <li class="card">
-                  <a href="{{ module.url_whitepaper.href }}">
-                    <div class="card__container">
-
-
-                     <div class="card__tags"><a class="card__tag" href="#">{{ module.text_tag }}</a></div>
-                      <div class="card__image" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(25, 77, 180, 0.60) 100%), url('{{ module.image_field.src }}') lightgray 50% / cover no-repeat;">
-                    
-                    </div>
-                    <div class="card__text">
-                      <h3>{{ module.text_title }}</h3>
-
-
-                      <div class="card__readmore"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <g id="ArrowRight" clip-path="url(#clip0_460_2129)">
-                    <path id="Vector" d="M3.125 10H16.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path id="Vector_2" d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_460_2129">
-                    <rect width="20" height="20" fill="white"/>
-                    </clipPath>
-                    </defs>
-                    </svg></div>
-                    </div>
-                    </div>
-                  </a>
-                </li>
-
-           {% endfor %}           
-        </ul>
-
-         <div class="bloglist__footer">
-         
-          <a class="bloglist__readmore btn-secondary  btn-small" href="{{ module.link_field }}">{{ module.text_link }}</a>
-     
-   
-
-        </div>
-
+            <li class="card">
           
-</div>
+              <a href="{{ card_url }}">
+                <div class="card__container">
+                  <div class="card__tags">
+                    <div class="card__tag">{{ card_tag }}</div>
+                  </div>
+                  <div class="card__image" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(25, 77, 180, 0.60) 100%), url('{{ card_img }}') center / cover no-repeat;"></div>
+                  <div class="card__text">
+                    <h3>{{ card_title }}</h3>
+                    <div class="card__readmore">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_460_2129)">
+                          <path d="M3.125 10H16.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M11.25 4.375L16.875 10L11.25 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_460_2129"><rect width="20" height="20" fill="white"/></clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+       
+        {% endfor %}
+      </ul>
+
+      <div class="bloglist__footer">
+        <a class="bloglist__readmore btn-secondary btn-small" href="{{ module.link_field }}">{{ module.text_button }}</a>
+      </div>
+
+    </div>
   </div>
 </section>
-

@@ -56,7 +56,7 @@
             {% set card_classes = 'cards__item cards__item--label-' ~ module.label_position %}
             <article class="{{ card_classes }}">
               {% if card_url %}
-                <a class="cards__card cards__card-{{ module.appearance_cards }}" href="{{ card_url|escape_url }}" target="{{ card_target }}"{% if card_rel %} rel="{{ card_rel }}"{% endif %}>
+                <a class="cards__card" href="{{ card_url|escape_url }}" target="{{ card_target }}"{% if card_rel %} rel="{{ card_rel }}"{% endif %}>
               {% else %}
                 <div class="cards__card cards__card-{{ module.appearance_cards }}">
               {% endif %}

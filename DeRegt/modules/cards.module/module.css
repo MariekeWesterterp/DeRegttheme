@@ -66,12 +66,7 @@
   color: inherit;
   border-radius: 0;
   overflow: hidden;
-}
-.cards__card-vertical{
-  height: 320px;
-}
-.cards__card-horizontal {
-  height: 360px;
+   height: 320px;
 }
 .cards__media {
   position: relative;
@@ -114,6 +109,7 @@
 .cards__label--bottom {
   align-self: flex-start;
   padding: 0;
+    padding-inline: 2px;
   background-color: var(--clr-corn-secondary);
   color: var(--clr-blue-midnight);
   font-weight: 400;
@@ -185,11 +181,8 @@
   .cards__grid {
     flex-direction: row;
   }
-  .cards__card-vertical{
+  .cards__card{
   height: 583px;
-}
-.cards__card-horizontal {
-  height: 560px;
 }
 }
 
